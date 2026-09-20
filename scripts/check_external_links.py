@@ -11,7 +11,7 @@ from urllib.request import Request, urlopen
 
 MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\((https?://[^)\s]+)\)")
 HTML_LINK_RE = re.compile(r"(?:href|src)=[\"'](https?://[^\"']+)[\"']", re.IGNORECASE)
-PLAIN_URL_RE = re.compile(r"https?://[^\s<>'\"]+")
+PLAIN_URL_RE = re.compile(r"https?://[^\\s<>\'\\\"`]+")
 
 WARNING_ONLY_HOSTS = {"github.com", "raw.githubusercontent.com", "img.shields.io"}
 
