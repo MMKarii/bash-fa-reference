@@ -1,0 +1,30 @@
+name: probe-firestorage
+
+on:
+  push:
+    branches: [bash-docs-v1]
+    paths: ['.github/workflows/probe-firestorage.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe share
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://firestorage.ai/ja/f/kuXLV6cvllP3'
+          curl -L -sS -D /tmp/headers.txt "$url" -o /tmp/share
+          echo '=== headers ==='
+          sed -n '1,80p' /tmp/headers.txt
+          echo '=== file ==='
+          file /tmp/share
+          wc -c /tmp/share
+          echo '=== candidate links ==='
+          grep -Eo 'https?://[^"'"'"' <]+' /tmp/share | head -80 || true
+          echo '=== download/api hints ==='
+          strings /tmp/share | grep -Ei 'download|api|zip|bash_text_payload|3LRdKuEUVn74KapZ|kuXLV6cvllP3' | head -120 || true
