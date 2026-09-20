@@ -1,10 +1,14 @@
 name: probe-firestorage
+
 on:
   push:
     branches: [bash-docs-v1]
-    paths: ['.github/workflows/probe-firestorage.yml']
+    paths:
+      - '.github/workflows/probe-firestorage.yml'
+
 permissions:
   contents: read
+
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -14,21 +18,11 @@ jobs:
         run: |
           set -euo pipefail
           base='https://firestorage.ai/_next/static/chunks'
-          for p in '5841-1160578ba9bb4f3e.js' '4899-d89df949f2dbd5af.js'
-          do
-            curl -L -sS "$base/$p" -o /tmp/chunk.js
-            P="$p" python - <<'PY'
-import os
-s=open('/tmp/chunk.js',encoding='utf-8').read()
-print('===',os.environ['P'],'===')
-for needle in ['api.firestorage','/api/','shares/','shareEndpoint','NEXT_PUBLIC','function v','cushion-sessions','files?maxResults']:
-    print('\nNEEDLE',needle)
-    start=0
-    count=0
-    while True:
-        i=s.find(needle,start)
-        if i<0 or count>=8: break
-        print(s[max(0,i-350):i+650])
-        start=i+len(needle); count+=1
-PY
-          done
+          curl -L -sS "$base/4899-d89df949f2dbd5af.js" -o /tmp/a.js
+          curl -L -sS "$base/5841-1160578ba9bb4f3e.js" -o /tmp/b.js
+          echo '=== api host/base ==='
+          grep -Eo '.{0,500}(api\.firestorage|/api/|apiBase|NEXT_PUBLIC).{0,700}' /tmp/a.js /tmp/b.js | head -80 || true
+          echo '=== share endpoint ==='
+          grep -Eo '.{0,800}shareEndpoint.{0,800}' /tmp/a.js /tmp/b.js | head -40 || true
+          echo '=== initial share state ==='
+          grep -Eo '.{0,800}(cushion-sessions|files\?maxResults).{0,800}' /tmp/a.js /tmp/b.js | head -60 || true
