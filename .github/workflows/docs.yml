@@ -1,0 +1,115 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache MkDocs
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          path: ~/.cache
+          restore-keys: |
+            mkdocs-material-${{ runner.os }}-
+
+      - name: Install documentation dependencies
+        run: pip install -r requirements.txt
+
+      - name: Test documentation tooling
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: Check bilingual structure links anchors translation freshness and public safety
+        run: python scripts/check_docs.py
+
+      - name: Check external links
+        run: python scripts/check_external_links.py
+
+      - name: Build Persian documentation
+        run: mkdocs build --strict -f mkdocs.fa.yml -d site/fa
+
+      - name: Build English documentation
+        run: mkdocs build --strict -f mkdocs.en.yml -d site/en
+
+      - name: Create latest aliases
+        run: |
+          mkdir -p site/latest
+          cp -a site/fa site/latest/fa
+          cp -a site/en site/latest/en
+
+      - name: Build stable v1.0 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p site/v1.0
+          if git rev-parse --verify --quiet refs/tags/v1.0.0 >/dev/null; then
+            V1_DIR="$RUNNER_TEMP/bash-reference-v1"
+            git worktree add --detach "$V1_DIR" v1.0.0
+            trap 'git worktree remove --force "$V1_DIR" >/dev/null 2>&1 || true' EXIT
+            test "$(git -C "$V1_DIR" describe --tags --exact-match)" = "v1.0.0"
+            mkdocs build --strict -f "$V1_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v1.0/fa"
+            mkdocs build --strict -f "$V1_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v1.0/en"
+          else
+            cp -a site/fa site/v1.0/fa
+            cp -a site/en site/v1.0/en
+          fi
+
+      - name: Publish social preview
+        run: |
+          mkdir -p site/assets
+          cp assets/social-preview-v1.jpg site/assets/social-preview-v1.jpg
+          test -s site/assets/social-preview-v1.jpg
+
+      - name: Add bilingual root landing page
+        run: cp site-root/index.html site/index.html
+
+      - name: Check built-site accessibility and metadata
+        run: python scripts/check_built_site.py
+
+      - name: Verify complete published output
+        run: |
+          test -f site/index.html
+          test -f site/fa/index.html
+          test -f site/en/index.html
+          test -f site/latest/fa/index.html
+          test -f site/latest/en/index.html
+          test -f site/v1.0/fa/index.html
+          test -f site/v1.0/en/index.html
+          test -f site/fa/14-debugging-testing-portability/index.html
+          test -f site/en/14-debugging-testing-portability/index.html
+          test -f site/fa/glossary/index.html
+          test -f site/en/glossary/index.html
+          test -f site/fa/assets/brand-banner.webp
+          test -f site/en/assets/brand-banner.webp
+          test -f site/assets/social-preview-v1.jpg
+          file site/assets/social-preview-v1.jpg | grep -q '1280 x 640'
+
+      - name: Deploy to gh-pages
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/tags/v1.0.0')
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          force_orphan: true
