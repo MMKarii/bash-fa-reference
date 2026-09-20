@@ -13,18 +13,17 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe share
+      - name: Inspect firestorage download client
         shell: bash
         run: |
           set -euo pipefail
-          url='https://firestorage.ai/ja/f/kuXLV6cvllP3'
-          curl -L -sS -D /tmp/headers.txt "$url" -o /tmp/share
-          echo '=== headers ==='
-          sed -n '1,80p' /tmp/headers.txt
-          echo '=== file ==='
-          file /tmp/share
-          wc -c /tmp/share
-          echo '=== candidate links ==='
-          grep -Eo 'https?://[^"'"'"' <]+' /tmp/share | head -80 || true
-          echo '=== download/api hints ==='
-          strings /tmp/share | grep -Ei 'download|api|zip|bash_text_payload|3LRdKuEUVn74KapZ|kuXLV6cvllP3' | head -120 || true
+          page='https://firestorage.ai/ja/f/kuXLV6cvllP3'
+          curl -L -sS "$page" -o /tmp/page.html
+          js_path="$(grep -o '/_next/static/chunks/app/(files)/ja/f/page-[^"]*\.js' /tmp/page.html | head -1)"
+          echo "JS_PATH=$js_path"
+          test -n "$js_path"
+          curl -L -sS "https://firestorage.ai$js_path" -o /tmp/app.js
+          echo '=== endpoint-like strings ==='
+          strings /tmp/app.js | grep -Eo '(/api/[^"'"'"' ]+|https?://[^"'"'"' ]+|download[^"'"'"' ]*|share[^"'"'"' ]*)' | head -200 || true
+          echo '=== context around fetch/axios ==='
+          tr ';' '\n' < /tmp/app.js | grep -Ei 'fetch\(|axios|download|share|public|file' | head -240 || true
