@@ -13,10 +13,13 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Extract API helper
+      - name: Resolve temporary transfer API
         shell: bash
         run: |
           set -euo pipefail
-          url='https://firestorage.ai/_next/static/chunks/5841-1160578ba9bb4f3e.js'
-          curl -L -sS "$url" -o /tmp/chunk.js
-          python3 -c 's=open("/tmp/chunk.js",encoding="utf-8").read(); i=s.find("firestorage.ai"); print(s[max(0,i-1200):i+4500])'
+          api='https://api.firestorage.ai/prod'
+          share='kuXLV6cvllP3'
+          curl -sS -c /tmp/cookies -D /tmp/headers -X POST             -H 'Content-Type: application/json'             "$api/shares/$share/cushion-sessions"             -d '{}' -o /tmp/body
+          sed -n '1,40p' /tmp/headers
+          cat /tmp/body
+          echo
