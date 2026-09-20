@@ -40,7 +40,7 @@ jobs:
           test -f "$RUNNER_TEMP/bash-full/assets/social-preview-v1.jpg"
           test -f "$RUNNER_TEMP/bash-full/.github/workflows/docs.yml"
 
-          cp -a "$RUNNER_TEMP/bash-full/." "$GITHUB_WORKSPACE/"
+          rsync -a --exclude='.github/workflows/' "$RUNNER_TEMP/bash-full/" "$GITHUB_WORKSPACE/"
 
       - name: Commit imported project
         shell: bash
