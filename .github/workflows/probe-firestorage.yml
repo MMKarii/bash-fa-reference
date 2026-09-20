@@ -1,25 +1,24 @@
 name: probe-firestorage
-
 on:
   push:
     branches: [bash-docs-v1]
-    paths:
-      - '.github/workflows/probe-firestorage.yml'
-
+    paths: ['.github/workflows/probe-firestorage.yml']
 permissions:
   contents: read
-
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Resolve temporary transfer API
+      - name: Inspect share API construction
         shell: bash
         run: |
           set -euo pipefail
-          api='https://api.firestorage.ai/prod'
-          share='kuXLV6cvllP3'
-          curl -sS -c /tmp/cookies -D /tmp/headers -X POST             -H 'Content-Type: application/json'             "$api/shares/$share/cushion-sessions"             -d '{}' -o /tmp/body
-          sed -n '1,40p' /tmp/headers
-          cat /tmp/body
-          echo
+          url='https://firestorage.ai/_next/static/chunks/4899-d89df949f2dbd5af.js'
+          curl -L -sS "$url" -o /tmp/chunk.js
+          python3 - <<'PY'
+s=open('/tmp/chunk.js',encoding='utf-8').read()
+for needle in ['cushion-sessions','files?maxResults=1000','shareEndpoint','/shares/']:
+    i=s.find(needle)
+    print('\n===',needle,'@',i,'===')
+    print(s[max(0,i-8000):i+2500] if i>=0 else 'not found')
+PY
