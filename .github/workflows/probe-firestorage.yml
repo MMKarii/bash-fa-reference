@@ -1,24 +1,28 @@
 name: probe-firestorage
 on:
   push:
-    branches: [bash-docs-v1]
-    paths: ['.github/workflows/probe-firestorage.yml']
+    branches:
+      - bash-docs-v1
+    paths:
+      - .github/workflows/probe-firestorage.yml
 permissions:
   contents: read
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect share API construction
+      - name: Probe direct file endpoint
         shell: bash
         run: |
           set -euo pipefail
-          url='https://firestorage.ai/_next/static/chunks/4899-d89df949f2dbd5af.js'
-          curl -L -sS "$url" -o /tmp/chunk.js
-          python3 - <<'PY'
-s=open('/tmp/chunk.js',encoding='utf-8').read()
-for needle in ['cushion-sessions','files?maxResults=1000','shareEndpoint','/shares/']:
-    i=s.find(needle)
-    print('\n===',needle,'@',i,'===')
-    print(s[max(0,i-8000):i+2500] if i>=0 else 'not found')
-PY
+          url='https://api.firestorage.ai/prod/file/objects/3LRdKuEUVn74KapZ/4E3vSt/files/01a0bdc334b374ec946f1a9795469828/download'
+          echo 'POST:'
+          curl -sS -D /tmp/h1 -o /tmp/b1 -X POST "$url" || true
+          sed -n '1,30p' /tmp/h1
+          head -c 1000 /tmp/b1 || true
+          echo
+          echo 'GET:'
+          curl -sS -D /tmp/h2 -o /tmp/b2 "$url" || true
+          sed -n '1,30p' /tmp/h2
+          head -c 1000 /tmp/b2 || true
+          echo
