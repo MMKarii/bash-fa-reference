@@ -26,14 +26,7 @@ jobs:
           set -euo pipefail
           endpoint='https://api.firestorage.ai/prod/file/objects/C2gmGfnZDAkyticu/xgxtMF/files/01a0c09d4d33703f8dd8fe33a9a565a5/download'
           curl -fsS -X POST "$endpoint" -o "$RUNNER_TEMP/download.json"
-          python - "$RUNNER_TEMP/download.json" "$RUNNER_TEMP/download-url.txt" <<'PY'
-import json, sys
-data=json.load(open(sys.argv[1], encoding='utf-8'))
-url=data.get('downloadUrl')
-if not url:
-    raise SystemExit('downloadUrl missing')
-open(sys.argv[2], 'w', encoding='utf-8').write(url)
-PY
+          python -c 'import json,sys; d=json.load(open(sys.argv[1],encoding="utf-8")); u=d.get("downloadUrl"); assert u, "downloadUrl missing"; open(sys.argv[2],"w",encoding="utf-8").write(u)' "$RUNNER_TEMP/download.json" "$RUNNER_TEMP/download-url.txt"
           download_url="$(cat "$RUNNER_TEMP/download-url.txt")"
           curl -fL --retry 3 --retry-delay 2 "$download_url" -o "$RUNNER_TEMP/bash-full.zip"
           mkdir -p "$RUNNER_TEMP/bash-full"
