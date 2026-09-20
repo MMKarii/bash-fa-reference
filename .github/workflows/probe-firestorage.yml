@@ -1,26 +1,34 @@
 name: probe-firestorage
-
 on:
   push:
     branches: [bash-docs-v1]
     paths: ['.github/workflows/probe-firestorage.yml']
-
 permissions:
   contents: read
-
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect firestorage client chunks
+      - name: Extract API constants
         shell: bash
         run: |
           set -euo pipefail
           base='https://firestorage.ai/_next/static/chunks'
-          for p in             '8500-f4d7bfbe7500f274.js'             '8437-d65cc193dc908afa.js'             '5841-1160578ba9bb4f3e.js'             '4899-d89df949f2dbd5af.js'             'app/(files)/ja/f/page-4d19ae0a4ce39d79.js'
+          for p in '5841-1160578ba9bb4f3e.js' '4899-d89df949f2dbd5af.js'
           do
-            echo "=== $p ==="
             curl -L -sS "$base/$p" -o /tmp/chunk.js
-            wc -c /tmp/chunk.js
-            tr ';' '\n' < /tmp/chunk.js | grep -Ei 'fetch\(|axios|/api/|download|share|public|presign|signed|object|file' | head -160 || true
+            P="$p" python - <<'PY'
+import os
+s=open('/tmp/chunk.js',encoding='utf-8').read()
+print('===',os.environ['P'],'===')
+for needle in ['api.firestorage','/api/','shares/','shareEndpoint','NEXT_PUBLIC','function v','cushion-sessions','files?maxResults']:
+    print('\nNEEDLE',needle)
+    start=0
+    count=0
+    while True:
+        i=s.find(needle,start)
+        if i<0 or count>=8: break
+        print(s[max(0,i-350):i+650])
+        start=i+len(needle); count+=1
+PY
           done
