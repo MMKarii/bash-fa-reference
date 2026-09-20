@@ -1,0 +1,64 @@
+name: import-full-build
+
+on:
+  push:
+    branches:
+      - bash-docs-v1
+    paths:
+      - .github/workflows/import-full-build.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bash-docs-v1
+          fetch-depth: 0
+
+      - name: Download and import prepared build
+        shell: bash
+        run: |
+          set -euo pipefail
+          endpoint='https://api.firestorage.ai/prod/file/objects/C2gmGfnZDAkyticu/xgxtMF/files/01a0c09d4d33703f8dd8fe33a9a565a5/download'
+          curl -fsS -X POST "$endpoint" -o "$RUNNER_TEMP/download.json"
+          python - "$RUNNER_TEMP/download.json" "$RUNNER_TEMP/download-url.txt" <<'PY'
+import json, sys
+data=json.load(open(sys.argv[1], encoding='utf-8'))
+url=data.get('downloadUrl')
+if not url:
+    raise SystemExit('downloadUrl missing')
+open(sys.argv[2], 'w', encoding='utf-8').write(url)
+PY
+          download_url="$(cat "$RUNNER_TEMP/download-url.txt")"
+          curl -fL --retry 3 --retry-delay 2 "$download_url" -o "$RUNNER_TEMP/bash-full.zip"
+          mkdir -p "$RUNNER_TEMP/bash-full"
+          unzip -q "$RUNNER_TEMP/bash-full.zip" -d "$RUNNER_TEMP/bash-full"
+
+          test -f "$RUNNER_TEMP/bash-full/README.md"
+          test -f "$RUNNER_TEMP/bash-full/docs/fa/index.md"
+          test -f "$RUNNER_TEMP/bash-full/docs/en/index.md"
+          test -f "$RUNNER_TEMP/bash-full/docs/fa/assets/brand-banner.webp"
+          test -f "$RUNNER_TEMP/bash-full/docs/en/assets/brand-banner.webp"
+          test -f "$RUNNER_TEMP/bash-full/assets/social-preview-v1.jpg"
+          test -f "$RUNNER_TEMP/bash-full/.github/workflows/docs.yml"
+
+          cp -a "$RUNNER_TEMP/bash-full/." "$GITHUB_WORKSPACE/"
+
+      - name: Commit imported project
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No imported changes to commit."
+            exit 0
+          fi
+          git commit -m "feat: build bilingual Bash professional reference"
+          git push origin HEAD:bash-docs-v1
