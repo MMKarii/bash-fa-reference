@@ -103,7 +103,7 @@ jobs:
           test -f site/fa/assets/brand-banner.webp
           test -f site/en/assets/brand-banner.webp
           test -f site/assets/social-preview-v1.jpg
-          file site/assets/social-preview-v1.jpg | grep -q '1280 x 640'
+          file site/assets/social-preview-v1.jpg | grep -Eq '1280 ?x ?640'
 
       - name: Deploy to gh-pages
         if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/tags/v1.0.0')
