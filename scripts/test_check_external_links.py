@@ -44,6 +44,17 @@ class ExternalLinkTests(unittest.TestCase):
             links = collect_external_links(root)
             self.assertIn("https://github.com/MMKarii/bash-fa-reference", links)
 
+    def test_inline_code_url_does_not_include_backtick(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "README.md").write_text(
+                "Run `curl https://example.com` for a documentation example.\n",
+                encoding="utf-8",
+            )
+            links = collect_external_links(root)
+            self.assertIn("https://example.com", links)
+            self.assertNotIn("https://example.com`", links)
+
     def test_unicode_url_is_ascii_encoded(self):
         _ascii_url("https://example.test/راهنما?q=بش").encode("ascii")
 
