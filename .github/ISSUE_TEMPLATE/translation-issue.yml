@@ -1,0 +1,17 @@
+name: Translation issue
+description: Report Persian/English drift or terminology problems.
+title: "[translation] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Translation issue
+    validations:
+      required: true

@@ -1,0 +1,22 @@
+name: Technical correction
+description: Report inaccurate Bash behavior, syntax, or system-administration guidance.
+title: "[technical] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is inaccurate?
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Authoritative reference
+      description: Prefer the GNU Bash manual or upstream tool documentation.

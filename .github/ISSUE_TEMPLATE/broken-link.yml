@@ -1,0 +1,22 @@
+name: Broken link
+description: Report an internal or external documentation link problem.
+title: "[link] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: docs/fa/... or docs/en/...
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Broken link
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
