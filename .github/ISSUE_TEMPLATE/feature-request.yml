@@ -1,0 +1,15 @@
+name: Documentation improvement
+description: Suggest a new Bash topic, example, or quality improvement.
+title: "[docs] "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Requested improvement
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is it useful?
