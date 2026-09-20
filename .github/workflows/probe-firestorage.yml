@@ -4,7 +4,6 @@ on:
   push:
     branches: [bash-docs-v1]
     paths: ['.github/workflows/probe-firestorage.yml']
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,17 +12,15 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect firestorage download client
+      - name: Inspect firestorage client chunks
         shell: bash
         run: |
           set -euo pipefail
-          page='https://firestorage.ai/ja/f/kuXLV6cvllP3'
-          curl -L -sS "$page" -o /tmp/page.html
-          js_path="$(grep -o '/_next/static/chunks/app/(files)/ja/f/page-[^"]*\.js' /tmp/page.html | head -1)"
-          echo "JS_PATH=$js_path"
-          test -n "$js_path"
-          curl -L -sS "https://firestorage.ai$js_path" -o /tmp/app.js
-          echo '=== endpoint-like strings ==='
-          strings /tmp/app.js | grep -Eo '(/api/[^"'"'"' ]+|https?://[^"'"'"' ]+|download[^"'"'"' ]*|share[^"'"'"' ]*)' | head -200 || true
-          echo '=== context around fetch/axios ==='
-          tr ';' '\n' < /tmp/app.js | grep -Ei 'fetch\(|axios|download|share|public|file' | head -240 || true
+          base='https://firestorage.ai/_next/static/chunks'
+          for p in             '8500-f4d7bfbe7500f274.js'             '8437-d65cc193dc908afa.js'             '5841-1160578ba9bb4f3e.js'             '4899-d89df949f2dbd5af.js'             'app/(files)/ja/f/page-4d19ae0a4ce39d79.js'
+          do
+            echo "=== $p ==="
+            curl -L -sS "$base/$p" -o /tmp/chunk.js
+            wc -c /tmp/chunk.js
+            tr ';' '\n' < /tmp/chunk.js | grep -Ei 'fetch\(|axios|/api/|download|share|public|presign|signed|object|file' | head -160 || true
+          done
