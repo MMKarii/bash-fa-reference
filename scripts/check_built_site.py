@@ -58,15 +58,16 @@ class _PageParser(HTMLParser):
 
         for attr in ("href", "src"):
             target = values.get(attr, "").strip()
-            if target:
-                parsed = urlsplit(target)
-                if (
-                    not parsed.scheme
-                    and not parsed.netloc
-                    and not target.startswith("//")
-                    and parsed.scheme.lower() not in EXTERNAL_SCHEMES
-                ):
-                    self.local_targets.append((attr, target))
+            if not target:
+                continue
+            parsed = urlsplit(target)
+            if (
+                not parsed.scheme
+                and not parsed.netloc
+                and not target.startswith("//")
+                and parsed.scheme.lower() not in EXTERNAL_SCHEMES
+            ):
+                self.local_targets.append((attr, target))
 
     def handle_endtag(self, tag):
         if tag.lower() == "title":
@@ -102,6 +103,18 @@ def check_html_file(path: Path) -> list[str]:
     return issues
 
 
+def _edition_root(site_root: Path, source_file: Path) -> Path:
+    """Return the effective web root for an independently built edition."""
+    relative = source_file.relative_to(site_root)
+    parts = relative.parts
+
+    if parts and parts[0] in {"fa", "en"}:
+        return site_root / parts[0]
+    if len(parts) >= 2 and parts[0] in {"latest", "v1.0"} and parts[1] in {"fa", "en"}:
+        return site_root / parts[0] / parts[1]
+    return site_root
+
+
 def _resolve_local_target(site_root: Path, source_file: Path, raw_target: str) -> tuple[Path | None, str]:
     parsed = urlsplit(raw_target)
     fragment = unquote(parsed.fragment)
@@ -111,7 +124,7 @@ def _resolve_local_target(site_root: Path, source_file: Path, raw_target: str) -
         return source_file, fragment
 
     if path_part.startswith("/"):
-        candidate = site_root / path_part.lstrip("/")
+        candidate = _edition_root(site_root, source_file) / path_part.lstrip("/")
     else:
         candidate = source_file.parent / path_part
 
