@@ -50,6 +50,38 @@ class BuiltSiteTests(unittest.TestCase):
             )
             self.assertEqual(check_built_links(root), [])
 
+    def test_root_relative_link_uses_language_edition_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            en = root / "en"
+            target = en / "guide"
+            target.mkdir(parents=True)
+            (en / "404.html").write_text(
+                '<html><body><a href="/guide/#topic">Guide</a></body></html>',
+                encoding="utf-8",
+            )
+            (target / "index.html").write_text(
+                '<html><body><h2 id="topic">Topic</h2></body></html>',
+                encoding="utf-8",
+            )
+            self.assertEqual(check_built_links(root), [])
+
+    def test_root_relative_link_uses_versioned_language_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fa = root / "latest" / "fa"
+            target = fa / "guide"
+            target.mkdir(parents=True)
+            (fa / "404.html").write_text(
+                '<html><body><a href="/guide/">Guide</a></body></html>',
+                encoding="utf-8",
+            )
+            (target / "index.html").write_text(
+                '<html><body>Guide</body></html>',
+                encoding="utf-8",
+            )
+            self.assertEqual(check_built_links(root), [])
+
     def test_built_missing_file_is_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
