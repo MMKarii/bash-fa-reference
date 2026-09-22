@@ -172,3 +172,78 @@ git diff --exit-code
 - [ ] Verify fresh wheel installation and core CLI commands from released artifact.
 - [ ] Verify main branch ruleset still requires `docs / build-and-deploy`.
 - [ ] Record release completion in changelog if any post-release metadata is required, without moving the v2 tag.
+
+## Exact implementation skeletons
+
+These release checks are normative and run before publication.
+
+~~~python
+# tools/release_version.py
+import re
+
+TAG_RE = re.compile(r"^v(\d+\.\d+\.\d+(?:[A-Za-z0-9.-]+)?)$")
+
+def normalize_tag(tag: str) -> str:
+    match = TAG_RE.fullmatch(tag)
+    if not match:
+        raise ValueError(f"invalid release tag: {tag}")
+    return match.group(1)
+
+def assert_release_version(tag: str, package_version: str) -> None:
+    version = normalize_tag(tag)
+    if version != package_version:
+        raise ValueError(f"tag version {version} does not match package version {package_version}")
+~~~
+
+~~~python
+# tests/packaging/test_release_version.py
+import pytest
+from tools.release_version import assert_release_version
+
+def test_exact_v2_release_matches():
+    assert_release_version("v2.0.0", "2.0.0")
+
+def test_version_mismatch_is_rejected():
+    with pytest.raises(ValueError):
+        assert_release_version("v2.0.1", "2.0.0")
+~~~
+
+~~~python
+# tools/verify_public_release.py
+EXPECTED_SUFFIXES = (
+    "-py3-none-any.whl",
+    ".tar.gz",
+    ".deb",
+    ".noarch.rpm",
+    "-portable.tar.gz",
+    "-manpages.tar.gz",
+    "-completions.tar.gz",
+)
+
+def verify_release(release: dict, fetch_text) -> list[str]:
+    issues = []
+    tag = release.get("tag_name", "")
+    version = tag.removeprefix("v")
+    assets = {asset["name"] for asset in release.get("assets", [])}
+    if "SHA256SUMS" not in assets:
+        issues.append("release missing SHA256SUMS")
+    if not any(name.endswith("-py3-none-any.whl") for name in assets):
+        issues.append("release missing wheel")
+    if fetch_text("https://mmkarii.github.io/bash-fa-reference/en/").find(version) < 0:
+        issues.append("Pages English edition does not expose release marker")
+    if fetch_text("https://mmkarii.github.io/bash-fa-reference/fa/").find(version) < 0:
+        issues.append("Pages Persian edition does not expose release marker")
+    return issues
+~~~
+
+~~~yaml
+# release workflow invariant
+on:
+  push:
+    tags:
+      - "v*"
+permissions:
+  contents: write
+~~~
+
+The release workflow checks out the exact tag, validates tag/package version equality, rebuilds all generated content, runs the full test suite, builds every artifact, writes and verifies SHA256SUMS, creates a draft release, uploads assets, verifies the live Pages deployment and release metadata, then publishes the draft only when verification reports zero issues.
