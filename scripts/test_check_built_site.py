@@ -29,6 +29,15 @@ class BuiltSiteTests(unittest.TestCase):
             self.assertTrue(any("description" in x for x in issues))
             self.assertTrue(any("canonical" in x for x in issues))
 
+    def test_404_page_does_not_require_canonical(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "404.html"
+            p.write_text(
+                GOOD.replace('<link rel="canonical" href="https://example.test/">', ""),
+                encoding="utf-8",
+            )
+            self.assertFalse(any("canonical" in issue for issue in check_html_file(p)))
+
     def test_local_img_requires_alt(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / "index.html"
