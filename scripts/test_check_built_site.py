@@ -29,6 +29,15 @@ class BuiltSiteTests(unittest.TestCase):
             self.assertTrue(any("description" in x for x in issues))
             self.assertTrue(any("canonical" in x for x in issues))
 
+    def test_404_page_does_not_require_canonical(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "404.html"
+            p.write_text(
+                GOOD.replace('<link rel="canonical" href="https://example.test/">', ""),
+                encoding="utf-8",
+            )
+            self.assertFalse(any("canonical" in issue for issue in check_html_file(p)))
+
     def test_local_img_requires_alt(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / "index.html"
@@ -58,6 +67,23 @@ class BuiltSiteTests(unittest.TestCase):
             target.mkdir(parents=True)
             (en / "404.html").write_text(
                 '<html><body><a href="/guide/#topic">Guide</a></body></html>',
+                encoding="utf-8",
+            )
+            (target / "index.html").write_text(
+                '<html><body><h2 id="topic">Topic</h2></body></html>',
+                encoding="utf-8",
+            )
+            self.assertEqual(check_built_links(root), [])
+
+    def test_project_prefixed_root_link_resolves_from_published_site_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "latest" / "en"
+            target = root / "en" / "guide"
+            source.mkdir(parents=True)
+            target.mkdir(parents=True)
+            (source / "404.html").write_text(
+                '<html><body><a href="/bash-fa-reference/en/guide/#topic">Guide</a></body></html>',
                 encoding="utf-8",
             )
             (target / "index.html").write_text(

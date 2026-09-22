@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build-and-deploy:
+    name: docs / build-and-deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -81,8 +82,11 @@ jobs:
           cp assets/social-preview-v1.jpg site/assets/social-preview-v1.jpg
           test -s site/assets/social-preview-v1.jpg
 
-      - name: Add bilingual root landing page
-        run: cp site-root/index.html site/index.html
+      - name: Add root publishing metadata
+        run: |
+          cp site-root/index.html site/index.html
+          cp site-root/robots.txt site/robots.txt
+          cp site-root/sitemap.xml site/sitemap.xml
 
       - name: Check built-site accessibility and metadata
         run: python scripts/check_built_site.py
@@ -90,8 +94,12 @@ jobs:
       - name: Verify complete published output
         run: |
           test -f site/index.html
+          test -f site/robots.txt
+          test -f site/sitemap.xml
           test -f site/fa/index.html
           test -f site/en/index.html
+          test -f site/fa/sitemap.xml
+          test -f site/en/sitemap.xml
           test -f site/latest/fa/index.html
           test -f site/latest/en/index.html
           test -f site/v1.0/fa/index.html
@@ -103,6 +111,10 @@ jobs:
           test -f site/fa/assets/brand-banner.webp
           test -f site/en/assets/brand-banner.webp
           test -f site/assets/social-preview-v1.jpg
+          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/' site/fa/index.html
+          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/' site/en/index.html
+          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/03-variables-expansion-quoting/' site/fa/03-variables-expansion-quoting/index.html
+          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/03-variables-expansion-quoting/' site/en/03-variables-expansion-quoting/index.html
           file site/assets/social-preview-v1.jpg | grep -Eq '1280 ?x ?640'
 
       - name: Deploy to gh-pages

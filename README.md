@@ -4,8 +4,9 @@
 
 A structured bilingual Bash reference for shell fundamentals, scripting, automation, system administration, DevOps, defensive security, debugging, and portability.
 
-**مطالعه فارسی:** [docs/fa/index.md](docs/fa/index.md)  
-**English edition:** [docs/en/index.md](docs/en/index.md)
+**Live documentation:** https://mmkarii.github.io/bash-fa-reference/  
+**مطالعه فارسی:** https://mmkarii.github.io/bash-fa-reference/fa/  
+**English edition:** https://mmkarii.github.io/bash-fa-reference/en/
 
 ## Scope
 
@@ -18,9 +19,10 @@ Technical behavior that is easy to misstate—especially `set -e`, pipelines, qu
 - 14 mirrored chapters in `docs/fa/` and `docs/en/`
 - learning path, cheat sheet, glossary, references, and disclaimer
 - strict MkDocs builds for RTL Persian and LTR English
+- page-matched Persian/English language switching and hreflang metadata
 - link, anchor, translation-drift, metadata, and accessibility QA
 - version aliases: `latest` and stable `v1.0`
-- deployable `gh-pages` output
+- GitHub Pages deployment from `gh-pages`
 
 ## Quality
 

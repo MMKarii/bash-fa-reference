@@ -4,17 +4,17 @@
   {{ super() }}
   {% set page_title = page.title ~ " - " ~ config.site_name if page and page.title else config.site_name %}
   {% set page_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
-  {% if page and page.file %}
-    {% set canonical = config.extra.canonical_base ~ page.file.src_uri %}
-  {% else %}
-    {% set canonical = config.repo_url %}
-  {% endif %}
+  {% set canonical = page.canonical_url if page and page.canonical_url else config.site_url %}
+  {% set is_fa = config.extra.current_language == "fa" %}
+  {% set is_error_page = not page %}
   <meta name="description" content="{{ page_description | e }}">
-  <link rel="canonical" href="{{ canonical }}">
+  <meta name="robots" content="{{ 'noindex,follow' if is_error_page else 'index,follow' }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title | e }}">
   <meta property="og:description" content="{{ page_description | e }}">
   <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:locale" content="{{ 'fa_IR' if is_fa else 'en_US' }}">
+  <meta property="og:locale:alternate" content="{{ 'en_US' if is_fa else 'fa_IR' }}">
   <meta property="og:image" content="{{ config.extra.social_image_url }}">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
