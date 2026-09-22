@@ -1,0 +1,27 @@
+{
+  "aliases": [],
+  "description": [
+    "Format arguments according to a format string and write the result to standard output, or assign it with -v."
+  ],
+  "examples": [
+    {
+      "code": "printf '%q\\n' \"$value\"",
+      "title": "Print a quoted value"
+    }
+  ],
+  "id": "builtin.printf",
+  "kind": "builtin",
+  "language": "en",
+  "name": "printf",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Format and print data.",
+  "synopsis": "printf [-v var] format [arguments]",
+  "tags": [
+    "output",
+    "formatting",
+    "builtin"
+  ]
+}
