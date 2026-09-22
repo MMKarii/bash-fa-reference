@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 EXTERNAL_SCHEMES = {"http", "https", "mailto", "tel", "data", "javascript"}
+PUBLISHED_PATH_PREFIX = "/bash-fa-reference"
 
 
 class _PageParser(HTMLParser):
@@ -123,7 +124,9 @@ def _resolve_local_target(site_root: Path, source_file: Path, raw_target: str) -
     if not path_part:
         return source_file, fragment
 
-    if path_part.startswith("/"):
+    if path_part == PUBLISHED_PATH_PREFIX or path_part.startswith(PUBLISHED_PATH_PREFIX + "/"):
+        candidate = site_root / path_part[len(PUBLISHED_PATH_PREFIX) :].lstrip("/")
+    elif path_part.startswith("/"):
         candidate = _edition_root(site_root, source_file) / path_part.lstrip("/")
     else:
         candidate = source_file.parent / path_part
