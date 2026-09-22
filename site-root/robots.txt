@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mmkarii.github.io/bash-fa-reference/sitemap.xml
