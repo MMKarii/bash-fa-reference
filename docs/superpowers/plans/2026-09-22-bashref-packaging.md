@@ -164,3 +164,68 @@
 - [ ] Upload artifacts for CI inspection without publishing releases.
 - [ ] Ensure final protected job fails if any required packaging job fails.
 - [ ] Commit with `ci: test Bashref packaging across supported platforms`.
+
+## Exact implementation skeletons
+
+These signatures and layouts are normative for the packaging tasks above.
+
+~~~python
+# tools/verify_python_artifacts.py
+from pathlib import Path
+from zipfile import ZipFile
+import tarfile
+
+def verify_wheel(path: Path, expected_version: str) -> list[str]:
+    issues = []
+    with ZipFile(path) as archive:
+        names = set(archive.namelist())
+        if not any(name.endswith("bashref/data/manifest.json") for name in names):
+            issues.append("wheel missing packaged reference manifest")
+        if not any("/bashref/data/en/" in "/" + name for name in names):
+            issues.append("wheel missing English reference data")
+        if not any("/bashref/data/fa/" in "/" + name for name in names):
+            issues.append("wheel missing Persian reference data")
+    return issues
+
+def verify_sdist(path: Path, expected_version: str) -> list[str]:
+    issues = []
+    with tarfile.open(path, "r:gz") as archive:
+        names = set(archive.getnames())
+        if not any(name.endswith("/LICENSES/MIT.txt") for name in names):
+            issues.append("sdist missing MIT license")
+        if not any(name.endswith("/LICENSES/CC-BY-4.0.txt") for name in names):
+            issues.append("sdist missing CC BY 4.0 license")
+    return issues
+~~~
+
+~~~python
+# tools/write_checksums.py
+from hashlib import sha256
+from pathlib import Path
+
+def digest(path: Path) -> str:
+    h = sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
+
+def write_checksums(paths: list[Path], output: Path) -> None:
+    lines = [f"{digest(path)}  {path.name}" for path in sorted(paths, key=lambda p: p.name)]
+    output.write_text("\n".join(lines) + "\n", encoding="utf-8")
+~~~
+
+~~~text
+Debian package-owned paths
+/usr/bin/bashref
+/opt/bashref/2.0.0/
+/usr/share/man/man1/bashref.1.gz
+/usr/share/man/man5/bashref-reference.5.gz
+/usr/share/bash-completion/completions/bashref
+/usr/share/zsh/vendor-completions/_bashref
+/usr/share/fish/vendor_completions.d/bashref.fish
+/usr/share/doc/bashref/LICENSE-MIT
+/usr/share/doc/bashref/LICENSE-CC-BY-4.0
+~~~
+
+RPM uses the equivalent system paths. Neither DEB nor RPM package scripts read, create, or remove files under a user's home directory.
