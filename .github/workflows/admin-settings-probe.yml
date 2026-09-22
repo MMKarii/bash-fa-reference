@@ -1,0 +1,50 @@
+name: admin-settings-probe
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe and apply repository settings
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -u
+          api() {
+            name="$1"
+            method="$2"
+            endpoint="$3"
+            data="${4-}"
+            body="$(mktemp)"
+            args=(-sS -o "$body" -w "%{http_code}" -X "$method"
+              -H "Accept: application/vnd.github+json"
+              -H "Authorization: Bearer $GH_TOKEN"
+              -H "X-GitHub-Api-Version: 2026-03-10")
+            if [ -n "$data" ]; then
+              args+=(-H "Content-Type: application/json" --data "$data")
+            fi
+            code="$(curl "${args[@]}" "https://api.github.com/repos/$REPO$endpoint")"
+            echo "::notice title=$name::HTTP $code"
+            cat "$body"
+            echo
+            rm -f "$body"
+          }
+
+          api "Pages current state" GET "/pages"
+          api "Create Pages site" POST "/pages" '{"source":{"branch":"gh-pages","path":"/"}}'
+          api "Request Pages build" POST "/pages/builds"
+
+          api "Repository metadata" PATCH "" '{"description":"Bilingual Persian & English Bash reference for shell scripting, automation, system administration, DevOps, debugging, and defensive security.","homepage":"https://github.com/MMKarii/bash-fa-reference/blob/main/docs/fa/index.md"}'
+          api "Repository topics" PUT "/topics" '{"names":["bash","shell-scripting","linux","sysadmin","devops","automation","cybersecurity","defensive-security","persian","farsi","documentation","shellcheck"]}'
+
+          api "Main branch protection" PUT "/branches/main/protection" '{"required_status_checks":{"strict":true,"contexts":["docs / build-and-deploy"]},"enforce_admins":false,"required_pull_request_reviews":{"dismiss_stale_reviews":true,"require_code_owner_reviews":false,"required_approving_review_count":1,"require_last_push_approval":false},"restrictions":null,"required_linear_history":false,"allow_force_pushes":false,"allow_deletions":false,"block_creations":false,"required_conversation_resolution":true,"lock_branch":false,"allow_fork_syncing":true}'
