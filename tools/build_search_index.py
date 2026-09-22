@@ -4,7 +4,10 @@ import argparse
 import json
 from pathlib import Path
 
-from tools.validate_reference import validate_tree
+try:
+    from tools.validate_reference import validate_tree
+except ModuleNotFoundError:  # direct script execution
+    from validate_reference import validate_tree
 
 
 def _entry(record: dict) -> dict:
