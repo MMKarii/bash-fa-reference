@@ -1,0 +1,27 @@
+{
+  "aliases": [],
+  "description": [
+    "آرگومان‌ها را طبق رشته قالب پردازش می‌کند و نتیجه را در خروجی استاندارد می‌نویسد یا با گزینه -v در یک متغیر قرار می‌دهد."
+  ],
+  "examples": [
+    {
+      "code": "printf '%q\\n' \"$value\"",
+      "title": "چاپ مقدار به شکل quoted"
+    }
+  ],
+  "id": "builtin.printf",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "printf",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "داده را با قالب مشخص چاپ می‌کند.",
+  "synopsis": "printf [-v var] format [arguments]",
+  "tags": [
+    "خروجی",
+    "قالب‌بندی",
+    "builtin"
+  ]
+}

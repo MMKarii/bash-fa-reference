@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "languages": {
+    "en": [
+      {
+        "aliases": [],
+        "description": "Format arguments according to a format string and write the result to standard output, or assign it with -v.",
+        "id": "builtin.printf",
+        "name": "printf",
+        "summary": "Format and print data.",
+        "tags": [
+          "output",
+          "formatting",
+          "builtin"
+        ]
+      }
+    ],
+    "fa": [
+      {
+        "aliases": [],
+        "description": "آرگومان‌ها را طبق رشته قالب پردازش می‌کند و نتیجه را در خروجی استاندارد می‌نویسد یا با گزینه -v در یک متغیر قرار می‌دهد.",
+        "id": "builtin.printf",
+        "name": "printf",
+        "summary": "داده را با قالب مشخص چاپ می‌کند.",
+        "tags": [
+          "خروجی",
+          "قالب‌بندی",
+          "builtin"
+        ]
+      }
+    ]
+  }
+}

@@ -1,9 +1,11 @@
-Creative Commons Attribution 4.0 International (CC BY 4.0)
+# License scope
 
-This documentation is licensed under the Creative Commons Attribution 4.0 International License.
+Software source code introduced for Bashref, including code under `src/bashref/`, product-generation code under `tools/`, and future packaging code under `packaging/`, is licensed under the MIT License:
 
-You are free to share and adapt the material for any purpose, including commercially, provided appropriate credit is given, a link to the license is provided, and changes are indicated.
+LICENSES/MIT.txt
 
-License legal code:
-https://creativecommons.org/licenses/by/4.0/legalcode
-SPDX-License-Identifier: CC-BY-4.0
+Documentation and reference prose, including content under `docs/`, `reference/`, and the project README files, is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0):
+
+LICENSES/CC-BY-4.0.txt
+
+Existing files that carry an explicit license notice retain that notice. Where a file has an explicit license notice, that notice controls.

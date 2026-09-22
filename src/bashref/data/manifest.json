@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "product_version": "2.0.0",
+  "record_count": 1,
+  "records": [
+    "builtin.printf"
+  ]
+}

@@ -2,11 +2,26 @@
 
 ![Bash Professional Reference](docs/en/assets/brand-banner.webp)
 
-A structured bilingual Bash reference for shell fundamentals, scripting, automation, system administration, DevOps, defensive security, debugging, and portability.
+A structured bilingual Bash reference and offline CLI for shell fundamentals, scripting, automation, system administration, DevOps, defensive security, debugging, and portability.
 
 **Live documentation:** https://mmkarii.github.io/bash-fa-reference/  
 **مطالعه فارسی:** https://mmkarii.github.io/bash-fa-reference/fa/  
 **English edition:** https://mmkarii.github.io/bash-fa-reference/en/
+
+## Bashref CLI
+
+The v2 development line adds an installable offline CLI backed by the same bilingual reference data:
+
+```bash
+python -m pip install -e .
+bashref --version
+bashref search printf
+bashref builtin printf
+bashref --lang fa builtin printf
+bashref --format json builtin printf
+```
+
+The CLI runtime uses only the Python standard library. The v2 package is still under development; the existing v1.0 documentation release remains available and unchanged.
 
 ## Scope
 
@@ -16,6 +31,8 @@ Technical behavior that is easy to misstate—especially `set -e`, pipelines, qu
 
 ## Documentation map
 
+- installable `bashref` CLI with offline bilingual lookup/search
+- deterministic structured reference data under `reference/`
 - 14 mirrored chapters in `docs/fa/` and `docs/en/`
 - learning path, cheat sheet, glossary, references, and disclaimer
 - strict MkDocs builds for RTL Persian and LTR English
