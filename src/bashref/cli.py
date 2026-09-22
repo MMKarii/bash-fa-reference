@@ -4,9 +4,12 @@ import argparse
 import os
 import shutil
 import sys
+import subprocess
+import webbrowser
 
 from . import __version__
 from .commands import LOOKUP_COMMAND_KINDS, list_records, lookup_record, search_records
+from .completion import completion_script, docs_url
 from .config import load_config, save_language
 from .errors import CorruptReferenceError, EntryNotFoundError
 from .languages import resolve_language
@@ -43,6 +46,16 @@ def build_parser() -> argparse.ArgumentParser:
 
     lang = sub.add_parser("lang", help="Save the preferred language")
     lang.add_argument("language", choices=("fa", "en"))
+
+    completion = sub.add_parser("completion", help="Generate shell completion")
+    completion.add_argument("shell", choices=("bash", "zsh", "fish"))
+
+    man = sub.add_parser("man", help="Open the Bashref manual")
+    man.add_argument("topic", nargs="?")
+
+    docs = sub.add_parser("docs", help="Print or open documentation URL")
+    docs.add_argument("topic", nargs="?")
+    docs.add_argument("--open", action="store_true", dest="open_url")
     return parser
 
 
@@ -67,6 +80,17 @@ def main(argv: list[str] | None = None) -> int:
         print(f"language: {args.language}")
         return 0
 
+    if args.command == "completion":
+        sys.stdout.write(completion_script(args.shell))
+        return 0
+
+    if args.command == "man":
+        page = "bashref-reference" if args.topic else "bashref"
+        if shutil.which("man") is None:
+            print(page)
+            return 0
+        return subprocess.run(["man", page], check=False).returncode
+
     config = load_config()
     language = resolve_language(args.lang, config.get("language"), os.environ)
     width = args.width if args.width is not None else shutil.get_terminal_size((80, 24)).columns
@@ -76,6 +100,13 @@ def main(argv: list[str] | None = None) -> int:
     try:
         store = ReferenceStore.load()
         engine = SearchEngine.load(store)
+        if args.command == "docs":
+            record = store.get(args.topic, language) if args.topic else None
+            url = docs_url(record, language)
+            print(url)
+            if args.open_url:
+                webbrowser.open(url)
+            return 0
         if args.command == "search":
             records = search_records(engine, args.query, language)
             sys.stdout.write(render_records(records, format=args.format, color=color, width=width))
