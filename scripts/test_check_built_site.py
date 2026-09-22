@@ -66,6 +66,23 @@ class BuiltSiteTests(unittest.TestCase):
             )
             self.assertEqual(check_built_links(root), [])
 
+    def test_project_prefixed_root_link_resolves_from_published_site_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "latest" / "en"
+            target = root / "en" / "guide"
+            source.mkdir(parents=True)
+            target.mkdir(parents=True)
+            (source / "404.html").write_text(
+                '<html><body><a href="/bash-fa-reference/en/guide/#topic">Guide</a></body></html>',
+                encoding="utf-8",
+            )
+            (target / "index.html").write_text(
+                '<html><body><h2 id="topic">Topic</h2></body></html>',
+                encoding="utf-8",
+            )
+            self.assertEqual(check_built_links(root), [])
+
     def test_root_relative_link_uses_versioned_language_root(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
