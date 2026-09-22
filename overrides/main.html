@@ -6,8 +6,9 @@
   {% set page_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
   {% set canonical = page.canonical_url if page and page.canonical_url else config.site_url %}
   {% set is_fa = config.extra.current_language == "fa" %}
+  {% set is_error_page = not page %}
   <meta name="description" content="{{ page_description | e }}">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="{{ 'noindex,follow' if is_error_page else 'index,follow' }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title | e }}">
   <meta property="og:description" content="{{ page_description | e }}">
