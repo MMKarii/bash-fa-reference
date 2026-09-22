@@ -1,6 +1,7 @@
 site_name: Bash Professional Reference
 site_description: Professional English Bash documentation for command-line work, scripting, automation, system administration, DevOps, and defensive security
 site_author: MMKarii
+site_url: https://mmkarii.github.io/bash-fa-reference/en/
 repo_url: https://github.com/MMKarii/bash-fa-reference
 repo_name: MMKarii/bash-fa-reference
 edit_uri: edit/main/docs/en/
@@ -41,14 +42,13 @@ plugins:
       separator: '[\s\-\u200c،؛,;:()/]+'
 
 extra:
-  canonical_base: https://github.com/MMKarii/bash-fa-reference/blob/main/docs/en/
   social_image_url: https://raw.githubusercontent.com/MMKarii/bash-fa-reference/main/assets/social-preview-v1.jpg
   alternate:
     - name: فارسی
-      link: https://github.com/MMKarii/bash-fa-reference/blob/main/docs/fa/index.md
+      link: https://mmkarii.github.io/bash-fa-reference/fa/
       lang: fa
     - name: English
-      link: https://github.com/MMKarii/bash-fa-reference/blob/main/docs/en/index.md
+      link: https://mmkarii.github.io/bash-fa-reference/en/
       lang: en
 
 extra_css:

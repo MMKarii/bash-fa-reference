@@ -4,10 +4,10 @@
   {{ super() }}
   {% set page_title = page.title ~ " - " ~ config.site_name if page and page.title else config.site_name %}
   {% set page_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
-  {% if page and page.file %}
-    {% set canonical = config.extra.canonical_base ~ page.file.src_uri %}
+  {% if page and page.canonical_url %}
+    {% set canonical = page.canonical_url %}
   {% else %}
-    {% set canonical = config.repo_url %}
+    {% set canonical = config.site_url %}
   {% endif %}
   <meta name="description" content="{{ page_description | e }}">
   <link rel="canonical" href="{{ canonical }}">
