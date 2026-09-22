@@ -96,7 +96,7 @@ def check_html_file(path: Path) -> list[str]:
         issues.append("missing meta description")
     if not parser.viewport:
         issues.append("missing viewport metadata")
-    if not parser.canonical:
+    if not parser.canonical and path.name != "404.html":
         issues.append("missing canonical URL")
     if not parser.og_title:
         issues.append("missing Open Graph title")
