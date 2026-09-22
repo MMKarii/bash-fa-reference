@@ -171,3 +171,79 @@
 - [ ] Add `mandoc` installation/lint on Ubuntu.
 - [ ] Run full suite and both strict builds.
 - [ ] Commit with `ci: verify generated reference and man pages`.
+
+## Exact implementation skeletons
+
+These signatures are normative for the tasks above.
+
+~~~python
+# tools/build_manpages.py
+from pathlib import Path
+
+def escape_roff(text: str) -> str:
+    text = text.replace("\\", r"\e")
+    out = []
+    for line in text.splitlines():
+        if line.startswith((".", "'")):
+            line = r"\&" + line
+        out.append(line.replace("-", r"\-"))
+    return "\n".join(out)
+
+def render_reference_manpage(record: dict) -> str:
+    sections = [
+        (".SH NAME", f"{record['name']} \\- {record['summary']}"),
+        (".SH SYNOPSIS", record["synopsis"]),
+        (".SH DESCRIPTION", "\n".join(record["description"])),
+    ]
+    return "\n".join(
+        header + "\n" + escape_roff(body)
+        for header, body in sections
+    ) + "\n"
+~~~
+
+~~~python
+# tools/build_docs_reference.py
+from pathlib import Path
+
+KIND_DIR = {
+    "builtin": "builtins",
+    "syntax": "syntax",
+    "expansion": "expansions",
+    "option": "options",
+    "shopt": "shopt",
+    "variable": "variables",
+    "concept": "concepts",
+    "example": "examples",
+}
+
+def record_doc_path(record: dict) -> Path:
+    slug = record["id"].split(".", 1)[1]
+    return Path(KIND_DIR[record["kind"]]) / f"{slug}.md"
+
+def render_markdown_record(record: dict) -> str:
+    header = (
+        "---\n"
+        "generated: true\n"
+        f"record_id: {record['id']}\n"
+        f"reference_kind: {record['kind']}\n"
+        "---\n\n"
+    )
+    synopsis = f"~~~bash\n{record['synopsis']}\n~~~\n"
+    description = "\n\n".join(record["description"])
+    return header + f"# {record['name']}\n\n{record['summary']}\n\n## Synopsis\n\n{synopsis}\n## Description\n\n{description}\n"
+~~~
+
+~~~python
+# tests/renderer/test_docs_generation.py
+def test_generated_peer_uses_same_record_id(en_record, fa_record):
+    assert en_record["id"] == fa_record["id"]
+
+def test_generation_is_byte_stable(tmp_path):
+    first = tmp_path / "first"
+    second = tmp_path / "second"
+    build_all(first)
+    build_all(second)
+    assert tree_bytes(first) == tree_bytes(second)
+~~~
+
+The corpus tasks use exact filename-to-ID mapping: a file named reference/en/builtins/read.json must contain id builtin.read, and its Persian peer must be reference/fa/builtins/read.json with the same id. The validator rejects any mismatch before generation.
