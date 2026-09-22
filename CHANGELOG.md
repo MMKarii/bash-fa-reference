@@ -2,6 +2,15 @@
 
 All notable documentation and tooling changes are recorded here.
 
+## [2.0.0] - Unreleased
+
+### Added
+- installable `bashref` Python package and console command
+- offline Persian/English reference loader with deterministic packaged data
+- structured JSON/text output and stable CLI exit codes
+- offline search, typo suggestions, language preferences, docs/man routing, and Bash/Zsh/Fish completion generation
+- CI build and installed-wheel smoke testing
+
 ## [1.0.0] - 2026-09-20
 
 ### Added

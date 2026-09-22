@@ -22,4 +22,4 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-"bashref" = ["data/**/*.json"]
+"bashref" = ["data/*.json", "data/**/*.json"]
