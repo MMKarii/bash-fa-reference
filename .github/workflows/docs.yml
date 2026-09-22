@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build-and-deploy:
+    name: docs / build-and-deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
