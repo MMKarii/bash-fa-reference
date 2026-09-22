@@ -34,6 +34,15 @@ def test_text_sanitizes_terminal_control_characters():
     assert "bad[2Jtext" in output
 
 
+def test_text_removes_del_and_c1_terminal_controls():
+    record = sample_record()
+    record["summary"] = "safe\x7f\x9b31mtext"
+    output = render_record(record, format="text", color=False, width=80)
+    assert "\x7f" not in output
+    assert "\x9b" not in output
+    assert "safe31mtext" in output
+
+
 def test_text_wraps_description_to_width():
     output = render_record(sample_record(), format="text", color=False, width=32)
     assert all(len(line) <= 32 for line in output.splitlines() if line)

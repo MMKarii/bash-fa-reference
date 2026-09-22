@@ -5,7 +5,16 @@ import textwrap
 
 
 def _sanitize_text(value: str) -> str:
-    return "".join(ch for ch in value if ch in "\n\t" or ord(ch) >= 32)
+    safe: list[str] = []
+    for ch in value:
+        code = ord(ch)
+        if ch in "\n\t":
+            safe.append(ch)
+        elif code < 32 or code == 127 or 128 <= code <= 159:
+            continue
+        else:
+            safe.append(ch)
+    return "".join(safe)
 
 
 def _wrap(value: str, width: int) -> list[str]:
