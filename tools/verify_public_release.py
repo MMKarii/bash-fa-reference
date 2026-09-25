@@ -9,6 +9,14 @@ from pathlib import Path
 from typing import Callable
 
 RPM_RE = re.compile(r"^bashref-(?P<version>\d+\.\d+\.\d+)-1(?:\.[A-Za-z0-9_.+-]+)?\.noarch\.rpm$")
+VERSION_RE = re.compile(r"^(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)$")
+
+
+def snapshot_name(version: str) -> str:
+    match = VERSION_RE.fullmatch(version)
+    if not match:
+        raise ValueError(f"invalid semantic version: {version}")
+    return f"v{match.group('major')}.{match.group('minor')}"
 
 
 def required_exact_assets(version: str) -> set[str]:
@@ -20,6 +28,10 @@ def required_exact_assets(version: str) -> set[str]:
         f"bashref-{version}-manpages.tar.gz",
         f"bashref-{version}-completions.tar.gz",
         f"bashref-{version}-docs.tar.gz",
+        f"bashref-{version}-linux-x86_64.tar.gz",
+        f"bashref-{version}-macos-arm64.tar.gz",
+        f"bashref-{version}-macos-x86_64.tar.gz",
+        f"bashref-{version}-windows-x86_64.zip",
         "bashref.rb",
         "SHA256SUMS",
     }
@@ -48,6 +60,10 @@ def verify_release(
     if not tag.startswith("v"):
         return ["release tag is missing or invalid"]
     version = tag[1:]
+    try:
+        snapshot = snapshot_name(version)
+    except ValueError as exc:
+        return [str(exc)]
 
     assets = {
         str(asset.get("name", ""))
@@ -72,8 +88,8 @@ def verify_release(
         f"{base_url}/",
         f"{base_url}/en/",
         f"{base_url}/fa/",
-        f"{base_url}/v2.0/en/",
-        f"{base_url}/v2.0/fa/",
+        f"{base_url}/{snapshot}/en/",
+        f"{base_url}/{snapshot}/fa/",
     ]
     for url in endpoints:
         try:
@@ -87,7 +103,7 @@ def verify_release(
 
 
 def _fetch_text(url: str) -> str:
-    request = urllib.request.Request(url, headers={"User-Agent": "bashref-release-verifier/2.0"})
+    request = urllib.request.Request(url, headers={"User-Agent": "bashref-release-verifier/2.1"})
     with urllib.request.urlopen(request, timeout=20) as response:
         return response.read().decode("utf-8", errors="replace")
 
@@ -96,10 +112,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--release-json", type=Path, required=True)
     parser.add_argument("--checksums", type=Path, required=True)
-    parser.add_argument(
-        "--base-url",
-        default="https://mmkarii.github.io/bash-fa-reference",
-    )
+    parser.add_argument("--base-url", default="https://mmkarii.github.io/bash-fa-reference")
     args = parser.parse_args(argv)
     release = json.loads(args.release_json.read_text(encoding="utf-8"))
     checksums = args.checksums.read_text(encoding="utf-8")
