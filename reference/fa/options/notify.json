@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "پایان jobهای پس‌زمینه را سریع‌تر گزارش می‌کند."
+  ],
+  "examples": [],
+  "id": "option.notify",
+  "kind": "option",
+  "language": "fa",
+  "name": "notify",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "پایان jobهای پس‌زمینه را سریع‌تر گزارش می‌کند.",
+  "synopsis": "set -o notify | set +o notify",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

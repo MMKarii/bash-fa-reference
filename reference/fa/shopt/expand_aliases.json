@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Alias expansion را در shellهای غیرتعاملی نیز فعال می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.expand_aliases",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "expand_aliases",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Alias expansion را در shellهای غیرتعاملی نیز فعال می‌کند.",
+  "synopsis": "shopt -s expand_aliases | shopt -u expand_aliases",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "فهرست readonly و جداشده با colon از optionهای فعال set -o است."
+  ],
+  "examples": [],
+  "id": "variable.SHELLOPTS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "SHELLOPTS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "فهرست readonly و جداشده با colon از optionهای فعال set -o است.",
+  "synopsis": "$SHELLOPTS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

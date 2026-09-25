@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Enable history expansion using the history expansion character."
+  ],
+  "examples": [],
+  "id": "option.histexpand",
+  "kind": "option",
+  "language": "en",
+  "name": "histexpand",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Enable history expansion using the history expansion character.",
+  "synopsis": "set -o histexpand | set +o histexpand",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

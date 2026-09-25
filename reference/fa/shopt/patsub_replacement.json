@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "در replacement مربوط به parameter substitution، & بدون quote را بخش match‌شده می‌داند."
+  ],
+  "examples": [],
+  "id": "shopt.patsub_replacement",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "patsub_replacement",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "در replacement مربوط به parameter substitution، & بدون quote را بخش match‌شده می‌داند.",
+  "synopsis": "shopt -s patsub_replacement | shopt -u patsub_replacement",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

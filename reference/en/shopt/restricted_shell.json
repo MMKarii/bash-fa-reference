@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Report whether the shell is running in restricted mode."
+  ],
+  "examples": [],
+  "id": "shopt.restricted_shell",
+  "kind": "shopt",
+  "language": "en",
+  "name": "restricted_shell",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Report whether the shell is running in restricted mode.",
+  "synopsis": "shopt -s restricted_shell | shopt -u restricted_shell",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

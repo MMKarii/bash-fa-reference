@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "GNU-style canonical platform description."
+  ],
+  "examples": [],
+  "id": "variable.MACHTYPE",
+  "kind": "variable",
+  "language": "en",
+  "name": "MACHTYPE",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "GNU-style canonical platform description.",
+  "synopsis": "$MACHTYPE",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "متن history-expanded را ابتدا وارد editing buffer می‌کند و مستقیم اجرا نمی‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.histverify",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "histverify",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "متن history-expanded را ابتدا وارد editing buffer می‌کند و مستقیم اجرا نمی‌کند.",
+  "synopsis": "shopt -s histverify | shopt -u histverify",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "یک command list را در subshell اجرا می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.subshell",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "subshell",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "یک command list را در subshell اجرا می‌کند.",
+  "synopsis": "( list )",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

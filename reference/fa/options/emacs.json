@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "ویرایش خط فرمان Readline به سبک Emacs را فعال می‌کند."
+  ],
+  "examples": [],
+  "id": "option.emacs",
+  "kind": "option",
+  "language": "fa",
+  "name": "emacs",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "ویرایش خط فرمان Readline به سبک Emacs را فعال می‌کند.",
+  "synopsis": "set -o emacs | set +o emacs",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "بر اساس exit status یک یا چند command list را شرطی اجرا می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.if",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "if",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "بر اساس exit status یک یا چند command list را شرطی اجرا می‌کند.",
+  "synopsis": "if list; then list; [ elif list; then list; ] ... [ else list; ] fi",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

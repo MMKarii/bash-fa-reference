@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Readonly colon-separated list of enabled shopt options."
+  ],
+  "examples": [],
+  "id": "variable.BASHOPTS",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASHOPTS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Readonly colon-separated list of enabled shopt options.",
+  "synopsis": "$BASHOPTS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

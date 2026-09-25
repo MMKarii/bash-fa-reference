@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیر مقصد پیش‌فرض read است."
+  ],
+  "examples": [],
+  "id": "variable.REPLY",
+  "kind": "variable",
+  "language": "fa",
+  "name": "REPLY",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "متغیر مقصد پیش‌فرض read است.",
+  "synopsis": "$REPLY",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "شماره history مربوط به command فعلی است."
+  ],
+  "examples": [],
+  "id": "variable.HISTCMD",
+  "kind": "variable",
+  "language": "fa",
+  "name": "HISTCMD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "شماره history مربوط به command فعلی است.",
+  "synopsis": "$HISTCMD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

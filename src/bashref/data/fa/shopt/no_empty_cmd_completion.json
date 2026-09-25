@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "در completion خط command خالی، PATH را جست‌وجو نمی‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.no_empty_cmd_completion",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "no_empty_cmd_completion",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "در completion خط command خالی، PATH را جست‌وجو نمی‌کند.",
+  "synopsis": "shopt -s no_empty_cmd_completion | shopt -u no_empty_cmd_completion",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array نام functionهای call stack فعلی است."
+  ],
+  "examples": [],
+  "id": "variable.FUNCNAME",
+  "kind": "variable",
+  "language": "fa",
+  "name": "FUNCNAME",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array نام functionهای call stack فعلی است.",
+  "synopsis": "$FUNCNAME",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

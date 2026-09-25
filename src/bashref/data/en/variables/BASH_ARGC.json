@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Call-stack array containing argument counts for active frames."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ARGC",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_ARGC",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Call-stack array containing argument counts for active frames.",
+  "synopsis": "$BASH_ARGC",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

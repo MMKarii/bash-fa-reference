@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array containing the current directory stack."
+  ],
+  "examples": [],
+  "id": "variable.DIRSTACK",
+  "kind": "variable",
+  "language": "en",
+  "name": "DIRSTACK",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array containing the current directory stack.",
+  "synopsis": "$DIRSTACK",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

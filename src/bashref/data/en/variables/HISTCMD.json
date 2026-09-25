@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "History number of the current command."
+  ],
+  "examples": [],
+  "id": "variable.HISTCMD",
+  "kind": "variable",
+  "language": "en",
+  "name": "HISTCMD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "History number of the current command.",
+  "synopsis": "$HISTCMD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

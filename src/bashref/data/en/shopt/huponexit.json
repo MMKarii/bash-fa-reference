@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Send SIGHUP to jobs when an interactive login shell exits."
+  ],
+  "examples": [],
+  "id": "shopt.huponexit",
+  "kind": "shopt",
+  "language": "en",
+  "name": "huponexit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Send SIGHUP to jobs when an interactive login shell exits.",
+  "synopsis": "shopt -s huponexit | shopt -u huponexit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

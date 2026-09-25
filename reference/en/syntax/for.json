@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Iterate over words and assign each value to a variable."
+  ],
+  "examples": [],
+  "id": "syntax.for",
+  "kind": "syntax",
+  "language": "en",
+  "name": "for",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Iterate over words and assign each value to a variable.",
+  "synopsis": "for name [ [in [words ...] ] ; ] do commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیر local مقدار و attributeهای متغیر هم‌نام scope بیرونی را به ارث می‌برد."
+  ],
+  "examples": [],
+  "id": "shopt.localvar_inherit",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "localvar_inherit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "متغیر local مقدار و attributeهای متغیر هم‌نام scope بیرونی را به ارث می‌برد.",
+  "synopsis": "shopt -s localvar_inherit | shopt -u localvar_inherit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

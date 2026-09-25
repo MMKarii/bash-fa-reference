@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Append history to the history file instead of overwriting it on shell exit."
+  ],
+  "examples": [],
+  "id": "shopt.histappend",
+  "kind": "shopt",
+  "language": "en",
+  "name": "histappend",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Append history to the history file instead of overwriting it on shell exit.",
+  "synopsis": "shopt -s histappend | shopt -u histappend",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

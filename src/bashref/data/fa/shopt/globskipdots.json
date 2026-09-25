@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "از match شدن . و .. در pathname expansion جلوگیری می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.globskipdots",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "globskipdots",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "از match شدن . و .. در pathname expansion جلوگیری می‌کند.",
+  "synopsis": "shopt -s globskipdots | shopt -u globskipdots",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

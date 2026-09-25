@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Current line number within a script or shell function."
+  ],
+  "examples": [],
+  "id": "variable.LINENO",
+  "kind": "variable",
+  "language": "en",
+  "name": "LINENO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Current line number within a script or shell function.",
+  "synopsis": "$LINENO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

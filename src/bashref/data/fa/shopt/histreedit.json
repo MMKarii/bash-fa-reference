@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "در صورت شکست history expansion امکان ویرایش مجدد command را می‌دهد."
+  ],
+  "examples": [],
+  "id": "shopt.histreedit",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "histreedit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "در صورت شکست history expansion امکان ویرایش مجدد command را می‌دهد.",
+  "synopsis": "shopt -s histreedit | shopt -u histreedit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

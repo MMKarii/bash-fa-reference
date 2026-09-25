@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Use ASCII ordering for bracket ranges in pathname matching."
+  ],
+  "examples": [],
+  "id": "shopt.globasciiranges",
+  "kind": "shopt",
+  "language": "en",
+  "name": "globasciiranges",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Use ASCII ordering for bracket ranges in pathname matching.",
+  "synopsis": "shopt -s globasciiranges | shopt -u globasciiranges",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

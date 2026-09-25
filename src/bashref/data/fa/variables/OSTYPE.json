@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "رشته توصیف سیستم‌عاملی است که Bash برای آن build شده است."
+  ],
+  "examples": [],
+  "id": "variable.OSTYPE",
+  "kind": "variable",
+  "language": "fa",
+  "name": "OSTYPE",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "رشته توصیف سیستم‌عاملی است که Bash برای آن build شده است.",
+  "synopsis": "$OSTYPE",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

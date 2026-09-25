@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "به‌صورت پیش‌فرض از overwrite شدن فایل‌های موجود با redirection نوع > جلوگیری می‌کند."
+  ],
+  "examples": [],
+  "id": "option.noclobber",
+  "kind": "option",
+  "language": "fa",
+  "name": "noclobber",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "به‌صورت پیش‌فرض از overwrite شدن فایل‌های موجود با redirection نوع > جلوگیری می‌کند.",
+  "synopsis": "set -o noclobber | set +o noclobber",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

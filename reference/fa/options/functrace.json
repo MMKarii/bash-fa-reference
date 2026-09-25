@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "باعث می‌شود trapهای DEBUG و RETURN در functionها و command substitutionها به ارث برسند."
+  ],
+  "examples": [],
+  "id": "option.functrace",
+  "kind": "option",
+  "language": "fa",
+  "name": "functrace",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "باعث می‌شود trapهای DEBUG و RETURN در functionها و command substitutionها به ارث برسند.",
+  "synopsis": "set -o functrace | set +o functrace",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

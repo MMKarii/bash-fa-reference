@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Call-stack array containing arguments for active frames."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ARGV",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_ARGV",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Call-stack array containing arguments for active frames.",
+  "synopsis": "$BASH_ARGV",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

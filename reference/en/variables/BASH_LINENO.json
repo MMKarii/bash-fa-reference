@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array of source line numbers corresponding to call-stack entries."
+  ],
+  "examples": [],
+  "id": "variable.BASH_LINENO",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_LINENO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array of source line numbers corresponding to call-stack entries.",
+  "synopsis": "$BASH_LINENO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

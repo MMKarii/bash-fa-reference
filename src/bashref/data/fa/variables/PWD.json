@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "دایرکتوری کاری فعلی shell است."
+  ],
+  "examples": [],
+  "id": "variable.PWD",
+  "kind": "variable",
+  "language": "fa",
+  "name": "PWD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "دایرکتوری کاری فعلی shell است.",
+  "synopsis": "$PWD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

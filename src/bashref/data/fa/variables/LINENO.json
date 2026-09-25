@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "شماره خط فعلی در script یا shell function است."
+  ],
+  "examples": [],
+  "id": "variable.LINENO",
+  "kind": "variable",
+  "language": "fa",
+  "name": "LINENO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "شماره خط فعلی در script یا shell function است.",
+  "synopsis": "$LINENO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

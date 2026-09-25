@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Enable job control."
+  ],
+  "examples": [],
+  "id": "option.monitor",
+  "kind": "option",
+  "language": "en",
+  "name": "monitor",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Enable job control.",
+  "synopsis": "set -o monitor | set +o monitor",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

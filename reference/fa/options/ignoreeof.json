@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "از خروج shell تعاملی با یک EOF جلوگیری می‌کند."
+  ],
+  "examples": [],
+  "id": "option.ignoreeof",
+  "kind": "option",
+  "language": "fa",
+  "name": "ignoreeof",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "از خروج shell تعاملی با یک EOF جلوگیری می‌کند.",
+  "synopsis": "set -o ignoreeof | set +o ignoreeof",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

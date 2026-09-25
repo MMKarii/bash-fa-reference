@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array شماره‌خط‌های source متناظر با call stack است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_LINENO",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_LINENO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array شماره‌خط‌های source متناظر با call stack است.",
+  "synopsis": "$BASH_LINENO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

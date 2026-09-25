@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Match filenames case-insensitively during pathname expansion."
+  ],
+  "examples": [],
+  "id": "shopt.nocaseglob",
+  "kind": "shopt",
+  "language": "en",
+  "name": "nocaseglob",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Match filenames case-insensitively during pathname expansion.",
+  "synopsis": "shopt -s nocaseglob | shopt -u nocaseglob",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

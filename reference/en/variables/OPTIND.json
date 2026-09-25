@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Index of the next argument to be processed by getopts."
+  ],
+  "examples": [],
+  "id": "variable.OPTIND",
+  "kind": "variable",
+  "language": "en",
+  "name": "OPTIND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Index of the next argument to be processed by getopts.",
+  "synopsis": "$OPTIND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

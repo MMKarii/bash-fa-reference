@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "اگر فایل mail از زمان آخرین بررسی دسترسی خورده باشد هشدار می‌دهد."
+  ],
+  "examples": [],
+  "id": "shopt.mailwarn",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "mailwarn",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "اگر فایل mail از زمان آخرین بررسی دسترسی خورده باشد هشدار می‌دهد.",
+  "synopsis": "shopt -s mailwarn | shopt -u mailwarn",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

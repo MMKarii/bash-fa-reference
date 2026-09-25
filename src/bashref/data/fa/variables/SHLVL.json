@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "سطح nesting shell است."
+  ],
+  "examples": [],
+  "id": "variable.SHLVL",
+  "kind": "variable",
+  "language": "fa",
+  "name": "SHLVL",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "سطح nesting shell است.",
+  "synopsis": "$SHLVL",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

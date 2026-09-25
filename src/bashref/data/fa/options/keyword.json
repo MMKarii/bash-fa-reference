@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "assignmentهای موجود در آرگومان‌های command را در محیط همان command اعمال می‌کند."
+  ],
+  "examples": [],
+  "id": "option.keyword",
+  "kind": "option",
+  "language": "fa",
+  "name": "keyword",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "assignmentهای موجود در آرگومان‌های command را در محیط همان command اعمال می‌کند.",
+  "synopsis": "set -o keyword | set +o keyword",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

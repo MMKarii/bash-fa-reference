@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "یک arithmetic expression را به‌عنوان shell command ارزیابی می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.arithmetic-command",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "arithmetic-command",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "یک arithmetic expression را به‌عنوان shell command ارزیابی می‌کند.",
+  "synopsis": "(( expression ))",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

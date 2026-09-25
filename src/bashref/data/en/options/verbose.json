@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Print shell input lines as they are read."
+  ],
+  "examples": [],
+  "id": "option.verbose",
+  "kind": "option",
+  "language": "en",
+  "name": "verbose",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Print shell input lines as they are read.",
+  "synopsis": "set -o verbose | set +o verbose",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

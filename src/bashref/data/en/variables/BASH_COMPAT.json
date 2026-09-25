@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Select compatibility behavior for an older Bash language level."
+  ],
+  "examples": [],
+  "id": "variable.BASH_COMPAT",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_COMPAT",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Select compatibility behavior for an older Bash language level.",
+  "synopsis": "$BASH_COMPAT",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

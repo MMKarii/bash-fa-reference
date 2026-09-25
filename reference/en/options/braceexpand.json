@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Enable brace expansion such as {a,b} and {1..5}."
+  ],
+  "examples": [],
+  "id": "option.braceexpand",
+  "kind": "option",
+  "language": "en",
+  "name": "braceexpand",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Enable brace expansion such as {a,b} and {1..5}.",
+  "synopsis": "set -o braceexpand | set +o braceexpand",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

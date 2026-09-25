@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Allow # to introduce comments in interactive shells."
+  ],
+  "examples": [],
+  "id": "option.interactive-comments",
+  "kind": "option",
+  "language": "en",
+  "name": "interactive-comments",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Allow # to introduce comments in interactive shells.",
+  "synopsis": "set -o interactive-comments | set +o interactive-comments",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

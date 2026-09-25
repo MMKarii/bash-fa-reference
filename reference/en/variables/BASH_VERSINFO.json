@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Readonly array describing the running Bash version."
+  ],
+  "examples": [],
+  "id": "variable.BASH_VERSINFO",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_VERSINFO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Readonly array describing the running Bash version.",
+  "synopsis": "$BASH_VERSINFO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "مسیرهای کامل را در عناصر BASH_SOURCE ذخیره می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.bash_source_fullpath",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "bash_source_fullpath",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "مسیرهای کامل را در عناصر BASH_SOURCE ذخیره می‌کند.",
+  "synopsis": "shopt -s bash_source_fullpath | shopt -u bash_source_fullpath",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

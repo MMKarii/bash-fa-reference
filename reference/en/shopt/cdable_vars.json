@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Let cd interpret a non-directory argument as a variable containing a directory path."
+  ],
+  "examples": [],
+  "id": "shopt.cdable_vars",
+  "kind": "shopt",
+  "language": "en",
+  "name": "cdable_vars",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Let cd interpret a non-directory argument as a variable containing a directory path.",
+  "synopsis": "shopt -s cdable_vars | shopt -u cdable_vars",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

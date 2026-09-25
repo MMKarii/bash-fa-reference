@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Default destination variable used by read."
+  ],
+  "examples": [],
+  "id": "variable.REPLY",
+  "kind": "variable",
+  "language": "en",
+  "name": "REPLY",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Default destination variable used by read.",
+  "synopsis": "$REPLY",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

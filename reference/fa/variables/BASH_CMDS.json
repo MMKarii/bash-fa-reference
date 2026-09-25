@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Associative array مربوط به command hash table داخلی Bash است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_CMDS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_CMDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Associative array مربوط به command hash table داخلی Bash است.",
+  "synopsis": "$BASH_CMDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

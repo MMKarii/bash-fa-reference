@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Read commands but do not execute them; primarily useful for syntax checking."
+  ],
+  "examples": [],
+  "id": "option.noexec",
+  "kind": "option",
+  "language": "en",
+  "name": "noexec",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Read commands but do not execute them; primarily useful for syntax checking.",
+  "synopsis": "set -o noexec | set +o noexec",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

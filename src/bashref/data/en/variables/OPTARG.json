@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Argument value for the current option processed by getopts."
+  ],
+  "examples": [],
+  "id": "variable.OPTARG",
+  "kind": "variable",
+  "language": "en",
+  "name": "OPTARG",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Argument value for the current option processed by getopts.",
+  "synopsis": "$OPTARG",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

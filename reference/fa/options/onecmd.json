@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "پس از خواندن و اجرای یک command خارج می‌شود."
+  ],
+  "examples": [],
+  "id": "option.onecmd",
+  "kind": "option",
+  "language": "fa",
+  "name": "onecmd",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "پس از خواندن و اجرای یک command خارج می‌شود.",
+  "synopsis": "set -o onecmd | set +o onecmd",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

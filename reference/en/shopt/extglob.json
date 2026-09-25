@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Enable extended pattern-matching operators such as ?(), *(), +(), @(), and !()."
+  ],
+  "examples": [],
+  "id": "shopt.extglob",
+  "kind": "shopt",
+  "language": "en",
+  "name": "extglob",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Enable extended pattern-matching operators such as ?(), *(), +(), @(), and !().",
+  "synopsis": "shopt -s extglob | shopt -u extglob",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

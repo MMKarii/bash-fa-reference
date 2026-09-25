@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Readonly colon-separated list of enabled set -o options."
+  ],
+  "examples": [],
+  "id": "variable.SHELLOPTS",
+  "kind": "variable",
+  "language": "en",
+  "name": "SHELLOPTS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Readonly colon-separated list of enabled set -o options.",
+  "synopsis": "$SHELLOPTS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

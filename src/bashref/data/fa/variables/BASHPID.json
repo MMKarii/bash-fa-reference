@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "PID پردازه فعلی Bash است."
+  ],
+  "examples": [],
+  "id": "variable.BASHPID",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASHPID",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "PID پردازه فعلی Bash است.",
+  "synopsis": "$BASHPID",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

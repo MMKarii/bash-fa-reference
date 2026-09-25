@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make FIGNORE suffixes suppress completion matches even when they are the only matches."
+  ],
+  "examples": [],
+  "id": "shopt.force_fignore",
+  "kind": "shopt",
+  "language": "en",
+  "name": "force_fignore",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Make FIGNORE suffixes suppress completion matches even when they are the only matches.",
+  "synopsis": "shopt -s force_fignore | shopt -u force_fignore",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

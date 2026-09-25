@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "خطاهای کوچک تایپی مسیرهای cd را اصلاح می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.cdspell",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "cdspell",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "خطاهای کوچک تایپی مسیرهای cd را اصلاح می‌کند.",
+  "synopsis": "shopt -s cdspell | shopt -u cdspell",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

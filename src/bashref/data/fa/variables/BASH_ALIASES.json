@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Associative array مربوط به aliasهای فعلی shell است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ALIASES",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_ALIASES",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Associative array مربوط به aliasهای فعلی shell است.",
+  "synopsis": "$BASH_ALIASES",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

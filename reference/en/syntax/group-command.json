@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Execute a command list in the current shell environment."
+  ],
+  "examples": [],
+  "id": "syntax.group-command",
+  "kind": "syntax",
+  "language": "en",
+  "name": "group-command",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Execute a command list in the current shell environment.",
+  "synopsis": "{ list; }",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

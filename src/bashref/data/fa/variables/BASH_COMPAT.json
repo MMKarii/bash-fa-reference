@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "سطح compatibility مربوط به نسخه‌های قدیمی‌تر Bash را انتخاب می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.BASH_COMPAT",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_COMPAT",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "سطح compatibility مربوط به نسخه‌های قدیمی‌تر Bash را انتخاب می‌کند.",
+  "synopsis": "$BASH_COMPAT",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

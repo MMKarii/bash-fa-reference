@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "نام host فعلی را نشان می‌دهد."
+  ],
+  "examples": [],
+  "id": "variable.HOSTNAME",
+  "kind": "variable",
+  "language": "fa",
+  "name": "HOSTNAME",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "نام host فعلی را نشان می‌دهد.",
+  "synopsis": "$HOSTNAME",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

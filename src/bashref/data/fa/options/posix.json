@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "رفتار Bash را به الزامات POSIX shell نزدیک‌تر می‌کند."
+  ],
+  "examples": [],
+  "id": "option.posix",
+  "kind": "option",
+  "language": "fa",
+  "name": "posix",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "رفتار Bash را به الزامات POSIX shell نزدیک‌تر می‌کند.",
+  "synopsis": "set -o posix | set +o posix",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

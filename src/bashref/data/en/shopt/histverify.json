@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Load history-expanded text into the editing buffer instead of executing it immediately."
+  ],
+  "examples": [],
+  "id": "shopt.histverify",
+  "kind": "shopt",
+  "language": "en",
+  "name": "histverify",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Load history-expanded text into the editing buffer instead of executing it immediately.",
+  "synopsis": "shopt -s histverify | shopt -u histverify",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

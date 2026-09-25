@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "مقدار آرگومان option فعلی که getopts پردازش می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.OPTARG",
+  "kind": "variable",
+  "language": "fa",
+  "name": "OPTARG",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "مقدار آرگومان option فعلی که getopts پردازش می‌کند.",
+  "synopsis": "$OPTARG",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Treat unquoted & in parameter-substitution replacement text as the matched portion."
+  ],
+  "examples": [],
+  "id": "shopt.patsub_replacement",
+  "kind": "shopt",
+  "language": "en",
+  "name": "patsub_replacement",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Treat unquoted & in parameter-substitution replacement text as the matched portion.",
+  "synopsis": "shopt -s patsub_replacement | shopt -u patsub_replacement",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

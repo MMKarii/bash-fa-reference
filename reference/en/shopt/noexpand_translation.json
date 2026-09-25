@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Do not re-expand translated $\"...\" strings."
+  ],
+  "examples": [],
+  "id": "shopt.noexpand_translation",
+  "kind": "shopt",
+  "language": "en",
+  "name": "noexpand_translation",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Do not re-expand translated $\"...\" strings.",
+  "synopsis": "shopt -s noexpand_translation | shopt -u noexpand_translation",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

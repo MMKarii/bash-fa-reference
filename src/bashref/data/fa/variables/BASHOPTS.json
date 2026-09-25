@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "فهرست readonly و جداشده با colon از shopt optionهای فعال است."
+  ],
+  "examples": [],
+  "id": "variable.BASHOPTS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASHOPTS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
+  "synopsis": "$BASHOPTS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

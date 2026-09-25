@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Execute a command list in a subshell environment."
+  ],
+  "examples": [],
+  "id": "syntax.subshell",
+  "kind": "syntax",
+  "language": "en",
+  "name": "subshell",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Execute a command list in a subshell environment.",
+  "synopsis": "( list )",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

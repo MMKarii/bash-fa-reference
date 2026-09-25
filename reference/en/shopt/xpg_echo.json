@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make echo interpret backslash escapes by default for XPG-style behavior."
+  ],
+  "examples": [],
+  "id": "shopt.xpg_echo",
+  "kind": "shopt",
+  "language": "en",
+  "name": "xpg_echo",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Make echo interpret backslash escapes by default for XPG-style behavior.",
+  "synopsis": "shopt -s xpg_echo | shopt -u xpg_echo",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

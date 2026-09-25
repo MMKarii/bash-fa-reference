@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Conditional expressionهای Bash را بدون word splitting معمول ارزیابی می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.conditional-command",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "conditional-command",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Conditional expressionهای Bash را بدون word splitting معمول ارزیابی می‌کند.",
+  "synopsis": "[[ expression ]]",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

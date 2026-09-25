@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Version string for the running Bash instance."
+  ],
+  "examples": [],
+  "id": "variable.BASH_VERSION",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_VERSION",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Version string for the running Bash instance.",
+  "synopsis": "$BASH_VERSION",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

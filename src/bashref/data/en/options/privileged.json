@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Enable privileged mode, affecting startup files, environment functions, and effective IDs."
+  ],
+  "examples": [],
+  "id": "option.privileged",
+  "kind": "option",
+  "language": "en",
+  "name": "privileged",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Enable privileged mode, affecting startup files, environment functions, and effective IDs.",
+  "synopsis": "set -o privileged | set +o privileged",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

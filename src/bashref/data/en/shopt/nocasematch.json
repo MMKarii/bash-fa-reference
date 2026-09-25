@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make pattern matching in case and [[ ]] ignore letter case."
+  ],
+  "examples": [],
+  "id": "shopt.nocasematch",
+  "kind": "shopt",
+  "language": "en",
+  "name": "nocasematch",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Make pattern matching in case and [[ ]] ignore letter case.",
+  "synopsis": "shopt -s nocasematch | shopt -u nocasematch",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

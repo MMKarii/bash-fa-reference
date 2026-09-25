@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "زمان فعلی Unix epoch را با بخش اعشاری ارائه می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.EPOCHREALTIME",
+  "kind": "variable",
+  "language": "fa",
+  "name": "EPOCHREALTIME",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "زمان فعلی Unix epoch را با بخش اعشاری ارائه می‌کند.",
+  "synopsis": "$EPOCHREALTIME",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

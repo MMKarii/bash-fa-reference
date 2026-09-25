@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Preserve local-variable scope information after unset until the function returns."
+  ],
+  "examples": [],
+  "id": "shopt.localvar_unset",
+  "kind": "shopt",
+  "language": "en",
+  "name": "localvar_unset",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Preserve local-variable scope information after unset until the function returns.",
+  "synopsis": "shopt -s localvar_unset | shopt -u localvar_unset",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

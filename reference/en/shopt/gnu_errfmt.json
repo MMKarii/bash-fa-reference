@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Format shell error messages in GNU-style filename:line form where applicable."
+  ],
+  "examples": [],
+  "id": "shopt.gnu_errfmt",
+  "kind": "shopt",
+  "language": "en",
+  "name": "gnu_errfmt",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Format shell error messages in GNU-style filename:line form where applicable.",
+  "synopsis": "shopt -s gnu_errfmt | shopt -u gnu_errfmt",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

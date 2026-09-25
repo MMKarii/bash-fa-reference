@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Previous working directory set by cd."
+  ],
+  "examples": [],
+  "id": "variable.OLDPWD",
+  "kind": "variable",
+  "language": "en",
+  "name": "OLDPWD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Previous working directory set by cd.",
+  "synopsis": "$OLDPWD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "هنگام خروج shell، history را به فایل اضافه می‌کند و overwrite نمی‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.histappend",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "histappend",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "هنگام خروج shell، history را به فایل اضافه می‌کند و overwrite نمی‌کند.",
+  "synopsis": "shopt -s histappend | shopt -u histappend",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

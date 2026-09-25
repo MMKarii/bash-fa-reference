@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "پیام‌های خطای shell را در قالب GNU مانند file:line قالب‌بندی می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.gnu_errfmt",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "gnu_errfmt",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "پیام‌های خطای shell را در قالب GNU مانند file:line قالب‌بندی می‌کند.",
+  "synopsis": "shopt -s gnu_errfmt | shopt -u gnu_errfmt",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

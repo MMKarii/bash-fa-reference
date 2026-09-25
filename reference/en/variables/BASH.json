@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Pathname used to invoke the current Bash executable."
+  ],
+  "examples": [],
+  "id": "variable.BASH",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Pathname used to invoke the current Bash executable.",
+  "synopsis": "$BASH",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

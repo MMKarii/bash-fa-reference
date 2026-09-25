@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Patternهای توسعه‌یافته مانند ?()، *()، +()، @() و !() را فعال می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.extglob",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "extglob",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Patternهای توسعه‌یافته مانند ?()، *()، +()، @() و !() را فعال می‌کند.",
+  "synopsis": "shopt -s extglob | shopt -u extglob",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

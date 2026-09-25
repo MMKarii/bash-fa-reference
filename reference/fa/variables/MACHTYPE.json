@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "توصیف canonical به سبک GNU از platform است."
+  ],
+  "examples": [],
+  "id": "variable.MACHTYPE",
+  "kind": "variable",
+  "language": "fa",
+  "name": "MACHTYPE",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "توصیف canonical به سبک GNU از platform است.",
+  "synopsis": "$MACHTYPE",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

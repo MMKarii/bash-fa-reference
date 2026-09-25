@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make command substitutions inherit the errexit option."
+  ],
+  "examples": [],
+  "id": "shopt.inherit_errexit",
+  "kind": "shopt",
+  "language": "en",
+  "name": "inherit_errexit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Make command substitutions inherit the errexit option.",
+  "synopsis": "shopt -s inherit_errexit | shopt -u inherit_errexit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}
