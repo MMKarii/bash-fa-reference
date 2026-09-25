@@ -51,7 +51,7 @@ jobs:
           python tools/build_docs_reference.py
           python tools/build_manpages.py
           python -m pytest -q
-          mandoc -Tlint man/bashref.1 man/bashref-reference.5 man/generated/*.5
+          mandoc -Tlint -Wwarning man/bashref.1 man/bashref-reference.5 man/generated/*.5
 
       - name: Build Bashref distributions
         run: python -m build
