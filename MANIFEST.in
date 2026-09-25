@@ -1,0 +1,8 @@
+include LICENSE
+recursive-include LICENSES *
+recursive-include reference *.json
+recursive-include man *
+recursive-include packaging *
+include README.md
+include README.fa.md
+include CHANGELOG.md

@@ -1,0 +1,13 @@
+Name: bashref
+Version: @VERSION@
+Release: 1%{?dist}
+Summary: Offline bilingual Bash reference CLI
+License: MIT AND CC-BY-4.0
+BuildArch: noarch
+Source0: @SOURCE@
+
+%files
+%{_bindir}/bashref
+%{_mandir}/man1/bashref.1*
+%{_mandir}/man5/bashref-reference.5*
+%{_datadir}/bash-completion/completions/bashref

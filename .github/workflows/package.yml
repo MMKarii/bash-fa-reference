@@ -1,0 +1,71 @@
+name: package
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  python-artifacts:
+    name: package / python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements-dev.txt && pip install -e .
+      - run: |
+          python tools/build_reference.py
+          python tools/build_search_index.py
+          python tools/build_completions.py
+          python -m pytest tests/packaging -q
+          python -m build
+          python tools/verify_python_artifacts.py 2.0.0 dist/bashref-2.0.0-py3-none-any.whl dist/bashref-2.0.0.tar.gz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bashref-python-artifacts
+          path: dist/
+
+  linux-packages:
+    name: package / linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: sudo apt-get update && sudo apt-get install -y rpm
+      - run: pip install -r requirements-dev.txt && pip install -e .
+      - run: |
+          python tools/build_completions.py
+          python tools/build_manpages.py
+          python -m build
+          python tools/build_deb.py dist/bashref-2.0.0-py3-none-any.whl --version 2.0.0
+          python tools/build_rpm.py --version 2.0.0
+          python tools/build_release_assets.py --version 2.0.0
+          python tools/write_checksums.py dist/* --output dist/SHA256SUMS
+          test -s dist/bashref_2.0.0_all.deb
+          ls dist/bashref-2.0.0-1*.noarch.rpm
+          sudo dpkg -i dist/bashref_2.0.0_all.deb
+          test "$(bashref --version)" = "bashref 2.0.0"
+          bashref --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
+          mkdir -p "$HOME/.config/bashref"
+          printf '{"language":"fa"}\n' > "$HOME/.config/bashref/config.json"
+          sudo dpkg -r bashref
+          test -f "$HOME/.config/bashref/config.json"
+          RPM="$(ls dist/bashref-2.0.0-1*.noarch.rpm | head -n1)"
+          sudo rpm -i --nodeps "$RPM"
+          test "$(bashref --version)" = "bashref 2.0.0"
+          bashref --lang fa --format json builtin printf | grep -Fq '"id": "builtin.printf"'
+          sudo rpm -e bashref
+          test -f "$HOME/.config/bashref/config.json"
+          (cd dist && sha256sum -c SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bashref-linux-artifacts
+          path: dist/
