@@ -1,0 +1,205 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bashref-v2-release
+  cancel-in-progress: false
+
+jobs:
+  publish-v2:
+    name: release / v2.0.0
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: "2.0.0"
+      TAG: "v2.0.0"
+      BASE_URL: "https://mmkarii.github.io/bash-fa-reference"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Detect release state
+        id: state
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! test -f release/v2.0.0.json; then
+            echo "publish=no" >> "$GITHUB_OUTPUT"
+            echo "No v2 release marker in this revision."
+            exit 0
+          fi
+
+          python tools/release_version.py "$TAG" "$VERSION"
+
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            git fetch --force origin "refs/tags/$TAG:refs/tags/$TAG"
+            TAG_SHA="$(git rev-list -n1 "$TAG")"
+            if test "$TAG_SHA" != "$GITHUB_SHA"; then
+              echo "Existing $TAG points to $TAG_SHA, expected $GITHUB_SHA" >&2
+              exit 1
+            fi
+          fi
+
+          if gh release view "$TAG" --json isDraft >/tmp/bashref-release-state.json 2>/dev/null; then
+            IS_DRAFT="$(python -c 'import json; print(str(json.load(open("/tmp/bashref-release-state.json"))["isDraft"]).lower())')"
+            if test "$IS_DRAFT" = "false"; then
+              echo "publish=no" >> "$GITHUB_OUTPUT"
+              echo "Release $TAG is already published from this revision."
+              exit 0
+            fi
+          fi
+
+          echo "publish=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Install build dependencies
+        if: steps.state.outputs.publish == 'yes'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mandoc rpm
+          python -m pip install -r requirements.txt -r requirements-dev.txt
+          python -m pip install -e .
+
+      - name: Validate product
+        if: steps.state.outputs.publish == 'yes'
+        run: |
+          set -euo pipefail
+          python tools/validate_reference.py
+          python tools/build_reference.py
+          python tools/build_search_index.py
+          python tools/build_docs_reference.py
+          python tools/build_manpages.py
+          python tools/build_completions.py
+          python -m pytest -q
+          mandoc -Tlint -Wwarning man/bashref.1 man/bashref-reference.5 man/generated/*.5
+          git diff --exit-code -- src/bashref/data
+          python tools/release_version.py "$TAG" "$VERSION"
+
+      - name: Build Python and Linux artifacts
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist
+          python -m build
+          python tools/verify_python_artifacts.py "$VERSION"             "dist/bashref-$VERSION-py3-none-any.whl"             "dist/bashref-$VERSION.tar.gz"
+
+          python tools/build_deb.py "dist/bashref-$VERSION-py3-none-any.whl" --version "$VERSION"
+          python tools/build_rpm.py --version "$VERSION"
+          python tools/build_release_assets.py --version "$VERSION"
+
+          sudo dpkg -i "dist/bashref_${VERSION}_all.deb"
+          test "$(bashref --version)" = "bashref $VERSION"
+          bashref --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
+          sudo dpkg -r bashref
+
+          RPM="$(ls dist/bashref-${VERSION}-1*.noarch.rpm | head -n1)"
+          sudo rpm -i --nodeps "$RPM"
+          test "$(bashref --version)" = "bashref $VERSION"
+          bashref --lang fa --format json builtin printf | grep -Fq '"id": "builtin.printf"'
+          sudo rpm -e bashref
+
+      - name: Build documentation release archive
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdocs build --strict -f mkdocs.en.yml -d site/en
+          mkdocs build --strict -f mkdocs.fa.yml -d site/fa
+          tar --sort=name --mtime='@0' --owner=0 --group=0 --numeric-owner             -czf "dist/bashref-$VERSION-docs.tar.gz" -C site en fa
+
+      - name: Render Homebrew formula
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDIST_SHA="$(sha256sum "dist/bashref-$VERSION.tar.gz" | awk '{print $1}')"
+          python tools/render_homebrew_formula.py             --version "$VERSION"             --url "https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG/bashref-$VERSION.tar.gz"             --sha256 "$SDIST_SHA" > dist/bashref.rb
+          ruby -c dist/bashref.rb
+
+      - name: Write and verify checksums
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/write_checksums.py dist/* --output dist/SHA256SUMS
+          (cd dist && sha256sum -c SHA256SUMS)
+
+      - name: Create release tag
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! git rev-parse --verify --quiet "refs/tags/$TAG" >/dev/null; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git tag -a "$TAG" -m "Bashref $VERSION"
+            git push origin "$TAG"
+          else
+            test "$(git rev-list -n1 "$TAG")" = "$GITHUB_SHA"
+          fi
+
+      - name: Create or refresh draft release
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          ASSETS=(dist/*)
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "${ASSETS[@]}" --clobber
+          else
+            gh release create "$TAG" "${ASSETS[@]}"               --draft               --title "Bashref $VERSION"               --notes-file ".github/release-notes/$TAG.md"
+          fi
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > release.json
+
+      - name: Wait for v2 Pages deployment
+        if: steps.state.outputs.publish == 'yes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          READY=0
+          for attempt in $(seq 1 36); do
+            if curl -fsS "$BASE_URL/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/fa/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/v2.0/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/v2.0/fa/" | grep -Fq "Bashref $VERSION"; then
+              READY=1
+              break
+            fi
+            sleep 10
+          done
+          test "$READY" = "1"
+
+      - name: Verify draft release and public documentation
+        if: steps.state.outputs.publish == 'yes'
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > release.json
+          python tools/verify_public_release.py             --release-json release.json             --checksums dist/SHA256SUMS             --base-url "$BASE_URL"
+
+      - name: Publish verified release
+        if: steps.state.outputs.publish == 'yes'
+        run: |
+          gh release edit "$TAG" --draft=false --latest
+          gh release view "$TAG" --json tagName,isDraft,url
+
+      - name: Upload release-build evidence
+        if: always() && steps.state.outputs.publish == 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: bashref-v2-release-evidence
+          path: |
+            dist/
+            release.json
+          if-no-files-found: ignore
