@@ -17,6 +17,23 @@ class LanguageLinksTests(unittest.TestCase):
             "https://mmkarii.github.io/bash-fa-reference/fa/",
         )
 
+    def test_generated_reference_maps_to_same_record_peer(self):
+        context = {}
+        page = SimpleNamespace(
+            url="reference/generated/builtins/printf/",
+            meta={"record_id": "builtin.printf", "reference_kind": "builtin"},
+        )
+        config = SimpleNamespace(extra={})
+        on_page_context(context, page=page, config=config, nav=None)
+        self.assertEqual(
+            config.extra["alternate"][0]["link"],
+            "https://mmkarii.github.io/bash-fa-reference/fa/reference/generated/builtins/printf/",
+        )
+        self.assertEqual(
+            config.extra["alternate"][1]["link"],
+            "https://mmkarii.github.io/bash-fa-reference/en/reference/generated/builtins/printf/",
+        )
+
     def test_page_context_sets_bilingual_matching_links(self):
         context = {}
         page = SimpleNamespace(url="cheatsheet/")
