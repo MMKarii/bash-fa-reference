@@ -6,6 +6,11 @@
 
 مطالب تکراری نسخه‌های اولیه حذف شده‌اند. توصیه‌هایی که در Bash به جزئیات رفتاری وابسته‌اند، مانند `set -e` و `pipefail`، با [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html) تطبیق داده شده‌اند.
 
+## دو مسیر استفاده از Bashref
+
+- **[Reference Guide](reference/):** مراجعه دقیق به builtinها، syntax، expansionها، optionها، variableها و conceptهای اصلی.
+- **[Professional Guide](book/):** راهنمای آموزشی و عملی ۱۴ فصلی.
+
 ## از کجا شروع کنم؟
 
 - تازه‌کار: [مسیر یادگیری](learning-path.md) ← فصل‌های ۱ تا ۴
