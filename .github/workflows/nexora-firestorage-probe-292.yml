@@ -3,33 +3,29 @@ on:
   push:
     branches:
       - nexora-runtime-fetch-292
-
 permissions:
   contents: read
-
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe share page and app chunks
+      - name: Inspect Firestorage share client
         shell: bash
         run: |
           set -euo pipefail
-          BASE='https://firestorage.ai'
-          curl -fsSL "$BASE/ja/f/fQusM--ibaOA" -o page.html
-          echo "PAGE_SIZE=$(stat -c%s page.html)"
-          echo 'SCRIPTS'
-          grep -Eo 'src="[^"]+"' page.html | sed 's/^src="//;s/"$//' | head -80 | tee scripts.txt
-          echo 'HYDRATION'
-          grep -o 'fQusM[^<]*' page.html | head -20 || true
-          while read -r src; do
-            case "$src" in
-              /_next/*.js)
-                name="$(basename "$src")"
-                curl -fsSL "$BASE$src" -o "$name" || continue
-                echo "CHUNK $name"
-                grep -Eo '/api/[A-Za-z0-9_?=&./{}:-]+' "$name" | sort -u | head -80 || true
-                grep -Eo 'download[^" ]{0,160}' "$name" | head -20 || true
-                ;;
-            esac
-          done < scripts.txt
+          URL='https://firestorage.ai/_next/static/chunks/app/(files)/ja/f/page-4d19ae0a4ce39d79.js'
+          curl -fsSL "$URL" -o page.js
+          echo "JS_SIZE=$(stat -c%s page.js)"
+          python3 - <<'PY'
+          import re
+          s=open('page.js',encoding='utf-8').read()
+          needles=['fetch(','download','api/','shareId','publicId','presign','signed','attachment','objects']
+          for n in needles:
+              print('\nNEEDLE',n)
+              start=0
+              for i in range(12):
+                  p=s.find(n,start)
+                  if p<0: break
+                  print(s[max(0,p-260):p+700])
+                  start=p+len(n)
+          PY
