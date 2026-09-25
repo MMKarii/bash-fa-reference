@@ -11,11 +11,25 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe share page
+      - name: Probe share page and app chunks
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsSL 'https://firestorage.ai/ja/f/fQusM--ibaOA' -o page.html
+          BASE='https://firestorage.ai'
+          curl -fsSL "$BASE/ja/f/fQusM--ibaOA" -o page.html
           echo "PAGE_SIZE=$(stat -c%s page.html)"
-          grep -Eo 'https?://[^"<> ]+|href="[^"]+"' page.html | head -80 || true
-          grep -n 'NEXORA-Setup-v2.9.2.exe' page.html | head -20 || true
+          echo 'SCRIPTS'
+          grep -Eo 'src="[^"]+"' page.html | sed 's/^src="//;s/"$//' | head -80 | tee scripts.txt
+          echo 'HYDRATION'
+          grep -o 'fQusM[^<]*' page.html | head -20 || true
+          while read -r src; do
+            case "$src" in
+              /_next/*.js)
+                name="$(basename "$src")"
+                curl -fsSL "$BASE$src" -o "$name" || continue
+                echo "CHUNK $name"
+                grep -Eo '/api/[A-Za-z0-9_?=&./{}:-]+' "$name" | sort -u | head -80 || true
+                grep -Eo 'download[^" ]{0,160}' "$name" | head -20 || true
+                ;;
+            esac
+          done < scripts.txt
