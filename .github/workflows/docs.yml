@@ -37,16 +37,21 @@ jobs:
 
       - name: Install documentation and development dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y mandoc
           pip install -r requirements.txt -r requirements-dev.txt
           pip install -e .
 
-      - name: Validate and test Bashref core
+      - name: Generate validate and test Bashref product
         run: |
           python tools/validate_reference.py
           python tools/build_reference.py
           python tools/build_search_index.py
           git diff --exit-code -- src/bashref/data
+          python tools/build_docs_reference.py
+          python tools/build_manpages.py
           python -m pytest -q
+          mandoc -Tlint man/bashref.1 man/bashref-reference.5 man/generated/*.5
 
       - name: Build Bashref distributions
         run: python -m build
@@ -133,6 +138,12 @@ jobs:
           test -f site/en/14-debugging-testing-portability/index.html
           test -f site/fa/glossary/index.html
           test -f site/en/glossary/index.html
+          test -f site/fa/reference/index.html
+          test -f site/en/reference/index.html
+          test -f site/fa/reference/generated/builtins/printf/index.html
+          test -f site/en/reference/generated/builtins/printf/index.html
+          test -f site/fa/reference/generated/variables/BASH_SOURCE/index.html
+          test -f site/en/reference/generated/variables/BASH_SOURCE/index.html
           test -f site/fa/assets/brand-banner.webp
           test -f site/en/assets/brand-banner.webp
           test -f site/assets/social-preview-v1.jpg
