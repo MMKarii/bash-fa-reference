@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -7,6 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 EXTERNAL_SCHEMES = {"http", "https", "mailto", "tel", "data", "javascript"}
 PUBLISHED_PATH_PREFIX = "/bash-fa-reference"
+VERSION_RE = re.compile(r"^v\d+\.\d+$")
 
 
 class _PageParser(HTMLParser):
@@ -111,7 +113,9 @@ def _edition_root(site_root: Path, source_file: Path) -> Path:
 
     if parts and parts[0] in {"fa", "en"}:
         return site_root / parts[0]
-    if len(parts) >= 2 and parts[0] in {"latest", "v1.0"} and parts[1] in {"fa", "en"}:
+    if len(parts) >= 2 and (
+        parts[0] == "latest" or VERSION_RE.fullmatch(parts[0])
+    ) and parts[1] in {"fa", "en"}:
         return site_root / parts[0] / parts[1]
     return site_root
 

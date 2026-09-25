@@ -106,6 +106,17 @@ jobs:
             cp -a site/en site/v1.0/en
           fi
 
+      - name: Build stable v2.0 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test -f release/v2.0.0.json; then
+            mkdir -p site/v2.0
+            rm -rf site/v2.0/fa site/v2.0/en
+            cp -a site/fa site/v2.0/fa
+            cp -a site/en site/v2.0/en
+          fi
+
       - name: Publish social preview
         run: |
           mkdir -p site/assets
@@ -134,6 +145,10 @@ jobs:
           test -f site/latest/en/index.html
           test -f site/v1.0/fa/index.html
           test -f site/v1.0/en/index.html
+          test -f site/v2.0/fa/index.html
+          test -f site/v2.0/en/index.html
+          test -f site/v2.0/fa/reference/index.html
+          test -f site/v2.0/en/reference/index.html
           test -f site/fa/14-debugging-testing-portability/index.html
           test -f site/en/14-debugging-testing-portability/index.html
           test -f site/fa/glossary/index.html
@@ -151,6 +166,11 @@ jobs:
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/' site/en/index.html
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/03-variables-expansion-quoting/' site/fa/03-variables-expansion-quoting/index.html
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/03-variables-expansion-quoting/' site/en/03-variables-expansion-quoting/index.html
+          grep -Fq 'Bashref 2.0.0' site/en/index.html
+          grep -Fq 'Bashref 2.0.0' site/fa/index.html
+          grep -Fq 'Bashref 2.0.0' site/v2.0/en/index.html
+          grep -Fq 'Bashref 2.0.0' site/v2.0/fa/index.html
+          grep -Fq 'Bashref' site/index.html
           file site/assets/social-preview-v1.jpg | grep -Eq '1280 ?x ?640'
 
       - name: Deploy to gh-pages

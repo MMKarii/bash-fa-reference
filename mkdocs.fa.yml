@@ -95,5 +95,9 @@ nav:
       - "۱۲. DevOps و CI/CD": 12-devops-cicd.md
       - "۱۳. امنیت دفاعی": 13-defensive-security.md
       - "۱۴. Debugging، تست و Portability": 14-debugging-testing-portability.md
+  - نصب: install/index.md
+  - دانلود: download/index.md
+  - انتشارها: releases/index.md
+  - درباره: about/index.md
   - منابع: references.md
   - سلب مسئولیت: disclaimer.md

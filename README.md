@@ -10,10 +10,10 @@ A structured bilingual Bash reference and offline CLI for shell fundamentals, sc
 
 ## Bashref CLI
 
-The v2 development line adds an installable offline CLI backed by the same bilingual reference data:
+Bashref 2.0.0 provides an installable offline CLI backed by the same bilingual reference data:
 
 ```bash
-python -m pip install -e .
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
 bashref --version
 bashref search printf
 bashref builtin printf
@@ -21,7 +21,7 @@ bashref --lang fa builtin printf
 bashref --format json builtin printf
 ```
 
-The CLI runtime uses only the Python standard library. The v2 package is still under development; the existing v1.0 documentation release remains available and unchanged.
+The CLI runtime uses only the Python standard library. Release artifacts are published on GitHub Releases, and the existing v1.0 documentation snapshot remains available unchanged.
 
 ## Scope
 
@@ -38,7 +38,7 @@ Technical behavior that is easy to misstate—especially `set -e`, pipelines, qu
 - strict MkDocs builds for RTL Persian and LTR English
 - page-matched Persian/English language switching and hreflang metadata
 - link, anchor, translation-drift, metadata, and accessibility QA
-- version aliases: `latest` and stable `v1.0`
+- version aliases: `latest`, stable `v1.0`, and stable `v2.0`
 - GitHub Pages deployment from `gh-pages`
 
 ## Quality
