@@ -6,6 +6,7 @@ import tarfile
 import tempfile
 from pathlib import Path
 
+from tools.build_completions import build_completions
 from tools.build_manpages import build_manpages
 
 
@@ -18,63 +19,66 @@ def _tar_filter(info: tarfile.TarInfo) -> tarfile.TarInfo:
     return info
 
 
-def _add_existing(tf: tarfile.TarFile, source_root: Path, relative: str, arc_prefix: str) -> None:
-    path = source_root / relative
-    if path.exists():
-        tf.add(path, arcname=f"{arc_prefix}/{relative}", recursive=True, filter=_tar_filter)
+def _add_existing(tf: tarfile.TarFile, source: Path, arcname: str) -> None:
+    if source.exists():
+        tf.add(source, arcname=arcname, recursive=True, filter=_tar_filter)
 
 
-def _build_archive(target: Path, source_root: Path, version: str, members: list[str]) -> Path:
-    prefix = f"bashref-{version}"
-    with tarfile.open(target, "w:gz") as tf:
-        for relative in members:
-            _add_existing(tf, source_root, relative, prefix)
-    return target
+def _ensure_generated_assets(source_root: Path, temp_root: Path) -> tuple[Path, Path]:
+    man_root = source_root / "man"
+    if not (man_root / "bashref.1").exists():
+        man_root = temp_root / "man"
+        build_manpages(source_root / "reference", man_root)
+
+    completions_root = source_root / "packaging/completions"
+    expected = [
+        completions_root / "bash/bashref",
+        completions_root / "zsh/_bashref",
+        completions_root / "fish/bashref.fish",
+    ]
+    if not all(path.exists() for path in expected):
+        completions_root = temp_root / "packaging/completions"
+        build_completions(
+            {
+                "bash": completions_root / "bash/bashref",
+                "zsh": completions_root / "zsh/_bashref",
+                "fish": completions_root / "fish/bashref.fish",
+            }
+        )
+    return man_root, completions_root
 
 
 def build_release_assets(version: str, out_dir: Path, source_root: Path = Path(".")) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    man_root = source_root / "man"
-    temp_dir = None
-    if not (man_root / "bashref.1").exists():
-        temp_dir = tempfile.TemporaryDirectory()
-        generated_root = Path(temp_dir.name)
-        build_manpages(source_root / "reference", generated_root / "man")
-        man_root = generated_root / "man"
+    prefix = f"bashref-{version}"
 
-    portable = _build_archive(
-        out_dir / f"bashref-{version}-portable.tar.gz",
-        source_root,
-        version,
-        [
-            "src",
-            "reference",
-            "README.md",
-            "README.fa.md",
-            "pyproject.toml",
-            "LICENSE",
-            "LICENSES",
-            "packaging/completions",
-        ],
-    )
-    if man_root == source_root / "man":
-        with tarfile.open(portable, "a") if False else open("/dev/null", "w"):
-            pass
-    else:
-        with tarfile.open(portable, "r:gz"):
-            pass
+    with tempfile.TemporaryDirectory() as tmp:
+        temp_root = Path(tmp)
+        man_root, completions_root = _ensure_generated_assets(source_root, temp_root)
 
-    manpages = out_dir / f"bashref-{version}-manpages.tar.gz"
-    with tarfile.open(manpages, "w:gz") as tf:
-        tf.add(man_root, arcname=f"bashref-{version}/man", recursive=True, filter=_tar_filter)
-    completions = _build_archive(
-        out_dir / f"bashref-{version}-completions.tar.gz",
-        source_root,
-        version,
-        ["packaging/completions"],
-    )
-    if temp_dir is not None:
-        temp_dir.cleanup()
+        portable = out_dir / f"bashref-{version}-portable.tar.gz"
+        with tarfile.open(portable, "w:gz") as tf:
+            for relative in [
+                "src",
+                "reference",
+                "README.md",
+                "README.fa.md",
+                "pyproject.toml",
+                "LICENSE",
+                "LICENSES",
+            ]:
+                _add_existing(tf, source_root / relative, f"{prefix}/{relative}")
+            _add_existing(tf, man_root, f"{prefix}/man")
+            _add_existing(tf, completions_root, f"{prefix}/packaging/completions")
+
+        manpages = out_dir / f"bashref-{version}-manpages.tar.gz"
+        with tarfile.open(manpages, "w:gz") as tf:
+            _add_existing(tf, man_root, f"{prefix}/man")
+
+        completions = out_dir / f"bashref-{version}-completions.tar.gz"
+        with tarfile.open(completions, "w:gz") as tf:
+            _add_existing(tf, completions_root, f"{prefix}/packaging/completions")
+
     return [portable, manpages, completions]
 
 
