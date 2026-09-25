@@ -2,7 +2,7 @@
 
 All notable documentation and tooling changes are recorded here.
 
-## [2.0.0] - Unreleased
+## [2.0.0] - 2026-09-26
 
 ### Added
 - installable `bashref` Python package and console command
@@ -10,6 +10,15 @@ All notable documentation and tooling changes are recorded here.
 - structured JSON/text output and stable CLI exit codes
 - offline search, typo suggestions, language preferences, docs/man routing, and Bash/Zsh/Fish completion generation
 - CI build and installed-wheel smoke testing
+- complete 97-record Persian/English structured Bash reference corpus
+- generated web Reference Guide and system man pages
+- split Reference Guide and Professional Guide navigation
+- Bash/Zsh/Fish completion assets
+- verified wheel and source distributions
+- installable Debian and RPM packages
+- Homebrew formula generation
+- portable, man-page, completion, and documentation release archives with SHA-256 checksums
+- versioned v2.0 documentation snapshot and release automation
 
 ## [1.0.0] - 2026-09-20
 
