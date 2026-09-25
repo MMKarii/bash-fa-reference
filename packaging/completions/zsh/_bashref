@@ -1,2 +1,2 @@
 #compdef bashref
-_arguments '1:command:(search show builtin syntax expansion option shopt variable example list lang man docs completion)' '*::arg:->args'
+_arguments '1:command:(search show builtin syntax expansion option shopt variable example list lang man docs completion usage doctor)' '*::arg:->args'

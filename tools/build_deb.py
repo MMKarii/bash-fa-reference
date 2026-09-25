@@ -129,7 +129,7 @@ def build_deb(wheel: Path, version: str, out_dir: Path = Path("dist")) -> Path:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("wheel", type=Path)
-    parser.add_argument("--version", default="2.0.0")
+    parser.add_argument("--version", default="2.1.0")
     parser.add_argument("--out-dir", type=Path, default=Path("dist"))
     args = parser.parse_args(argv)
     path = build_deb(args.wheel, args.version, args.out_dir)

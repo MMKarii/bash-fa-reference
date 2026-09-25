@@ -17,7 +17,7 @@ permissions:
 jobs:
   build-and-deploy:
     name: docs / build-and-deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
         with:
@@ -43,11 +43,15 @@ jobs:
           pip install -e .
 
       - name: Generate validate and test Bashref product
+        shell: bash
         run: |
+          set -euo pipefail
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
           python tools/validate_reference.py
-          python tools/build_reference.py
+          python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
-          git diff --exit-code -- src/bashref/data
+          python tools/build_completions.py
+          git diff --exit-code -- src/bashref/data packaging/completions
           python tools/build_docs_reference.py
           python tools/build_manpages.py
           python -m pytest -q
@@ -60,13 +64,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
           SMOKE="$RUNNER_TEMP/bashref-smoke"
           python -m venv "$SMOKE"
           WHEEL="$(ls dist/bashref-*.whl)"
           "$SMOKE/bin/pip" install --no-deps "$WHEEL"
-          test "$("$SMOKE/bin/bashref" --version)" = "bashref 2.0.0"
+          test "$("$SMOKE/bin/bashref" --version)" = "bashref $VERSION"
           "$SMOKE/bin/bashref" --lang en search printf | grep -Fq 'printf'
           "$SMOKE/bin/bashref" --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
+          "$SMOKE/bin/bashref" --format json doctor | grep -Fq '"status": "ok"'
 
       - name: Test documentation tooling
         run: python -m unittest discover -s scripts -p 'test_*.py'
@@ -101,20 +107,45 @@ jobs:
             test "$(git -C "$V1_DIR" describe --tags --exact-match)" = "v1.0.0"
             mkdocs build --strict -f "$V1_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v1.0/fa"
             mkdocs build --strict -f "$V1_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v1.0/en"
-          else
-            cp -a site/fa site/v1.0/fa
-            cp -a site/en site/v1.0/en
+            git worktree remove --force "$V1_DIR"
+            trap - EXIT
           fi
 
       - name: Build stable v2.0 snapshot
         shell: bash
         run: |
           set -euo pipefail
-          if test -f release/v2.0.0.json; then
-            mkdir -p site/v2.0
-            rm -rf site/v2.0/fa site/v2.0/en
-            cp -a site/fa site/v2.0/fa
-            cp -a site/en site/v2.0/en
+          mkdir -p site/v2.0
+          if git rev-parse --verify --quiet refs/tags/v2.0.0 >/dev/null; then
+            V2_DIR="$RUNNER_TEMP/bash-reference-v2"
+            git worktree add --detach "$V2_DIR" v2.0.0
+            trap 'git worktree remove --force "$V2_DIR" >/dev/null 2>&1 || true' EXIT
+            test "$(git -C "$V2_DIR" describe --tags --exact-match)" = "v2.0.0"
+            mkdocs build --strict -f "$V2_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v2.0/fa"
+            mkdocs build --strict -f "$V2_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v2.0/en"
+            git worktree remove --force "$V2_DIR"
+            trap - EXIT
+          fi
+
+      - name: Build stable v2.1 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test -f release/v2.1.0.json; then
+            mkdir -p site/v2.1
+            rm -rf site/v2.1/fa site/v2.1/en
+            if git rev-parse --verify --quiet refs/tags/v2.1.0 >/dev/null; then
+              V21_DIR="$RUNNER_TEMP/bash-reference-v21"
+              git worktree add --detach "$V21_DIR" v2.1.0
+              trap 'git worktree remove --force "$V21_DIR" >/dev/null 2>&1 || true' EXIT
+              mkdocs build --strict -f "$V21_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v2.1/fa"
+              mkdocs build --strict -f "$V21_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v2.1/en"
+              git worktree remove --force "$V21_DIR"
+              trap - EXIT
+            else
+              cp -a site/fa site/v2.1/fa
+              cp -a site/en site/v2.1/en
+            fi
           fi
 
       - name: Publish social preview
@@ -133,7 +164,10 @@ jobs:
         run: python scripts/check_built_site.py
 
       - name: Verify complete published output
+        shell: bash
         run: |
+          set -euo pipefail
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
           test -f site/index.html
           test -f site/robots.txt
           test -f site/sitemap.xml
@@ -149,6 +183,12 @@ jobs:
           test -f site/v2.0/en/index.html
           test -f site/v2.0/fa/reference/index.html
           test -f site/v2.0/en/reference/index.html
+          if test -f release/v2.1.0.json; then
+            test -f site/v2.1/fa/index.html
+            test -f site/v2.1/en/index.html
+            test -f site/v2.1/fa/reference/index.html
+            test -f site/v2.1/en/reference/index.html
+          fi
           test -f site/fa/14-debugging-testing-portability/index.html
           test -f site/en/14-debugging-testing-portability/index.html
           test -f site/fa/glossary/index.html
@@ -164,17 +204,19 @@ jobs:
           test -f site/assets/social-preview-v1.jpg
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/' site/fa/index.html
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/' site/en/index.html
-          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/03-variables-expansion-quoting/' site/fa/03-variables-expansion-quoting/index.html
-          grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/03-variables-expansion-quoting/' site/en/03-variables-expansion-quoting/index.html
-          grep -Fq 'Bashref 2.0.0' site/en/index.html
-          grep -Fq 'Bashref 2.0.0' site/fa/index.html
+          grep -Fq "Bashref $VERSION" site/en/index.html
+          grep -Fq "Bashref $VERSION" site/fa/index.html
           grep -Fq 'Bashref 2.0.0' site/v2.0/en/index.html
           grep -Fq 'Bashref 2.0.0' site/v2.0/fa/index.html
+          if test -f release/v2.1.0.json; then
+            grep -Fq "Bashref $VERSION" site/v2.1/en/index.html
+            grep -Fq "Bashref $VERSION" site/v2.1/fa/index.html
+          fi
           grep -Fq 'Bashref' site/index.html
           file site/assets/social-preview-v1.jpg | grep -Eq '1280 ?x ?640'
 
       - name: Deploy to gh-pages
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/tags/v1.0.0')
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

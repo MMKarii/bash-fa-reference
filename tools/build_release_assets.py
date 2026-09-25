@@ -88,7 +88,7 @@ def build_release_assets(version: str, out_dir: Path, source_root: Path = Path("
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--version", default="2.0.0")
+    parser.add_argument("--version", default="2.1.0")
     parser.add_argument("--out-dir", type=Path, default=Path("dist"))
     parser.add_argument("--source-root", type=Path, default=Path("."))
     args = parser.parse_args(argv)
