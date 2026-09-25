@@ -22,12 +22,12 @@ COMMON COMMANDS:
   docs [TOPIC]         Print the matching documentation URL
   man [TOPIC]          Open the installed manual page when available
   completion SHELL     Generate Bash, Zsh, or Fish completion
-  lang {fa,en}         Save the preferred language
+  lang {{fa,en}}         Save the preferred language
   usage                Print this summary
 
 GLOBAL OPTIONS:
-  --lang {fa,en}       Select output language
-  --format {text,json} Select human or machine-readable output
+  --lang {{fa,en}}       Select output language
+  --format {{text,json}} Select human or machine-readable output
   --no-color           Disable terminal color
   --width N            Set text output width
   --version            Print Bashref version
