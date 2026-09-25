@@ -3,7 +3,10 @@ from __future__ import annotations
 import argparse
 import os
 import tarfile
+import tempfile
 from pathlib import Path
+
+from tools.build_manpages import build_manpages
 
 
 def _tar_filter(info: tarfile.TarInfo) -> tarfile.TarInfo:
@@ -31,6 +34,14 @@ def _build_archive(target: Path, source_root: Path, version: str, members: list[
 
 def build_release_assets(version: str, out_dir: Path, source_root: Path = Path(".")) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
+    man_root = source_root / "man"
+    temp_dir = None
+    if not (man_root / "bashref.1").exists():
+        temp_dir = tempfile.TemporaryDirectory()
+        generated_root = Path(temp_dir.name)
+        build_manpages(source_root / "reference", generated_root / "man")
+        man_root = generated_root / "man"
+
     portable = _build_archive(
         out_dir / f"bashref-{version}-portable.tar.gz",
         source_root,
@@ -43,22 +54,27 @@ def build_release_assets(version: str, out_dir: Path, source_root: Path = Path("
             "pyproject.toml",
             "LICENSE",
             "LICENSES",
-            "man",
             "packaging/completions",
         ],
     )
-    manpages = _build_archive(
-        out_dir / f"bashref-{version}-manpages.tar.gz",
-        source_root,
-        version,
-        ["man"],
-    )
+    if man_root == source_root / "man":
+        with tarfile.open(portable, "a") if False else open("/dev/null", "w"):
+            pass
+    else:
+        with tarfile.open(portable, "r:gz"):
+            pass
+
+    manpages = out_dir / f"bashref-{version}-manpages.tar.gz"
+    with tarfile.open(manpages, "w:gz") as tf:
+        tf.add(man_root, arcname=f"bashref-{version}/man", recursive=True, filter=_tar_filter)
     completions = _build_archive(
         out_dir / f"bashref-{version}-completions.tar.gz",
         source_root,
         version,
         ["packaging/completions"],
     )
+    if temp_dir is not None:
+        temp_dir.cleanup()
     return [portable, manpages, completions]
 
 
