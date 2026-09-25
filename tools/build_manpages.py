@@ -62,7 +62,7 @@ def render_cli_manpage() -> str:
     return """\
 .TH "BASHREF" "1" "Bashref 2.0.0" "Bashref" "User Commands"
 .SH NAME
-bashref \- offline bilingual Bash reference
+bashref \\- offline bilingual Bash reference
 .SH SYNOPSIS
 bashref [--lang fa|en] [--format text|json] COMMAND [ARGUMENTS]
 .SH DESCRIPTION
