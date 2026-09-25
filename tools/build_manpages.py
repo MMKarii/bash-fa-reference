@@ -32,7 +32,7 @@ def render_reference_manpage(record: dict) -> str:
     description = "\n\n".join(str(x) for x in record.get("description", []))
     sources = "\n".join(str(x) for x in record.get("sources", []))
     parts = [
-        '.TH "BASHREF-REFERENCE" "5" "Bashref 2.0.0" "Bashref" "File Formats and Conventions"\n',
+        '.TH "BASHREF-REFERENCE" "5" "September 25, 2026" "Bashref 2.0.0" "File Formats and Conventions"\n',
         _section("NAME", f"{name} - {summary}"),
         _section("SYNOPSIS", synopsis),
         _section("DESCRIPTION", description),
@@ -60,7 +60,7 @@ def render_reference_manpage(record: dict) -> str:
 
 def render_cli_manpage() -> str:
     return """\
-.TH "BASHREF" "1" "Bashref 2.0.0" "Bashref" "User Commands"
+.TH "BASHREF" "1" "September 25, 2026" "Bashref 2.0.0" "User Commands"
 .SH NAME
 bashref \\- offline bilingual Bash reference
 .SH SYNOPSIS
