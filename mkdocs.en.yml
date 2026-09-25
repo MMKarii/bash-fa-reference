@@ -76,6 +76,7 @@ nav:
   - Home: index.md
   - Reference Guide:
       - Overview: reference/index.md
+      - Command Summary: reference/usage-summary.md
   - Professional Guide:
       - Overview: book/index.md
       - Learning Path: learning-path.md
@@ -97,6 +98,10 @@ nav:
       - "14. Debugging, Testing, and Portability": 14-debugging-testing-portability.md
   - Installation: install/index.md
   - Download: download/index.md
+  - Support:
+      - Compatibility: compatibility.md
+      - Troubleshooting: troubleshooting.md
+      - FAQ: faq.md
   - Releases: releases/index.md
   - About: about/index.md
   - References: references.md
