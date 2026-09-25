@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from packaging.deb.build_deb import stage_deb
+from tools.build_deb import stage_deb
 
 EXPECTED = {
     "usr/bin/bashref",
