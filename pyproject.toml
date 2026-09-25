@@ -8,7 +8,8 @@ version = "2.0.0"
 description = "Offline bilingual Bash reference CLI"
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"\nlicense-files = ["LICENSE", "LICENSES/MIT.txt", "LICENSES/CC-BY-4.0.txt"]
+license = "MIT"
+license-files = ["LICENSE", "LICENSES/MIT.txt", "LICENSES/CC-BY-4.0.txt"]
 authors = [{ name = "MMKarii" }]
 dependencies = []
 
