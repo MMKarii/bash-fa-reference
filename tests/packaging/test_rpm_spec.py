@@ -1,8 +1,8 @@
-from packaging.rpm.build_rpm import render_spec
+from tools.build_rpm import render_spec
 
 
 def test_rpm_spec_contains_required_payload():
-    text = render_spec("2.0.0", "bashref-2.0.0.tar.gz")
+    text = render_spec("2.0.0", "bashref-2.0.0-package.tar.gz")
     assert "Version: 2.0.0" in text
     assert "BuildArch: noarch" in text
     assert "%{_bindir}/bashref" in text
