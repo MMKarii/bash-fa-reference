@@ -2,21 +2,21 @@
 
 Bashref 2.0.0 is an offline bilingual Bash reference CLI.
 
-## Python package
+## Recommended installation
 
-The primary portable installation path is:
-
-```bash
-pipx install bashref
-```
-
-You can also install with pip:
+Install the official wheel directly from the GitHub Release:
 
 ```bash
-python -m pip install bashref
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
 ```
 
-For a checkout of this repository:
+Or with pip:
+
+```bash
+python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+```
+
+For a checked-out source tree:
 
 ```bash
 python -m pip install -e .
@@ -32,8 +32,10 @@ bashref builtin printf
 
 ## Linux packages
 
-Release assets include Debian and RPM packages. They install the CLI, packaged reference data, man pages, and Bash/Zsh/Fish completions.
+The v2 release also includes Debian and RPM packages. They install the CLI runtime, packaged reference data, man pages, and Bash/Zsh/Fish completions.
 
 ## Offline behavior
 
 Core lookup and search do not require network access. Bashref never executes examples from the reference database.
+
+> The project currently publishes installation artifacts through GitHub Releases. A PyPI publication is not assumed by this documentation.
