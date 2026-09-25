@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 EXTERNAL_SCHEMES = {"http", "https", "mailto", "tel", "data", "javascript"}
 PUBLISHED_PATH_PREFIX = "/bash-fa-reference"
-VERSION_RE = re.compile(r"^v\\d+\\.\\d+$")
+VERSION_RE = re.compile(r"^v\d+\.\d+$")
 
 
 class _PageParser(HTMLParser):
