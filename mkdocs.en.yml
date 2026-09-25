@@ -95,5 +95,9 @@ nav:
       - "12. DevOps and CI/CD": 12-devops-cicd.md
       - "13. Defensive Security": 13-defensive-security.md
       - "14. Debugging, Testing, and Portability": 14-debugging-testing-portability.md
+  - Installation: install/index.md
+  - Download: download/index.md
+  - Releases: releases/index.md
+  - About: about/index.md
   - References: references.md
   - Disclaimer: disclaimer.md
