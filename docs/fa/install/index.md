@@ -1,41 +1,50 @@
 # نصب Bashref
 
-Bashref 2.0.0 یک ابزار خط فرمان آفلاین برای مرجع دوزبانه Bash است.
+Bashref 2.1.0 یک CLI آفلاین دوزبانه است. اگر نمی‌خواهید Python جداگانه مدیریت کنید از standalone استفاده کنید.
 
-## روش پیشنهادی نصب
+## Standalone بدون نیاز به Python جداگانه
 
-wheel رسمی را مستقیماً از GitHub Release نصب کنید:
+### Linux x86_64
 
 ```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+curl -LO https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-linux-x86_64.tar.gz
+tar -xzf bashref-2.1.0-linux-x86_64.tar.gz
+install -m 755 bashref ~/.local/bin/bashref
+bashref doctor
 ```
 
-یا با pip:
+### macOS
+
+Apple Silicon از `bashref-2.1.0-macos-arm64.tar.gz` و Intel از `bashref-2.1.0-macos-x86_64.tar.gz` استفاده می‌کند.
+
+### Windows x86_64
+
+`bashref-2.1.0-windows-x86_64.zip` را دانلود کنید، `bashref.exe` را استخراج و در مسیری داخل `PATH` قرار دهید.
+
+## pipx / wheel
 
 ```bash
-python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
-```
-
-برای source checkoutشده:
-
-```bash
-python -m pip install -e .
-```
-
-بررسی نصب:
-
-```bash
-bashref --version
-bashref search quoting
-bashref --lang fa builtin printf
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
 ## بسته‌های Linux
 
-انتشار v2 شامل بسته‌های Debian و RPM نیز هست. این بسته‌ها runtime ابزار، داده مرجع، man page و completionهای Bash/Zsh/Fish را نصب می‌کنند.
+انتشار شامل DEB و RPM است که CLI، داده مرجع، man page و completionها را نصب می‌کنند.
 
-## اجرای آفلاین
+## بررسی نصب
 
-جست‌وجو و lookup اصلی به اینترنت نیاز ندارند و Bashref هیچ مثال ذخیره‌شده در مرجع را اجرا نمی‌کند.
+```bash
+bashref --version
+bashref doctor
+bashref --lang fa search quoting
+```
 
-> در حال حاضر artifactهای نصب از طریق GitHub Releases منتشر می‌شوند و این مستندات انتشار روی PyPI را فرض نمی‌کنند.
+## حذف
+
+- Standalone: فایل `bashref` یا `bashref.exe` را حذف کنید.
+- pipx: `pipx uninstall bashref`
+- pip: `python -m pip uninstall bashref`
+- Debian: `sudo dpkg -r bashref`
+- RPM: `sudo rpm -e bashref`
+
+حذف DEB/RPM preference کاربر را پاک نمی‌کند.
