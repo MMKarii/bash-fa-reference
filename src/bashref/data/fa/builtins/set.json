@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "گزینه‌های پوسته و پارامترهای positional را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "set -u",
+      "title": "Enable nounset"
+    }
+  ],
+  "id": "builtin.set",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "set",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "گزینه‌های پوسته و پارامترهای positional را تنظیم می‌کند.",
+  "synopsis": "set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]",
+  "tags": [
+    "builtin",
+    "set"
+  ]
+}

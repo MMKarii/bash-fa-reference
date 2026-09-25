@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیرها و ویژگی‌های آن‌ها را تعریف می‌کند و در Bash هم‌معنی declare است. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.typeset",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "typeset",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "متغیرها و ویژگی‌های آن‌ها را تعریف می‌کند و در Bash هم‌معنی declare است.",
+  "synopsis": "typeset [-aAfFgiIlnrtux] name[=value] ... or typeset -p [-aAfFilnrtux] [name ...]",
+  "tags": [
+    "builtin",
+    "typeset"
+  ]
+}

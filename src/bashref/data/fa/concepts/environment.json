@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "محیط پوسته مجموعه‌ای از name-valueهای exportشده است که پردازه‌های فرزند به ارث می‌برند."
+  ],
+  "examples": [],
+  "id": "concept.environment",
+  "kind": "concept",
+  "language": "fa",
+  "name": "environment",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Environment"
+  ],
+  "summary": "محیط پوسته مجموعه‌ای از name-valueهای exportشده است که پردازه‌های فرزند به ارث می‌برند.",
+  "synopsis": "export NAME=value",
+  "tags": [
+    "concept",
+    "environment"
+  ]
+}

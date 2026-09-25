@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Commands report success or failure through integer exit status values."
+  ],
+  "examples": [],
+  "id": "concept.exit-status",
+  "kind": "concept",
+  "language": "en",
+  "name": "exit status",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Exit-Status"
+  ],
+  "summary": "Commands report success or failure through integer exit status values.",
+  "synopsis": "command; status=$?",
+  "tags": [
+    "concept",
+    "exit-status"
+  ]
+}

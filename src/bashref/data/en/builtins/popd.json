@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Remove entries from the directory stack. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.popd",
+  "kind": "builtin",
+  "language": "en",
+  "name": "popd",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Remove entries from the directory stack.",
+  "synopsis": "popd [-n] [+N | -N]",
+  "tags": [
+    "builtin",
+    "popd"
+  ]
+}

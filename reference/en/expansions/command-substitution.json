@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Command substitution replaces a construct with a command's standard output."
+  ],
+  "examples": [],
+  "id": "expansion.command-substitution",
+  "kind": "expansion",
+  "language": "en",
+  "name": "command substitution",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Command-Substitution"
+  ],
+  "summary": "Command substitution replaces a construct with a command's standard output.",
+  "synopsis": "$(command)",
+  "tags": [
+    "expansion",
+    "command-substitution"
+  ]
+}

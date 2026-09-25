@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Jobها را از جدول Job پوسته حذف می‌کند یا رفتار SIGHUP آن‌ها را تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.disown",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "disown",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "Jobها را از جدول Job پوسته حذف می‌کند یا رفتار SIGHUP آن‌ها را تغییر می‌دهد.",
+  "synopsis": "disown [-h] [-ar] [jobspec ... | pid ...]",
+  "tags": [
+    "builtin",
+    "disown"
+  ]
+}

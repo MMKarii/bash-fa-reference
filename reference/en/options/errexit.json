@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "errexit requests shell exit after certain unhandled command failures; exceptions are context-sensitive."
+  ],
+  "examples": [],
+  "id": "option.errexit",
+  "kind": "option",
+  "language": "en",
+  "name": "errexit",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "errexit requests shell exit after certain unhandled command failures; exceptions are context-sensitive.",
+  "synopsis": "set -e  set -o errexit",
+  "tags": [
+    "option",
+    "errexit"
+  ]
+}

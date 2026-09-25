@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "builtin set گزینه‌های اجرایی shell را فعال یا غیرفعال می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.shell-options",
+  "kind": "concept",
+  "language": "fa",
+  "name": "shell options",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "builtin set گزینه‌های اجرایی shell را فعال یا غیرفعال می‌کند.",
+  "synopsis": "set -o option  set +o option",
+  "tags": [
+    "concept",
+    "shell-options"
+  ]
+}

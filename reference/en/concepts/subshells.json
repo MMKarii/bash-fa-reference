@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Parentheses execute a command list in a subshell environment."
+  ],
+  "examples": [],
+  "id": "concept.subshells",
+  "kind": "concept",
+  "language": "en",
+  "name": "subshells",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Command-Grouping"
+  ],
+  "summary": "Parentheses execute a command list in a subshell environment.",
+  "synopsis": "( list )",
+  "tags": [
+    "concept",
+    "subshells"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Display or modify shell process resource limits. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.ulimit",
+  "kind": "builtin",
+  "language": "en",
+  "name": "ulimit",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Display or modify shell process resource limits.",
+  "synopsis": "ulimit [-SHabcdefiklmnpqrstuvxPRT] [limit]",
+  "tags": [
+    "builtin",
+    "ulimit"
+  ]
+}

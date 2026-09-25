@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Indexed arrays store multiple shell values under integer indices."
+  ],
+  "examples": [],
+  "id": "concept.arrays",
+  "kind": "concept",
+  "language": "en",
+  "name": "arrays",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Arrays"
+  ],
+  "summary": "Indexed arrays store multiple shell values under integer indices.",
+  "synopsis": "name=(one two three)",
+  "tags": [
+    "concept",
+    "arrays"
+  ]
+}

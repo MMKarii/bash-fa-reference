@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را."
+  ],
+  "examples": [],
+  "id": "option.pipefail",
+  "kind": "option",
+  "language": "fa",
+  "name": "pipefail",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را.",
+  "synopsis": "set -o pipefail",
+  "tags": [
+    "option",
+    "pipefail"
+  ]
+}

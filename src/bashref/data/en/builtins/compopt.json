@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Modify programmable completion options. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.compopt",
+  "kind": "builtin",
+  "language": "en",
+  "name": "compopt",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Modify programmable completion options.",
+  "synopsis": "compopt [-o|+o option] [-DEI] [name ...]",
+  "tags": [
+    "builtin",
+    "compopt"
+  ]
+}

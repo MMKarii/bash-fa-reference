@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Braces group commands in the current shell; parentheses group them in a subshell."
+  ],
+  "examples": [],
+  "id": "concept.grouping",
+  "kind": "concept",
+  "language": "en",
+  "name": "command grouping",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Command-Grouping"
+  ],
+  "summary": "Braces group commands in the current shell; parentheses group them in a subshell.",
+  "synopsis": "{ list; }  ( list )",
+  "tags": [
+    "concept",
+    "grouping"
+  ]
+}

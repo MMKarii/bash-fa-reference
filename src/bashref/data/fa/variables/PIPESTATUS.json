@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است."
+  ],
+  "examples": [],
+  "id": "variable.PIPESTATUS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "PIPESTATUS",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است.",
+  "synopsis": "${PIPESTATUS[@]}",
+  "tags": [
+    "variable",
+    "PIPESTATUS"
+  ]
+}

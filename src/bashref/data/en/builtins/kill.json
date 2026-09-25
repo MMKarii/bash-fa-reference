@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Send signals to processes or jobs. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.kill",
+  "kind": "builtin",
+  "language": "en",
+  "name": "kill",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "Send signals to processes or jobs.",
+  "synopsis": "kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]",
+  "tags": [
+    "builtin",
+    "kill"
+  ]
+}

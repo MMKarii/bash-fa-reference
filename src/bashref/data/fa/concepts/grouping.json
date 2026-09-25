@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Brace فرمان‌ها را در همان پوسته و پرانتز در subshell گروه‌بندی می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.grouping",
+  "kind": "concept",
+  "language": "fa",
+  "name": "command grouping",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Command-Grouping"
+  ],
+  "summary": "Brace فرمان‌ها را در همان پوسته و پرانتز در subshell گروه‌بندی می‌کند.",
+  "synopsis": "{ list; }  ( list )",
+  "tags": [
+    "concept",
+    "grouping"
+  ]
+}

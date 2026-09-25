@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Parameter expansion reads and transforms shell parameter values."
+  ],
+  "examples": [],
+  "id": "expansion.parameter",
+  "kind": "expansion",
+  "language": "en",
+  "name": "parameter expansion",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion"
+  ],
+  "summary": "Parameter expansion reads and transforms shell parameter values.",
+  "synopsis": "${parameter}",
+  "tags": [
+    "expansion",
+    "parameter"
+  ]
+}

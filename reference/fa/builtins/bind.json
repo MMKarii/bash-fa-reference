@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "تنظیمات و کلیدهای میانبر Readline را مدیریت می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.bind",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "bind",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "تنظیمات و کلیدهای میانبر Readline را مدیریت می‌کند.",
+  "synopsis": "bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r keyseq] [-x keyseq:shell-command] [keyseq:readline-function or readline-command]",
+  "tags": [
+    "builtin",
+    "bind"
+  ]
+}

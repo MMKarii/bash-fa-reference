@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "ماسک مجوز ایجاد فایل را نمایش یا تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.umask",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "umask",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "ماسک مجوز ایجاد فایل را نمایش یا تنظیم می‌کند.",
+  "synopsis": "umask [-p] [-S] [mode]",
+  "tags": [
+    "builtin",
+    "umask"
+  ]
+}

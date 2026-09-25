@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Mark variables or functions as readonly. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.readonly",
+  "kind": "builtin",
+  "language": "en",
+  "name": "readonly",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Mark variables or functions as readonly.",
+  "synopsis": "readonly [-aAf] [name[=value] ...] or readonly -p",
+  "tags": [
+    "builtin",
+    "readonly"
+  ]
+}

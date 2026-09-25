@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Process substitution ورودی یا خروجی فرمان را از طریق مسیری شبیه فایل در دسترس می‌گذارد."
+  ],
+  "examples": [],
+  "id": "expansion.process-substitution",
+  "kind": "expansion",
+  "language": "fa",
+  "name": "process substitution",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Process-Substitution"
+  ],
+  "summary": "Process substitution ورودی یا خروجی فرمان را از طریق مسیری شبیه فایل در دسترس می‌گذارد.",
+  "synopsis": "<(list)  >(list)",
+  "tags": [
+    "expansion",
+    "process-substitution"
+  ]
+}

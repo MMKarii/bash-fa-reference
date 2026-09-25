@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "Set handlers for signals and shell pseudo-signals. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [
+    {
+      "code": "trap 'rm -f \"$tmp\"' EXIT",
+      "title": "Cleanup on exit"
+    }
+  ],
+  "id": "builtin.trap",
+  "kind": "builtin",
+  "language": "en",
+  "name": "trap",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Set handlers for signals and shell pseudo-signals.",
+  "synopsis": "trap [-lp] [[arg] signal_spec ...]",
+  "tags": [
+    "builtin",
+    "trap"
+  ]
+}

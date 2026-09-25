@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Bash بر اساس حالت login، interactive و نحوه اجرا فایل‌های startup متفاوتی می‌خواند."
+  ],
+  "examples": [],
+  "id": "concept.startup-files",
+  "kind": "concept",
+  "language": "fa",
+  "name": "startup files",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files"
+  ],
+  "summary": "Bash بر اساس حالت login، interactive و نحوه اجرا فایل‌های startup متفاوتی می‌خواند.",
+  "synopsis": "~/.bash_profile  ~/.bashrc",
+  "tags": [
+    "concept",
+    "startup-files"
+  ]
+}

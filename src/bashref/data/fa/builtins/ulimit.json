@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "محدودیت منابع پردازه‌های پوسته را نمایش یا تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.ulimit",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "ulimit",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "محدودیت منابع پردازه‌های پوسته را نمایش یا تغییر می‌دهد.",
+  "synopsis": "ulimit [-SHabcdefiklmnpqrstuvxPRT] [limit]",
+  "tags": [
+    "builtin",
+    "ulimit"
+  ]
+}

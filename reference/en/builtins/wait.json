@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "Wait for jobs or processes and return completion status. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [
+    {
+      "code": "wait \"$pid\"",
+      "title": "Wait for a background PID"
+    }
+  ],
+  "id": "builtin.wait",
+  "kind": "builtin",
+  "language": "en",
+  "name": "wait",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "Wait for jobs or processes and return completion status.",
+  "synopsis": "wait [-fn] [-p var] [id ...]",
+  "tags": [
+    "builtin",
+    "wait"
+  ]
+}

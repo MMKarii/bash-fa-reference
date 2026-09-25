@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Continue the next iteration of an enclosing loop. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.continue",
+  "kind": "builtin",
+  "language": "en",
+  "name": "continue",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Continue the next iteration of an enclosing loop.",
+  "synopsis": "continue [n]",
+  "tags": [
+    "builtin",
+    "continue"
+  ]
+}

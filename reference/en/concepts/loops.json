@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Loop constructs repeat command lists while conditions or item lists require it."
+  ],
+  "examples": [],
+  "id": "concept.loops",
+  "kind": "concept",
+  "language": "en",
+  "name": "loops",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs"
+  ],
+  "summary": "Loop constructs repeat command lists while conditions or item lists require it.",
+  "synopsis": "for name in words; do list; done",
+  "tags": [
+    "concept",
+    "loops"
+  ]
+}

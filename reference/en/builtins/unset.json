@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Remove variables or functions from the shell environment. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.unset",
+  "kind": "builtin",
+  "language": "en",
+  "name": "unset",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Remove variables or functions from the shell environment.",
+  "synopsis": "unset [-f] [-v] [-n] [name ...]",
+  "tags": [
+    "builtin",
+    "unset"
+  ]
+}

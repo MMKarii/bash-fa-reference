@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "نشان می‌دهد نام فرمان‌ها چگونه resolve می‌شوند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.type",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "type",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "نشان می‌دهد نام فرمان‌ها چگونه resolve می‌شوند.",
+  "synopsis": "type [-afptP] name [name ...]",
+  "tags": [
+    "builtin",
+    "type"
+  ]
+}

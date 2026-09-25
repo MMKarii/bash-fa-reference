@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Traps associate shell code with signals and Bash pseudo-signals such as EXIT and DEBUG."
+  ],
+  "examples": [],
+  "id": "concept.traps",
+  "kind": "concept",
+  "language": "en",
+  "name": "traps",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Signals"
+  ],
+  "summary": "Traps associate shell code with signals and Bash pseudo-signals such as EXIT and DEBUG.",
+  "synopsis": "trap 'handler' EXIT",
+  "tags": [
+    "concept",
+    "traps"
+  ]
+}

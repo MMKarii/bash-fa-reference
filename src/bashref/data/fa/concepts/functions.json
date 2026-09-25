@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "تابع‌های پوسته مجموعه فرمان‌ها را با یک نام قابل استفاده مجدد در همان پوسته گروه‌بندی می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.functions",
+  "kind": "concept",
+  "language": "fa",
+  "name": "functions",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Functions"
+  ],
+  "summary": "تابع‌های پوسته مجموعه فرمان‌ها را با یک نام قابل استفاده مجدد در همان پوسته گروه‌بندی می‌کنند.",
+  "synopsis": "name () { list; }",
+  "tags": [
+    "concept",
+    "functions"
+  ]
+}

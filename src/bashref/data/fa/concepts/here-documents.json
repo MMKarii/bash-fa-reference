@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Here document ورودی چندخطی را تا رسیدن به delimiter فراهم می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.here-documents",
+  "kind": "concept",
+  "language": "fa",
+  "name": "here documents",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Here-Documents"
+  ],
+  "summary": "Here document ورودی چندخطی را تا رسیدن به delimiter فراهم می‌کند.",
+  "synopsis": "command <<'EOF' ... EOF",
+  "tags": [
+    "concept",
+    "here-documents"
+  ]
+}

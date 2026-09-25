@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "فرمان‌ها موفقیت یا شکست را با مقدار عددی exit status گزارش می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.exit-status",
+  "kind": "concept",
+  "language": "fa",
+  "name": "exit status",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Exit-Status"
+  ],
+  "summary": "فرمان‌ها موفقیت یا شکست را با مقدار عددی exit status گزارش می‌کنند.",
+  "synopsis": "command; status=$?",
+  "tags": [
+    "concept",
+    "exit-status"
+  ]
+}

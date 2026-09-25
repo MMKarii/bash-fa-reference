@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    "["
+  ],
+  "description": [
+    "Evaluate a conditional expression and return its truth status. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.test",
+  "kind": "builtin",
+  "language": "en",
+  "name": "test",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Evaluate a conditional expression and return its truth status.",
+  "synopsis": "test [expr]",
+  "tags": [
+    "builtin",
+    "test"
+  ]
+}

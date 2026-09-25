@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Brace expansion generates strings from comma lists or sequences."
+  ],
+  "examples": [],
+  "id": "expansion.brace",
+  "kind": "expansion",
+  "language": "en",
+  "name": "brace expansion",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Brace-Expansion"
+  ],
+  "summary": "Brace expansion generates strings from comma lists or sequences.",
+  "synopsis": "prefix{a,b,c}suffix",
+  "tags": [
+    "expansion",
+    "brace"
+  ]
+}

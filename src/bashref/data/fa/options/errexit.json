@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند."
+  ],
+  "examples": [],
+  "id": "option.errexit",
+  "kind": "option",
+  "language": "fa",
+  "name": "errexit",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند.",
+  "synopsis": "set -e  set -o errexit",
+  "tags": [
+    "option",
+    "errexit"
+  ]
+}

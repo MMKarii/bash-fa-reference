@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "آرایه‌های indexed چند مقدار را با index عددی نگهداری می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.arrays",
+  "kind": "concept",
+  "language": "fa",
+  "name": "arrays",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Arrays"
+  ],
+  "summary": "آرایه‌های indexed چند مقدار را با index عددی نگهداری می‌کنند.",
+  "synopsis": "name=(one two three)",
+  "tags": [
+    "concept",
+    "arrays"
+  ]
+}

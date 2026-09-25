@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "BASH_SOURCE آرایه‌ای از نام فایل‌های source متناظر با call stack جاری است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_SOURCE",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_SOURCE",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "BASH_SOURCE آرایه‌ای از نام فایل‌های source متناظر با call stack جاری است.",
+  "synopsis": "${BASH_SOURCE[0]}",
+  "tags": [
+    "variable",
+    "BASH_SOURCE"
+  ]
+}

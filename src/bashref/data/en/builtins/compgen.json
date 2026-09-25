@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Generate programmable-completion candidates. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.compgen",
+  "kind": "builtin",
+  "language": "en",
+  "name": "compgen",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Generate programmable-completion candidates.",
+  "synopsis": "compgen [-abcdefgjksuv] [-o option] [-A action] [-G globpat] [-W wordlist] [-F function] [-C command] [-X filterpat] [-P prefix] [-S suffix] [word]",
+  "tags": [
+    "builtin",
+    "compgen"
+  ]
+}

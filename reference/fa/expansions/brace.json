@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Brace expansion مجموعه‌ای از رشته‌ها را از list یا sequence داخل brace تولید می‌کند."
+  ],
+  "examples": [],
+  "id": "expansion.brace",
+  "kind": "expansion",
+  "language": "fa",
+  "name": "brace expansion",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Brace-Expansion"
+  ],
+  "summary": "Brace expansion مجموعه‌ای از رشته‌ها را از list یا sequence داخل brace تولید می‌کند.",
+  "synopsis": "prefix{a,b,c}suffix",
+  "tags": [
+    "expansion",
+    "brace"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Create variables local to a shell function. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.local",
+  "kind": "builtin",
+  "language": "en",
+  "name": "local",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Create variables local to a shell function.",
+  "synopsis": "local [option] name[=value] ...",
+  "tags": [
+    "builtin",
+    "local"
+  ]
+}

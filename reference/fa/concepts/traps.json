@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Trap کد پوسته را به signalها و pseudo-signalهایی مانند EXIT و DEBUG متصل می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.traps",
+  "kind": "concept",
+  "language": "fa",
+  "name": "traps",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Signals"
+  ],
+  "summary": "Trap کد پوسته را به signalها و pseudo-signalهایی مانند EXIT و DEBUG متصل می‌کند.",
+  "synopsis": "trap 'handler' EXIT",
+  "tags": [
+    "concept",
+    "traps"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "globstar makes ** in pathname expansion match recursively through directory levels."
+  ],
+  "examples": [],
+  "id": "shopt.globstar",
+  "kind": "shopt",
+  "language": "en",
+  "name": "globstar",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "globstar makes ** in pathname expansion match recursively through directory levels.",
+  "synopsis": "shopt -s globstar",
+  "tags": [
+    "shopt",
+    "globstar"
+  ]
+}

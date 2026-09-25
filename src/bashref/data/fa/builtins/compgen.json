@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "گزینه‌های ممکن برای تکمیل خودکار را تولید می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.compgen",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "compgen",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "گزینه‌های ممکن برای تکمیل خودکار را تولید می‌کند.",
+  "synopsis": "compgen [-abcdefgjksuv] [-o option] [-A action] [-G globpat] [-W wordlist] [-F function] [-C command] [-X filterpat] [-P prefix] [-S suffix] [word]",
+  "tags": [
+    "builtin",
+    "compgen"
+  ]
+}

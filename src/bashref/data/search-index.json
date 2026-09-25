@@ -4,28 +4,2146 @@
     "en": [
       {
         "aliases": [],
-        "description": "Format arguments according to a format string and write the result to standard output, or assign it with -v.",
+        "description": "Define or display shell aliases. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.alias",
+        "name": "alias",
+        "summary": "Define or display shell aliases.",
+        "tags": [
+          "builtin",
+          "alias"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Resume suspended jobs in the background. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.bg",
+        "name": "bg",
+        "summary": "Resume suspended jobs in the background.",
+        "tags": [
+          "builtin",
+          "bg"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Configure Readline key bindings and variables. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.bind",
+        "name": "bind",
+        "summary": "Configure Readline key bindings and variables.",
+        "tags": [
+          "builtin",
+          "bind"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Exit one or more enclosing loops. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.break",
+        "name": "break",
+        "summary": "Exit one or more enclosing loops.",
+        "tags": [
+          "builtin",
+          "break"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Execute a shell builtin directly. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.builtin",
+        "name": "builtin",
+        "summary": "Execute a shell builtin directly.",
+        "tags": [
+          "builtin",
+          "builtin"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display shell function call-stack context. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.caller",
+        "name": "caller",
+        "summary": "Display shell function call-stack context.",
+        "tags": [
+          "builtin",
+          "caller"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Change the current working directory. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.cd",
+        "name": "cd",
+        "summary": "Change the current working directory.",
+        "tags": [
+          "builtin",
+          "cd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Run a command while bypassing shell functions, or describe command lookup. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.command",
+        "name": "command",
+        "summary": "Run a command while bypassing shell functions, or describe command lookup.",
+        "tags": [
+          "builtin",
+          "command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Generate programmable-completion candidates. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.compgen",
+        "name": "compgen",
+        "summary": "Generate programmable-completion candidates.",
+        "tags": [
+          "builtin",
+          "compgen"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Define programmable completion specifications. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.complete",
+        "name": "complete",
+        "summary": "Define programmable completion specifications.",
+        "tags": [
+          "builtin",
+          "complete"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Modify programmable completion options. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.compopt",
+        "name": "compopt",
+        "summary": "Modify programmable completion options.",
+        "tags": [
+          "builtin",
+          "compopt"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Continue the next iteration of an enclosing loop. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.continue",
+        "name": "continue",
+        "summary": "Continue the next iteration of an enclosing loop.",
+        "tags": [
+          "builtin",
+          "continue"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Declare variables and set their attributes. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.declare",
+        "name": "declare",
+        "summary": "Declare variables and set their attributes.",
+        "tags": [
+          "builtin",
+          "declare"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display or manipulate the directory stack. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.dirs",
+        "name": "dirs",
+        "summary": "Display or manipulate the directory stack.",
+        "tags": [
+          "builtin",
+          "dirs"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remove jobs from the shell's job table or alter hangup handling. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.disown",
+        "name": "disown",
+        "summary": "Remove jobs from the shell's job table or alter hangup handling.",
+        "tags": [
+          "builtin",
+          "disown"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Write arguments to standard output. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.echo",
+        "name": "echo",
+        "summary": "Write arguments to standard output.",
+        "tags": [
+          "builtin",
+          "echo"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable, disable, or load shell builtins. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.enable",
+        "name": "enable",
+        "summary": "Enable, disable, or load shell builtins.",
+        "tags": [
+          "builtin",
+          "enable"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Concatenate arguments and execute the result as shell input. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.eval",
+        "name": "eval",
+        "summary": "Concatenate arguments and execute the result as shell input.",
+        "tags": [
+          "builtin",
+          "eval"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Replace the current shell process with a command, or apply redirections. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.exec",
+        "name": "exec",
+        "summary": "Replace the current shell process with a command, or apply redirections.",
+        "tags": [
+          "builtin",
+          "exec"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Exit the shell with an optional status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.exit",
+        "name": "exit",
+        "summary": "Exit the shell with an optional status.",
+        "tags": [
+          "builtin",
+          "exit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Mark variables for export to child processes. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.export",
+        "name": "export",
+        "summary": "Mark variables for export to child processes.",
+        "tags": [
+          "builtin",
+          "export"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Return an unsuccessful status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.false",
+        "name": "false",
+        "summary": "Return an unsuccessful status.",
+        "tags": [
+          "builtin",
+          "false"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "List, edit, or re-execute commands from shell history. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.fc",
+        "name": "fc",
+        "summary": "List, edit, or re-execute commands from shell history.",
+        "tags": [
+          "builtin",
+          "fc"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Move a job to the foreground. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.fg",
+        "name": "fg",
+        "summary": "Move a job to the foreground.",
+        "tags": [
+          "builtin",
+          "fg"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Parse positional parameters as command-line options. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.getopts",
+        "name": "getopts",
+        "summary": "Parse positional parameters as command-line options.",
+        "tags": [
+          "builtin",
+          "getopts"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remember, display, or forget command locations. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.hash",
+        "name": "hash",
+        "summary": "Remember, display, or forget command locations.",
+        "tags": [
+          "builtin",
+          "hash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display help for shell builtins. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.help",
+        "name": "help",
+        "summary": "Display help for shell builtins.",
+        "tags": [
+          "builtin",
+          "help"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display or manipulate the shell history list. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.history",
+        "name": "history",
+        "summary": "Display or manipulate the shell history list.",
+        "tags": [
+          "builtin",
+          "history"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display job status or substitute job specifications. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.jobs",
+        "name": "jobs",
+        "summary": "Display job status or substitute job specifications.",
+        "tags": [
+          "builtin",
+          "jobs"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Send signals to processes or jobs. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.kill",
+        "name": "kill",
+        "summary": "Send signals to processes or jobs.",
+        "tags": [
+          "builtin",
+          "kill"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Evaluate shell arithmetic expressions. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.let",
+        "name": "let",
+        "summary": "Evaluate shell arithmetic expressions.",
+        "tags": [
+          "builtin",
+          "let"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Create variables local to a shell function. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.local",
+        "name": "local",
+        "summary": "Create variables local to a shell function.",
+        "tags": [
+          "builtin",
+          "local"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Exit a login shell. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.logout",
+        "name": "logout",
+        "summary": "Exit a login shell.",
+        "tags": [
+          "builtin",
+          "logout"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Read input lines into an indexed array. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.mapfile",
+        "name": "mapfile",
+        "summary": "Read input lines into an indexed array.",
+        "tags": [
+          "builtin",
+          "mapfile"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remove entries from the directory stack. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.popd",
+        "name": "popd",
+        "summary": "Remove entries from the directory stack.",
+        "tags": [
+          "builtin",
+          "popd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Format and print data, or assign formatted output with -v. This entry documents the Bash builtin and its shell-state effects.",
         "id": "builtin.printf",
         "name": "printf",
-        "summary": "Format and print data.",
+        "summary": "Format and print data, or assign formatted output with -v.",
         "tags": [
-          "output",
-          "formatting",
-          "builtin"
+          "builtin",
+          "printf"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Add or rotate entries in the directory stack. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.pushd",
+        "name": "pushd",
+        "summary": "Add or rotate entries in the directory stack.",
+        "tags": [
+          "builtin",
+          "pushd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Print the current working directory. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.pwd",
+        "name": "pwd",
+        "summary": "Print the current working directory.",
+        "tags": [
+          "builtin",
+          "pwd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Read input and assign fields to shell variables. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.read",
+        "name": "read",
+        "summary": "Read input and assign fields to shell variables.",
+        "tags": [
+          "builtin",
+          "read"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Read input lines into an indexed array; equivalent to mapfile. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.readarray",
+        "name": "readarray",
+        "summary": "Read input lines into an indexed array; equivalent to mapfile.",
+        "tags": [
+          "builtin",
+          "readarray"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Mark variables or functions as readonly. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.readonly",
+        "name": "readonly",
+        "summary": "Mark variables or functions as readonly.",
+        "tags": [
+          "builtin",
+          "readonly"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Return from a function or sourced script with an optional status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.return",
+        "name": "return",
+        "summary": "Return from a function or sourced script with an optional status.",
+        "tags": [
+          "builtin",
+          "return"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Set shell options and positional parameters. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.set",
+        "name": "set",
+        "summary": "Set shell options and positional parameters.",
+        "tags": [
+          "builtin",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Shift positional parameters to the left. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.shift",
+        "name": "shift",
+        "summary": "Shift positional parameters to the left.",
+        "tags": [
+          "builtin",
+          "shift"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Inspect or change Bash-specific shell options. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.shopt",
+        "name": "shopt",
+        "summary": "Inspect or change Bash-specific shell options.",
+        "tags": [
+          "builtin",
+          "shopt"
+        ]
+      },
+      {
+        "aliases": [
+          "."
+        ],
+        "description": "Execute commands from a file in the current shell environment. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.source",
+        "name": "source",
+        "summary": "Execute commands from a file in the current shell environment.",
+        "tags": [
+          "builtin",
+          "source"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Suspend execution of the current shell. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.suspend",
+        "name": "suspend",
+        "summary": "Suspend execution of the current shell.",
+        "tags": [
+          "builtin",
+          "suspend"
+        ]
+      },
+      {
+        "aliases": [
+          "["
+        ],
+        "description": "Evaluate a conditional expression and return its truth status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.test",
+        "name": "test",
+        "summary": "Evaluate a conditional expression and return its truth status.",
+        "tags": [
+          "builtin",
+          "test"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display accumulated user and system CPU times. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.times",
+        "name": "times",
+        "summary": "Display accumulated user and system CPU times.",
+        "tags": [
+          "builtin",
+          "times"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Set handlers for signals and shell pseudo-signals. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.trap",
+        "name": "trap",
+        "summary": "Set handlers for signals and shell pseudo-signals.",
+        "tags": [
+          "builtin",
+          "trap"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Return a successful status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.true",
+        "name": "true",
+        "summary": "Return a successful status.",
+        "tags": [
+          "builtin",
+          "true"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Describe how command names would be interpreted. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.type",
+        "name": "type",
+        "summary": "Describe how command names would be interpreted.",
+        "tags": [
+          "builtin",
+          "type"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Declare variables and attributes; a synonym for declare in Bash. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.typeset",
+        "name": "typeset",
+        "summary": "Declare variables and attributes; a synonym for declare in Bash.",
+        "tags": [
+          "builtin",
+          "typeset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display or modify shell process resource limits. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.ulimit",
+        "name": "ulimit",
+        "summary": "Display or modify shell process resource limits.",
+        "tags": [
+          "builtin",
+          "ulimit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Display or set the file creation mode mask. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.umask",
+        "name": "umask",
+        "summary": "Display or set the file creation mode mask.",
+        "tags": [
+          "builtin",
+          "umask"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remove shell aliases. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.unalias",
+        "name": "unalias",
+        "summary": "Remove shell aliases.",
+        "tags": [
+          "builtin",
+          "unalias"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remove variables or functions from the shell environment. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.unset",
+        "name": "unset",
+        "summary": "Remove variables or functions from the shell environment.",
+        "tags": [
+          "builtin",
+          "unset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Wait for jobs or processes and return completion status. This entry documents the Bash builtin and its shell-state effects.",
+        "id": "builtin.wait",
+        "name": "wait",
+        "summary": "Wait for jobs or processes and return completion status.",
+        "tags": [
+          "builtin",
+          "wait"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Indexed arrays store multiple shell values under integer indices.",
+        "id": "concept.arrays",
+        "name": "arrays",
+        "summary": "Indexed arrays store multiple shell values under integer indices.",
+        "tags": [
+          "concept",
+          "arrays"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Associative arrays store values under string keys.",
+        "id": "concept.associative-arrays",
+        "name": "associative arrays",
+        "summary": "Associative arrays store values under string keys.",
+        "tags": [
+          "concept",
+          "associative-arrays"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Conditional commands select behavior from command status or expressions.",
+        "id": "concept.conditionals",
+        "name": "conditionals",
+        "summary": "Conditional commands select behavior from command status or expressions.",
+        "tags": [
+          "concept",
+          "conditionals"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Bash debugging combines trace options, traps, status inspection, and static analysis.",
+        "id": "concept.debugging",
+        "name": "debugging",
+        "summary": "Bash debugging combines trace options, traps, status inspection, and static analysis.",
+        "tags": [
+          "concept",
+          "debugging"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Defensive scripts quote expansions, validate input, check failures, minimize privilege, and clean up predictably.",
+        "id": "concept.defensive-scripting",
+        "name": "defensive scripting",
+        "summary": "Defensive scripts quote expansions, validate input, check failures, minimize privilege, and clean up predictably.",
+        "tags": [
+          "concept",
+          "defensive-scripting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "The shell environment is a set of exported name-value pairs inherited by child processes.",
+        "id": "concept.environment",
+        "name": "environment",
+        "summary": "The shell environment is a set of exported name-value pairs inherited by child processes.",
+        "tags": [
+          "concept",
+          "environment"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Commands report success or failure through integer exit status values.",
+        "id": "concept.exit-status",
+        "name": "exit status",
+        "summary": "Commands report success or failure through integer exit status values.",
+        "tags": [
+          "concept",
+          "exit-status"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Shell functions group commands under a reusable name in the current shell.",
+        "id": "concept.functions",
+        "name": "functions",
+        "summary": "Shell functions group commands under a reusable name in the current shell.",
+        "tags": [
+          "concept",
+          "functions"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Braces group commands in the current shell; parentheses group them in a subshell.",
+        "id": "concept.grouping",
+        "name": "command grouping",
+        "summary": "Braces group commands in the current shell; parentheses group them in a subshell.",
+        "tags": [
+          "concept",
+          "grouping"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Here documents provide multiline input until a delimiter line is reached.",
+        "id": "concept.here-documents",
+        "name": "here documents",
+        "summary": "Here documents provide multiline input until a delimiter line is reached.",
+        "tags": [
+          "concept",
+          "here-documents"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Here strings provide one expanded word as standard input.",
+        "id": "concept.here-strings",
+        "name": "here strings",
+        "summary": "Here strings provide one expanded word as standard input.",
+        "tags": [
+          "concept",
+          "here-strings"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Job control manages foreground and background pipelines in interactive shells.",
+        "id": "concept.job-control",
+        "name": "job control",
+        "summary": "Job control manages foreground and background pipelines in interactive shells.",
+        "tags": [
+          "concept",
+          "job-control"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Loop constructs repeat command lists while conditions or item lists require it.",
+        "id": "concept.loops",
+        "name": "loops",
+        "summary": "Loop constructs repeat command lists while conditions or item lists require it.",
+        "tags": [
+          "concept",
+          "loops"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pipelines connect command output to command input and produce a pipeline status.",
+        "id": "concept.pipelines",
+        "name": "pipelines",
+        "summary": "Pipelines connect command output to command input and produce a pipeline status.",
+        "tags": [
+          "concept",
+          "pipelines"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Portable scripts separate POSIX shell behavior from Bash-specific features and version differences.",
+        "id": "concept.portability",
+        "name": "portability",
+        "summary": "Portable scripts separate POSIX shell behavior from Bash-specific features and version differences.",
+        "tags": [
+          "concept",
+          "portability"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Redirections control where commands read input and write output.",
+        "id": "concept.redirections",
+        "name": "redirections",
+        "summary": "Redirections control where commands read input and write output.",
+        "tags": [
+          "concept",
+          "redirections"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "The set builtin enables and disables shell execution options.",
+        "id": "concept.shell-options",
+        "name": "shell options",
+        "summary": "The set builtin enables and disables shell execution options.",
+        "tags": [
+          "concept",
+          "shell-options"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "The shopt builtin controls Bash-specific optional behavior.",
+        "id": "concept.shopt",
+        "name": "shopt options",
+        "summary": "The shopt builtin controls Bash-specific optional behavior.",
+        "tags": [
+          "concept",
+          "shopt"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Signals notify processes about asynchronous events and can be handled with trap.",
+        "id": "concept.signals",
+        "name": "signals",
+        "summary": "Signals notify processes about asynchronous events and can be handled with trap.",
+        "tags": [
+          "concept",
+          "signals"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Bash reads different startup files depending on login, interactive, and invocation modes.",
+        "id": "concept.startup-files",
+        "name": "startup files",
+        "summary": "Bash reads different startup files depending on login, interactive, and invocation modes.",
+        "tags": [
+          "concept",
+          "startup-files"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Parentheses execute a command list in a subshell environment.",
+        "id": "concept.subshells",
+        "name": "subshells",
+        "summary": "Parentheses execute a command list in a subshell environment.",
+        "tags": [
+          "concept",
+          "subshells"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Traps associate shell code with signals and Bash pseudo-signals such as EXIT and DEBUG.",
+        "id": "concept.traps",
+        "name": "traps",
+        "summary": "Traps associate shell code with signals and Bash pseudo-signals such as EXIT and DEBUG.",
+        "tags": [
+          "concept",
+          "traps"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "A robust pipeline example preserves quoting and inspects pipeline status when needed.",
+        "id": "example.pipeline",
+        "name": "pipeline example",
+        "summary": "A robust pipeline example preserves quoting and inspects pipeline status when needed.",
+        "tags": [
+          "example",
+          "pipeline"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "A cleanup trap centralizes predictable resource cleanup when a script exits.",
+        "id": "example.trap",
+        "name": "trap example",
+        "summary": "A cleanup trap centralizes predictable resource cleanup when a script exits.",
+        "tags": [
+          "example",
+          "trap"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Arithmetic expansion evaluates an arithmetic expression and substitutes its value.",
+        "id": "expansion.arithmetic",
+        "name": "arithmetic expansion",
+        "summary": "Arithmetic expansion evaluates an arithmetic expression and substitutes its value.",
+        "tags": [
+          "expansion",
+          "arithmetic"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Brace expansion generates strings from comma lists or sequences.",
+        "id": "expansion.brace",
+        "name": "brace expansion",
+        "summary": "Brace expansion generates strings from comma lists or sequences.",
+        "tags": [
+          "expansion",
+          "brace"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command substitution replaces a construct with a command's standard output.",
+        "id": "expansion.command-substitution",
+        "name": "command substitution",
+        "summary": "Command substitution replaces a construct with a command's standard output.",
+        "tags": [
+          "expansion",
+          "command-substitution"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Parameter expansion reads and transforms shell parameter values.",
+        "id": "expansion.parameter",
+        "name": "parameter expansion",
+        "summary": "Parameter expansion reads and transforms shell parameter values.",
+        "tags": [
+          "expansion",
+          "parameter"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pathname expansion replaces glob patterns with matching pathnames.",
+        "id": "expansion.pathname",
+        "name": "pathname expansion",
+        "summary": "Pathname expansion replaces glob patterns with matching pathnames.",
+        "tags": [
+          "expansion",
+          "pathname"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Process substitution exposes command input or output through a filename-like path.",
+        "id": "expansion.process-substitution",
+        "name": "process substitution",
+        "summary": "Process substitution exposes command input or output through a filename-like path.",
+        "tags": [
+          "expansion",
+          "process-substitution"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "errexit requests shell exit after certain unhandled command failures; exceptions are context-sensitive.",
+        "id": "option.errexit",
+        "name": "errexit",
+        "summary": "errexit requests shell exit after certain unhandled command failures; exceptions are context-sensitive.",
+        "tags": [
+          "option",
+          "errexit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "nounset treats expansion of unset variables as an error in applicable contexts.",
+        "id": "option.nounset",
+        "name": "nounset",
+        "summary": "nounset treats expansion of unset variables as an error in applicable contexts.",
+        "tags": [
+          "option",
+          "nounset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "pipefail makes pipeline status reflect the rightmost failing command instead of only the last command.",
+        "id": "option.pipefail",
+        "name": "pipefail",
+        "summary": "pipefail makes pipeline status reflect the rightmost failing command instead of only the last command.",
+        "tags": [
+          "option",
+          "pipefail"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "xtrace prints expanded commands before execution for tracing and debugging.",
+        "id": "option.xtrace",
+        "name": "xtrace",
+        "summary": "xtrace prints expanded commands before execution for tracing and debugging.",
+        "tags": [
+          "option",
+          "xtrace"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "globstar makes ** in pathname expansion match recursively through directory levels.",
+        "id": "shopt.globstar",
+        "name": "globstar",
+        "summary": "globstar makes ** in pathname expansion match recursively through directory levels.",
+        "tags": [
+          "shopt",
+          "globstar"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "nullglob removes a non-matching glob pattern instead of leaving the literal pattern unchanged.",
+        "id": "shopt.nullglob",
+        "name": "nullglob",
+        "summary": "nullglob removes a non-matching glob pattern instead of leaving the literal pattern unchanged.",
+        "tags": [
+          "shopt",
+          "nullglob"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Quoting controls which characters and expansions retain literal meaning.",
+        "id": "syntax.quoting",
+        "name": "quoting",
+        "summary": "Quoting controls which characters and expansions retain literal meaning.",
+        "tags": [
+          "syntax",
+          "quoting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "BASH_SOURCE is an array containing source filenames corresponding to the current call stack.",
+        "id": "variable.BASH_SOURCE",
+        "name": "BASH_SOURCE",
+        "summary": "BASH_SOURCE is an array containing source filenames corresponding to the current call stack.",
+        "tags": [
+          "variable",
+          "BASH_SOURCE"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "PIPESTATUS is an array containing exit statuses from the most recently executed foreground pipeline.",
+        "id": "variable.PIPESTATUS",
+        "name": "PIPESTATUS",
+        "summary": "PIPESTATUS is an array containing exit statuses from the most recently executed foreground pipeline.",
+        "tags": [
+          "variable",
+          "PIPESTATUS"
         ]
       }
     ],
     "fa": [
       {
         "aliases": [],
-        "description": "آرگومان‌ها را طبق رشته قالب پردازش می‌کند و نتیجه را در خروجی استاندارد می‌نویسد یا با گزینه -v در یک متغیر قرار می‌دهد.",
+        "description": "نام‌های مستعار پوسته را تعریف یا نمایش می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.alias",
+        "name": "alias",
+        "summary": "نام‌های مستعار پوسته را تعریف یا نمایش می‌دهد.",
+        "tags": [
+          "builtin",
+          "alias"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Jobهای متوقف‌شده را در پس‌زمینه ادامه می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.bg",
+        "name": "bg",
+        "summary": "Jobهای متوقف‌شده را در پس‌زمینه ادامه می‌دهد.",
+        "tags": [
+          "builtin",
+          "bg"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "تنظیمات و کلیدهای میانبر Readline را مدیریت می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.bind",
+        "name": "bind",
+        "summary": "تنظیمات و کلیدهای میانبر Readline را مدیریت می‌کند.",
+        "tags": [
+          "builtin",
+          "bind"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "از یک یا چند حلقه دربرگیرنده خارج می‌شود. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.break",
+        "name": "break",
+        "summary": "از یک یا چند حلقه دربرگیرنده خارج می‌شود.",
+        "tags": [
+          "builtin",
+          "break"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک builtin پوسته را مستقیماً اجرا می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.builtin",
+        "name": "builtin",
+        "summary": "یک builtin پوسته را مستقیماً اجرا می‌کند.",
+        "tags": [
+          "builtin",
+          "builtin"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اطلاعات پشته فراخوانی تابع‌های پوسته را نمایش می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.caller",
+        "name": "caller",
+        "summary": "اطلاعات پشته فراخوانی تابع‌های پوسته را نمایش می‌دهد.",
+        "tags": [
+          "builtin",
+          "caller"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "دایرکتوری کاری جاری را تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.cd",
+        "name": "cd",
+        "summary": "دایرکتوری کاری جاری را تغییر می‌دهد.",
+        "tags": [
+          "builtin",
+          "cd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فرمان را با نادیده‌گرفتن تابع‌های هم‌نام اجرا می‌کند یا نحوه یافتن فرمان را نشان می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.command",
+        "name": "command",
+        "summary": "فرمان را با نادیده‌گرفتن تابع‌های هم‌نام اجرا می‌کند یا نحوه یافتن فرمان را نشان می‌دهد.",
+        "tags": [
+          "builtin",
+          "command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "گزینه‌های ممکن برای تکمیل خودکار را تولید می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.compgen",
+        "name": "compgen",
+        "summary": "گزینه‌های ممکن برای تکمیل خودکار را تولید می‌کند.",
+        "tags": [
+          "builtin",
+          "compgen"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "قواعد تکمیل خودکار قابل‌برنامه‌ریزی را تعریف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.complete",
+        "name": "complete",
+        "summary": "قواعد تکمیل خودکار قابل‌برنامه‌ریزی را تعریف می‌کند.",
+        "tags": [
+          "builtin",
+          "complete"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "گزینه‌های تکمیل خودکار را تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.compopt",
+        "name": "compopt",
+        "summary": "گزینه‌های تکمیل خودکار را تغییر می‌دهد.",
+        "tags": [
+          "builtin",
+          "compopt"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اجرای حلقه دربرگیرنده را از iteration بعدی ادامه می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.continue",
+        "name": "continue",
+        "summary": "اجرای حلقه دربرگیرنده را از iteration بعدی ادامه می‌دهد.",
+        "tags": [
+          "builtin",
+          "continue"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرها را تعریف و ویژگی‌های آن‌ها را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.declare",
+        "name": "declare",
+        "summary": "متغیرها را تعریف و ویژگی‌های آن‌ها را تنظیم می‌کند.",
+        "tags": [
+          "builtin",
+          "declare"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پشته دایرکتوری‌ها را نمایش یا مدیریت می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.dirs",
+        "name": "dirs",
+        "summary": "پشته دایرکتوری‌ها را نمایش یا مدیریت می‌کند.",
+        "tags": [
+          "builtin",
+          "dirs"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Jobها را از جدول Job پوسته حذف می‌کند یا رفتار SIGHUP آن‌ها را تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.disown",
+        "name": "disown",
+        "summary": "Jobها را از جدول Job پوسته حذف می‌کند یا رفتار SIGHUP آن‌ها را تغییر می‌دهد.",
+        "tags": [
+          "builtin",
+          "disown"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "آرگومان‌ها را در خروجی استاندارد می‌نویسد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.echo",
+        "name": "echo",
+        "summary": "آرگومان‌ها را در خروجی استاندارد می‌نویسد.",
+        "tags": [
+          "builtin",
+          "echo"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "builtinهای پوسته را فعال، غیرفعال یا بارگذاری می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.enable",
+        "name": "enable",
+        "summary": "builtinهای پوسته را فعال، غیرفعال یا بارگذاری می‌کند.",
+        "tags": [
+          "builtin",
+          "enable"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "آرگومان‌ها را ترکیب و نتیجه را به‌عنوان ورودی پوسته اجرا می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.eval",
+        "name": "eval",
+        "summary": "آرگومان‌ها را ترکیب و نتیجه را به‌عنوان ورودی پوسته اجرا می‌کند.",
+        "tags": [
+          "builtin",
+          "eval"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پردازه پوسته جاری را با یک فرمان جایگزین می‌کند یا redirectionها را اعمال می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.exec",
+        "name": "exec",
+        "summary": "پردازه پوسته جاری را با یک فرمان جایگزین می‌کند یا redirectionها را اعمال می‌کند.",
+        "tags": [
+          "builtin",
+          "exec"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پوسته را با وضعیت خروج اختیاری خاتمه می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.exit",
+        "name": "exit",
+        "summary": "پوسته را با وضعیت خروج اختیاری خاتمه می‌دهد.",
+        "tags": [
+          "builtin",
+          "exit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرها را برای انتقال به پردازه‌های فرزند export می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.export",
+        "name": "export",
+        "summary": "متغیرها را برای انتقال به پردازه‌های فرزند export می‌کند.",
+        "tags": [
+          "builtin",
+          "export"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "همیشه وضعیت ناموفق برمی‌گرداند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.false",
+        "name": "false",
+        "summary": "همیشه وضعیت ناموفق برمی‌گرداند.",
+        "tags": [
+          "builtin",
+          "false"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فرمان‌های history را فهرست، ویرایش یا دوباره اجرا می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.fc",
+        "name": "fc",
+        "summary": "فرمان‌های history را فهرست، ویرایش یا دوباره اجرا می‌کند.",
+        "tags": [
+          "builtin",
+          "fc"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک Job را به foreground منتقل می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.fg",
+        "name": "fg",
+        "summary": "یک Job را به foreground منتقل می‌کند.",
+        "tags": [
+          "builtin",
+          "fg"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پارامترهای positional را به‌عنوان گزینه‌های خط فرمان تجزیه می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.getopts",
+        "name": "getopts",
+        "summary": "پارامترهای positional را به‌عنوان گزینه‌های خط فرمان تجزیه می‌کند.",
+        "tags": [
+          "builtin",
+          "getopts"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "مسیر فرمان‌ها را cache، نمایش یا حذف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.hash",
+        "name": "hash",
+        "summary": "مسیر فرمان‌ها را cache، نمایش یا حذف می‌کند.",
+        "tags": [
+          "builtin",
+          "hash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "راهنمای builtinهای پوسته را نمایش می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.help",
+        "name": "help",
+        "summary": "راهنمای builtinهای پوسته را نمایش می‌دهد.",
+        "tags": [
+          "builtin",
+          "help"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فهرست history پوسته را نمایش یا مدیریت می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.history",
+        "name": "history",
+        "summary": "فهرست history پوسته را نمایش یا مدیریت می‌کند.",
+        "tags": [
+          "builtin",
+          "history"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "وضعیت Jobها را نمایش می‌دهد یا jobspecها را جایگزین می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.jobs",
+        "name": "jobs",
+        "summary": "وضعیت Jobها را نمایش می‌دهد یا jobspecها را جایگزین می‌کند.",
+        "tags": [
+          "builtin",
+          "jobs"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "برای پردازه‌ها یا Jobها signal ارسال می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.kill",
+        "name": "kill",
+        "summary": "برای پردازه‌ها یا Jobها signal ارسال می‌کند.",
+        "tags": [
+          "builtin",
+          "kill"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "عبارت‌های حسابی Bash را ارزیابی می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.let",
+        "name": "let",
+        "summary": "عبارت‌های حسابی Bash را ارزیابی می‌کند.",
+        "tags": [
+          "builtin",
+          "let"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرهای محلی برای تابع پوسته ایجاد می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.local",
+        "name": "local",
+        "summary": "متغیرهای محلی برای تابع پوسته ایجاد می‌کند.",
+        "tags": [
+          "builtin",
+          "local"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "از login shell خارج می‌شود. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.logout",
+        "name": "logout",
+        "summary": "از login shell خارج می‌شود.",
+        "tags": [
+          "builtin",
+          "logout"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "خطوط ورودی را در یک آرایه indexed می‌خواند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.mapfile",
+        "name": "mapfile",
+        "summary": "خطوط ورودی را در یک آرایه indexed می‌خواند.",
+        "tags": [
+          "builtin",
+          "mapfile"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ورودی‌هایی را از پشته دایرکتوری حذف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.popd",
+        "name": "popd",
+        "summary": "ورودی‌هایی را از پشته دایرکتوری حذف می‌کند.",
+        "tags": [
+          "builtin",
+          "popd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "داده را قالب‌بندی و چاپ می‌کند یا با -v در متغیر قرار می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
         "id": "builtin.printf",
         "name": "printf",
-        "summary": "داده را با قالب مشخص چاپ می‌کند.",
+        "summary": "داده را قالب‌بندی و چاپ می‌کند یا با -v در متغیر قرار می‌دهد.",
         "tags": [
-          "خروجی",
-          "قالب‌بندی",
-          "builtin"
+          "builtin",
+          "printf"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ورودی جدید به پشته دایرکتوری اضافه می‌کند یا آن را می‌چرخاند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.pushd",
+        "name": "pushd",
+        "summary": "ورودی جدید به پشته دایرکتوری اضافه می‌کند یا آن را می‌چرخاند.",
+        "tags": [
+          "builtin",
+          "pushd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "دایرکتوری کاری جاری را چاپ می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.pwd",
+        "name": "pwd",
+        "summary": "دایرکتوری کاری جاری را چاپ می‌کند.",
+        "tags": [
+          "builtin",
+          "pwd"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ورودی را می‌خواند و فیلدها را به متغیرهای پوسته اختصاص می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.read",
+        "name": "read",
+        "summary": "ورودی را می‌خواند و فیلدها را به متغیرهای پوسته اختصاص می‌دهد.",
+        "tags": [
+          "builtin",
+          "read"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "خطوط ورودی را در آرایه indexed می‌خواند و معادل mapfile است. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.readarray",
+        "name": "readarray",
+        "summary": "خطوط ورودی را در آرایه indexed می‌خواند و معادل mapfile است.",
+        "tags": [
+          "builtin",
+          "readarray"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرها یا تابع‌ها را readonly می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.readonly",
+        "name": "readonly",
+        "summary": "متغیرها یا تابع‌ها را readonly می‌کند.",
+        "tags": [
+          "builtin",
+          "readonly"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "از تابع یا فایل sourceشده با وضعیت اختیاری بازمی‌گردد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.return",
+        "name": "return",
+        "summary": "از تابع یا فایل sourceشده با وضعیت اختیاری بازمی‌گردد.",
+        "tags": [
+          "builtin",
+          "return"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "گزینه‌های پوسته و پارامترهای positional را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.set",
+        "name": "set",
+        "summary": "گزینه‌های پوسته و پارامترهای positional را تنظیم می‌کند.",
+        "tags": [
+          "builtin",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پارامترهای positional را به چپ shift می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.shift",
+        "name": "shift",
+        "summary": "پارامترهای positional را به چپ shift می‌دهد.",
+        "tags": [
+          "builtin",
+          "shift"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "گزینه‌های مخصوص Bash را مشاهده یا تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.shopt",
+        "name": "shopt",
+        "summary": "گزینه‌های مخصوص Bash را مشاهده یا تغییر می‌دهد.",
+        "tags": [
+          "builtin",
+          "shopt"
+        ]
+      },
+      {
+        "aliases": [
+          "."
+        ],
+        "description": "فرمان‌های یک فایل را در محیط همان پوسته اجرا می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.source",
+        "name": "source",
+        "summary": "فرمان‌های یک فایل را در محیط همان پوسته اجرا می‌کند.",
+        "tags": [
+          "builtin",
+          "source"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اجرای پوسته جاری را متوقف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.suspend",
+        "name": "suspend",
+        "summary": "اجرای پوسته جاری را متوقف می‌کند.",
+        "tags": [
+          "builtin",
+          "suspend"
+        ]
+      },
+      {
+        "aliases": [
+          "["
+        ],
+        "description": "یک عبارت شرطی را ارزیابی و وضعیت truth آن را برمی‌گرداند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.test",
+        "name": "test",
+        "summary": "یک عبارت شرطی را ارزیابی و وضعیت truth آن را برمی‌گرداند.",
+        "tags": [
+          "builtin",
+          "test"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "زمان CPU کاربر و سیستم را نمایش می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.times",
+        "name": "times",
+        "summary": "زمان CPU کاربر و سیستم را نمایش می‌دهد.",
+        "tags": [
+          "builtin",
+          "times"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "handlerهای signal و pseudo-signalهای Bash را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.trap",
+        "name": "trap",
+        "summary": "handlerهای signal و pseudo-signalهای Bash را تنظیم می‌کند.",
+        "tags": [
+          "builtin",
+          "trap"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "همیشه وضعیت موفق برمی‌گرداند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.true",
+        "name": "true",
+        "summary": "همیشه وضعیت موفق برمی‌گرداند.",
+        "tags": [
+          "builtin",
+          "true"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نشان می‌دهد نام فرمان‌ها چگونه resolve می‌شوند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.type",
+        "name": "type",
+        "summary": "نشان می‌دهد نام فرمان‌ها چگونه resolve می‌شوند.",
+        "tags": [
+          "builtin",
+          "type"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرها و ویژگی‌های آن‌ها را تعریف می‌کند و در Bash هم‌معنی declare است. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.typeset",
+        "name": "typeset",
+        "summary": "متغیرها و ویژگی‌های آن‌ها را تعریف می‌کند و در Bash هم‌معنی declare است.",
+        "tags": [
+          "builtin",
+          "typeset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "محدودیت منابع پردازه‌های پوسته را نمایش یا تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.ulimit",
+        "name": "ulimit",
+        "summary": "محدودیت منابع پردازه‌های پوسته را نمایش یا تغییر می‌دهد.",
+        "tags": [
+          "builtin",
+          "ulimit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ماسک مجوز ایجاد فایل را نمایش یا تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.umask",
+        "name": "umask",
+        "summary": "ماسک مجوز ایجاد فایل را نمایش یا تنظیم می‌کند.",
+        "tags": [
+          "builtin",
+          "umask"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "aliasهای پوسته را حذف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.unalias",
+        "name": "unalias",
+        "summary": "aliasهای پوسته را حذف می‌کند.",
+        "tags": [
+          "builtin",
+          "unalias"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیرها یا تابع‌ها را از محیط پوسته حذف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.unset",
+        "name": "unset",
+        "summary": "متغیرها یا تابع‌ها را از محیط پوسته حذف می‌کند.",
+        "tags": [
+          "builtin",
+          "unset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "برای پایان Jobها یا پردازه‌ها منتظر می‌ماند و وضعیت خروج را برمی‌گرداند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند.",
+        "id": "builtin.wait",
+        "name": "wait",
+        "summary": "برای پایان Jobها یا پردازه‌ها منتظر می‌ماند و وضعیت خروج را برمی‌گرداند.",
+        "tags": [
+          "builtin",
+          "wait"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "آرایه‌های indexed چند مقدار را با index عددی نگهداری می‌کنند.",
+        "id": "concept.arrays",
+        "name": "arrays",
+        "summary": "آرایه‌های indexed چند مقدار را با index عددی نگهداری می‌کنند.",
+        "tags": [
+          "concept",
+          "arrays"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "آرایه‌های associative مقدارها را با کلید رشته‌ای نگهداری می‌کنند.",
+        "id": "concept.associative-arrays",
+        "name": "associative arrays",
+        "summary": "آرایه‌های associative مقدارها را با کلید رشته‌ای نگهداری می‌کنند.",
+        "tags": [
+          "concept",
+          "associative-arrays"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ساختارهای شرطی رفتار را بر اساس وضعیت فرمان یا expression انتخاب می‌کنند.",
+        "id": "concept.conditionals",
+        "name": "conditionals",
+        "summary": "ساختارهای شرطی رفتار را بر اساس وضعیت فرمان یا expression انتخاب می‌کنند.",
+        "tags": [
+          "concept",
+          "conditionals"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Debugging در Bash از trace، trap، بررسی status و تحلیل ایستا استفاده می‌کند.",
+        "id": "concept.debugging",
+        "name": "debugging",
+        "summary": "Debugging در Bash از trace، trap، بررسی status و تحلیل ایستا استفاده می‌کند.",
+        "tags": [
+          "concept",
+          "debugging"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اسکریپت دفاعی expansionها را quote، ورودی را validate، خطاها را بررسی، privilege را کم و cleanup را قابل پیش‌بینی می‌کند.",
+        "id": "concept.defensive-scripting",
+        "name": "defensive scripting",
+        "summary": "اسکریپت دفاعی expansionها را quote، ورودی را validate، خطاها را بررسی، privilege را کم و cleanup را قابل پیش‌بینی می‌کند.",
+        "tags": [
+          "concept",
+          "defensive-scripting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "محیط پوسته مجموعه‌ای از name-valueهای exportشده است که پردازه‌های فرزند به ارث می‌برند.",
+        "id": "concept.environment",
+        "name": "environment",
+        "summary": "محیط پوسته مجموعه‌ای از name-valueهای exportشده است که پردازه‌های فرزند به ارث می‌برند.",
+        "tags": [
+          "concept",
+          "environment"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فرمان‌ها موفقیت یا شکست را با مقدار عددی exit status گزارش می‌کنند.",
+        "id": "concept.exit-status",
+        "name": "exit status",
+        "summary": "فرمان‌ها موفقیت یا شکست را با مقدار عددی exit status گزارش می‌کنند.",
+        "tags": [
+          "concept",
+          "exit-status"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "تابع‌های پوسته مجموعه فرمان‌ها را با یک نام قابل استفاده مجدد در همان پوسته گروه‌بندی می‌کنند.",
+        "id": "concept.functions",
+        "name": "functions",
+        "summary": "تابع‌های پوسته مجموعه فرمان‌ها را با یک نام قابل استفاده مجدد در همان پوسته گروه‌بندی می‌کنند.",
+        "tags": [
+          "concept",
+          "functions"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Brace فرمان‌ها را در همان پوسته و پرانتز در subshell گروه‌بندی می‌کند.",
+        "id": "concept.grouping",
+        "name": "command grouping",
+        "summary": "Brace فرمان‌ها را در همان پوسته و پرانتز در subshell گروه‌بندی می‌کند.",
+        "tags": [
+          "concept",
+          "grouping"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Here document ورودی چندخطی را تا رسیدن به delimiter فراهم می‌کند.",
+        "id": "concept.here-documents",
+        "name": "here documents",
+        "summary": "Here document ورودی چندخطی را تا رسیدن به delimiter فراهم می‌کند.",
+        "tags": [
+          "concept",
+          "here-documents"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Here string یک word گسترش‌یافته را به‌عنوان ورودی استاندارد ارائه می‌کند.",
+        "id": "concept.here-strings",
+        "name": "here strings",
+        "summary": "Here string یک word گسترش‌یافته را به‌عنوان ورودی استاندارد ارائه می‌کند.",
+        "tags": [
+          "concept",
+          "here-strings"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Job control pipelineهای foreground و background را در shell تعاملی مدیریت می‌کند.",
+        "id": "concept.job-control",
+        "name": "job control",
+        "summary": "Job control pipelineهای foreground و background را در shell تعاملی مدیریت می‌کند.",
+        "tags": [
+          "concept",
+          "job-control"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ساختارهای loop یک فهرست فرمان را بر اساس شرط یا مجموعه آیتم‌ها تکرار می‌کنند.",
+        "id": "concept.loops",
+        "name": "loops",
+        "summary": "ساختارهای loop یک فهرست فرمان را بر اساس شرط یا مجموعه آیتم‌ها تکرار می‌کنند.",
+        "tags": [
+          "concept",
+          "loops"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pipeline خروجی یک فرمان را به ورودی فرمان بعدی متصل و یک وضعیت نهایی تولید می‌کند.",
+        "id": "concept.pipelines",
+        "name": "pipelines",
+        "summary": "Pipeline خروجی یک فرمان را به ورودی فرمان بعدی متصل و یک وضعیت نهایی تولید می‌کند.",
+        "tags": [
+          "concept",
+          "pipelines"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اسکریپت portable رفتار POSIX را از قابلیت‌های مخصوص Bash و تفاوت نسخه‌ها جدا می‌کند.",
+        "id": "concept.portability",
+        "name": "portability",
+        "summary": "اسکریپت portable رفتار POSIX را از قابلیت‌های مخصوص Bash و تفاوت نسخه‌ها جدا می‌کند.",
+        "tags": [
+          "concept",
+          "portability"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Redirection مشخص می‌کند فرمان‌ها ورودی را از کجا بخوانند و خروجی را کجا بنویسند.",
+        "id": "concept.redirections",
+        "name": "redirections",
+        "summary": "Redirection مشخص می‌کند فرمان‌ها ورودی را از کجا بخوانند و خروجی را کجا بنویسند.",
+        "tags": [
+          "concept",
+          "redirections"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "builtin set گزینه‌های اجرایی shell را فعال یا غیرفعال می‌کند.",
+        "id": "concept.shell-options",
+        "name": "shell options",
+        "summary": "builtin set گزینه‌های اجرایی shell را فعال یا غیرفعال می‌کند.",
+        "tags": [
+          "concept",
+          "shell-options"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "builtin shopt رفتارهای اختیاری مخصوص Bash را کنترل می‌کند.",
+        "id": "concept.shopt",
+        "name": "shopt options",
+        "summary": "builtin shopt رفتارهای اختیاری مخصوص Bash را کنترل می‌کند.",
+        "tags": [
+          "concept",
+          "shopt"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Signalها رخدادهای asynchronous را به پردازه‌ها اطلاع می‌دهند و با trap قابل مدیریت‌اند.",
+        "id": "concept.signals",
+        "name": "signals",
+        "summary": "Signalها رخدادهای asynchronous را به پردازه‌ها اطلاع می‌دهند و با trap قابل مدیریت‌اند.",
+        "tags": [
+          "concept",
+          "signals"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Bash بر اساس حالت login، interactive و نحوه اجرا فایل‌های startup متفاوتی می‌خواند.",
+        "id": "concept.startup-files",
+        "name": "startup files",
+        "summary": "Bash بر اساس حالت login، interactive و نحوه اجرا فایل‌های startup متفاوتی می‌خواند.",
+        "tags": [
+          "concept",
+          "startup-files"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پرانتز یک فهرست فرمان را در محیط subshell اجرا می‌کند.",
+        "id": "concept.subshells",
+        "name": "subshells",
+        "summary": "پرانتز یک فهرست فرمان را در محیط subshell اجرا می‌کند.",
+        "tags": [
+          "concept",
+          "subshells"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Trap کد پوسته را به signalها و pseudo-signalهایی مانند EXIT و DEBUG متصل می‌کند.",
+        "id": "concept.traps",
+        "name": "traps",
+        "summary": "Trap کد پوسته را به signalها و pseudo-signalهایی مانند EXIT و DEBUG متصل می‌کند.",
+        "tags": [
+          "concept",
+          "traps"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نمونه pipeline مقاوم quoting را حفظ می‌کند و در صورت نیاز statusهای pipeline را بررسی می‌کند.",
+        "id": "example.pipeline",
+        "name": "pipeline example",
+        "summary": "نمونه pipeline مقاوم quoting را حفظ می‌کند و در صورت نیاز statusهای pipeline را بررسی می‌کند.",
+        "tags": [
+          "example",
+          "pipeline"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک cleanup trap پاک‌سازی منابع را هنگام خروج اسکریپت به‌صورت متمرکز و قابل پیش‌بینی انجام می‌دهد.",
+        "id": "example.trap",
+        "name": "trap example",
+        "summary": "یک cleanup trap پاک‌سازی منابع را هنگام خروج اسکریپت به‌صورت متمرکز و قابل پیش‌بینی انجام می‌دهد.",
+        "tags": [
+          "example",
+          "trap"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Arithmetic expansion یک عبارت حسابی را ارزیابی و مقدار آن را جایگزین می‌کند.",
+        "id": "expansion.arithmetic",
+        "name": "arithmetic expansion",
+        "summary": "Arithmetic expansion یک عبارت حسابی را ارزیابی و مقدار آن را جایگزین می‌کند.",
+        "tags": [
+          "expansion",
+          "arithmetic"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Brace expansion مجموعه‌ای از رشته‌ها را از list یا sequence داخل brace تولید می‌کند.",
+        "id": "expansion.brace",
+        "name": "brace expansion",
+        "summary": "Brace expansion مجموعه‌ای از رشته‌ها را از list یا sequence داخل brace تولید می‌کند.",
+        "tags": [
+          "expansion",
+          "brace"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command substitution یک ساختار را با خروجی استاندارد یک فرمان جایگزین می‌کند.",
+        "id": "expansion.command-substitution",
+        "name": "command substitution",
+        "summary": "Command substitution یک ساختار را با خروجی استاندارد یک فرمان جایگزین می‌کند.",
+        "tags": [
+          "expansion",
+          "command-substitution"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Parameter expansion مقدار پارامترهای پوسته را می‌خواند و تبدیل می‌کند.",
+        "id": "expansion.parameter",
+        "name": "parameter expansion",
+        "summary": "Parameter expansion مقدار پارامترهای پوسته را می‌خواند و تبدیل می‌کند.",
+        "tags": [
+          "expansion",
+          "parameter"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pathname expansion الگوهای glob را با مسیرهای مطابق جایگزین می‌کند.",
+        "id": "expansion.pathname",
+        "name": "pathname expansion",
+        "summary": "Pathname expansion الگوهای glob را با مسیرهای مطابق جایگزین می‌کند.",
+        "tags": [
+          "expansion",
+          "pathname"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Process substitution ورودی یا خروجی فرمان را از طریق مسیری شبیه فایل در دسترس می‌گذارد.",
+        "id": "expansion.process-substitution",
+        "name": "process substitution",
+        "summary": "Process substitution ورودی یا خروجی فرمان را از طریق مسیری شبیه فایل در دسترس می‌گذارد.",
+        "tags": [
+          "expansion",
+          "process-substitution"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند.",
+        "id": "option.errexit",
+        "name": "errexit",
+        "summary": "errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند.",
+        "tags": [
+          "option",
+          "errexit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "nounset استفاده از متغیر unset را در contextهای مربوط خطا در نظر می‌گیرد.",
+        "id": "option.nounset",
+        "name": "nounset",
+        "summary": "nounset استفاده از متغیر unset را در contextهای مربوط خطا در نظر می‌گیرد.",
+        "tags": [
+          "option",
+          "nounset"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را.",
+        "id": "option.pipefail",
+        "name": "pipefail",
+        "summary": "pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را.",
+        "tags": [
+          "option",
+          "pipefail"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "xtrace فرمان‌های expandشده را پیش از اجرا برای trace و debugging چاپ می‌کند.",
+        "id": "option.xtrace",
+        "name": "xtrace",
+        "summary": "xtrace فرمان‌های expandشده را پیش از اجرا برای trace و debugging چاپ می‌کند.",
+        "tags": [
+          "option",
+          "xtrace"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود.",
+        "id": "shopt.globstar",
+        "name": "globstar",
+        "summary": "globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود.",
+        "tags": [
+          "shopt",
+          "globstar"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "nullglob الگوی glob بدون match را حذف می‌کند به‌جای اینکه خود الگو literal باقی بماند.",
+        "id": "shopt.nullglob",
+        "name": "nullglob",
+        "summary": "nullglob الگوی glob بدون match را حذف می‌کند به‌جای اینکه خود الگو literal باقی بماند.",
+        "tags": [
+          "shopt",
+          "nullglob"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Quoting تعیین می‌کند کدام نویسه‌ها و expansionها معنای literal خود را حفظ کنند.",
+        "id": "syntax.quoting",
+        "name": "quoting",
+        "summary": "Quoting تعیین می‌کند کدام نویسه‌ها و expansionها معنای literal خود را حفظ کنند.",
+        "tags": [
+          "syntax",
+          "quoting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "BASH_SOURCE آرایه‌ای از نام فایل‌های source متناظر با call stack جاری است.",
+        "id": "variable.BASH_SOURCE",
+        "name": "BASH_SOURCE",
+        "summary": "BASH_SOURCE آرایه‌ای از نام فایل‌های source متناظر با call stack جاری است.",
+        "tags": [
+          "variable",
+          "BASH_SOURCE"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است.",
+        "id": "variable.PIPESTATUS",
+        "name": "PIPESTATUS",
+        "summary": "PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است.",
+        "tags": [
+          "variable",
+          "PIPESTATUS"
         ]
       }
     ]

@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Here string یک word گسترش‌یافته را به‌عنوان ورودی استاندارد ارائه می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.here-strings",
+  "kind": "concept",
+  "language": "fa",
+  "name": "here strings",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Here-Strings"
+  ],
+  "summary": "Here string یک word گسترش‌یافته را به‌عنوان ورودی استاندارد ارائه می‌کند.",
+  "synopsis": "command <<< \"$value\"",
+  "tags": [
+    "concept",
+    "here-strings"
+  ]
+}

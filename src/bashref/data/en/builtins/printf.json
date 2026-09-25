@@ -1,27 +1,31 @@
 {
   "aliases": [],
   "description": [
-    "Format arguments according to a format string and write the result to standard output, or assign it with -v."
+    "Format and print data, or assign formatted output with -v. This entry documents the Bash builtin and its shell-state effects."
   ],
   "examples": [
     {
-      "code": "printf '%q\\n' \"$value\"",
-      "title": "Print a quoted value"
+      "code": "printf '%s\\n' \"$value\"",
+      "title": "Format safely"
     }
   ],
   "id": "builtin.printf",
   "kind": "builtin",
   "language": "en",
   "name": "printf",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
   "related": [],
+  "security": [],
   "sources": [
     "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
   ],
-  "summary": "Format and print data.",
+  "summary": "Format and print data, or assign formatted output with -v.",
   "synopsis": "printf [-v var] format [arguments]",
   "tags": [
-    "output",
-    "formatting",
-    "builtin"
+    "builtin",
+    "printf"
   ]
 }

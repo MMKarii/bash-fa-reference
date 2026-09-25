@@ -1,0 +1,30 @@
+{
+  "aliases": [],
+  "description": [
+    "Concatenate arguments and execute the result as shell input. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.eval",
+  "kind": "builtin",
+  "language": "en",
+  "name": "eval",
+  "pitfalls": [
+    "Do not evaluate untrusted text."
+  ],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [
+    "Treat evaluated text as code."
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Concatenate arguments and execute the result as shell input.",
+  "synopsis": "eval [arg ...]",
+  "tags": [
+    "builtin",
+    "eval"
+  ]
+}

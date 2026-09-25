@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Arithmetic expansion evaluates an arithmetic expression and substitutes its value."
+  ],
+  "examples": [],
+  "id": "expansion.arithmetic",
+  "kind": "expansion",
+  "language": "en",
+  "name": "arithmetic expansion",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Arithmetic-Expansion"
+  ],
+  "summary": "Arithmetic expansion evaluates an arithmetic expression and substitutes its value.",
+  "synopsis": "$(( expression ))",
+  "tags": [
+    "expansion",
+    "arithmetic"
+  ]
+}

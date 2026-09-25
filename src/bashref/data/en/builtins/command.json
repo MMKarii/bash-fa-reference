@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Run a command while bypassing shell functions, or describe command lookup. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.command",
+  "kind": "builtin",
+  "language": "en",
+  "name": "command",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Run a command while bypassing shell functions, or describe command lookup.",
+  "synopsis": "command [-pVv] command [arg ...]",
+  "tags": [
+    "builtin",
+    "command"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیرها را تعریف و ویژگی‌های آن‌ها را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.declare",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "declare",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "متغیرها را تعریف و ویژگی‌های آن‌ها را تنظیم می‌کند.",
+  "synopsis": "declare [-aAfFgiIlnrtux] [name[=value] ...] or declare -p [-aAfFilnrtux] [name ...]",
+  "tags": [
+    "builtin",
+    "declare"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "nounset treats expansion of unset variables as an error in applicable contexts."
+  ],
+  "examples": [],
+  "id": "option.nounset",
+  "kind": "option",
+  "language": "en",
+  "name": "nounset",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "nounset treats expansion of unset variables as an error in applicable contexts.",
+  "synopsis": "set -u  set -o nounset",
+  "tags": [
+    "option",
+    "nounset"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Pathname expansion الگوهای glob را با مسیرهای مطابق جایگزین می‌کند."
+  ],
+  "examples": [],
+  "id": "expansion.pathname",
+  "kind": "expansion",
+  "language": "fa",
+  "name": "pathname expansion",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Filename-Expansion"
+  ],
+  "summary": "Pathname expansion الگوهای glob را با مسیرهای مطابق جایگزین می‌کند.",
+  "synopsis": "*.txt  **/*.sh",
+  "tags": [
+    "expansion",
+    "pathname"
+  ]
+}

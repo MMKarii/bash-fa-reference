@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Remember, display, or forget command locations. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.hash",
+  "kind": "builtin",
+  "language": "en",
+  "name": "hash",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Remember, display, or forget command locations.",
+  "synopsis": "hash [-lr] [-p pathname] [-dt] [name ...]",
+  "tags": [
+    "builtin",
+    "hash"
+  ]
+}
