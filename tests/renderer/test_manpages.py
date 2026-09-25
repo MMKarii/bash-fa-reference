@@ -29,3 +29,9 @@ def test_reference_manpage_has_required_sections():
 
 def test_persian_text_is_preserved():
     assert "داده را چاپ می‌کند" in render_reference_manpage(sample_record("fa"))
+
+def test_cli_manpage_uses_parseable_th_date():
+    from tools.build_manpages import render_cli_manpage
+    first = render_cli_manpage().splitlines()[0]
+    assert '"September 25, 2026"' in first
+    assert '"Bashref 2.0.0"' in first
