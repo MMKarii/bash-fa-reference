@@ -46,12 +46,20 @@ jobs:
 
           python tools/release_version.py "$TAG" "$VERSION"
 
+          RELEASE_REF="$GITHUB_SHA"
           if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
             git fetch --force origin "refs/tags/$TAG:refs/tags/$TAG"
             TAG_SHA="$(git rev-list -n1 "$TAG")"
+            RELEASE_REF="$TAG"
             if test "$TAG_SHA" != "$GITHUB_SHA"; then
-              echo "Existing $TAG points to $TAG_SHA, expected $GITHUB_SHA" >&2
-              exit 1
+              if ! git diff --quiet "$TAG_SHA" "$GITHUB_SHA" -- . \
+                ':(exclude).github/workflows/release.yml' \
+                ':(exclude)tools/select_release.py' \
+                ':(exclude)tests/integration/test_select_release.py'; then
+                echo "Existing $TAG points to $TAG_SHA and product files changed in $GITHUB_SHA" >&2
+                exit 1
+              fi
+              echo "Resuming release from exact existing tag $TAG at $TAG_SHA."
             fi
           fi
 
@@ -65,6 +73,21 @@ jobs:
           fi
 
           echo "publish=yes" >> "$GITHUB_OUTPUT"
+          echo "release_ref=$RELEASE_REF" >> "$GITHUB_OUTPUT"
+
+      - name: Preserve release helper
+        if: steps.state.outputs.publish == 'yes'
+        run: cp tools/select_release.py "$RUNNER_TEMP/select_release.py"
+
+      - name: Checkout exact release source
+        if: steps.state.outputs.publish == 'yes'
+        env:
+          RELEASE_REF: ${{ steps.state.outputs.release_ref }}
+        run: |
+          set -euo pipefail
+          git checkout --detach "$RELEASE_REF"
+          test -f release/v2.0.0.json
+          python tools/release_version.py "$TAG" "$VERSION"
 
       - name: Install build dependencies
         if: steps.state.outputs.publish == 'yes'
@@ -150,7 +173,7 @@ jobs:
             git tag -a "$TAG" -m "Bashref $VERSION"
             git push origin "$TAG"
           else
-            test "$(git rev-list -n1 "$TAG")" = "$GITHUB_SHA"
+            test "$(git rev-list -n1 "$TAG")" = "$(git rev-parse HEAD)"
           fi
 
       - name: Create or refresh draft release
@@ -165,7 +188,8 @@ jobs:
           else
             gh release create "$TAG" "${ASSETS[@]}"               --draft               --title "Bashref $VERSION"               --notes-file ".github/release-notes/$TAG.md"
           fi
-          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > release.json
+          gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
+          python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json
 
       - name: Wait for v2 Pages deployment
         if: steps.state.outputs.publish == 'yes'
@@ -185,7 +209,8 @@ jobs:
       - name: Verify draft release and public documentation
         if: steps.state.outputs.publish == 'yes'
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > release.json
+          gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
+          python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json
           python tools/verify_public_release.py             --release-json release.json             --checksums dist/SHA256SUMS             --base-url "$BASE_URL"
 
       - name: Publish verified release
