@@ -13,8 +13,8 @@ _KIND_DIR = {
     "concept": "concepts",
     "example": "examples",
 }
-_ID_RE = re.compile(r"^([a-z][a-z0-9-]*)\.([A-Za-z0-9][A-Za-z0-9_-]*)$")
-_SUBCOMMANDS = "search show builtin syntax expansion option shopt variable example list lang man docs completion"
+_ID_RE = re.compile(r"^([a-z][a-z0-9-]*)\.([a-z0-9][a-z0-9_-]*)$")
+_SUBCOMMANDS = "search show builtin syntax expansion option shopt variable example list lang man docs completion usage doctor"
 
 
 def docs_url(record: dict | None, language: str) -> str:
@@ -45,8 +45,8 @@ complete -F _bashref bashref
 '''
     if shell == "zsh":
         return f'''#compdef bashref
-_arguments '1:command:({ _SUBCOMMANDS })' '*::arg:->args'
-'''.replace("{ _SUBCOMMANDS }", _SUBCOMMANDS)
+_arguments '1:command:({_SUBCOMMANDS})' '*::arg:->args'
+'''
     if shell == "fish":
         lines = ["complete -c bashref -f"]
         for command in _SUBCOMMANDS.split():

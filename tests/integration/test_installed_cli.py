@@ -12,7 +12,7 @@ def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
 def test_installed_version():
     result = run_cli("--version")
     assert result.returncode == 0
-    assert result.stdout.strip() == "bashref 2.0.0"
+    assert result.stdout.strip() == "bashref 2.1.0"
 
 
 def test_installed_search_and_lookup():

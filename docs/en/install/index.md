@@ -1,41 +1,57 @@
 # Install Bashref
 
-Bashref 2.0.0 is an offline bilingual Bash reference CLI.
+Bashref 2.1.0 is an offline bilingual Bash reference CLI. Use a standalone executable when you do not want to manage Python, or use the Python/Linux packages for deeper system integration.
 
-## Recommended installation
+## Standalone: no separate Python required
 
-Install the official wheel directly from the GitHub Release:
-
-```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
-```
-
-Or with pip:
+### Linux x86_64
 
 ```bash
-python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+curl -LO https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-linux-x86_64.tar.gz
+tar -xzf bashref-2.1.0-linux-x86_64.tar.gz
+install -m 755 bashref ~/.local/bin/bashref
+bashref doctor
 ```
 
-For a checked-out source tree:
+### macOS Apple Silicon
+
+Use `bashref-2.1.0-macos-arm64.tar.gz`. Intel Macs use `bashref-2.1.0-macos-x86_64.tar.gz`.
+
+### Windows x86_64
+
+Download `bashref-2.1.0-windows-x86_64.zip`, extract `bashref.exe`, and place it in a directory on `PATH`.
+
+## pipx / wheel
 
 ```bash
-python -m pip install -e .
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
-Verify the installation:
+Or:
+
+```bash
+python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
+```
+
+## Linux system packages
+
+The release includes `bashref_2.1.0_all.deb` and an RPM. These install the CLI, reference data, man pages, and Bash/Zsh/Fish completions.
+
+## Verify
 
 ```bash
 bashref --version
+bashref doctor
 bashref search quoting
 bashref builtin printf
 ```
 
-## Linux packages
+## Uninstall
 
-The v2 release also includes Debian and RPM packages. They install the CLI runtime, packaged reference data, man pages, and Bash/Zsh/Fish completions.
+- Standalone: remove the copied `bashref` or `bashref.exe`.
+- pipx: `pipx uninstall bashref`
+- pip: `python -m pip uninstall bashref`
+- Debian: `sudo dpkg -r bashref`
+- RPM: `sudo rpm -e bashref`
 
-## Offline behavior
-
-Core lookup and search do not require network access. Bashref never executes examples from the reference database.
-
-> The project currently publishes installation artifacts through GitHub Releases. A PyPI publication is not assumed by this documentation.
+User preferences under the Bashref config directory are not removed by DEB/RPM uninstall.

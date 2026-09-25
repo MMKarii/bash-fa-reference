@@ -76,6 +76,7 @@ nav:
   - خانه: index.md
   - Reference Guide:
       - معرفی: reference/index.md
+      - خلاصه فرمان‌ها: reference/usage-summary.md
   - Professional Guide:
       - معرفی: book/index.md
       - مسیر یادگیری: learning-path.md
@@ -97,6 +98,10 @@ nav:
       - "۱۴. Debugging، تست و Portability": 14-debugging-testing-portability.md
   - نصب: install/index.md
   - دانلود: download/index.md
+  - پشتیبانی:
+      - سازگاری: compatibility.md
+      - رفع اشکال: troubleshooting.md
+      - پرسش‌های متداول: faq.md
   - انتشارها: releases/index.md
   - درباره: about/index.md
   - منابع: references.md

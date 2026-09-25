@@ -1,7 +1,7 @@
 _bashref() {
     local cur="${COMP_WORDS[COMP_CWORD]}"
     if [[ $COMP_CWORD -eq 1 ]]; then
-        COMPREPLY=( $(compgen -W "search show builtin syntax expansion option shopt variable example list lang man docs completion" -- "$cur") )
+        COMPREPLY=( $(compgen -W "search show builtin syntax expansion option shopt variable example list lang man docs completion usage doctor" -- "$cur") )
     fi
 }
 complete -F _bashref bashref

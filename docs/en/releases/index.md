@@ -1,20 +1,17 @@
 # Releases
 
+## Bashref 2.1.0
+
+Bashref 2.1.0 extends the integrated v2 product with standalone single-file executables for Linux x86_64, macOS arm64/x86_64, and Windows x86_64; `bashref doctor`; a concise `bashref usage` summary; platform support/troubleshooting documentation; and cross-platform standalone smoke tests.
+
+The existing wheel/sdist, DEB/RPM, Homebrew formula, generated man pages, bilingual 97-record Reference Guide, shell completions, and 14-chapter Professional Guide remain part of the product.
+
 ## Bashref 2.0.0
 
-Bashref 2.0.0 is the first integrated software release of this project. It combines:
+Bashref 2.0.0 was the first integrated software release: installable CLI, structured bilingual reference corpus, generated web/man reference, Linux packages, completion assets, release archives, and SHA-256 checksums.
 
-- the installable `bashref` CLI
-- a 97-record bilingual structured reference corpus
-- generated Reference Guide pages
-- generated system man pages
-- Bash, Zsh, and Fish completions
-- wheel and source distributions
-- Debian and RPM packages
-- portable/man/completion archives
-- SHA-256 checksums
-- the existing 14-chapter Professional Guide
+## Bash Professional Reference 1.0.0
 
-The v1.0.0 documentation release remains available as an immutable historical snapshot.
+v1.0.0 is retained as the historical documentation-focused release.
 
 See the [project releases](https://github.com/MMKarii/bash-fa-reference/releases).

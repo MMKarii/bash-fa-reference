@@ -11,11 +11,13 @@ from . import __version__
 from .commands import LOOKUP_COMMAND_KINDS, list_records, lookup_record, search_records
 from .completion import completion_script, docs_url
 from .config import load_config, save_language
+from .diagnostics import collect_diagnostics, render_diagnostics
 from .errors import CorruptReferenceError, EntryNotFoundError
 from .languages import resolve_language
 from .reference import ReferenceStore
 from .renderer import render_error, render_record, render_records
 from .search import SearchEngine
+from .usage import usage_summary
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -56,6 +58,9 @@ def build_parser() -> argparse.ArgumentParser:
     docs = sub.add_parser("docs", help="Print or open documentation URL")
     docs.add_argument("topic", nargs="?")
     docs.add_argument("--open", action="store_true", dest="open_url")
+
+    sub.add_parser("usage", help="Print the concise command summary")
+    sub.add_parser("doctor", help="Diagnose Bashref runtime and reference data")
     return parser
 
 
@@ -71,8 +76,8 @@ def main(argv: list[str] | None = None) -> int:
     except SystemExit as exc:
         return int(exc.code or 0)
 
-    if args.command is None:
-        parser.print_help()
+    if args.command is None or args.command == "usage":
+        sys.stdout.write(usage_summary())
         return 0
 
     if args.command == "lang":
@@ -100,6 +105,10 @@ def main(argv: list[str] | None = None) -> int:
     try:
         store = ReferenceStore.load()
         engine = SearchEngine.load(store)
+        if args.command == "doctor":
+            payload = collect_diagnostics(store, language)
+            sys.stdout.write(render_diagnostics(payload, args.format))
+            return 0 if payload["status"] == "ok" else 4
         if args.command == "docs":
             record = store.get(args.topic, language) if args.topic else None
             url = docs_url(record, language)

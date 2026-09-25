@@ -2,6 +2,19 @@
 
 All notable documentation and tooling changes are recorded here.
 
+## [2.1.0] - Unreleased
+
+### Added
+- standalone single-file executables for Linux x86_64, macOS arm64/x86_64, and Windows x86_64
+- `bashref doctor` runtime/reference diagnostics
+- concise command summary through `bashref usage` and no-argument invocation
+- platform compatibility, support, FAQ, troubleshooting, and install/uninstall documentation
+- dedicated AUTHORS and SUPPORT project documents
+
+### Changed
+- package and documentation CI derive the current product version from Bashref instead of hard-coded artifact names
+- stable v2.0 documentation is rebuilt from the immutable v2.0.0 tag instead of the moving main branch
+
 ## [2.0.0] - 2026-09-26
 
 ### Added

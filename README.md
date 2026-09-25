@@ -2,49 +2,72 @@
 
 ![Bash Professional Reference](docs/en/assets/brand-banner.webp)
 
-A structured bilingual Bash reference and offline CLI for shell fundamentals, scripting, automation, system administration, DevOps, defensive security, debugging, and portability.
+Bashref is a bilingual Persian/English Bash reference product: an offline CLI, structured Reference Guide, generated man pages, cross-platform standalone executables, Linux packages, and a 14-chapter Professional Guide.
 
 **Live documentation:** https://mmkarii.github.io/bash-fa-reference/  
-**مطالعه فارسی:** https://mmkarii.github.io/bash-fa-reference/fa/  
-**English edition:** https://mmkarii.github.io/bash-fa-reference/en/
+**فارسی:** https://mmkarii.github.io/bash-fa-reference/fa/  
+**English:** https://mmkarii.github.io/bash-fa-reference/en/
 
 ## Bashref CLI
 
-Bashref 2.0.0 provides an installable offline CLI backed by the same bilingual reference data:
+Bashref 2.1.0 keeps normal lookup and search offline:
 
 ```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
-bashref --version
-bashref search printf
+bashref
+bashref search quoting
 bashref builtin printf
-bashref --lang fa builtin printf
+bashref option pipefail
+bashref --lang fa builtin read
 bashref --format json builtin printf
+bashref doctor
 ```
 
-The CLI runtime uses only the Python standard library. Release artifacts are published on GitHub Releases, and the existing v1.0 documentation snapshot remains available unchanged.
+Running `bashref` with no arguments prints a concise command summary. `bashref doctor` reports the runtime, platform, selected language, reference record count, and bilingual parity.
 
-## Scope
+## Installation
 
-This repository consolidates and professionally restructures the supplied Bash articles into parallel Persian and English documentation. It preserves the original emphasis on command-line fundamentals, text processing, automation, system administration, DevOps, security practices, Zsh/Fish comparison, debugging, glossary material, and practical examples.
+The release line supports several installation models:
 
-Technical behavior that is easy to misstate—especially `set -e`, pipelines, quoting, exit status, and portability—is cross-checked against the GNU Bash Reference Manual. Shell scripts shown here are intended for owned systems, controlled labs, and routine administration.
+- standalone Linux x86_64 executable
+- standalone macOS arm64 and x86_64 executables
+- standalone Windows x86_64 executable
+- Python wheel / pipx for Python 3.10+
+- Debian package
+- RPM package
+- Homebrew formula artifact
 
-## Documentation map
+Standalone builds do not require a separate Python installation. See the [installation guide](https://mmkarii.github.io/bash-fa-reference/en/install/) for exact commands and uninstall instructions.
 
-- installable `bashref` CLI with offline bilingual lookup/search
-- deterministic structured reference data under `reference/`
-- 14 mirrored chapters in `docs/fa/` and `docs/en/`
-- learning path, cheat sheet, glossary, references, and disclaimer
-- strict MkDocs builds for RTL Persian and LTR English
-- page-matched Persian/English language switching and hreflang metadata
-- link, anchor, translation-drift, metadata, and accessibility QA
-- version aliases: `latest`, stable `v1.0`, and stable `v2.0`
-- GitHub Pages deployment from `gh-pages`
+## Product architecture
 
-## Quality
+- **Bashref CLI:** offline terminal lookup/search with text and JSON output
+- **Reference Guide:** structured bilingual records for builtins, syntax, expansions, options, variables, concepts, and examples
+- **Professional Guide:** 14 chapters covering shell fundamentals, scripting, automation, SysAdmin, DevOps, defensive security, debugging, and portability
+- **Man pages:** generated from the same reference source
+- **Packages:** wheel/sdist, DEB, RPM, completions, Homebrew formula, portable archives, and checksums
+- **Standalone executables:** built and smoke-tested separately on Linux, macOS, and Windows
+- **Website:** Persian RTL and English LTR editions with stable version snapshots
 
-CI tests the documentation tooling, checks local links and anchors, checks external links for deterministic 404/410 failures, builds both languages with `--strict`, validates built-site metadata/accessibility, and verifies the full published output.
+## Quality and release engineering
+
+CI validates structured reference parity, generated outputs, unit/integration tests, installed-wheel behavior, man pages, links, anchors, metadata, accessibility, DEB/RPM installation, and standalone executables. Release assets are published with SHA-256 checksums.
+
+The reference database is never executed as shell code. Bash-specific semantics cite the GNU Bash Reference Manual.
+
+## Support
+
+Start with:
+
+```bash
+bashref --format json doctor
+```
+
+Then see [SUPPORT.md](SUPPORT.md) for bug-reporting information. Sensitive security issues should follow [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Canonical reference records live under `reference/en/` and `reference/fa/`; generated reference pages should not be edited directly.
 
 ## License
 
-Documentation is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code snippets are examples for education and administration; review them before production use.
+Software is MIT licensed. Documentation/reference prose is CC BY 4.0. See the root `LICENSE` and `LICENSES/` directory for scope.
