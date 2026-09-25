@@ -26,7 +26,7 @@ TEMPLATE = '''class Bashref < Formula
   end
 
   test do
-    assert_match "bashref {version}", shell_output("#{bin}/bashref --version")
+    assert_match "bashref {version}", shell_output("#{{bin}}/bashref --version")
   end
 end
 '''
