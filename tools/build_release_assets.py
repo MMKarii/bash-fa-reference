@@ -6,8 +6,12 @@ import tarfile
 import tempfile
 from pathlib import Path
 
-from tools.build_completions import build_completions
-from tools.build_manpages import build_manpages
+try:
+    from tools.build_completions import build_completions
+    from tools.build_manpages import build_manpages
+except ModuleNotFoundError:
+    from build_completions import build_completions
+    from build_manpages import build_manpages
 
 
 def _tar_filter(info: tarfile.TarInfo) -> tarfile.TarInfo:
