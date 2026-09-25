@@ -121,6 +121,7 @@ jobs:
             git worktree add --detach "$V2_DIR" v2.0.0
             trap 'git worktree remove --force "$V2_DIR" >/dev/null 2>&1 || true' EXIT
             test "$(git -C "$V2_DIR" describe --tags --exact-match)" = "v2.0.0"
+            python "$V2_DIR/tools/build_docs_reference.py" --source "$V2_DIR/reference" --docs-root "$V2_DIR/docs"
             mkdocs build --strict -f "$V2_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v2.0/fa"
             mkdocs build --strict -f "$V2_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v2.0/en"
             git worktree remove --force "$V2_DIR"
@@ -138,6 +139,7 @@ jobs:
               V21_DIR="$RUNNER_TEMP/bash-reference-v21"
               git worktree add --detach "$V21_DIR" v2.1.0
               trap 'git worktree remove --force "$V21_DIR" >/dev/null 2>&1 || true' EXIT
+              python "$V21_DIR/tools/build_docs_reference.py" --source "$V21_DIR/reference" --docs-root "$V21_DIR/docs"
               mkdocs build --strict -f "$V21_DIR/mkdocs.fa.yml" -d "$GITHUB_WORKSPACE/site/v2.1/fa"
               mkdocs build --strict -f "$V21_DIR/mkdocs.en.yml" -d "$GITHUB_WORKSPACE/site/v2.1/en"
               git worktree remove --force "$V21_DIR"
