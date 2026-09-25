@@ -64,7 +64,8 @@ jobs:
           python -m venv "$SMOKE"
           WHEEL="$(ls dist/bashref-*.whl)"
           "$SMOKE/bin/pip" install --no-deps "$WHEEL"
-          test "$("$SMOKE/bin/bashref" --version)" = "bashref 2.0.0"
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
+          test "$("$SMOKE/bin/bashref" --version)" = "bashref $VERSION"
           "$SMOKE/bin/bashref" --lang en search printf | grep -Fq 'printf'
           "$SMOKE/bin/bashref" --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
 

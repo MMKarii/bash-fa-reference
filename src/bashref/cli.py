@@ -6,11 +6,13 @@ import shutil
 import sys
 import subprocess
 import webbrowser
+import json
 
 from . import __version__
 from .commands import LOOKUP_COMMAND_KINDS, list_records, lookup_record, search_records
 from .completion import completion_script, docs_url
 from .config import load_config, save_language
+from .diagnostics import doctor_report, reference_stats
 from .errors import CorruptReferenceError, EntryNotFoundError
 from .languages import resolve_language
 from .reference import ReferenceStore
@@ -56,6 +58,9 @@ def build_parser() -> argparse.ArgumentParser:
     docs = sub.add_parser("docs", help="Print or open documentation URL")
     docs.add_argument("topic", nargs="?")
     docs.add_argument("--open", action="store_true", dest="open_url")
+
+    sub.add_parser("stats", help="Show reference coverage statistics")
+    sub.add_parser("doctor", help="Show local Bashref runtime diagnostics")
     return parser
 
 
@@ -100,6 +105,30 @@ def main(argv: list[str] | None = None) -> int:
     try:
         store = ReferenceStore.load()
         engine = SearchEngine.load(store)
+        if args.command == "stats":
+            payload = reference_stats(store)
+            if args.format == "json":
+                print(json.dumps(payload, ensure_ascii=False, sort_keys=True))
+            else:
+                print(f"bashref {payload['product_version']}")
+                print(f"records: {payload['record_count']}")
+                for kind, count in payload["kinds"].items():
+                    print(f"{kind}: {count}")
+            return 0
+        if args.command == "doctor":
+            payload = doctor_report(store)
+            if args.format == "json":
+                print(json.dumps(payload, ensure_ascii=False, sort_keys=True))
+            else:
+                print(f"bashref: {payload['bashref_version']}")
+                print(f"python: {payload['python_version']}")
+                print(f"platform: {payload['platform']}")
+                print(f"language: {payload['default_language']}")
+                print(f"reference records: {payload['reference_records']}")
+                bash = payload["bash"]
+                print(f"bash: {bash['version'] if bash else 'not found'}")
+                print("network required: no")
+            return 0
         if args.command == "docs":
             record = store.get(args.topic, language) if args.topic else None
             url = docs_url(record, language)

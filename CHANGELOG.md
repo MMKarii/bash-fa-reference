@@ -2,6 +2,22 @@
 
 All notable documentation and tooling changes are recorded here.
 
+## [2.1.0] - Unreleased
+
+### Added
+- expanded bilingual structured reference from 97 to 214 records
+- broad `set -o` shell-option coverage
+- broad `shopt` option coverage
+- major Bash special-variable coverage
+- individual reference entries for primary compound-command syntax forms
+- `bashref stats` reference-coverage reporting
+- `bashref doctor` offline runtime diagnostics
+- project-level INSTALL, HACKING, AUTHORS, and NEWS documents
+
+### Changed
+- development and contribution guidance now distinguishes canonical source from generated output
+- CI/package scripts derive the product version instead of assuming 2.0.0
+
 ## [2.0.0] - 2026-09-26
 
 ### Added

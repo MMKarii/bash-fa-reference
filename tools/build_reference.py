@@ -52,7 +52,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, default=Path("reference"))
     parser.add_argument("--output", type=Path, default=Path("src/bashref/data"))
-    parser.add_argument("--version", default="2.0.0")
+    parser.add_argument("--version", default="2.1.0")
     args = parser.parse_args()
     manifest = build_reference(args.source, args.output, args.version)
     print(f"Built {manifest['record_count']} bilingual reference record(s).")
