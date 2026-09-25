@@ -87,7 +87,7 @@ def render_overview_manpage(records: list[dict]) -> str:
         body.append(", ".join(sorted(by_kind[kind], key=str.casefold)))
         body.append("")
     return (
-        '.TH "BASHREF-REFERENCE" "5" "Bashref 2.0.0" "Bashref" "File Formats and Conventions"\n'
+        '.TH "BASHREF-REFERENCE" "5" "September 25, 2026" "Bashref 2.0.0" "File Formats and Conventions"\n'
         + _section("NAME", "bashref-reference - Bash language and builtin reference index")
         + _section("DESCRIPTION", "Canonical Bashref reference topics generated from bilingual JSON records.")
         + _section("REFERENCE INDEX", "\n".join(body).rstrip())
