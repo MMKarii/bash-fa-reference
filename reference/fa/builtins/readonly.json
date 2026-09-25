@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیرها یا تابع‌ها را readonly می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.readonly",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "readonly",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "متغیرها یا تابع‌ها را readonly می‌کند.",
+  "synopsis": "readonly [-aAf] [name[=value] ...] or readonly -p",
+  "tags": [
+    "builtin",
+    "readonly"
+  ]
+}

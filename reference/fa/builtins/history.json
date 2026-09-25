@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "فهرست history پوسته را نمایش یا مدیریت می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.history",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "history",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "فهرست history پوسته را نمایش یا مدیریت می‌کند.",
+  "synopsis": "history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]",
+  "tags": [
+    "builtin",
+    "history"
+  ]
+}

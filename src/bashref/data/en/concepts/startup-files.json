@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Bash reads different startup files depending on login, interactive, and invocation modes."
+  ],
+  "examples": [],
+  "id": "concept.startup-files",
+  "kind": "concept",
+  "language": "en",
+  "name": "startup files",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files"
+  ],
+  "summary": "Bash reads different startup files depending on login, interactive, and invocation modes.",
+  "synopsis": "~/.bash_profile  ~/.bashrc",
+  "tags": [
+    "concept",
+    "startup-files"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "از یک یا چند حلقه دربرگیرنده خارج می‌شود. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.break",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "break",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "از یک یا چند حلقه دربرگیرنده خارج می‌شود.",
+  "synopsis": "break [n]",
+  "tags": [
+    "builtin",
+    "break"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    "."
+  ],
+  "description": [
+    "Execute commands from a file in the current shell environment. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.source",
+  "kind": "builtin",
+  "language": "en",
+  "name": "source",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Execute commands from a file in the current shell environment.",
+  "synopsis": "source filename [arguments]",
+  "tags": [
+    "builtin",
+    "source"
+  ]
+}

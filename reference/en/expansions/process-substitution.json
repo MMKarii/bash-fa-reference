@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Process substitution exposes command input or output through a filename-like path."
+  ],
+  "examples": [],
+  "id": "expansion.process-substitution",
+  "kind": "expansion",
+  "language": "en",
+  "name": "process substitution",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Process-Substitution"
+  ],
+  "summary": "Process substitution exposes command input or output through a filename-like path.",
+  "synopsis": "<(list)  >(list)",
+  "tags": [
+    "expansion",
+    "process-substitution"
+  ]
+}

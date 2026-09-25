@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Portable scripts separate POSIX shell behavior from Bash-specific features and version differences."
+  ],
+  "examples": [],
+  "id": "concept.portability",
+  "kind": "concept",
+  "language": "en",
+  "name": "portability",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-POSIX-Mode"
+  ],
+  "summary": "Portable scripts separate POSIX shell behavior from Bash-specific features and version differences.",
+  "synopsis": "#!/usr/bin/env bash",
+  "tags": [
+    "concept",
+    "portability"
+  ]
+}

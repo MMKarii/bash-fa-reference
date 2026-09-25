@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Display or manipulate the directory stack. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.dirs",
+  "kind": "builtin",
+  "language": "en",
+  "name": "dirs",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Display or manipulate the directory stack.",
+  "synopsis": "dirs [-clpv] [+N] [-N]",
+  "tags": [
+    "builtin",
+    "dirs"
+  ]
+}

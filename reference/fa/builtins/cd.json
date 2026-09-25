@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "دایرکتوری کاری جاری را تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.cd",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "cd",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "دایرکتوری کاری جاری را تغییر می‌دهد.",
+  "synopsis": "cd [-L|[-P [-e]] [-@]] [dir]",
+  "tags": [
+    "builtin",
+    "cd"
+  ]
+}

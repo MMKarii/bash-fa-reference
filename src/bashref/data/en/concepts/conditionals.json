@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Conditional commands select behavior from command status or expressions."
+  ],
+  "examples": [],
+  "id": "concept.conditionals",
+  "kind": "concept",
+  "language": "en",
+  "name": "conditionals",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs"
+  ],
+  "summary": "Conditional commands select behavior from command status or expressions.",
+  "synopsis": "if list; then list; fi",
+  "tags": [
+    "concept",
+    "conditionals"
+  ]
+}

@@ -8,6 +8,8 @@ edit_uri: edit/main/docs/en/
 docs_dir: docs/en
 site_dir: site/en
 copyright: CC BY 4.0 · MMKarii
+not_in_nav: |
+  /reference/generated/**
 
 theme:
   name: material
@@ -72,26 +74,25 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Start Here:
+  - Reference Guide:
+      - Overview: reference/index.md
+  - Professional Guide:
+      - Overview: book/index.md
       - Learning Path: learning-path.md
       - Cheat Sheet: cheatsheet.md
       - Bilingual Glossary: glossary.md
-  - Fundamentals:
       - "1. Bash Fundamentals and Shell Model": 01-introduction.md
       - "2. Filesystem and Basic Commands": 02-filesystem-basics.md
       - "3. Variables, Expansion, and Quoting": 03-variables-expansion-quoting.md
       - "4. Redirection and Pipelines": 04-redirection-pipelines.md
-  - Processing and Execution:
       - "5. Text Processing": 05-text-processing.md
       - "6. Processes, Jobs, and Signals": 06-processes-jobs-signals.md
       - "7. Scripting Fundamentals": 07-scripting-fundamentals.md
       - "8. Robust Scripting": 08-robust-scripting.md
-  - Operations:
       - "9. Configuration, History, and Globbing": 09-configuration-history-globbing.md
       - "10. Networking and Remote Tools": 10-networking-remote-tools.md
       - "11. System Administration Automation": 11-sysadmin-automation.md
       - "12. DevOps and CI/CD": 12-devops-cicd.md
-  - Quality and Security:
       - "13. Defensive Security": 13-defensive-security.md
       - "14. Debugging, Testing, and Portability": 14-debugging-testing-portability.md
   - References: references.md

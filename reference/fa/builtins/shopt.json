@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "گزینه‌های مخصوص Bash را مشاهده یا تغییر می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "shopt -s globstar",
+      "title": "Enable globstar"
+    }
+  ],
+  "id": "builtin.shopt",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "shopt",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "گزینه‌های مخصوص Bash را مشاهده یا تغییر می‌دهد.",
+  "synopsis": "shopt [-pqsu] [-o] [optname ...]",
+  "tags": [
+    "builtin",
+    "shopt"
+  ]
+}

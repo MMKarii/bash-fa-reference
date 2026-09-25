@@ -8,6 +8,8 @@ edit_uri: edit/main/docs/fa/
 docs_dir: docs/fa
 site_dir: site/fa
 copyright: CC BY 4.0 · MMKarii
+not_in_nav: |
+  /reference/generated/**
 
 theme:
   name: material
@@ -72,26 +74,25 @@ markdown_extensions:
 
 nav:
   - خانه: index.md
-  - شروع:
+  - Reference Guide:
+      - معرفی: reference/index.md
+  - Professional Guide:
+      - معرفی: book/index.md
       - مسیر یادگیری: learning-path.md
       - برگه تقلب: cheatsheet.md
       - واژه‌نامه دوزبانه: glossary.md
-  - مبانی:
       - "۱. مبانی Bash و مدل Shell": 01-introduction.md
       - "۲. فایل‌سیستم و دستورات پایه": 02-filesystem-basics.md
       - "۳. متغیرها، Expansion و Quoting": 03-variables-expansion-quoting.md
       - "۴. Redirection و Pipeline": 04-redirection-pipelines.md
-  - پردازش و اجرا:
       - "۵. پردازش متن": 05-text-processing.md
       - "۶. پردازه‌ها، Jobها و Signalها": 06-processes-jobs-signals.md
       - "۷. مبانی اسکریپت‌نویسی": 07-scripting-fundamentals.md
       - "۸. اسکریپت‌نویسی مقاوم": 08-robust-scripting.md
-  - عملیات:
       - "۹. پیکربندی، History و Globbing": 09-configuration-history-globbing.md
       - "۱۰. شبکه و ابزارهای راه‌دور": 10-networking-remote-tools.md
       - "۱۱. مدیریت سیستم و خودکارسازی": 11-sysadmin-automation.md
       - "۱۲. DevOps و CI/CD": 12-devops-cicd.md
-  - کیفیت و امنیت:
       - "۱۳. امنیت دفاعی": 13-defensive-security.md
       - "۱۴. Debugging، تست و Portability": 14-debugging-testing-portability.md
   - منابع: references.md

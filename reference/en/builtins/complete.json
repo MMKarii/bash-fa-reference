@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Define programmable completion specifications. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.complete",
+  "kind": "builtin",
+  "language": "en",
+  "name": "complete",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Define programmable completion specifications.",
+  "synopsis": "complete [-abcdefgjksuv] [-pr] [-DEI] [-o option] [-A action] [-G globpat] [-W wordlist] [-F function] [-C command] [-X filterpat] [-P prefix] [-S suffix] [name ...]",
+  "tags": [
+    "builtin",
+    "complete"
+  ]
+}

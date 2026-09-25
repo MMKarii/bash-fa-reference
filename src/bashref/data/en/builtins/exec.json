@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Replace the current shell process with a command, or apply redirections. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.exec",
+  "kind": "builtin",
+  "language": "en",
+  "name": "exec",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Replace the current shell process with a command, or apply redirections.",
+  "synopsis": "exec [-cl] [-a name] [command [argument ...]] [redirection ...]",
+  "tags": [
+    "builtin",
+    "exec"
+  ]
+}

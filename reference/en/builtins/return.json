@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Return from a function or sourced script with an optional status. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.return",
+  "kind": "builtin",
+  "language": "en",
+  "name": "return",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Return from a function or sourced script with an optional status.",
+  "synopsis": "return [n]",
+  "tags": [
+    "builtin",
+    "return"
+  ]
+}

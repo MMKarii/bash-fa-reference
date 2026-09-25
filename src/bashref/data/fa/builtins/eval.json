@@ -1,0 +1,30 @@
+{
+  "aliases": [],
+  "description": [
+    "آرگومان‌ها را ترکیب و نتیجه را به‌عنوان ورودی پوسته اجرا می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.eval",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "eval",
+  "pitfalls": [
+    "متن غیرقابل‌اعتماد را با eval اجرا نکنید."
+  ],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [
+    "متن ورودی eval را کد در نظر بگیرید."
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "آرگومان‌ها را ترکیب و نتیجه را به‌عنوان ورودی پوسته اجرا می‌کند.",
+  "synopsis": "eval [arg ...]",
+  "tags": [
+    "builtin",
+    "eval"
+  ]
+}

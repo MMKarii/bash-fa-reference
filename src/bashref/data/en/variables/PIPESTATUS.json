@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "PIPESTATUS is an array containing exit statuses from the most recently executed foreground pipeline."
+  ],
+  "examples": [],
+  "id": "variable.PIPESTATUS",
+  "kind": "variable",
+  "language": "en",
+  "name": "PIPESTATUS",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "PIPESTATUS is an array containing exit statuses from the most recently executed foreground pipeline.",
+  "synopsis": "${PIPESTATUS[@]}",
+  "tags": [
+    "variable",
+    "PIPESTATUS"
+  ]
+}

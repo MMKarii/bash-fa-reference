@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "handlerهای signal و pseudo-signalهای Bash را تنظیم می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "trap 'rm -f \"$tmp\"' EXIT",
+      "title": "Cleanup on exit"
+    }
+  ],
+  "id": "builtin.trap",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "trap",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "handlerهای signal و pseudo-signalهای Bash را تنظیم می‌کند.",
+  "synopsis": "trap [-lp] [[arg] signal_spec ...]",
+  "tags": [
+    "builtin",
+    "trap"
+  ]
+}

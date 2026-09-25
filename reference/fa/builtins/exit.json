@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "پوسته را با وضعیت خروج اختیاری خاتمه می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.exit",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "exit",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "پوسته را با وضعیت خروج اختیاری خاتمه می‌دهد.",
+  "synopsis": "exit [n]",
+  "tags": [
+    "builtin",
+    "exit"
+  ]
+}

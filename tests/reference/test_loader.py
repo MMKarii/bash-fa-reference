@@ -81,4 +81,6 @@ def test_ambiguous_alias_is_corrupt(tmp_path: Path):
 def test_list_can_filter_kind():
     store = ReferenceStore.load()
     result = store.list("builtin", "en")
-    assert [item["id"] for item in result] == ["builtin.printf"]
+    ids = [item["id"] for item in result]
+    assert "builtin.printf" in ids
+    assert ids == sorted(ids)

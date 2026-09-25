@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "اجرای حلقه دربرگیرنده را از iteration بعدی ادامه می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.continue",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "continue",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "اجرای حلقه دربرگیرنده را از iteration بعدی ادامه می‌دهد.",
+  "synopsis": "continue [n]",
+  "tags": [
+    "builtin",
+    "continue"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Pipeline خروجی یک فرمان را به ورودی فرمان بعدی متصل و یک وضعیت نهایی تولید می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.pipelines",
+  "kind": "concept",
+  "language": "fa",
+  "name": "pipelines",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "Pipeline خروجی یک فرمان را به ورودی فرمان بعدی متصل و یک وضعیت نهایی تولید می‌کند.",
+  "synopsis": "command1 | command2",
+  "tags": [
+    "concept",
+    "pipelines"
+  ]
+}

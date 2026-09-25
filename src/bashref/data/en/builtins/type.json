@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Describe how command names would be interpreted. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.type",
+  "kind": "builtin",
+  "language": "en",
+  "name": "type",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Describe how command names would be interpreted.",
+  "synopsis": "type [-afptP] name [name ...]",
+  "tags": [
+    "builtin",
+    "type"
+  ]
+}

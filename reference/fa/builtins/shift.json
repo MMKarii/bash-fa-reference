@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "پارامترهای positional را به چپ shift می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.shift",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "shift",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "پارامترهای positional را به چپ shift می‌دهد.",
+  "synopsis": "shift [n]",
+  "tags": [
+    "builtin",
+    "shift"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "Set shell options and positional parameters. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [
+    {
+      "code": "set -u",
+      "title": "Enable nounset"
+    }
+  ],
+  "id": "builtin.set",
+  "kind": "builtin",
+  "language": "en",
+  "name": "set",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Set shell options and positional parameters.",
+  "synopsis": "set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]",
+  "tags": [
+    "builtin",
+    "set"
+  ]
+}

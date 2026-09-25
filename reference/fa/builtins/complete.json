@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "قواعد تکمیل خودکار قابل‌برنامه‌ریزی را تعریف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.complete",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "complete",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "قواعد تکمیل خودکار قابل‌برنامه‌ریزی را تعریف می‌کند.",
+  "synopsis": "complete [-abcdefgjksuv] [-pr] [-DEI] [-o option] [-A action] [-G globpat] [-W wordlist] [-F function] [-C command] [-X filterpat] [-P prefix] [-S suffix] [name ...]",
+  "tags": [
+    "builtin",
+    "complete"
+  ]
+}

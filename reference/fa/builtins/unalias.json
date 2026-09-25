@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "aliasهای پوسته را حذف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.unalias",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "unalias",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "aliasهای پوسته را حذف می‌کند.",
+  "synopsis": "unalias [-a] name [name ...]",
+  "tags": [
+    "builtin",
+    "unalias"
+  ]
+}

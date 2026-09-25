@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Remove shell aliases. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.unalias",
+  "kind": "builtin",
+  "language": "en",
+  "name": "unalias",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Remove shell aliases.",
+  "synopsis": "unalias [-a] name [name ...]",
+  "tags": [
+    "builtin",
+    "unalias"
+  ]
+}

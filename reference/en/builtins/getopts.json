@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Parse positional parameters as command-line options. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.getopts",
+  "kind": "builtin",
+  "language": "en",
+  "name": "getopts",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Parse positional parameters as command-line options.",
+  "synopsis": "getopts optstring name [arg ...]",
+  "tags": [
+    "builtin",
+    "getopts"
+  ]
+}

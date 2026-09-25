@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "اجرای پوسته جاری را متوقف می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.suspend",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "suspend",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "اجرای پوسته جاری را متوقف می‌کند.",
+  "synopsis": "suspend [-f]",
+  "tags": [
+    "builtin",
+    "suspend"
+  ]
+}

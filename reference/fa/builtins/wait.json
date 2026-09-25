@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "برای پایان Jobها یا پردازه‌ها منتظر می‌ماند و وضعیت خروج را برمی‌گرداند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "wait \"$pid\"",
+      "title": "Wait for a background PID"
+    }
+  ],
+  "id": "builtin.wait",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "wait",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "برای پایان Jobها یا پردازه‌ها منتظر می‌ماند و وضعیت خروج را برمی‌گرداند.",
+  "synopsis": "wait [-fn] [-p var] [id ...]",
+  "tags": [
+    "builtin",
+    "wait"
+  ]
+}

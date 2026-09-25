@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "Read input and assign fields to shell variables. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [
+    {
+      "code": "IFS= read -r value",
+      "title": "Read without backslash escapes"
+    }
+  ],
+  "id": "builtin.read",
+  "kind": "builtin",
+  "language": "en",
+  "name": "read",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Read input and assign fields to shell variables.",
+  "synopsis": "read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd] [name ...]",
+  "tags": [
+    "builtin",
+    "read"
+  ]
+}

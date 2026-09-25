@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "اسکریپت دفاعی expansionها را quote، ورودی را validate، خطاها را بررسی، privilege را کم و cleanup را قابل پیش‌بینی می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.defensive-scripting",
+  "kind": "concept",
+  "language": "fa",
+  "name": "defensive scripting",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [
+    "ورودی خارجی را داده در نظر بگیرید، نه کد shell."
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion"
+  ],
+  "summary": "اسکریپت دفاعی expansionها را quote، ورودی را validate، خطاها را بررسی، privilege را کم و cleanup را قابل پیش‌بینی می‌کند.",
+  "synopsis": "set -u; trap cleanup EXIT",
+  "tags": [
+    "concept",
+    "defensive-scripting"
+  ]
+}

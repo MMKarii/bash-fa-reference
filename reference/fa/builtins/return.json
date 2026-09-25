@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "از تابع یا فایل sourceشده با وضعیت اختیاری بازمی‌گردد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.return",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "return",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "از تابع یا فایل sourceشده با وضعیت اختیاری بازمی‌گردد.",
+  "synopsis": "return [n]",
+  "tags": [
+    "builtin",
+    "return"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود."
+  ],
+  "examples": [],
+  "id": "shopt.globstar",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "globstar",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود.",
+  "synopsis": "shopt -s globstar",
+  "tags": [
+    "shopt",
+    "globstar"
+  ]
+}

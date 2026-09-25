@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Remove jobs from the shell's job table or alter hangup handling. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.disown",
+  "kind": "builtin",
+  "language": "en",
+  "name": "disown",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "Remove jobs from the shell's job table or alter hangup handling.",
+  "synopsis": "disown [-h] [-ar] [jobspec ... | pid ...]",
+  "tags": [
+    "builtin",
+    "disown"
+  ]
+}

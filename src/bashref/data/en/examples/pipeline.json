@@ -1,0 +1,29 @@
+{
+  "aliases": [],
+  "description": [
+    "A robust pipeline example preserves quoting and inspects pipeline status when needed."
+  ],
+  "examples": [
+    {
+      "code": "printf '%s\\n' \"$value\" | grep -F -- \"$needle\"",
+      "title": "Example"
+    }
+  ],
+  "id": "example.pipeline",
+  "kind": "example",
+  "language": "en",
+  "name": "pipeline example",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "A robust pipeline example preserves quoting and inspects pipeline status when needed.",
+  "synopsis": "printf '%s\\n' \"$value\" | grep -F -- \"$needle\"",
+  "tags": [
+    "example",
+    "pipeline"
+  ]
+}

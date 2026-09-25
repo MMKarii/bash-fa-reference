@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "BASH_SOURCE is an array containing source filenames corresponding to the current call stack."
+  ],
+  "examples": [],
+  "id": "variable.BASH_SOURCE",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_SOURCE",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "BASH_SOURCE is an array containing source filenames corresponding to the current call stack.",
+  "synopsis": "${BASH_SOURCE[0]}",
+  "tags": [
+    "variable",
+    "BASH_SOURCE"
+  ]
+}

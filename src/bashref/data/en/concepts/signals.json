@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Signals notify processes about asynchronous events and can be handled with trap."
+  ],
+  "examples": [],
+  "id": "concept.signals",
+  "kind": "concept",
+  "language": "en",
+  "name": "signals",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Signals"
+  ],
+  "summary": "Signals notify processes about asynchronous events and can be handled with trap.",
+  "synopsis": "trap 'handler' INT TERM",
+  "tags": [
+    "concept",
+    "signals"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Here documents provide multiline input until a delimiter line is reached."
+  ],
+  "examples": [],
+  "id": "concept.here-documents",
+  "kind": "concept",
+  "language": "en",
+  "name": "here documents",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Here-Documents"
+  ],
+  "summary": "Here documents provide multiline input until a delimiter line is reached.",
+  "synopsis": "command <<'EOF' ... EOF",
+  "tags": [
+    "concept",
+    "here-documents"
+  ]
+}

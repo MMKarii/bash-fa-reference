@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "xtrace فرمان‌های expandشده را پیش از اجرا برای trace و debugging چاپ می‌کند."
+  ],
+  "examples": [],
+  "id": "option.xtrace",
+  "kind": "option",
+  "language": "fa",
+  "name": "xtrace",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "xtrace فرمان‌های expandشده را پیش از اجرا برای trace و debugging چاپ می‌کند.",
+  "synopsis": "set -x  set -o xtrace",
+  "tags": [
+    "option",
+    "xtrace"
+  ]
+}

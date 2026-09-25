@@ -1,0 +1,29 @@
+{
+  "aliases": [],
+  "description": [
+    "نمونه pipeline مقاوم quoting را حفظ می‌کند و در صورت نیاز statusهای pipeline را بررسی می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "printf '%s\\n' \"$value\" | grep -F -- \"$needle\"",
+      "title": "نمونه"
+    }
+  ],
+  "id": "example.pipeline",
+  "kind": "example",
+  "language": "fa",
+  "name": "pipeline example",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "نمونه pipeline مقاوم quoting را حفظ می‌کند و در صورت نیاز statusهای pipeline را بررسی می‌کند.",
+  "synopsis": "printf '%s\\n' \"$value\" | grep -F -- \"$needle\"",
+  "tags": [
+    "example",
+    "pipeline"
+  ]
+}

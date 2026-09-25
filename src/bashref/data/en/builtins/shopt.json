@@ -1,0 +1,31 @@
+{
+  "aliases": [],
+  "description": [
+    "Inspect or change Bash-specific shell options. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [
+    {
+      "code": "shopt -s globstar",
+      "title": "Enable globstar"
+    }
+  ],
+  "id": "builtin.shopt",
+  "kind": "builtin",
+  "language": "en",
+  "name": "shopt",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Inspect or change Bash-specific shell options.",
+  "synopsis": "shopt [-pqsu] [-o] [optname ...]",
+  "tags": [
+    "builtin",
+    "shopt"
+  ]
+}

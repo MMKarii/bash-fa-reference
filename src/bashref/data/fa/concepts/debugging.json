@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Debugging در Bash از trace، trap، بررسی status و تحلیل ایستا استفاده می‌کند."
+  ],
+  "examples": [],
+  "id": "concept.debugging",
+  "kind": "concept",
+  "language": "fa",
+  "name": "debugging",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Debugging در Bash از trace، trap، بررسی status و تحلیل ایستا استفاده می‌کند.",
+  "synopsis": "set -x",
+  "tags": [
+    "concept",
+    "debugging"
+  ]
+}

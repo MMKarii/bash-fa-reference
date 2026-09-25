@@ -1,0 +1,29 @@
+{
+  "aliases": [],
+  "description": [
+    "A cleanup trap centralizes predictable resource cleanup when a script exits."
+  ],
+  "examples": [
+    {
+      "code": "tmp=$(mktemp); trap 'rm -f \"$tmp\"' EXIT",
+      "title": "Example"
+    }
+  ],
+  "id": "example.trap",
+  "kind": "example",
+  "language": "en",
+  "name": "trap example",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Signals"
+  ],
+  "summary": "A cleanup trap centralizes predictable resource cleanup when a script exits.",
+  "synopsis": "tmp=$(mktemp); trap 'rm -f \"$tmp\"' EXIT",
+  "tags": [
+    "example",
+    "trap"
+  ]
+}

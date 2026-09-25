@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "آرایه‌های associative مقدارها را با کلید رشته‌ای نگهداری می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.associative-arrays",
+  "kind": "concept",
+  "language": "fa",
+  "name": "associative arrays",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Arrays"
+  ],
+  "summary": "آرایه‌های associative مقدارها را با کلید رشته‌ای نگهداری می‌کنند.",
+  "synopsis": "declare -A map=([key]=value)",
+  "tags": [
+    "concept",
+    "associative-arrays"
+  ]
+}

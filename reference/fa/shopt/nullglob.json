@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "nullglob الگوی glob بدون match را حذف می‌کند به‌جای اینکه خود الگو literal باقی بماند."
+  ],
+  "examples": [],
+  "id": "shopt.nullglob",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "nullglob",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "nullglob الگوی glob بدون match را حذف می‌کند به‌جای اینکه خود الگو literal باقی بماند.",
+  "synopsis": "shopt -s nullglob",
+  "tags": [
+    "shopt",
+    "nullglob"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Redirections control where commands read input and write output."
+  ],
+  "examples": [],
+  "id": "concept.redirections",
+  "kind": "concept",
+  "language": "en",
+  "name": "redirections",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Redirections"
+  ],
+  "summary": "Redirections control where commands read input and write output.",
+  "synopsis": "command >file 2>&1",
+  "tags": [
+    "concept",
+    "redirections"
+  ]
+}

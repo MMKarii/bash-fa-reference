@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "آرگومان‌ها را در خروجی استاندارد می‌نویسد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.echo",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "echo",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "آرگومان‌ها را در خروجی استاندارد می‌نویسد.",
+  "synopsis": "echo [-neE] [arg ...]",
+  "tags": [
+    "builtin",
+    "echo"
+  ]
+}

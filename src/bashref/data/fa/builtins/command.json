@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "فرمان را با نادیده‌گرفتن تابع‌های هم‌نام اجرا می‌کند یا نحوه یافتن فرمان را نشان می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.command",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "command",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "فرمان را با نادیده‌گرفتن تابع‌های هم‌نام اجرا می‌کند یا نحوه یافتن فرمان را نشان می‌دهد.",
+  "synopsis": "command [-pVv] command [arg ...]",
+  "tags": [
+    "builtin",
+    "command"
+  ]
+}

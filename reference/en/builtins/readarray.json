@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Read input lines into an indexed array; equivalent to mapfile. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.readarray",
+  "kind": "builtin",
+  "language": "en",
+  "name": "readarray",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Read input lines into an indexed array; equivalent to mapfile.",
+  "synopsis": "readarray [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [array]",
+  "tags": [
+    "builtin",
+    "readarray"
+  ]
+}

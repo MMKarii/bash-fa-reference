@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Define or display shell aliases. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.alias",
+  "kind": "builtin",
+  "language": "en",
+  "name": "alias",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Define or display shell aliases.",
+  "synopsis": "alias [-p] [name[=value] ... ]",
+  "tags": [
+    "builtin",
+    "alias"
+  ]
+}

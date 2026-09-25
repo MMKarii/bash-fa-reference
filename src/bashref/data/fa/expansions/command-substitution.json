@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Command substitution یک ساختار را با خروجی استاندارد یک فرمان جایگزین می‌کند."
+  ],
+  "examples": [],
+  "id": "expansion.command-substitution",
+  "kind": "expansion",
+  "language": "fa",
+  "name": "command substitution",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Command-Substitution"
+  ],
+  "summary": "Command substitution یک ساختار را با خروجی استاندارد یک فرمان جایگزین می‌کند.",
+  "synopsis": "$(command)",
+  "tags": [
+    "expansion",
+    "command-substitution"
+  ]
+}

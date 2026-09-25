@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "The shell environment is a set of exported name-value pairs inherited by child processes."
+  ],
+  "examples": [],
+  "id": "concept.environment",
+  "kind": "concept",
+  "language": "en",
+  "name": "environment",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Environment"
+  ],
+  "summary": "The shell environment is a set of exported name-value pairs inherited by child processes.",
+  "synopsis": "export NAME=value",
+  "tags": [
+    "concept",
+    "environment"
+  ]
+}

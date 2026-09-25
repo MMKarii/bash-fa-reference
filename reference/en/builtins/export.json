@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Mark variables for export to child processes. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.export",
+  "kind": "builtin",
+  "language": "en",
+  "name": "export",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Mark variables for export to child processes.",
+  "synopsis": "export [-fn] [name[=value] ...] or export -p",
+  "tags": [
+    "builtin",
+    "export"
+  ]
+}

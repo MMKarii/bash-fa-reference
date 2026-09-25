@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Pipelines connect command output to command input and produce a pipeline status."
+  ],
+  "examples": [],
+  "id": "concept.pipelines",
+  "kind": "concept",
+  "language": "en",
+  "name": "pipelines",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "Pipelines connect command output to command input and produce a pipeline status.",
+  "synopsis": "command1 | command2",
+  "tags": [
+    "concept",
+    "pipelines"
+  ]
+}

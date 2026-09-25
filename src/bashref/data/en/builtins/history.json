@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Display or manipulate the shell history list. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.history",
+  "kind": "builtin",
+  "language": "en",
+  "name": "history",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Display or manipulate the shell history list.",
+  "synopsis": "history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]",
+  "tags": [
+    "builtin",
+    "history"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "nounset استفاده از متغیر unset را در contextهای مربوط خطا در نظر می‌گیرد."
+  ],
+  "examples": [],
+  "id": "option.nounset",
+  "kind": "option",
+  "language": "fa",
+  "name": "nounset",
+  "pitfalls": [],
+  "portability": [
+    "این رفتار مخصوص Bash است؛ هنگام اهمیت portability نسخه Bash را بررسی کنید."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "nounset استفاده از متغیر unset را در contextهای مربوط خطا در نظر می‌گیرد.",
+  "synopsis": "set -u  set -o nounset",
+  "tags": [
+    "option",
+    "nounset"
+  ]
+}

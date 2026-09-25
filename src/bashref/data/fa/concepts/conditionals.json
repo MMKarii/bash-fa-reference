@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "ساختارهای شرطی رفتار را بر اساس وضعیت فرمان یا expression انتخاب می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.conditionals",
+  "kind": "concept",
+  "language": "fa",
+  "name": "conditionals",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs"
+  ],
+  "summary": "ساختارهای شرطی رفتار را بر اساس وضعیت فرمان یا expression انتخاب می‌کنند.",
+  "synopsis": "if list; then list; fi",
+  "tags": [
+    "concept",
+    "conditionals"
+  ]
+}

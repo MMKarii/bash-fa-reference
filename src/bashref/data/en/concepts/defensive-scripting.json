@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Defensive scripts quote expansions, validate input, check failures, minimize privilege, and clean up predictably."
+  ],
+  "examples": [],
+  "id": "concept.defensive-scripting",
+  "kind": "concept",
+  "language": "en",
+  "name": "defensive scripting",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [
+    "Treat external input as data, not shell code."
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion"
+  ],
+  "summary": "Defensive scripts quote expansions, validate input, check failures, minimize privilege, and clean up predictably.",
+  "synopsis": "set -u; trap cleanup EXIT",
+  "tags": [
+    "concept",
+    "defensive-scripting"
+  ]
+}

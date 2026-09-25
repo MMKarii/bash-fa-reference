@@ -1,0 +1,29 @@
+{
+  "aliases": [],
+  "description": [
+    "یک cleanup trap پاک‌سازی منابع را هنگام خروج اسکریپت به‌صورت متمرکز و قابل پیش‌بینی انجام می‌دهد."
+  ],
+  "examples": [
+    {
+      "code": "tmp=$(mktemp); trap 'rm -f \"$tmp\"' EXIT",
+      "title": "نمونه"
+    }
+  ],
+  "id": "example.trap",
+  "kind": "example",
+  "language": "fa",
+  "name": "trap example",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Signals"
+  ],
+  "summary": "یک cleanup trap پاک‌سازی منابع را هنگام خروج اسکریپت به‌صورت متمرکز و قابل پیش‌بینی انجام می‌دهد.",
+  "synopsis": "tmp=$(mktemp); trap 'rm -f \"$tmp\"' EXIT",
+  "tags": [
+    "example",
+    "trap"
+  ]
+}

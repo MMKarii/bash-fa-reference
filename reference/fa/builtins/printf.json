@@ -1,14 +1,31 @@
 {
+  "aliases": [],
+  "description": [
+    "داده را قالب‌بندی و چاپ می‌کند یا با -v در متغیر قرار می‌دهد. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [
+    {
+      "code": "printf '%s\\n' \"$value\"",
+      "title": "Format safely"
+    }
+  ],
   "id": "builtin.printf",
   "kind": "builtin",
-  "name": "printf",
-  "aliases": [],
   "language": "fa",
-  "summary": "داده را با قالب مشخص چاپ می‌کند.",
-  "synopsis": "printf [-v var] format [arguments]",
-  "description": ["آرگومان‌ها را طبق رشته قالب پردازش می‌کند و نتیجه را در خروجی استاندارد می‌نویسد یا با گزینه -v در یک متغیر قرار می‌دهد."],
-  "examples": [{"title": "چاپ مقدار به شکل quoted", "code": "printf '%q\\n' \"$value\""}],
+  "name": "printf",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
   "related": [],
-  "tags": ["خروجی", "قالب‌بندی", "builtin"],
-  "sources": ["https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"]
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "داده را قالب‌بندی و چاپ می‌کند یا با -v در متغیر قرار می‌دهد.",
+  "synopsis": "printf [-v var] format [arguments]",
+  "tags": [
+    "builtin",
+    "printf"
+  ]
 }

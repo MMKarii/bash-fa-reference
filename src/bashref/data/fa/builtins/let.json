@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "عبارت‌های حسابی Bash را ارزیابی می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.let",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "let",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "عبارت‌های حسابی Bash را ارزیابی می‌کند.",
+  "synopsis": "let arg [arg ...]",
+  "tags": [
+    "builtin",
+    "let"
+  ]
+}

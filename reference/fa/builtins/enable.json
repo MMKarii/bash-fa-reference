@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "builtinهای پوسته را فعال، غیرفعال یا بارگذاری می‌کند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.enable",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "enable",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "builtinهای پوسته را فعال، غیرفعال یا بارگذاری می‌کند.",
+  "synopsis": "enable [-a] [-dnps] [-f filename] [name ...]",
+  "tags": [
+    "builtin",
+    "enable"
+  ]
+}

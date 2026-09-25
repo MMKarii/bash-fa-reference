@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "List, edit, or re-execute commands from shell history. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.fc",
+  "kind": "builtin",
+  "language": "en",
+  "name": "fc",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "List, edit, or re-execute commands from shell history.",
+  "synopsis": "fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]",
+  "tags": [
+    "builtin",
+    "fc"
+  ]
+}

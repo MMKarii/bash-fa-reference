@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "ساختارهای loop یک فهرست فرمان را بر اساس شرط یا مجموعه آیتم‌ها تکرار می‌کنند."
+  ],
+  "examples": [],
+  "id": "concept.loops",
+  "kind": "concept",
+  "language": "fa",
+  "name": "loops",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs"
+  ],
+  "summary": "ساختارهای loop یک فهرست فرمان را بر اساس شرط یا مجموعه آیتم‌ها تکرار می‌کنند.",
+  "synopsis": "for name in words; do list; done",
+  "tags": [
+    "concept",
+    "loops"
+  ]
+}

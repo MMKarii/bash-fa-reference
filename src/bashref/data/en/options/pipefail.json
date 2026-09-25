@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "pipefail makes pipeline status reflect the rightmost failing command instead of only the last command."
+  ],
+  "examples": [],
+  "id": "option.pipefail",
+  "kind": "option",
+  "language": "en",
+  "name": "pipefail",
+  "pitfalls": [],
+  "portability": [
+    "This behavior is Bash-specific; verify the Bash version when portability matters."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Pipelines"
+  ],
+  "summary": "pipefail makes pipeline status reflect the rightmost failing command instead of only the last command.",
+  "synopsis": "set -o pipefail",
+  "tags": [
+    "option",
+    "pipefail"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "ورودی جدید به پشته دایرکتوری اضافه می‌کند یا آن را می‌چرخاند. این مدخل builtin و اثر آن بر وضعیت پوسته را مستند می‌کند."
+  ],
+  "examples": [],
+  "id": "builtin.pushd",
+  "kind": "builtin",
+  "language": "fa",
+  "name": "pushd",
+  "pitfalls": [],
+  "portability": [
+    "گزینه‌های فراتر از POSIX ممکن است مخصوص Bash باشند."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "ورودی جدید به پشته دایرکتوری اضافه می‌کند یا آن را می‌چرخاند.",
+  "synopsis": "pushd [-n] [+N | -N | dir]",
+  "tags": [
+    "builtin",
+    "pushd"
+  ]
+}

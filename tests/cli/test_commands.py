@@ -29,7 +29,9 @@ def test_empty_search_result_is_successful_json(capsys):
 def test_list_builtin_returns_records(capsys):
     assert main(["--lang", "en", "--format", "json", "list", "builtin"]) == 0
     payload = json.loads(capsys.readouterr().out)
-    assert [item["id"] for item in payload] == ["builtin.printf"]
+    ids = [item["id"] for item in payload]
+    assert "builtin.printf" in ids
+    assert ids == sorted(ids)
 
 
 def test_lang_command_persists(tmp_path, monkeypatch, capsys):

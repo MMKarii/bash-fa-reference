@@ -6,6 +6,11 @@ This reference consolidates the supplied Bash articles into a maintainable bilin
 
 Repeated placeholder material has been removed. Bash behavior that is easy to oversimplify—especially `set -e`, `pipefail`, quoting, expansion, and exit status—is checked against the [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html).
 
+## Two ways to use Bashref
+
+- **[Reference Guide](reference/):** precise lookup for builtins, syntax, expansions, options, variables, and core concepts.
+- **[Professional Guide](book/):** the 14-chapter learning and operations handbook.
+
 ## Start here
 
 - New to Bash: [Learning Path](learning-path.md) and chapters 1–4

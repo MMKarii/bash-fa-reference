@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Display or set the file creation mode mask. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.umask",
+  "kind": "builtin",
+  "language": "en",
+  "name": "umask",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Display or set the file creation mode mask.",
+  "synopsis": "umask [-p] [-S] [mode]",
+  "tags": [
+    "builtin",
+    "umask"
+  ]
+}

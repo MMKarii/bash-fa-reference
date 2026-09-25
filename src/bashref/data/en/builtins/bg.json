@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Resume suspended jobs in the background. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.bg",
+  "kind": "builtin",
+  "language": "en",
+  "name": "bg",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Job-Control-Builtins"
+  ],
+  "summary": "Resume suspended jobs in the background.",
+  "synopsis": "bg [job_spec ...]",
+  "tags": [
+    "builtin",
+    "bg"
+  ]
+}

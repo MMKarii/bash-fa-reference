@@ -1,0 +1,24 @@
+{
+  "aliases": [],
+  "description": [
+    "Associative arrays store values under string keys."
+  ],
+  "examples": [],
+  "id": "concept.associative-arrays",
+  "kind": "concept",
+  "language": "en",
+  "name": "associative arrays",
+  "pitfalls": [],
+  "portability": [],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Arrays"
+  ],
+  "summary": "Associative arrays store values under string keys.",
+  "synopsis": "declare -A map=([key]=value)",
+  "tags": [
+    "concept",
+    "associative-arrays"
+  ]
+}

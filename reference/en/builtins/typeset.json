@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Declare variables and attributes; a synonym for declare in Bash. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.typeset",
+  "kind": "builtin",
+  "language": "en",
+  "name": "typeset",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Declare variables and attributes; a synonym for declare in Bash.",
+  "synopsis": "typeset [-aAfFgiIlnrtux] name[=value] ... or typeset -p [-aAfFilnrtux] [name ...]",
+  "tags": [
+    "builtin",
+    "typeset"
+  ]
+}

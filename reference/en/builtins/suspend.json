@@ -1,0 +1,26 @@
+{
+  "aliases": [],
+  "description": [
+    "Suspend execution of the current shell. This entry documents the Bash builtin and its shell-state effects."
+  ],
+  "examples": [],
+  "id": "builtin.suspend",
+  "kind": "builtin",
+  "language": "en",
+  "name": "suspend",
+  "pitfalls": [],
+  "portability": [
+    "Options beyond POSIX may be Bash-specific."
+  ],
+  "related": [],
+  "security": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+  ],
+  "summary": "Suspend execution of the current shell.",
+  "synopsis": "suspend [-f]",
+  "tags": [
+    "builtin",
+    "suspend"
+  ]
+}
