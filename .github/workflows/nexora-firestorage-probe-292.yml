@@ -1,0 +1,21 @@
+name: NEXORA Firestorage Probe 2.9.2
+on:
+  push:
+    branches:
+      - nexora-runtime-fetch-292
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe share page
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL 'https://firestorage.ai/ja/f/fQusM--ibaOA' -o page.html
+          echo "PAGE_SIZE=$(stat -c%s page.html)"
+          grep -Eo 'https?://[^"<> ]+|href="[^"]+"' page.html | head -80 || true
+          grep -n 'NEXORA-Setup-v2.9.2.exe' page.html | head -20 || true
