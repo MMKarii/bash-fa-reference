@@ -3,7 +3,15 @@ from __future__ import annotations
 import argparse
 import shutil
 import subprocess
+import tarfile
+import tempfile
 from pathlib import Path
+
+try:
+    from tools.build_deb import stage_system_payload
+except ModuleNotFoundError:
+    from build_deb import stage_system_payload
+
 
 SPEC_TEMPLATE = """Name: bashref
 Version: {version}
@@ -19,24 +27,24 @@ Offline bilingual Bash reference CLI and generated reference data.
 
 %prep
 %setup -q -c -T
+tar -xzf %{{SOURCE0}}
 
 %build
 
 %install
-mkdir -p %{{buildroot}}%{{_bindir}}
-install -m 0755 packaging/root/usr/bin/bashref %{{buildroot}}%{{_bindir}}/bashref
-mkdir -p %{{buildroot}}%{{_mandir}}/man1
-install -m 0644 man/bashref.1 %{{buildroot}}%{{_mandir}}/man1/bashref.1
-mkdir -p %{{buildroot}}%{{_mandir}}/man5
-install -m 0644 man/bashref-reference.5 %{{buildroot}}%{{_mandir}}/man5/bashref-reference.5
-mkdir -p %{{buildroot}}%{{_datadir}}/bash-completion/completions
-install -m 0644 packaging/completions/bash/bashref %{{buildroot}}%{{_datadir}}/bash-completion/completions/bashref
+mkdir -p %{{buildroot}}
+cp -a root/* %{{buildroot}}/
 
 %files
 %{{_bindir}}/bashref
+/usr/lib/bashref/bashref
 %{{_mandir}}/man1/bashref.1*
 %{{_mandir}}/man5/bashref-reference.5*
 %{{_datadir}}/bash-completion/completions/bashref
+%{{_datadir}}/zsh/vendor-completions/_bashref
+%{{_datadir}}/fish/vendor_completions.d/bashref.fish
+%{{_datadir}}/doc/bashref/LICENSE-MIT
+%{{_datadir}}/doc/bashref/LICENSE-CC-BY-4.0
 
 %changelog
 * Fri Sep 25 2026 MMKarii - {version}-1
@@ -52,22 +60,34 @@ def build_rpm(version: str, out_dir: Path = Path("dist")) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     if shutil.which("rpmbuild") is None:
         raise RuntimeError("rpmbuild is not installed")
-    build_root = out_dir / ".rpmbuild"
-    for name in ("BUILD", "BUILDROOT", "RPMS", "SOURCES", "SPECS", "SRPMS"):
-        (build_root / name).mkdir(parents=True, exist_ok=True)
-    source_name = f"bashref-{version}-package.tar.gz"
-    spec = build_root / "SPECS/bashref.spec"
-    spec.write_text(render_spec(version, source_name), encoding="utf-8")
-    subprocess.run(
-        ["rpmbuild", "--define", f"_topdir {build_root.resolve()}", "-bb", str(spec)],
-        check=True,
-    )
-    candidates = list((build_root / "RPMS").rglob("bashref-*.noarch.rpm"))
-    if not candidates:
-        raise RuntimeError("rpmbuild did not produce a noarch RPM")
-    target = out_dir / candidates[0].name
-    shutil.copy2(candidates[0], target)
-    return target
+
+    with tempfile.TemporaryDirectory() as tmp:
+        temp = Path(tmp)
+        stage = temp / "root"
+        stage.mkdir()
+        stage_system_payload(stage, version)
+
+        build_root = temp / "rpmbuild"
+        for name in ("BUILD", "BUILDROOT", "RPMS", "SOURCES", "SPECS", "SRPMS"):
+            (build_root / name).mkdir(parents=True, exist_ok=True)
+
+        source_name = f"bashref-{version}-package.tar.gz"
+        source = build_root / "SOURCES" / source_name
+        with tarfile.open(source, "w:gz") as tf:
+            tf.add(stage, arcname="root")
+
+        spec = build_root / "SPECS/bashref.spec"
+        spec.write_text(render_spec(version, source_name), encoding="utf-8")
+        subprocess.run(
+            ["rpmbuild", "--define", f"_topdir {build_root.resolve()}", "-bb", str(spec)],
+            check=True,
+        )
+        candidates = list((build_root / "RPMS").rglob("bashref-*.noarch.rpm"))
+        if not candidates:
+            raise RuntimeError("rpmbuild did not produce a noarch RPM")
+        target = out_dir / candidates[0].name
+        shutil.copy2(candidates[0], target)
+        return target
 
 
 def main(argv: list[str] | None = None) -> int:
