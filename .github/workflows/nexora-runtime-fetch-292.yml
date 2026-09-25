@@ -1,0 +1,54 @@
+name: NEXORA Runtime Fetch 2.9.2
+on:
+  push:
+    branches:
+      - nexora-runtime-fetch-292
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch official CPython 3.12.10 embeddable x64
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://www.python.org/ftp/python/3.12.10/python-3.12.10-embeddable-amd64.zip"
+          FILE="python-3.12.10-embeddable-amd64.zip"
+          EXPECTED="156c7eea90d58cd7e91a23f28a0056616b13e9f4cf4901b7b99b837b7848c6da"
+          curl --fail --location --retry 3 --output "$FILE" "$URL"
+          test "$(stat -c%s "$FILE")" -gt 10000000
+          ACTUAL="$(sha256sum "$FILE" | awk '{print $1}')"
+          test "$ACTUAL" = "$EXPECTED"
+          python3 - <<'PY'
+          import zipfile,sys,os,hashlib
+          p="python-3.12.10-embeddable-amd64.zip"
+          with zipfile.ZipFile(p) as z:
+              names=set(z.namelist())
+              required={"python.exe","python312.dll","python312.zip","pythonw.exe","vcruntime140.dll"}
+              missing=sorted(required-names)
+              if missing:
+                  raise SystemExit("missing: "+", ".join(missing))
+              bad=z.testzip()
+              if bad:
+                  raise SystemExit("bad zip member: "+bad)
+          print("RUNTIME_ZIP_VALID")
+          PY
+          {
+            echo "source_url=$URL"
+            echo "expected_sha256=$EXPECTED"
+            echo "actual_sha256=$ACTUAL"
+            echo "size_bytes=$(stat -c%s "$FILE")"
+          } > runtime-metadata.txt
+      - name: Upload verified runtime
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-runtime-3.12.10
+          path: |
+            python-3.12.10-embeddable-amd64.zip
+            runtime-metadata.txt
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
