@@ -19,8 +19,9 @@ def _copy_or_placeholder(source: Path, destination: Path, content: bytes = b"") 
 def _gzip_copy(source: Path, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     data = source.read_bytes() if source.exists() else b".TH BASHREF 1\n"
-    with gzip.open(destination, "wb", mtime=0) as handle:
-        handle.write(data)
+    with destination.open("wb") as raw:
+        with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as handle:
+            handle.write(data)
 
 
 def stage_deb(root: Path, wheel: Path, version: str, dry_run: bool = False) -> Path:
