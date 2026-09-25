@@ -21,7 +21,7 @@ REQUIRED_FIELDS = {
 OPTIONAL_LIST_FIELDS = {"aliases", "parameters", "exit_status", "pitfalls", "portability", "security", "tags"}
 ALLOWED_LANGUAGES = {"en", "fa"}
 ALLOWED_KINDS = {"builtin", "syntax", "expansion", "option", "shopt", "variable", "concept", "example"}
-ID_RE = re.compile(r"^[a-z][a-z0-9-]*\\.[A-Za-z0-9][A-Za-z0-9._-]*$")
+ID_RE = re.compile(r"^[a-z][a-z0-9-]*\.[A-Za-z0-9][A-Za-z0-9._-]*$")
 
 
 def validate_record(data: dict, expected_language: str | None = None) -> list[str]:
