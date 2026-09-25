@@ -117,7 +117,7 @@ jobs:
           VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
           python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
-          python -m PyInstaller --clean --noconfirm --onefile             --name bashref --collect-data bashref src/bashref/__main__.py
+          python -m PyInstaller --clean --noconfirm --onefile             --name bashref --collect-data bashref packaging/standalone_entry.py
           BINARY="dist/${{ matrix.exe }}"
           "$BINARY" --version | grep -Fq "bashref $VERSION"
           "$BINARY" --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
