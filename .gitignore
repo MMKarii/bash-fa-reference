@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+build/
+dist/
+site/
+*.egg-info/
+docs/en/reference/generated/
+docs/fa/reference/generated/
+man/bashref.1
+man/bashref-reference.5
+man/generated/
