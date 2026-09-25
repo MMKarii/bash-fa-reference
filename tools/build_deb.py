@@ -4,8 +4,13 @@ import argparse
 import gzip
 import shutil
 import subprocess
-import sys
+import tempfile
 from pathlib import Path
+
+try:
+    from tools.build_manpages import build_manpages
+except ModuleNotFoundError:
+    from build_manpages import build_manpages
 
 
 def _copy_or_placeholder(source: Path, destination: Path, content: bytes = b"") -> None:
@@ -18,36 +23,46 @@ def _copy_or_placeholder(source: Path, destination: Path, content: bytes = b"") 
 
 def _gzip_copy(source: Path, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
-    data = source.read_bytes() if source.exists() else b".TH BASHREF 1\n"
+    data = source.read_bytes()
     with destination.open("wb") as raw:
         with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as handle:
             handle.write(data)
 
 
-def stage_deb(root: Path, wheel: Path, version: str, dry_run: bool = False) -> Path:
-    if root.exists():
-        shutil.rmtree(root)
-    root.mkdir(parents=True)
+def _man_root() -> tuple[Path, tempfile.TemporaryDirectory[str] | None]:
+    root = Path("man")
+    if (root / "bashref.1").exists() and (root / "bashref-reference.5").exists():
+        return root, None
+    tmp = tempfile.TemporaryDirectory()
+    root = Path(tmp.name) / "man"
+    build_manpages(Path("reference"), root)
+    return root, tmp
 
+
+def stage_system_payload(root: Path, version: str) -> Path:
     launcher = root / "usr/bin/bashref"
     launcher.parent.mkdir(parents=True, exist_ok=True)
     launcher.write_text(
-        "#!/bin/sh\nexec python3 -m bashref \"$@\"\n",
+        '#!/bin/sh\nPYTHONPATH=/usr/lib/bashref exec python3 -m bashref "$@"\n',
         encoding="utf-8",
     )
     launcher.chmod(0o755)
 
-    payload = root / f"opt/bashref/{version}"
-    payload.mkdir(parents=True, exist_ok=True)
-    if wheel.exists():
-        shutil.copy2(wheel, payload / wheel.name)
-    elif dry_run:
-        (payload / f"bashref-{version}-py3-none-any.whl").write_bytes(b"")
-    else:
-        raise FileNotFoundError(wheel)
+    runtime = root / "usr/lib/bashref/bashref"
+    if runtime.exists():
+        shutil.rmtree(runtime)
+    shutil.copytree(Path("src/bashref"), runtime)
 
-    _gzip_copy(Path("man/bashref.1"), root / "usr/share/man/man1/bashref.1.gz")
-    _gzip_copy(Path("man/bashref-reference.5"), root / "usr/share/man/man5/bashref-reference.5.gz")
+    man_root, temporary = _man_root()
+    try:
+        _gzip_copy(man_root / "bashref.1", root / "usr/share/man/man1/bashref.1.gz")
+        _gzip_copy(
+            man_root / "bashref-reference.5",
+            root / "usr/share/man/man5/bashref-reference.5.gz",
+        )
+    finally:
+        if temporary is not None:
+            temporary.cleanup()
 
     _copy_or_placeholder(
         Path("packaging/completions/bash/bashref"),
@@ -62,7 +77,21 @@ def stage_deb(root: Path, wheel: Path, version: str, dry_run: bool = False) -> P
         root / "usr/share/fish/vendor_completions.d/bashref.fish",
     )
     _copy_or_placeholder(Path("LICENSES/MIT.txt"), root / "usr/share/doc/bashref/LICENSE-MIT")
-    _copy_or_placeholder(Path("LICENSES/CC-BY-4.0.txt"), root / "usr/share/doc/bashref/LICENSE-CC-BY-4.0")
+    _copy_or_placeholder(
+        Path("LICENSES/CC-BY-4.0.txt"),
+        root / "usr/share/doc/bashref/LICENSE-CC-BY-4.0",
+    )
+    return root
+
+
+def stage_deb(root: Path, wheel: Path, version: str, dry_run: bool = False) -> Path:
+    if root.exists():
+        shutil.rmtree(root)
+    root.mkdir(parents=True)
+    stage_system_payload(root, version)
+
+    if not wheel.exists() and not dry_run:
+        raise FileNotFoundError(wheel)
 
     control = root / "DEBIAN/control"
     control.parent.mkdir(parents=True, exist_ok=True)
