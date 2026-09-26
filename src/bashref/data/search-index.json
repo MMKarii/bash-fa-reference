@@ -1944,6 +1944,28 @@
       },
       {
         "aliases": [],
+        "description": "Readonly colon-separated list of enabled shopt options.",
+        "id": "variable.BASHOPTS",
+        "name": "BASHOPTS",
+        "summary": "Readonly colon-separated list of enabled shopt options.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Process ID of the current Bash process.",
+        "id": "variable.BASHPID",
+        "name": "BASHPID",
+        "summary": "Process ID of the current Bash process.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "Associative array exposing the current alias table.",
         "id": "variable.BASH_ALIASES",
         "name": "BASH_ALIASES",
@@ -2091,28 +2113,6 @@
         "id": "variable.BASH_VERSION",
         "name": "BASH_VERSION",
         "summary": "Version string for the running Bash instance.",
-        "tags": [
-          "variable",
-          "bash"
-        ]
-      },
-      {
-        "aliases": [],
-        "description": "Readonly colon-separated list of enabled shopt options.",
-        "id": "variable.BASHOPTS",
-        "name": "BASHOPTS",
-        "summary": "Readonly colon-separated list of enabled shopt options.",
-        "tags": [
-          "variable",
-          "bash"
-        ]
-      },
-      {
-        "aliases": [],
-        "description": "Process ID of the current Bash process.",
-        "id": "variable.BASHPID",
-        "name": "BASHPID",
-        "summary": "Process ID of the current Bash process.",
         "tags": [
           "variable",
           "bash"
@@ -4304,6 +4304,28 @@
       },
       {
         "aliases": [],
+        "description": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
+        "id": "variable.BASHOPTS",
+        "name": "BASHOPTS",
+        "summary": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "PID پردازه فعلی Bash است.",
+        "id": "variable.BASHPID",
+        "name": "BASHPID",
+        "summary": "PID پردازه فعلی Bash است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "Associative array مربوط به aliasهای فعلی shell است.",
         "id": "variable.BASH_ALIASES",
         "name": "BASH_ALIASES",
@@ -4451,28 +4473,6 @@
         "id": "variable.BASH_VERSION",
         "name": "BASH_VERSION",
         "summary": "رشته نسخه Bash در حال اجرا است.",
-        "tags": [
-          "variable",
-          "bash"
-        ]
-      },
-      {
-        "aliases": [],
-        "description": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
-        "id": "variable.BASHOPTS",
-        "name": "BASHOPTS",
-        "summary": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
-        "tags": [
-          "variable",
-          "bash"
-        ]
-      },
-      {
-        "aliases": [],
-        "description": "PID پردازه فعلی Bash است.",
-        "id": "variable.BASHPID",
-        "name": "BASHPID",
-        "summary": "PID پردازه فعلی Bash است.",
         "tags": [
           "variable",
           "bash"
