@@ -1,0 +1,1748 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مستند حرفه‌ای فارسی Bash برای خط فرمان، اسکریپت‌نویسی، خودکارسازی، مدیریت سیستم، DevOps و امنیت دفاعی">
+      
+      
+        <meta name="author" content="MMKarii">
+      
+      
+        <link rel="canonical" href="https://mmkarii.github.io/bash-fa-reference/fa/reference/generated/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="https://mmkarii.github.io/bash-fa-reference/fa/reference/generated/" hreflang="fa">
+        
+          <link rel="alternate" href="https://mmkarii.github.io/bash-fa-reference/en/reference/generated/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>فهرست کامل Reference Guide - مرجع حرفه‌ای Bash به زبان فارسی</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  
+  
+  
+  
+  
+  <meta name="description" content="مستند حرفه‌ای فارسی Bash برای خط فرمان، اسکریپت‌نویسی، خودکارسازی، مدیریت سیستم، DevOps و امنیت دفاعی">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="فهرست کامل Reference Guide - مرجع حرفه‌ای Bash به زبان فارسی">
+  <meta property="og:description" content="مستند حرفه‌ای فارسی Bash برای خط فرمان، اسکریپت‌نویسی، خودکارسازی، مدیریت سیستم، DevOps و امنیت دفاعی">
+  <meta property="og:url" content="https://mmkarii.github.io/bash-fa-reference/fa/reference/generated/">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MMKarii/bash-fa-reference/main/assets/social-preview-v1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reference-guide" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <div class="bashref-utilitybar">
+    <div class="bashref-utilitybar__links">
+      <a href="https://github.com/MMKarii/bash-fa-reference">GitHub</a>
+      <a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a>
+      <a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash</a>
+      <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>
+    </div>
+    <div class="bashref-utilitybar__lang">
+      <a href="https://mmkarii.github.io/bash-fa-reference/en/" lang="en">English</a>
+      <a href="https://mmkarii.github.io/bash-fa-reference/fa/" lang="fa">فارسی</a>
+    </div>
+  </div>
+  
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="../.." title="مرجع حرفه‌ای Bash به زبان فارسی" class="md-header__button md-logo" aria-label="مرجع حرفه‌ای Bash به زبان فارسی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مرجع حرفه‌ای Bash به زبان فارسی
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              فهرست کامل Reference Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="انتخاب زبان">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="https://mmkarii.github.io/bash-fa-reference/fa/reference/generated/" hreflang="fa" class="md-select__link">
+              فارسی
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://mmkarii.github.io/bash-fa-reference/en/reference/generated/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MMKarii/bash-fa-reference" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MMKarii/bash-fa-reference
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="زبانه‌ها" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  خانه
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Reference Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../book/" class="md-tabs__link">
+          
+  
+  
+  Professional Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../install/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  نصب
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../download/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  دانلود
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../releases/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انتشارها
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  درباره
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../references/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  منابع
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../disclaimer/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  سلب مسئولیت
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="مرجع حرفه‌ای Bash به زبان فارسی" class="md-nav__button md-logo" aria-label="مرجع حرفه‌ای Bash به زبان فارسی" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مرجع حرفه‌ای Bash به زبان فارسی
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MMKarii/bash-fa-reference" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MMKarii/bash-fa-reference
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    خانه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    معرفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Professional Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Professional Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    معرفی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مسیر یادگیری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    برگه تقلب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    واژه‌نامه دوزبانه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱. مبانی Bash و مدل Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-filesystem-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۲. فایل‌سیستم و دستورات پایه
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-variables-expansion-quoting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۳. متغیرها، Expansion و Quoting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-redirection-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۴. Redirection و Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-text-processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۵. پردازش متن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-processes-jobs-signals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۶. پردازه‌ها، Jobها و Signalها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-scripting-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۷. مبانی اسکریپت‌نویسی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-robust-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۸. اسکریپت‌نویسی مقاوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-configuration-history-globbing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۹. پیکربندی، History و Globbing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-networking-remote-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۰. شبکه و ابزارهای راه‌دور
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-sysadmin-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۱. مدیریت سیستم و خودکارسازی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-devops-cicd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۲. DevOps و CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-defensive-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۳. امنیت دفاعی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-debugging-testing-portability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ۱۴. Debugging، تست و Portability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    نصب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    دانلود
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انتشارها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درباره
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    منابع
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../disclaimer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    سلب مسئولیت
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#builtin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        builtin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        expansion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        option
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shopt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shopt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        variable
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="reference-guide">فهرست کامل Reference Guide<a class="headerlink" href="#reference-guide" title="Permanent link">&para;</a></h1>
+<p>این فهرست به‌صورت خودکار از داده مرجع canonical تولید می‌شود.</p>
+<h2 id="builtin">builtin<a class="headerlink" href="#builtin" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="builtins/alias/">alias</a> — نام‌های مستعار پوسته را تعریف یا نمایش می‌دهد.</li>
+<li><a href="builtins/bg/">bg</a> — Jobهای متوقف‌شده را در پس‌زمینه ادامه می‌دهد.</li>
+<li><a href="builtins/bind/">bind</a> — تنظیمات و کلیدهای میانبر Readline را مدیریت می‌کند.</li>
+<li><a href="builtins/break/">break</a> — از یک یا چند حلقه دربرگیرنده خارج می‌شود.</li>
+<li><a href="builtins/builtin/">builtin</a> — یک builtin پوسته را مستقیماً اجرا می‌کند.</li>
+<li><a href="builtins/caller/">caller</a> — اطلاعات پشته فراخوانی تابع‌های پوسته را نمایش می‌دهد.</li>
+<li><a href="builtins/cd/">cd</a> — دایرکتوری کاری جاری را تغییر می‌دهد.</li>
+<li><a href="builtins/command/">command</a> — فرمان را با نادیده‌گرفتن تابع‌های هم‌نام اجرا می‌کند یا نحوه یافتن فرمان را نشان می‌دهد.</li>
+<li><a href="builtins/compgen/">compgen</a> — گزینه‌های ممکن برای تکمیل خودکار را تولید می‌کند.</li>
+<li><a href="builtins/complete/">complete</a> — قواعد تکمیل خودکار قابل‌برنامه‌ریزی را تعریف می‌کند.</li>
+<li><a href="builtins/compopt/">compopt</a> — گزینه‌های تکمیل خودکار را تغییر می‌دهد.</li>
+<li><a href="builtins/continue/">continue</a> — اجرای حلقه دربرگیرنده را از iteration بعدی ادامه می‌دهد.</li>
+<li><a href="builtins/declare/">declare</a> — متغیرها را تعریف و ویژگی‌های آن‌ها را تنظیم می‌کند.</li>
+<li><a href="builtins/dirs/">dirs</a> — پشته دایرکتوری‌ها را نمایش یا مدیریت می‌کند.</li>
+<li><a href="builtins/disown/">disown</a> — Jobها را از جدول Job پوسته حذف می‌کند یا رفتار SIGHUP آن‌ها را تغییر می‌دهد.</li>
+<li><a href="builtins/echo/">echo</a> — آرگومان‌ها را در خروجی استاندارد می‌نویسد.</li>
+<li><a href="builtins/enable/">enable</a> — builtinهای پوسته را فعال، غیرفعال یا بارگذاری می‌کند.</li>
+<li><a href="builtins/eval/">eval</a> — آرگومان‌ها را ترکیب و نتیجه را به‌عنوان ورودی پوسته اجرا می‌کند.</li>
+<li><a href="builtins/exec/">exec</a> — پردازه پوسته جاری را با یک فرمان جایگزین می‌کند یا redirectionها را اعمال می‌کند.</li>
+<li><a href="builtins/exit/">exit</a> — پوسته را با وضعیت خروج اختیاری خاتمه می‌دهد.</li>
+<li><a href="builtins/export/">export</a> — متغیرها را برای انتقال به پردازه‌های فرزند export می‌کند.</li>
+<li><a href="builtins/false/">false</a> — همیشه وضعیت ناموفق برمی‌گرداند.</li>
+<li><a href="builtins/fc/">fc</a> — فرمان‌های history را فهرست، ویرایش یا دوباره اجرا می‌کند.</li>
+<li><a href="builtins/fg/">fg</a> — یک Job را به foreground منتقل می‌کند.</li>
+<li><a href="builtins/getopts/">getopts</a> — پارامترهای positional را به‌عنوان گزینه‌های خط فرمان تجزیه می‌کند.</li>
+<li><a href="builtins/hash/">hash</a> — مسیر فرمان‌ها را cache، نمایش یا حذف می‌کند.</li>
+<li><a href="builtins/help/">help</a> — راهنمای builtinهای پوسته را نمایش می‌دهد.</li>
+<li><a href="builtins/history/">history</a> — فهرست history پوسته را نمایش یا مدیریت می‌کند.</li>
+<li><a href="builtins/jobs/">jobs</a> — وضعیت Jobها را نمایش می‌دهد یا jobspecها را جایگزین می‌کند.</li>
+<li><a href="builtins/kill/">kill</a> — برای پردازه‌ها یا Jobها signal ارسال می‌کند.</li>
+<li><a href="builtins/let/">let</a> — عبارت‌های حسابی Bash را ارزیابی می‌کند.</li>
+<li><a href="builtins/local/">local</a> — متغیرهای محلی برای تابع پوسته ایجاد می‌کند.</li>
+<li><a href="builtins/logout/">logout</a> — از login shell خارج می‌شود.</li>
+<li><a href="builtins/mapfile/">mapfile</a> — خطوط ورودی را در یک آرایه indexed می‌خواند.</li>
+<li><a href="builtins/popd/">popd</a> — ورودی‌هایی را از پشته دایرکتوری حذف می‌کند.</li>
+<li><a href="builtins/printf/">printf</a> — داده را قالب‌بندی و چاپ می‌کند یا با -v در متغیر قرار می‌دهد.</li>
+<li><a href="builtins/pushd/">pushd</a> — ورودی جدید به پشته دایرکتوری اضافه می‌کند یا آن را می‌چرخاند.</li>
+<li><a href="builtins/pwd/">pwd</a> — دایرکتوری کاری جاری را چاپ می‌کند.</li>
+<li><a href="builtins/read/">read</a> — ورودی را می‌خواند و فیلدها را به متغیرهای پوسته اختصاص می‌دهد.</li>
+<li><a href="builtins/readarray/">readarray</a> — خطوط ورودی را در آرایه indexed می‌خواند و معادل mapfile است.</li>
+<li><a href="builtins/readonly/">readonly</a> — متغیرها یا تابع‌ها را readonly می‌کند.</li>
+<li><a href="builtins/return/">return</a> — از تابع یا فایل sourceشده با وضعیت اختیاری بازمی‌گردد.</li>
+<li><a href="builtins/set/">set</a> — گزینه‌های پوسته و پارامترهای positional را تنظیم می‌کند.</li>
+<li><a href="builtins/shift/">shift</a> — پارامترهای positional را به چپ shift می‌دهد.</li>
+<li><a href="builtins/shopt/">shopt</a> — گزینه‌های مخصوص Bash را مشاهده یا تغییر می‌دهد.</li>
+<li><a href="builtins/source/">source</a> — فرمان‌های یک فایل را در محیط همان پوسته اجرا می‌کند.</li>
+<li><a href="builtins/suspend/">suspend</a> — اجرای پوسته جاری را متوقف می‌کند.</li>
+<li><a href="builtins/test/">test</a> — یک عبارت شرطی را ارزیابی و وضعیت truth آن را برمی‌گرداند.</li>
+<li><a href="builtins/times/">times</a> — زمان CPU کاربر و سیستم را نمایش می‌دهد.</li>
+<li><a href="builtins/trap/">trap</a> — handlerهای signal و pseudo-signalهای Bash را تنظیم می‌کند.</li>
+<li><a href="builtins/true/">true</a> — همیشه وضعیت موفق برمی‌گرداند.</li>
+<li><a href="builtins/type/">type</a> — نشان می‌دهد نام فرمان‌ها چگونه resolve می‌شوند.</li>
+<li><a href="builtins/typeset/">typeset</a> — متغیرها و ویژگی‌های آن‌ها را تعریف می‌کند و در Bash هم‌معنی declare است.</li>
+<li><a href="builtins/ulimit/">ulimit</a> — محدودیت منابع پردازه‌های پوسته را نمایش یا تغییر می‌دهد.</li>
+<li><a href="builtins/umask/">umask</a> — ماسک مجوز ایجاد فایل را نمایش یا تنظیم می‌کند.</li>
+<li><a href="builtins/unalias/">unalias</a> — aliasهای پوسته را حذف می‌کند.</li>
+<li><a href="builtins/unset/">unset</a> — متغیرها یا تابع‌ها را از محیط پوسته حذف می‌کند.</li>
+<li><a href="builtins/wait/">wait</a> — برای پایان Jobها یا پردازه‌ها منتظر می‌ماند و وضعیت خروج را برمی‌گرداند.</li>
+</ul>
+<h2 id="concept">concept<a class="headerlink" href="#concept" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="concepts/arrays/">arrays</a> — آرایه‌های indexed چند مقدار را با index عددی نگهداری می‌کنند.</li>
+<li><a href="concepts/associative-arrays/">associative arrays</a> — آرایه‌های associative مقدارها را با کلید رشته‌ای نگهداری می‌کنند.</li>
+<li><a href="concepts/conditionals/">conditionals</a> — ساختارهای شرطی رفتار را بر اساس وضعیت فرمان یا expression انتخاب می‌کنند.</li>
+<li><a href="concepts/debugging/">debugging</a> — Debugging در Bash از trace، trap، بررسی status و تحلیل ایستا استفاده می‌کند.</li>
+<li><a href="concepts/defensive-scripting/">defensive scripting</a> — اسکریپت دفاعی expansionها را quote، ورودی را validate، خطاها را بررسی، privilege را کم و cleanup را قابل پیش‌بینی می‌کند.</li>
+<li><a href="concepts/environment/">environment</a> — محیط پوسته مجموعه‌ای از name-valueهای exportشده است که پردازه‌های فرزند به ارث می‌برند.</li>
+<li><a href="concepts/exit-status/">exit status</a> — فرمان‌ها موفقیت یا شکست را با مقدار عددی exit status گزارش می‌کنند.</li>
+<li><a href="concepts/functions/">functions</a> — تابع‌های پوسته مجموعه فرمان‌ها را با یک نام قابل استفاده مجدد در همان پوسته گروه‌بندی می‌کنند.</li>
+<li><a href="concepts/grouping/">command grouping</a> — Brace فرمان‌ها را در همان پوسته و پرانتز در subshell گروه‌بندی می‌کند.</li>
+<li><a href="concepts/here-documents/">here documents</a> — Here document ورودی چندخطی را تا رسیدن به delimiter فراهم می‌کند.</li>
+<li><a href="concepts/here-strings/">here strings</a> — Here string یک word گسترش‌یافته را به‌عنوان ورودی استاندارد ارائه می‌کند.</li>
+<li><a href="concepts/job-control/">job control</a> — Job control pipelineهای foreground و background را در shell تعاملی مدیریت می‌کند.</li>
+<li><a href="concepts/loops/">loops</a> — ساختارهای loop یک فهرست فرمان را بر اساس شرط یا مجموعه آیتم‌ها تکرار می‌کنند.</li>
+<li><a href="concepts/pipelines/">pipelines</a> — Pipeline خروجی یک فرمان را به ورودی فرمان بعدی متصل و یک وضعیت نهایی تولید می‌کند.</li>
+<li><a href="concepts/portability/">portability</a> — اسکریپت portable رفتار POSIX را از قابلیت‌های مخصوص Bash و تفاوت نسخه‌ها جدا می‌کند.</li>
+<li><a href="concepts/redirections/">redirections</a> — Redirection مشخص می‌کند فرمان‌ها ورودی را از کجا بخوانند و خروجی را کجا بنویسند.</li>
+<li><a href="concepts/shell-options/">shell options</a> — builtin set گزینه‌های اجرایی shell را فعال یا غیرفعال می‌کند.</li>
+<li><a href="concepts/shopt/">shopt options</a> — builtin shopt رفتارهای اختیاری مخصوص Bash را کنترل می‌کند.</li>
+<li><a href="concepts/signals/">signals</a> — Signalها رخدادهای asynchronous را به پردازه‌ها اطلاع می‌دهند و با trap قابل مدیریت‌اند.</li>
+<li><a href="concepts/startup-files/">startup files</a> — Bash بر اساس حالت login، interactive و نحوه اجرا فایل‌های startup متفاوتی می‌خواند.</li>
+<li><a href="concepts/subshells/">subshells</a> — پرانتز یک فهرست فرمان را در محیط subshell اجرا می‌کند.</li>
+<li><a href="concepts/traps/">traps</a> — Trap کد پوسته را به signalها و pseudo-signalهایی مانند EXIT و DEBUG متصل می‌کند.</li>
+</ul>
+<h2 id="example">example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="examples/pipeline/">pipeline example</a> — نمونه pipeline مقاوم quoting را حفظ می‌کند و در صورت نیاز statusهای pipeline را بررسی می‌کند.</li>
+<li><a href="examples/trap/">trap example</a> — یک cleanup trap پاک‌سازی منابع را هنگام خروج اسکریپت به‌صورت متمرکز و قابل پیش‌بینی انجام می‌دهد.</li>
+</ul>
+<h2 id="expansion">expansion<a class="headerlink" href="#expansion" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="expansions/arithmetic/">arithmetic expansion</a> — Arithmetic expansion یک عبارت حسابی را ارزیابی و مقدار آن را جایگزین می‌کند.</li>
+<li><a href="expansions/brace/">brace expansion</a> — Brace expansion مجموعه‌ای از رشته‌ها را از list یا sequence داخل brace تولید می‌کند.</li>
+<li><a href="expansions/command-substitution/">command substitution</a> — Command substitution یک ساختار را با خروجی استاندارد یک فرمان جایگزین می‌کند.</li>
+<li><a href="expansions/parameter/">parameter expansion</a> — Parameter expansion مقدار پارامترهای پوسته را می‌خواند و تبدیل می‌کند.</li>
+<li><a href="expansions/pathname/">pathname expansion</a> — Pathname expansion الگوهای glob را با مسیرهای مطابق جایگزین می‌کند.</li>
+<li><a href="expansions/process-substitution/">process substitution</a> — Process substitution ورودی یا خروجی فرمان را از طریق مسیری شبیه فایل در دسترس می‌گذارد.</li>
+</ul>
+<h2 id="option">option<a class="headerlink" href="#option" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="options/allexport/">allexport</a> — متغیرهای ایجاد یا تغییرکرده را به‌صورت خودکار برای export علامت می‌زند.</li>
+<li><a href="options/braceexpand/">braceexpand</a> — Brace expansion مانند {a,b} و {1..5} را فعال می‌کند.</li>
+<li><a href="options/emacs/">emacs</a> — ویرایش خط فرمان Readline به سبک Emacs را فعال می‌کند.</li>
+<li><a href="options/errexit/">errexit</a> — errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند.</li>
+<li><a href="options/errtrace/">errtrace</a> — باعث می‌شود trap مربوط به ERR در functionها، command substitutionها و subshellها به ارث برسد.</li>
+<li><a href="options/functrace/">functrace</a> — باعث می‌شود trapهای DEBUG و RETURN در functionها و command substitutionها به ارث برسند.</li>
+<li><a href="options/hashall/">hashall</a> — مسیر commandها را هنگام lookup در hash table نگه می‌دارد.</li>
+<li><a href="options/histexpand/">histexpand</a> — History expansion را با نویسه مخصوص history فعال می‌کند.</li>
+<li><a href="options/history/">history</a> — ثبت و استفاده از command history را فعال می‌کند.</li>
+<li><a href="options/ignoreeof/">ignoreeof</a> — از خروج shell تعاملی با یک EOF جلوگیری می‌کند.</li>
+<li><a href="options/interactive-comments/">interactive-comments</a> — اجازه می‌دهد # در shell تعاملی آغازگر comment باشد.</li>
+<li><a href="options/keyword/">keyword</a> — assignmentهای موجود در آرگومان‌های command را در محیط همان command اعمال می‌کند.</li>
+<li><a href="options/monitor/">monitor</a> — Job control را فعال می‌کند.</li>
+<li><a href="options/noclobber/">noclobber</a> — به‌صورت پیش‌فرض از overwrite شدن فایل‌های موجود با redirection نوع &gt; جلوگیری می‌کند.</li>
+<li><a href="options/noexec/">noexec</a> — commandها را می‌خواند اما اجرا نمی‌کند و برای بررسی syntax مفید است.</li>
+<li><a href="options/noglob/">noglob</a> — Pathname expansion یا globbing را غیرفعال می‌کند.</li>
+<li><a href="options/notify/">notify</a> — پایان jobهای پس‌زمینه را سریع‌تر گزارش می‌کند.</li>
+<li><a href="options/nounset/">nounset</a> — nounset استفاده از متغیر unset را در contextهای مربوط خطا در نظر می‌گیرد.</li>
+<li><a href="options/onecmd/">onecmd</a> — پس از خواندن و اجرای یک command خارج می‌شود.</li>
+<li><a href="options/physical/">physical</a> — برای رفتار cd/pwd از مسیر فیزیکی به‌جای مسیر منطقی symlinkها استفاده می‌کند.</li>
+<li><a href="options/pipefail/">pipefail</a> — pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را.</li>
+<li><a href="options/posix/">posix</a> — رفتار Bash را به الزامات POSIX shell نزدیک‌تر می‌کند.</li>
+<li><a href="options/privileged/">privileged</a> — Privileged mode را فعال می‌کند و بر startup fileها، functionهای محیطی و IDهای مؤثر اثر می‌گذارد.</li>
+<li><a href="options/verbose/">verbose</a> — خطوط ورودی shell را هنگام خوانده‌شدن چاپ می‌کند.</li>
+<li><a href="options/vi/">vi</a> — ویرایش خط فرمان Readline به سبک vi را فعال می‌کند.</li>
+<li><a href="options/xtrace/">xtrace</a> — xtrace فرمان‌های expandشده را پیش از اجرا برای trace و debugging چاپ می‌کند.</li>
+</ul>
+<h2 id="shopt">shopt<a class="headerlink" href="#shopt" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="shopt/array_expand_once/">array_expand_once</a> — ارزیابی تکراری subscriptهای array را در برخی contextها محدود می‌کند.</li>
+<li><a href="shopt/assoc_expand_once/">assoc_expand_once</a> — نام قدیمی و deprecated برای array_expand_once است.</li>
+<li><a href="shopt/autocd/">autocd</a> — در shell تعاملی نام directory را مثل cd ضمنی در نظر می‌گیرد.</li>
+<li><a href="shopt/bash_source_fullpath/">bash_source_fullpath</a> — مسیرهای کامل را در عناصر BASH_SOURCE ذخیره می‌کند.</li>
+<li><a href="shopt/cdable_vars/">cdable_vars</a> — به cd اجازه می‌دهد آرگومان غیر-directory را نام متغیری حاوی مسیر در نظر بگیرد.</li>
+<li><a href="shopt/cdspell/">cdspell</a> — خطاهای کوچک تایپی مسیرهای cd را اصلاح می‌کند.</li>
+<li><a href="shopt/checkhash/">checkhash</a> — پیش از اجرای commandهای hash‌شده وجود مسیر ذخیره‌شده را بررسی می‌کند.</li>
+<li><a href="shopt/checkjobs/">checkjobs</a> — پیش از خروج shell تعاملی jobهای در حال اجرا یا متوقف را بررسی و گزارش می‌کند.</li>
+<li><a href="shopt/checkwinsize/">checkwinsize</a> — در صورت تغییر اندازه terminal، LINES و COLUMNS را به‌روزرسانی می‌کند.</li>
+<li><a href="shopt/cmdhist/">cmdhist</a> — commandهای چندخطی را تا حد ممکن به‌صورت یک history entry ذخیره می‌کند.</li>
+<li><a href="shopt/direxpand/">direxpand</a> — هنگام completion نام directory را expand کرده و متن را با مسیر expandشده جایگزین می‌کند.</li>
+<li><a href="shopt/dirspell/">dirspell</a> — هنگام completion برای نام directory اصلاح تایپی انجام می‌دهد.</li>
+<li><a href="shopt/dotglob/">dotglob</a> — فایل‌هایی که با . شروع می‌شوند را در نتیجه globbing وارد می‌کند.</li>
+<li><a href="shopt/execfail/">execfail</a> — اگر exec نتواند command را اجرا کند، shell غیرتعاملی فوراً خارج نمی‌شود.</li>
+<li><a href="shopt/expand_aliases/">expand_aliases</a> — Alias expansion را در shellهای غیرتعاملی نیز فعال می‌کند.</li>
+<li><a href="shopt/extdebug/">extdebug</a> — رفتار debugging پیشرفته برای functionها، trapها و متغیرهای call stack را فعال می‌کند.</li>
+<li><a href="shopt/extglob/">extglob</a> — Patternهای توسعه‌یافته مانند ?()، *()، +()، @() و !() را فعال می‌کند.</li>
+<li><a href="shopt/failglob/">failglob</a> — اگر glob هیچ match نداشته باشد خطای expansion ایجاد می‌کند.</li>
+<li><a href="shopt/force_fignore/">force_fignore</a> — باعث می‌شود suffixهای FIGNORE حتی در حالت تنها match بودن نیز در completion حذف شوند.</li>
+<li><a href="shopt/globasciiranges/">globasciiranges</a> — برای rangeهای bracket در pathname matching از ترتیب ASCII استفاده می‌کند.</li>
+<li><a href="shopt/globskipdots/">globskipdots</a> — از match شدن . و .. در pathname expansion جلوگیری می‌کند.</li>
+<li><a href="shopt/globstar/">globstar</a> — globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود.</li>
+<li><a href="shopt/gnu_errfmt/">gnu_errfmt</a> — پیام‌های خطای shell را در قالب GNU مانند file:line قالب‌بندی می‌کند.</li>
+<li><a href="shopt/histappend/">histappend</a> — هنگام خروج shell، history را به فایل اضافه می‌کند و overwrite نمی‌کند.</li>
+<li><a href="shopt/histreedit/">histreedit</a> — در صورت شکست history expansion امکان ویرایش مجدد command را می‌دهد.</li>
+<li><a href="shopt/histverify/">histverify</a> — متن history-expanded را ابتدا وارد editing buffer می‌کند و مستقیم اجرا نمی‌کند.</li>
+<li><a href="shopt/hostcomplete/">hostcomplete</a> — در context مناسب hostname completion انجام می‌دهد.</li>
+<li><a href="shopt/huponexit/">huponexit</a> — هنگام خروج login shell تعاملی به jobها SIGHUP می‌فرستد.</li>
+<li><a href="shopt/inherit_errexit/">inherit_errexit</a> — باعث می‌شود command substitution گزینه errexit را به ارث ببرد.</li>
+<li><a href="shopt/interactive_comments/">interactive_comments</a> — Commentهای # را در shell تعاملی فعال می‌کند.</li>
+<li><a href="shopt/lastpipe/">lastpipe</a> — وقتی job control غیرفعال است اجازه می‌دهد آخرین command pipeline در shell جاری اجرا شود.</li>
+<li><a href="shopt/lithist/">lithist</a> — در history چندخطی newlineهای واقعی را حفظ می‌کند.</li>
+<li><a href="shopt/localvar_inherit/">localvar_inherit</a> — متغیر local مقدار و attributeهای متغیر هم‌نام scope بیرونی را به ارث می‌برد.</li>
+<li><a href="shopt/localvar_unset/">localvar_unset</a> — اطلاعات scope متغیر local را پس از unset تا پایان function حفظ می‌کند.</li>
+<li><a href="shopt/mailwarn/">mailwarn</a> — اگر فایل mail از زمان آخرین بررسی دسترسی خورده باشد هشدار می‌دهد.</li>
+<li><a href="shopt/no_empty_cmd_completion/">no_empty_cmd_completion</a> — در completion خط command خالی، PATH را جست‌وجو نمی‌کند.</li>
+<li><a href="shopt/nocaseglob/">nocaseglob</a> — Pathname expansion را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.</li>
+<li><a href="shopt/nocasematch/">nocasematch</a> — Pattern matching در case و [[ ]] را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.</li>
+<li><a href="shopt/noexpand_translation/">noexpand_translation</a> — پس از ترجمه locale، رشته‌های $"..." را دوباره expand نمی‌کند.</li>
+<li><a href="shopt/nullglob/">nullglob</a> — nullglob الگوی glob بدون match را حذف می‌کند به‌جای اینکه خود الگو literal باقی بماند.</li>
+<li><a href="shopt/patsub_replacement/">patsub_replacement</a> — در replacement مربوط به parameter substitution، &amp; بدون quote را بخش match‌شده می‌داند.</li>
+<li><a href="shopt/progcomp/">progcomp</a> — Programmable completion را فعال می‌کند.</li>
+<li><a href="shopt/progcomp_alias/">progcomp_alias</a> — اگر programmable completion spec پیدا نشود alias expansion را امتحان می‌کند.</li>
+<li><a href="shopt/promptvars/">promptvars</a> — روی promptها expansionهای shell را انجام می‌دهد.</li>
+<li><a href="shopt/restricted_shell/">restricted_shell</a> — نشان می‌دهد shell در restricted mode اجرا می‌شود.</li>
+<li><a href="shopt/shift_verbose/">shift_verbose</a> — اگر تعداد shift از positional parameterها بیشتر باشد خطا گزارش می‌کند.</li>
+<li><a href="shopt/sourcepath/">sourcepath</a> — برای یافتن فایل source و . در صورت نیاز از PATH استفاده می‌کند.</li>
+<li><a href="shopt/varredir_close/">varredir_close</a> — file descriptorهای ساخته‌شده با redirection نوع {varname} را خودکار می‌بندد.</li>
+<li><a href="shopt/xpg_echo/">xpg_echo</a> — باعث می‌شود echo به‌صورت پیش‌فرض backslash escapeها را تفسیر کند.</li>
+</ul>
+<h2 id="syntax">syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="syntax/arithmetic-command/">arithmetic-command</a> — یک arithmetic expression را به‌عنوان shell command ارزیابی می‌کند.</li>
+<li><a href="syntax/case/">case</a> — با match کردن word در برابر patternهای shell یک command list را انتخاب می‌کند.</li>
+<li><a href="syntax/conditional-command/">conditional-command</a> — Conditional expressionهای Bash را بدون word splitting معمول ارزیابی می‌کند.</li>
+<li><a href="syntax/for/">for</a> — روی wordها iteration انجام می‌دهد و هر مقدار را به متغیر می‌دهد.</li>
+<li><a href="syntax/function/">function</a> — یک shell function تعریف می‌کند.</li>
+<li><a href="syntax/group-command/">group-command</a> — یک command list را در محیط shell فعلی اجرا می‌کند.</li>
+<li><a href="syntax/if/">if</a> — بر اساس exit status یک یا چند command list را شرطی اجرا می‌کند.</li>
+<li><a href="syntax/quoting/">quoting</a> — Quoting تعیین می‌کند کدام نویسه‌ها و expansionها معنای literal خود را حفظ کنند.</li>
+<li><a href="syntax/select/">select</a> — یک منوی شماره‌دار تعاملی نمایش می‌دهد و word انتخاب‌شده را assign می‌کند.</li>
+<li><a href="syntax/subshell/">subshell</a> — یک command list را در subshell اجرا می‌کند.</li>
+<li><a href="syntax/until/">until</a> — تا زمانی که test موفق نشده باشد commandها را تکرار می‌کند.</li>
+<li><a href="syntax/while/">while</a> — تا زمانی که test موفق باشد commandها را تکرار می‌کند.</li>
+</ul>
+<h2 id="variable">variable<a class="headerlink" href="#variable" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="variables/BASH/">BASH</a> — مسیر executable فعلی Bash را نشان می‌دهد.</li>
+<li><a href="variables/BASHOPTS/">BASHOPTS</a> — فهرست readonly و جداشده با colon از shopt optionهای فعال است.</li>
+<li><a href="variables/BASHPID/">BASHPID</a> — PID پردازه فعلی Bash است.</li>
+<li><a href="variables/BASH_ALIASES/">BASH_ALIASES</a> — Associative array مربوط به aliasهای فعلی shell است.</li>
+<li><a href="variables/BASH_ARGC/">BASH_ARGC</a> — Array call stack شامل تعداد آرگومان frameهای فعال است.</li>
+<li><a href="variables/BASH_ARGV/">BASH_ARGV</a> — Array مربوط به آرگومان‌های frameهای فعال call stack است.</li>
+<li><a href="variables/BASH_ARGV0/">BASH_ARGV0</a> — متغیری برای خواندن یا تغییر مقداری است که Bash به‌عنوان $0 ارائه می‌کند.</li>
+<li><a href="variables/BASH_CMDS/">BASH_CMDS</a> — Associative array مربوط به command hash table داخلی Bash است.</li>
+<li><a href="variables/BASH_COMMAND/">BASH_COMMAND</a> — Command فعلی یا commandی که در آستانه اجراست را نشان می‌دهد.</li>
+<li><a href="variables/BASH_COMPAT/">BASH_COMPAT</a> — سطح compatibility مربوط به نسخه‌های قدیمی‌تر Bash را انتخاب می‌کند.</li>
+<li><a href="variables/BASH_ENV/">BASH_ENV</a> — startup file مربوط به Bash غیرتعاملی در شرایط مربوط است.</li>
+<li><a href="variables/BASH_LINENO/">BASH_LINENO</a> — Array شماره‌خط‌های source متناظر با call stack است.</li>
+<li><a href="variables/BASH_REMATCH/">BASH_REMATCH</a> — نتیجه آخرین regex match و groupهای captureشده را نگه می‌دارد.</li>
+<li><a href="variables/BASH_SOURCE/">BASH_SOURCE</a> — BASH_SOURCE آرایه‌ای از نام فایل‌های source متناظر با call stack جاری است.</li>
+<li><a href="variables/BASH_SUBSHELL/">BASH_SUBSHELL</a> — سطح nesting مربوط به subshell در context فعلی است.</li>
+<li><a href="variables/BASH_VERSINFO/">BASH_VERSINFO</a> — Array readonly شامل اجزای نسخه Bash در حال اجرا است.</li>
+<li><a href="variables/BASH_VERSION/">BASH_VERSION</a> — رشته نسخه Bash در حال اجرا است.</li>
+<li><a href="variables/DIRSTACK/">DIRSTACK</a> — Array مربوط به directory stack فعلی است.</li>
+<li><a href="variables/EPOCHREALTIME/">EPOCHREALTIME</a> — زمان فعلی Unix epoch را با بخش اعشاری ارائه می‌کند.</li>
+<li><a href="variables/EPOCHSECONDS/">EPOCHSECONDS</a> — زمان فعلی Unix epoch را برحسب ثانیه ارائه می‌کند.</li>
+<li><a href="variables/FUNCNAME/">FUNCNAME</a> — Array نام functionهای call stack فعلی است.</li>
+<li><a href="variables/HISTCMD/">HISTCMD</a> — شماره history مربوط به command فعلی است.</li>
+<li><a href="variables/HOSTNAME/">HOSTNAME</a> — نام host فعلی را نشان می‌دهد.</li>
+<li><a href="variables/LINENO/">LINENO</a> — شماره خط فعلی در script یا shell function است.</li>
+<li><a href="variables/MACHTYPE/">MACHTYPE</a> — توصیف canonical به سبک GNU از platform است.</li>
+<li><a href="variables/OLDPWD/">OLDPWD</a> — دایرکتوری کاری قبلی که توسط cd تنظیم شده است.</li>
+<li><a href="variables/OPTARG/">OPTARG</a> — مقدار آرگومان option فعلی که getopts پردازش می‌کند.</li>
+<li><a href="variables/OPTIND/">OPTIND</a> — index آرگومان بعدی که getopts باید پردازش کند.</li>
+<li><a href="variables/OSTYPE/">OSTYPE</a> — رشته توصیف سیستم‌عاملی است که Bash برای آن build شده است.</li>
+<li><a href="variables/PIPESTATUS/">PIPESTATUS</a> — PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است.</li>
+<li><a href="variables/PPID/">PPID</a> — PID پردازه والد shell است.</li>
+<li><a href="variables/PROMPT_COMMAND/">PROMPT_COMMAND</a> — Command یا arrayی است که Bash پیش از نمایش prompt اصلی اجرا می‌کند.</li>
+<li><a href="variables/PWD/">PWD</a> — دایرکتوری کاری فعلی shell است.</li>
+<li><a href="variables/RANDOM/">RANDOM</a> — در هر expansion یک عدد شبه‌تصادفی تولید می‌کند.</li>
+<li><a href="variables/REPLY/">REPLY</a> — متغیر مقصد پیش‌فرض read است.</li>
+<li><a href="variables/SECONDS/">SECONDS</a> — ثانیه‌های سپری‌شده از شروع shell یا آخرین assignment است.</li>
+<li><a href="variables/SHELLOPTS/">SHELLOPTS</a> — فهرست readonly و جداشده با colon از optionهای فعال set -o است.</li>
+<li><a href="variables/SHLVL/">SHLVL</a> — سطح nesting shell است.</li>
+<li><a href="variables/SRANDOM/">SRANDOM</a> — یک مقدار تصادفی ۳۲ بیتی ارائه می‌کند.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY 4.0 · MMKarii
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
