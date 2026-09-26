@@ -14,200 +14,174 @@
   <meta property="og:description" content="Offline Bash CLI, bilingual Reference Guide, Professional Guide, system man pages, packages, and strict QA.">
   <meta property="og:url" content="https://mmkarii.github.io/bash-fa-reference/">
   <meta property="og:image" content="https://raw.githubusercontent.com/MMKarii/bash-fa-reference/main/assets/social-preview-v1.jpg">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="640">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bashref 2.1.0">
-  <meta name="twitter:description" content="Professional bilingual Bash CLI and documentation platform.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/MMKarii/bash-fa-reference/main/assets/social-preview-v1.jpg">
   <title>Bashref 2.1.0 — Bash Professional Reference</title>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bashref","softwareVersion":"2.1.0","applicationCategory":"DeveloperApplication","operatingSystem":"Linux, macOS, Windows","url":"https://mmkarii.github.io/bash-fa-reference/","sameAs":"https://github.com/MMKarii/bash-fa-reference"}</script>
   <style>
     :root{
-      --navy:#1e3550;--navy-2:#14283e;--navy-3:#0c1927;--blue:#28618f;
-      --link:#1f5d8e;--link-hover:#b04c25;--paper:#fff;--sky:#dfeaf3;
-      --line:#aebdca;--soft:#edf3f7;--ink:#202830;--muted:#596875;
-      --gold:#e9a43a;--gold-dark:#c77d17;
+      --purple:#2b003d;
+      --purple-top:#240032;
+      --purple-tab:#4c1d5f;
+      --purple-tab-dark:#2c063e;
+      --purple-line:#6d4779;
+      --blue:#1a4a8a;
+      --ink:#101010;
+      --muted:#4d4d4d;
+      --paper:#fff;
+      --rule:#bcbcbc;
     }
     *{box-sizing:border-box}
-    html{background:var(--sky)}
-    body{margin:0;color:var(--ink);font:15px/1.55 Arial,Helvetica,sans-serif;background:linear-gradient(#d8e5ef 0,#edf3f7 180px,#edf3f7 100%)}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline;color:var(--link-hover)}
-    a:focus-visible,input:focus-visible{outline:3px solid #ffbe55;outline-offset:2px}
-    .networkbar{background:var(--navy-3);color:#c7d3dd;border-bottom:1px solid #07121d;font-size:12px}
-    .networkbar-inner{max-width:1080px;margin:auto;display:flex;justify-content:space-between;align-items:center;min-height:30px;padding:0 14px;gap:16px}
-    .networkbar a{color:#d7e0e7;margin-right:18px}
-    .networkbar .languages a{margin-right:0;margin-left:16px}
-    .masthead{background:linear-gradient(#2c4f72,#1e3a57);border-bottom:1px solid #0e2335;box-shadow:inset 0 1px rgba(255,255,255,.14)}
-    .masthead-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 330px;align-items:center;gap:28px;padding:18px 14px 16px}
-    .brand{display:flex;align-items:center;gap:14px;color:#fff}
-    .brand:hover{text-decoration:none;color:#fff}
-    .brand-mark{width:62px;height:62px;border:3px solid #d9e6ef;border-radius:50%;display:grid;place-items:center;background:#132b41;box-shadow:0 1px 6px rgba(0,0,0,.35);font:700 22px/1 Consolas,Monaco,monospace;letter-spacing:-3px}
-    .brand-copy strong{display:block;font:700 34px/1 Georgia,"Times New Roman",serif;letter-spacing:-1px;text-shadow:0 1px 1px #000}
-    .brand-copy span{display:block;margin-top:5px;color:#d8e4ed;font-size:13px}
-    .site-search{display:flex;justify-self:end;width:100%;max-width:330px}
-    .site-search input{width:100%;height:34px;border:1px solid #10263a;border-right:0;border-radius:3px 0 0 3px;padding:0 10px;background:#fff;color:#222}
-    .site-search button{height:34px;border:1px solid #10263a;border-radius:0 3px 3px 0;padding:0 14px;background:#e7edf2;color:#17324a;font-weight:700;cursor:pointer}
-    .primary-nav{background:#f7f9fb;border-bottom:1px solid #9fb0be;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-    .primary-nav ul{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;list-style:none}
-    .primary-nav a{display:block;padding:10px 17px;border-right:1px solid #d3dde5;color:#173d60;font-weight:700;font-size:13px}
-    .primary-nav li:first-child a{border-left:1px solid #d3dde5}
-    .primary-nav a:hover{background:#e7eef4;text-decoration:none}
-    .release-callout{background:#f0b54e;border-bottom:1px solid #c58924;color:#3c2b0b}
-    .release-callout-inner{max-width:1080px;margin:auto;padding:7px 14px;text-align:center;font-weight:700}
-    .release-callout a{color:#4f2b00;text-decoration:underline}
-    .page{max-width:1080px;margin:18px auto 30px;background:var(--paper);border:1px solid #b7c5d1;box-shadow:0 2px 5px rgba(42,64,82,.13);display:grid;grid-template-columns:minmax(0,1fr) 250px}
-    .content{padding:22px 28px 34px;min-width:0}
-    .sidebar{border-left:1px solid #c9d4dc;background:#f4f7f9;padding:18px 18px 28px}
-    h1{margin:0 0 13px;color:#1d3852;font:700 30px/1.18 Georgia,"Times New Roman",serif}
-    h2{margin:26px 0 10px;color:#244b70;font:700 21px/1.25 Georgia,"Times New Roman",serif;border-bottom:1px solid #c7d3dc;padding-bottom:5px}
-    h3{color:#2a567d}
-    .lead{font-size:15px}
-    .lead strong{color:#1a3f62}
-    .news-list,.feature-list{padding-left:22px;margin:8px 0 0}
-    .news-list li,.feature-list li{margin:7px 0}
-    .feature-list strong{color:#173f62}
-    .terminal{background:#101820;color:#d9e4ec;border:1px solid #000;border-radius:2px;padding:13px 16px;overflow:auto;font:13px/1.6 Consolas,Monaco,"Courier New",monospace;box-shadow:inset 0 0 0 1px #2c3e4d}
-    .terminal .prompt{color:#f0b54e}
-    .sidebar h2{font:700 16px/1.2 Arial,Helvetica,sans-serif;margin:0 0 10px;padding:0 0 6px;border-bottom:1px solid #b8c6d1;color:#244b70}
-    .sidebar ul{list-style:none;margin:0 0 22px;padding:0}
-    .sidebar li{padding:4px 0;border-bottom:1px dotted #c4cfd7}
-    .sidebar .version-box{background:#fff;border:1px solid #bdcbd5;padding:11px;margin-bottom:18px}
-    .sidebar .version-box strong{display:block;color:#173d60}
-    .site-footer{background:#172c42;color:#c5d1db;border-top:4px solid #0e2234}
-    .footer-inner{max-width:1080px;margin:auto;padding:24px 14px 30px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-    .footer-inner h2{border:0;margin:0 0 9px;padding:0;color:#fff;font:700 14px Arial,Helvetica,sans-serif}
-    .footer-inner ul{list-style:none;margin:0;padding:0}
-    .footer-inner li{margin:5px 0}
-    .footer-inner a{color:#d2e0eb}
-    .footer-bottom{max-width:1080px;margin:auto;padding:0 14px 20px;color:#8fa3b4;font-size:12px}
-    .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:800px){
-      .masthead-inner{grid-template-columns:1fr}.site-search{justify-self:stretch;max-width:none}
-      .primary-nav ul{overflow-x:auto}.primary-nav a{white-space:nowrap}
-      .page{margin:10px;grid-template-columns:1fr}.sidebar{border-left:0;border-top:1px solid #c9d4dc}
-      .footer-inner{grid-template-columns:repeat(2,1fr)}
+    html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:14px/1.35 Arial,Helvetica,sans-serif}
+    a{color:var(--blue);text-decoration:underline}
+    a:hover{color:#6a1a7a}
+    a:focus-visible,input:focus-visible{outline:3px solid #ffcf5a;outline-offset:2px}
+    .nmap-shell{width:min(100%,1100px);margin:0 auto}
+    .masthead{background:linear-gradient(#2d0640,#23002f 58%,#1d0027);color:#fff;border-bottom:1px solid #17001e}
+    .masthead-top{display:grid;grid-template-columns:132px 1fr;min-height:82px}
+    .brand{display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;padding:8px 10px 2px}
+    .brand:hover{color:#fff;text-decoration:none}
+    .brand-logo{width:102px;height:58px;position:relative;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 1px 1px #000)}
+    .brand-logo:before{content:"";position:absolute;width:82px;height:38px;border:2px solid #a9d6e8;border-radius:50% 50% 48% 52%;background:radial-gradient(ellipse at center,#d8eef7 0 12%,#69a7bf 13% 31%,#24485e 32% 43%,transparent 44%);transform:skewX(-12deg)}
+    .brand-logo:after{content:">_";position:absolute;right:3px;bottom:0;background:#22002f;border:1px solid #8cb7ca;padding:1px 4px;color:#fff;font:bold 12px/1.2 Consolas,monospace}
+    .brand-name{position:absolute;bottom:0;left:7px;color:#d9f3ff;font:bold 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.6px;text-shadow:0 1px #000}
+    .masthead-right{padding:10px 10px 8px 0;min-width:0}
+    .project-links{text-align:right;white-space:nowrap;margin:0 0 16px;font-size:12px}
+    .project-links a{color:#fff;text-decoration:none;margin-left:20px}
+    .project-links a:hover{text-decoration:underline}
+    .site-search{display:block;width:100%}
+    .site-search label{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;overflow:hidden}
+    .site-search input{width:100%;height:28px;border:1px solid #c9c2ce;background:#fff;padding:4px 8px;color:#111;font:13px Arial,Helvetica,sans-serif}
+    .primary-nav{margin:0;background:#240032;border-top:1px solid #4e2b59;border-bottom:1px solid #130019}
+    .primary-nav ul{display:grid;grid-template-columns:repeat(6,1fr);list-style:none;margin:0;padding:0}
+    .primary-nav li{margin:0}
+    .primary-nav a{display:block;text-align:center;padding:7px 5px;color:#fff;text-decoration:none;font-weight:bold;font-size:13px;background:linear-gradient(#5b3269,#3b124c 50%,#2d083d 51%,#4a1e5a);border-left:1px solid #785982;border-right:1px solid #21002c;border-radius:5px 5px 0 0;text-shadow:0 1px #180020}
+    .primary-nav a:hover{background:linear-gradient(#71407f,#4e1a61 50%,#3d0c50 51%,#5c2a6d)}
+    .release-callout{text-align:center;padding:14px 8px 10px;background:#fff}
+    .release-callout a{display:inline-block;border:1px solid #b7b0bb;background:#fafafa;padding:9px 14px;color:#1a4a8a;font-weight:bold;font-size:15px;box-shadow:inset 0 0 0 3px #f2f2f2}
+    .section-bar{margin:0;background:#2c003e;color:#fff;text-align:center;font-weight:bold;font-size:17px;line-height:1.25;padding:2px 8px;border-top:1px solid #5b3268;border-bottom:1px solid #16001f}
+    .news{padding:8px 9px 12px}
+    .news ul{margin:0;padding-left:22px}
+    .news li{margin:1px 0}
+    .main-content{padding:14px 10px 22px}
+    h1{margin:6px 0 8px;font:bold 24px/1.18 Arial,Helvetica,sans-serif}
+    h2.plain{margin:18px 0 5px;font:bold 16px/1.2 Arial,Helvetica,sans-serif}
+    p{margin:8px 0}
+    .feature-list{margin:6px 0 12px;padding-left:22px}
+    .feature-list li{margin:6px 0}
+    code{font:13px Consolas,Monaco,"Courier New",monospace}
+    pre{margin:12px 10px;padding:8px 10px;overflow:auto;background:#f3f3f3;border:1px solid #bbb;font:13px/1.35 Consolas,Monaco,"Courier New",monospace}
+    .language-line{text-align:center;margin:10px 0 4px;font-size:12px}
+    .site-footer{background:#240032;color:#fff;border-top:3px solid #3c0e4d;margin-top:10px}
+    .footer-search{padding:12px 10px 0}
+    .footer-search input{width:100%;height:27px;border:1px solid #baaabd;padding:4px 8px}
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:14px 12px 18px}
+    .footer-grid h2{margin:0 0 5px;font:bold 16px Arial,Helvetica,sans-serif;color:#fff}
+    .footer-grid ul{list-style:none;margin:0;padding:0}
+    .footer-grid li{margin:4px 0}
+    .footer-grid a{color:#fff}
+    .footer-bottom{padding:0 12px 14px;color:#d7c8dc;font-size:11px}
+    @media(max-width:700px){
+      .masthead-top{grid-template-columns:105px 1fr}
+      .brand-logo{width:92px}
+      .project-links{overflow-x:auto;padding-bottom:3px}
+      .project-links a{margin-left:12px}
+      .primary-nav ul{grid-template-columns:repeat(3,1fr)}
+      .primary-nav a{border-radius:0}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:500px){
-      .networkbar-inner{align-items:flex-start;flex-direction:column;padding-top:6px;padding-bottom:6px;gap:5px}
-      .brand-copy strong{font-size:29px}.brand-mark{width:52px;height:52px}
-      .content{padding:18px}.footer-inner{grid-template-columns:1fr}
+    @media(max-width:430px){
+      .masthead-top{grid-template-columns:88px 1fr}
+      .brand-logo{transform:scale(.8)}
+      .primary-nav ul{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      h1{font-size:21px}
     }
   </style>
 </head>
 <body>
-  <div class="networkbar">
-    <div class="networkbar-inner">
-      <div>
-        <a href="./">Bashref</a>
-        <a href="https://github.com/MMKarii/bash-fa-reference">GitHub</a>
-        <a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a>
-        <a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash</a>
-        <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>
-      </div>
-      <div class="languages">
-        <a href="en/" lang="en">English</a>
-        <a href="fa/" lang="fa">فارسی</a>
-      </div>
-    </div>
-  </div>
-
   <header class="masthead">
-    <div class="masthead-inner">
-      <a class="brand" href="./" aria-label="Bashref home">
-        <span class="brand-mark" aria-hidden="true">&gt;_</span>
-        <span class="brand-copy"><strong>Bashref</strong><span>Bash Professional Reference</span></span>
-      </a>
-      <form class="site-search" action="en/" method="get" role="search">
-        <label class="visually-hidden" for="site-q">Search Bashref documentation</label>
-        <input id="site-q" type="search" name="q" placeholder="Search Bashref documentation">
-        <button type="submit">Search</button>
-      </form>
+    <div class="nmap-shell">
+      <div class="masthead-top">
+        <a class="brand" href="./" aria-label="Bashref home">
+          <span class="brand-logo" aria-hidden="true"><span class="brand-name">BASHREF.ORG</span></span>
+        </a>
+        <div class="masthead-right">
+          <div class="project-links">
+            <a href="https://github.com/MMKarii/bash-fa-reference">GitHub</a>
+            <a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a>
+            <a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash</a>
+            <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>
+          </div>
+          <form class="site-search" action="en/" method="get" role="search">
+            <label for="site-q">Site Search</label>
+            <input id="site-q" type="search" name="q" placeholder="Site Search">
+          </form>
+        </div>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="en/download/">Download</a></li>
+          <li><a href="en/reference/">Reference Guide</a></li>
+          <li><a href="en/book/">Book</a></li>
+          <li><a href="en/">Docs</a></li>
+          <li><a href="en/install/">Install Guide</a></li>
+          <li><a href="en/releases/">Releases</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <nav class="primary-nav" aria-label="Primary navigation">
-    <ul>
-      <li><a href="en/download/">Download</a></li>
-      <li><a href="en/reference/">Reference Guide</a></li>
-      <li><a href="en/book/">Professional Guide</a></li>
-      <li><a href="en/">Docs</a></li>
-      <li><a href="en/install/">Install Guide</a></li>
-      <li><a href="en/releases/">Releases</a></li>
-    </ul>
-  </nav>
+  <main class="nmap-shell">
+    <div class="release-callout"><a href="https://github.com/MMKarii/bash-fa-reference/releases/tag/v2.1.0">Get Bashref 2.1.0 here</a></div>
 
-  <div class="release-callout">
-    <div class="release-callout-inner">Latest stable release: <a href="https://github.com/MMKarii/bash-fa-reference/releases/tag/v2.1.0">Get Bashref 2.1.0</a></div>
-  </div>
+    <h2 class="section-bar">News</h2>
+    <section class="news">
+      <ul>
+        <li>Bashref 2.1.0 is available with a 214-record Persian/English reference corpus. [<a href="en/releases/">release notes</a> | <a href="en/download/">download</a>]</li>
+        <li>The Reference Guide now includes broader <code>set -o</code>, <code>shopt</code>, Bash-variable, and compound-command coverage.</li>
+        <li><code>bashref stats</code> reports corpus coverage and <code>bashref doctor</code> reports local runtime details without network access.</li>
+        <li>Stable documentation snapshots remain available for <a href="v2.1/en/">v2.1 English</a> / <a href="v2.1/fa/">v2.1 فارسی</a>, <a href="v2.0/en/">v2.0 English</a> / <a href="v2.0/fa/">v2.0 فارسی</a>, and <a href="v1.0/en/">v1.0 English</a> / <a href="v1.0/fa/">v1.0 فارسی</a>.</li>
+      </ul>
+    </section>
 
-  <main class="page">
-    <article class="content">
-      <section aria-labelledby="news-title">
-        <h2 id="news-title">News</h2>
-        <ul class="news-list">
-          <li><strong>Bashref 2.1.0 released:</strong> the structured Persian/English reference now contains 214 bilingual records, with broader shell-option, <code>shopt</code>, variable, and compound-command coverage.</li>
-          <li><strong>Offline diagnostics:</strong> <code>bashref stats</code> reports reference coverage and <code>bashref doctor</code> reports the local runtime without requiring network access.</li>
-          <li><strong>Stable documentation:</strong> immutable <a href="v2.1/en/">v2.1 English</a> / <a href="v2.1/fa/">v2.1 فارسی</a>, <a href="v2.0/en/">v2.0 English</a> / <a href="v2.0/fa/">v2.0 فارسی</a>, and <a href="v1.0/en/">v1.0 English</a> / <a href="v1.0/fa/">v1.0 فارسی</a> snapshots remain available.</li>
-        </ul>
-      </section>
+    <article class="main-content">
+      <h1>Bashref: Master the shell</h1>
+      <p><strong>Bashref</strong> is a free and open source bilingual Bash reference for command-line work, scripting, automation, system administration, DevOps, debugging, portability, and defensive security. It combines an offline CLI, generated man pages, installable packages, a structured Reference Guide, and a fourteen-chapter Professional Guide.</p>
+      <p>The reference is available in <a href="en/">English</a> and <a href="fa/" lang="fa">فارسی</a>. Core lookup and search work offline after installation. Bash-specific behavior is cross-checked primarily against the <a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash Reference Manual</a>.</p>
 
-      <h1>Bashref: master Bash from the terminal to the reference manual</h1>
-      <p class="lead"><strong>Bashref</strong> is a free, open-source, bilingual Bash reference project for command-line work, scripting, automation, system administration, DevOps, debugging, portability, and defensive security. It combines an offline CLI, generated man pages, installable packages, a structured Reference Guide, and a fourteen-chapter Professional Guide.</p>
-
-      <p>The reference is available in <a href="en/">English</a> and <a href="fa/" lang="fa">فارسی</a>. Core CLI lookup and search work offline after installation. Bash behavior is cross-checked primarily against the GNU Bash Reference Manual.</p>
-
-      <div class="terminal" aria-label="Bashref command examples"><span class="prompt">$</span> bashref search quoting
-<span class="prompt">$</span> bashref builtin printf
-<span class="prompt">$</span> bashref option pipefail
-<span class="prompt">$</span> bashref shopt extglob
-<span class="prompt">$</span> bashref variable BASH_VERSION
-<span class="prompt">$</span> bashref doctor</div>
-
-      <h2>Bashref is...</h2>
+      <h2 class="plain">Bashref is ...</h2>
       <ul class="feature-list">
-        <li><strong>Comprehensive:</strong> 214 bilingual records covering builtins, syntax, expansions, shell options, <code>shopt</code>, variables, concepts, and examples. <span class="visually-hidden">214-record corpus</span></li>
-        <li><strong>Offline:</strong> reference lookup, search, JSON output, diagnostics, and shell completions do not require network access.</li>
-        <li><strong>Portable:</strong> release artifacts include a Python wheel, source distribution, Debian package, RPM package, Homebrew formula, portable archive, man pages, and completions.</li>
-        <li><strong>Well documented:</strong> the generated Reference Guide is complemented by the Professional Guide, installation documentation, contributor guidance, security policy, and system man pages.</li>
-        <li><strong>Bilingual:</strong> Persian and English records share stable IDs so equivalent reference topics stay paired across languages.</li>
-        <li><strong>Verifiable:</strong> releases include SHA-256 checksums and are built and tested by the protected CI pipeline.</li>
+        <li><strong>Comprehensive:</strong> 214 bilingual records covering builtins, syntax, expansions, shell options, <code>shopt</code>, variables, concepts, and examples.</li>
+        <li><strong>Powerful:</strong> direct lookup, full-text search, machine-readable JSON, diagnostics, generated man pages, and versioned documentation are available from one project.</li>
+        <li><strong>Portable:</strong> wheel, source distribution, Debian package, RPM package, Homebrew formula, portable archive, man pages, and completions are published as release artifacts.</li>
+        <li><strong>Easy:</strong> start with commands such as <code>bashref search quoting</code> or <code>bashref builtin printf</code>.</li>
+        <li><strong>Free:</strong> software code is MIT-licensed and documentation is published under CC BY 4.0.</li>
+        <li><strong>Well Documented:</strong> the generated Reference Guide is complemented by a Professional Guide, install documentation, contributor documentation, and man pages.</li>
+        <li><strong>Bilingual:</strong> English and Persian records share stable IDs and matching reference topics.</li>
       </ul>
-    </article>
 
-    <aside class="sidebar" aria-label="Bashref quick links">
-      <div class="version-box"><strong>Bashref 2.1.0</strong>Latest stable release<br>214 bilingual records</div>
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="en/reference/">Reference Guide</a></li>
-        <li><a href="en/book/">Professional Guide</a></li>
-        <li><a href="en/install/">Install Guide</a></li>
-        <li><a href="en/download/">Download</a></li>
-        <li><a href="en/releases/">Release history</a></li>
-      </ul>
-      <h2>Languages</h2>
-      <ul>
-        <li><a href="en/" lang="en">English documentation</a></li>
-        <li><a href="fa/" lang="fa">مستندات فارسی</a></li>
-      </ul>
-      <h2>Project</h2>
-      <ul>
-        <li><a href="https://github.com/MMKarii/bash-fa-reference">Source code</a></li>
-        <li><a href="https://github.com/MMKarii/bash-fa-reference/issues">Issue tracker</a></li>
-        <li><a href="https://github.com/MMKarii/bash-fa-reference/security">Security</a></li>
-      </ul>
-    </aside>
+      <pre>$ bashref search quoting
+$ bashref builtin printf
+$ bashref option pipefail
+$ bashref shopt extglob
+$ bashref variable BASH_VERSION
+$ bashref doctor</pre>
+
+      <p class="language-line"><a href="en/">English documentation</a> · <a href="fa/" lang="fa">مستندات فارسی</a></p>
+    </article>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <section><h2>Bashref</h2><ul><li><a href="en/reference/">Reference Guide</a></li><li><a href="en/install/">Install Guide</a></li><li><a href="en/download/">Download</a></li></ul></section>
-      <section><h2>Guides</h2><ul><li><a href="en/book/">Professional Guide</a></li><li><a href="en/learning-path/">Learning Path</a></li><li><a href="en/cheatsheet/">Cheat Sheet</a></li></ul></section>
-      <section><h2>Project</h2><ul><li><a href="https://github.com/MMKarii/bash-fa-reference">GitHub</a></li><li><a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a></li><li><a href="https://github.com/MMKarii/bash-fa-reference/security">Security</a></li></ul></section>
-      <section><h2>Sources</h2><ul><li><a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash Manual</a></li><li><a href="https://github.com/koalaman/shellcheck">ShellCheck</a></li><li><a href="en/references/">References</a></li></ul></section>
+    <div class="nmap-shell">
+      <div class="footer-search"><input type="search" aria-label="Site Search" placeholder="Site Search"></div>
+      <div class="footer-grid">
+        <section><h2><a href="en/">Bashref</a></h2><ul><li><a href="en/reference/">Ref Guide</a></li><li><a href="en/install/">Install Guide</a></li><li><a href="en/">Docs</a></li><li><a href="en/download/">Download</a></li></ul></section>
+        <section><h2><a href="en/book/">Professional Guide</a></h2><ul><li><a href="en/learning-path/">Learning Path</a></li><li><a href="en/cheatsheet/">Cheat Sheet</a></li><li><a href="en/glossary/">Glossary</a></li><li><a href="en/references/">References</a></li></ul></section>
+        <section><h2><a href="https://github.com/MMKarii/bash-fa-reference">Project</a></h2><ul><li><a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a></li><li><a href="https://github.com/MMKarii/bash-fa-reference/issues">Issues</a></li><li><a href="https://github.com/MMKarii/bash-fa-reference/security">Security</a></li></ul></section>
+        <section><h2>Languages</h2><ul><li><a href="en/">English</a></li><li><a href="fa/" lang="fa">فارسی</a></li><li><a href="v2.1/en/">v2.1</a></li><li><a href="v2.0/en/">v2.0</a></li></ul></section>
+      </div>
+      <div class="footer-bottom">Bashref software: MIT · Documentation: CC BY 4.0 · Independent project, not affiliated with GNU Bash or Nmap.</div>
     </div>
-    <div class="footer-bottom">Bashref software: MIT · Documentation: CC BY 4.0 · Independent project, not affiliated with GNU Bash or Nmap.</div>
   </footer>
 </body>
 </html>
