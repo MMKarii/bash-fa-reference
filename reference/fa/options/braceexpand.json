@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Brace expansion مانند {a,b} و {1..5} را فعال می‌کند."
+  ],
+  "examples": [],
+  "id": "option.braceexpand",
+  "kind": "option",
+  "language": "fa",
+  "name": "braceexpand",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Brace expansion مانند {a,b} و {1..5} را فعال می‌کند.",
+  "synopsis": "set -o braceexpand | set +o braceexpand",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

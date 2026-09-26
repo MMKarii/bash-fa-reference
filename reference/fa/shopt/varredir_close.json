@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "file descriptorهای ساخته‌شده با redirection نوع {varname} را خودکار می‌بندد."
+  ],
+  "examples": [],
+  "id": "shopt.varredir_close",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "varredir_close",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "file descriptorهای ساخته‌شده با redirection نوع {varname} را خودکار می‌بندد.",
+  "synopsis": "shopt -s varredir_close | shopt -u varredir_close",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

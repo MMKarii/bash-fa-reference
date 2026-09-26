@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array readonly شامل اجزای نسخه Bash در حال اجرا است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_VERSINFO",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_VERSINFO",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array readonly شامل اجزای نسخه Bash در حال اجرا است.",
+  "synopsis": "$BASH_VERSINFO",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

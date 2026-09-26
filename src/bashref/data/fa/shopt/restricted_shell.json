@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "نشان می‌دهد shell در restricted mode اجرا می‌شود."
+  ],
+  "examples": [],
+  "id": "shopt.restricted_shell",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "restricted_shell",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "نشان می‌دهد shell در restricted mode اجرا می‌شود.",
+  "synopsis": "shopt -s restricted_shell | shopt -u restricted_shell",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

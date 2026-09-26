@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Associative array exposing the current alias table."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ALIASES",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_ALIASES",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Associative array exposing the current alias table.",
+  "synopsis": "$BASH_ALIASES",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Update LINES and COLUMNS when terminal size changes."
+  ],
+  "examples": [],
+  "id": "shopt.checkwinsize",
+  "kind": "shopt",
+  "language": "en",
+  "name": "checkwinsize",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Update LINES and COLUMNS when terminal size changes.",
+  "synopsis": "shopt -s checkwinsize | shopt -u checkwinsize",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

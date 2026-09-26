@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "ثانیه‌های سپری‌شده از شروع shell یا آخرین assignment است."
+  ],
+  "examples": [],
+  "id": "variable.SECONDS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "SECONDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "ثانیه‌های سپری‌شده از شروع shell یا آخرین assignment است.",
+  "synopsis": "$SECONDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

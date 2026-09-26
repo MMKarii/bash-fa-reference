@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Elapsed seconds since shell start or assignment."
+  ],
+  "examples": [],
+  "id": "variable.SECONDS",
+  "kind": "variable",
+  "language": "en",
+  "name": "SECONDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Elapsed seconds since shell start or assignment.",
+  "synopsis": "$SECONDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

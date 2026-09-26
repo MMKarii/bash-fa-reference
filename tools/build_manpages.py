@@ -3,12 +3,22 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import re
 from pathlib import Path
 
 try:
     from tools.validate_reference import validate_tree
 except ModuleNotFoundError:
     from validate_reference import validate_tree
+
+
+def project_version() -> str:
+    init_path = Path(__file__).resolve().parents[1] / "src" / "bashref" / "__init__.py"
+    text = init_path.read_text(encoding="utf-8")
+    match = re.search(r'__version__\s*=\s*"([^"]+)"', text)
+    if not match:
+        raise ValueError("cannot determine Bashref version")
+    return match.group(1)
 
 
 def escape_roff(text: str) -> str:
@@ -32,7 +42,7 @@ def render_reference_manpage(record: dict) -> str:
     description = "\n\n".join(str(x) for x in record.get("description", []))
     sources = "\n".join(str(x) for x in record.get("sources", []))
     parts = [
-        '.TH "BASHREF-REFERENCE" "5" "September 25, 2026" "Bashref 2.0.0" "File Formats and Conventions"\n',
+        f'.TH "BASHREF-REFERENCE" "5" "September 26, 2026" "Bashref {project_version()}" "File Formats and Conventions"\n',
         _section("NAME", f"{name} - {summary}"),
         _section("SYNOPSIS", synopsis),
         _section("DESCRIPTION", description),
@@ -59,8 +69,8 @@ def render_reference_manpage(record: dict) -> str:
 
 
 def render_cli_manpage() -> str:
-    return """\
-.TH "BASHREF" "1" "September 25, 2026" "Bashref 2.0.0" "User Commands"
+    return f"""\
+.TH "BASHREF" "1" "September 26, 2026" "Bashref {project_version()}" "User Commands"
 .SH NAME
 bashref \\- offline bilingual Bash reference
 .SH SYNOPSIS
@@ -69,7 +79,7 @@ bashref [--lang fa|en] [--format text|json] COMMAND [ARGUMENTS]
 Bashref provides offline lookup and search for a structured Persian and English Bash reference.
 It never executes examples stored in the reference database.
 .SH COMMANDS
-search, show, builtin, syntax, expansion, option, shopt, variable, example, list, lang, man, docs, completion.
+search, show, builtin, syntax, expansion, option, shopt, variable, example, list, lang, man, docs, completion, stats, doctor.
 .SH EXIT STATUS
 0 means success, 1 an internal error, 2 a command-line usage error, 3 a missing reference entry, and 4 corrupt reference data.
 .SH SEE ALSO
@@ -87,7 +97,7 @@ def render_overview_manpage(records: list[dict]) -> str:
         body.append(", ".join(sorted(by_kind[kind], key=str.casefold)))
         body.append("")
     return (
-        '.TH "BASHREF-REFERENCE" "5" "September 25, 2026" "Bashref 2.0.0" "File Formats and Conventions"\n'
+        f'.TH "BASHREF-REFERENCE" "5" "September 26, 2026" "Bashref {project_version()}" "File Formats and Conventions"\n'
         + _section("NAME", "bashref-reference - Bash language and builtin reference index")
         + _section("DESCRIPTION", "Canonical Bashref reference topics generated from bilingual JSON records.")
         + _section("REFERENCE INDEX", "\n".join(body).rstrip())

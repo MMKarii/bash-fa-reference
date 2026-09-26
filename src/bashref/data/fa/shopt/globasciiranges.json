@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "برای rangeهای bracket در pathname matching از ترتیب ASCII استفاده می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.globasciiranges",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "globasciiranges",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "برای rangeهای bracket در pathname matching از ترتیب ASCII استفاده می‌کند.",
+  "synopsis": "shopt -s globasciiranges | shopt -u globasciiranges",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

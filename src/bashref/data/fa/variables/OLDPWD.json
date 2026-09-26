@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "دایرکتوری کاری قبلی که توسط cd تنظیم شده است."
+  ],
+  "examples": [],
+  "id": "variable.OLDPWD",
+  "kind": "variable",
+  "language": "fa",
+  "name": "OLDPWD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "دایرکتوری کاری قبلی که توسط cd تنظیم شده است.",
+  "synopsis": "$OLDPWD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

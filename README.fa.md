@@ -10,17 +10,17 @@
 
 ## ابزار خط فرمان bashref
 
-Bashref 2.0.0 یک CLI قابل نصب برای جست‌وجو و مراجعه آفلاین به مرجع فارسی و انگلیسی ارائه می‌کند:
+Bashref 2.1.0 یک CLI قابل نصب برای جست‌وجو و مراجعه آفلاین به مرجع فارسی و انگلیسی ارائه می‌کند:
 
 ```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 bashref --version
 bashref search printf
 bashref --lang fa builtin printf
 bashref --format json builtin printf
 ```
 
-artifactهای نسخه 2.0.0 از GitHub Releases منتشر می‌شوند و snapshot مستندات v1.0 بدون تغییر باقی می‌ماند.
+نسخه 2.1.0 مرجع ساختاریافته را به ۲۱۴ رکورد دوزبانه گسترش می‌دهد و commandهای `bashref stats` و `bashref doctor` را برای مشاهده پوشش مرجع و وضعیت runtime محلی اضافه می‌کند. هسته جست‌وجو همچنان آفلاین است.
 
 محتوای اصلی از فایل‌های Word ارائه‌شده استخراج و ادغام شده است؛ تکرارها و متن‌های Placeholder حذف شده‌اند و نکات فنی حساس به رفتار Bash با مستند رسمی GNU تطبیق داده شده‌اند.
 

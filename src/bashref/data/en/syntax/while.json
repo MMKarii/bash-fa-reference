@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Repeat commands while a test command list succeeds."
+  ],
+  "examples": [],
+  "id": "syntax.while",
+  "kind": "syntax",
+  "language": "en",
+  "name": "while",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Repeat commands while a test command list succeeds.",
+  "synopsis": "while test-commands; do consequent-commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "اجازه می‌دهد # در shell تعاملی آغازگر comment باشد."
+  ],
+  "examples": [],
+  "id": "option.interactive-comments",
+  "kind": "option",
+  "language": "fa",
+  "name": "interactive-comments",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "اجازه می‌دهد # در shell تعاملی آغازگر comment باشد.",
+  "synopsis": "set -o interactive-comments | set +o interactive-comments",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

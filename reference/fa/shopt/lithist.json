@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "در history چندخطی newlineهای واقعی را حفظ می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.lithist",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "lithist",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "در history چندخطی newlineهای واقعی را حفظ می‌کند.",
+  "synopsis": "shopt -s lithist | shopt -u lithist",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

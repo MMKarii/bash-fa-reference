@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Correct minor spelling errors in directory names used by cd."
+  ],
+  "examples": [],
+  "id": "shopt.cdspell",
+  "kind": "shopt",
+  "language": "en",
+  "name": "cdspell",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Correct minor spelling errors in directory names used by cd.",
+  "synopsis": "shopt -s cdspell | shopt -u cdspell",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

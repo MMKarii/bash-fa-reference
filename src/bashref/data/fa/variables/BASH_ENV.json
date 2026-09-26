@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "startup file مربوط به Bash غیرتعاملی در شرایط مربوط است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ENV",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_ENV",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "startup file مربوط به Bash غیرتعاملی در شرایط مربوط است.",
+  "synopsis": "$BASH_ENV",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

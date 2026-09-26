@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Select a command list by matching a word against shell patterns."
+  ],
+  "examples": [],
+  "id": "syntax.case",
+  "kind": "syntax",
+  "language": "en",
+  "name": "case",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Select a command list by matching a word against shell patterns.",
+  "synopsis": "case word in [ pattern [| pattern]...) list ;; ] ... esac",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "نام قدیمی و deprecated برای array_expand_once است."
+  ],
+  "examples": [],
+  "id": "shopt.assoc_expand_once",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "assoc_expand_once",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "نام قدیمی و deprecated برای array_expand_once است.",
+  "synopsis": "shopt -s assoc_expand_once | shopt -u assoc_expand_once",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

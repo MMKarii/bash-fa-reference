@@ -20,12 +20,14 @@ jobs:
           python-version: '3.13'
       - run: pip install -r requirements-dev.txt && pip install -e .
       - run: |
-          python tools/build_reference.py
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
+          export VERSION
+          python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
           python tools/build_completions.py
           python -m pytest tests/packaging -q
           python -m build
-          python tools/verify_python_artifacts.py 2.0.0 dist/bashref-2.0.0-py3-none-any.whl dist/bashref-2.0.0.tar.gz
+          python tools/verify_python_artifacts.py "$VERSION" dist/bashref-$VERSION-py3-none-any.whl dist/bashref-$VERSION.tar.gz
       - uses: actions/upload-artifact@v4
         with:
           name: bashref-python-artifacts
@@ -42,25 +44,27 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y rpm
       - run: pip install -r requirements-dev.txt && pip install -e .
       - run: |
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
+          export VERSION
           python tools/build_completions.py
           python tools/build_manpages.py
           python -m build
-          python tools/build_deb.py dist/bashref-2.0.0-py3-none-any.whl --version 2.0.0
-          python tools/build_rpm.py --version 2.0.0
-          python tools/build_release_assets.py --version 2.0.0
+          python tools/build_deb.py dist/bashref-$VERSION-py3-none-any.whl --version "$VERSION"
+          python tools/build_rpm.py --version "$VERSION"
+          python tools/build_release_assets.py --version "$VERSION"
           python tools/write_checksums.py dist/* --output dist/SHA256SUMS
-          test -s dist/bashref_2.0.0_all.deb
-          ls dist/bashref-2.0.0-1*.noarch.rpm
-          sudo dpkg -i dist/bashref_2.0.0_all.deb
-          test "$(bashref --version)" = "bashref 2.0.0"
+          test -s dist/bashref_${VERSION}_all.deb
+          ls dist/bashref-$VERSION-1*.noarch.rpm
+          sudo dpkg -i dist/bashref_${VERSION}_all.deb
+          test "$(bashref --version)" = "bashref $VERSION"
           bashref --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
           mkdir -p "$HOME/.config/bashref"
           printf '{"language":"fa"}\n' > "$HOME/.config/bashref/config.json"
           sudo dpkg -r bashref
           test -f "$HOME/.config/bashref/config.json"
-          RPM="$(ls dist/bashref-2.0.0-1*.noarch.rpm | head -n1)"
+          RPM="$(ls dist/bashref-$VERSION-1*.noarch.rpm | head -n1)"
           sudo rpm -i --nodeps "$RPM"
-          test "$(bashref --version)" = "bashref 2.0.0"
+          test "$(bashref --version)" = "bashref $VERSION"
           bashref --lang fa --format json builtin printf | grep -Fq '"id": "builtin.printf"'
           sudo rpm -e bashref
           test -f "$HOME/.config/bashref/config.json"

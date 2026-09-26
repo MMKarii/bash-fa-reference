@@ -70,11 +70,31 @@ class ReferenceStore:
                 if record_id in records[language]:
                     raise CorruptReferenceError(f"duplicate record id: {record_id}")
                 records[language][record_id] = record
-                keys = {record_id.casefold(), name.casefold(), *(alias.casefold() for alias in aliases)}
-                for key in keys:
+
+        for language in languages:
+            # Canonical IDs are always exact and unambiguous.
+            for record_id in sorted(records[language]):
+                indexes[language][record_id.casefold()] = record_id
+
+            # Bare record names are a convenience only when unique. Legitimate
+            # cross-kind collisions such as builtin.history vs option.history
+            # remain accessible through their canonical IDs and typed commands.
+            name_to_ids: dict[str, list[str]] = {}
+            for record_id, record in records[language].items():
+                name_to_ids.setdefault(str(record["name"]).casefold(), []).append(record_id)
+            for key, record_ids in name_to_ids.items():
+                if len(record_ids) == 1:
+                    indexes[language][key] = record_ids[0]
+
+            # Aliases are part of the lookup contract and must remain unique.
+            for record_id, record in records[language].items():
+                for alias in record.get("aliases", []):
+                    key = alias.casefold()
                     existing = indexes[language].get(key)
                     if existing is not None and existing != record_id:
-                        raise CorruptReferenceError(f"ambiguous lookup key {key!r}: {existing}, {record_id}")
+                        raise CorruptReferenceError(
+                            f"ambiguous lookup key {key!r}: {existing}, {record_id}"
+                        )
                     indexes[language][key] = record_id
 
         actual_ids = sorted(records["en"])

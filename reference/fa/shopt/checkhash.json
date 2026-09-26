@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "پیش از اجرای commandهای hash‌شده وجود مسیر ذخیره‌شده را بررسی می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.checkhash",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "checkhash",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "پیش از اجرای commandهای hash‌شده وجود مسیر ذخیره‌شده را بررسی می‌کند.",
+  "synopsis": "shopt -s checkhash | shopt -u checkhash",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

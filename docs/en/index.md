@@ -2,7 +2,7 @@
 
 <img class="hero-banner" src="assets/brand-banner.webp" alt="Bash Professional Reference banner">
 
-**Bashref 2.0.0** combines an offline CLI, a structured bilingual Reference Guide, system man pages, downloadable packages, and the 14-chapter Professional Guide.
+**Bashref 2.1.0** combines an offline CLI, a structured bilingual Reference Guide, system man pages, downloadable packages, and the 14-chapter Professional Guide.
 
 This project covers **command-line fundamentals, pipelines and redirection, text processing, scripting, automation, system administration, DevOps, defensive security, and debugging**. Bash-specific behavior is cross-checked against the [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html).
 

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Disable pathname expansion (globbing)."
+  ],
+  "examples": [],
+  "id": "option.noglob",
+  "kind": "option",
+  "language": "en",
+  "name": "noglob",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Disable pathname expansion (globbing).",
+  "synopsis": "set -o noglob | set +o noglob",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

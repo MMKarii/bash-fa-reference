@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Command یا arrayی است که Bash پیش از نمایش prompt اصلی اجرا می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.PROMPT_COMMAND",
+  "kind": "variable",
+  "language": "fa",
+  "name": "PROMPT_COMMAND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Command یا arrayی است که Bash پیش از نمایش prompt اصلی اجرا می‌کند.",
+  "synopsis": "$PROMPT_COMMAND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

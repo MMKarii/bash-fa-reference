@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Allow a failed history expansion to be re-edited."
+  ],
+  "examples": [],
+  "id": "shopt.histreedit",
+  "kind": "shopt",
+  "language": "en",
+  "name": "histreedit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Allow a failed history expansion to be re-edited.",
+  "synopsis": "shopt -s histreedit | shopt -u histreedit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

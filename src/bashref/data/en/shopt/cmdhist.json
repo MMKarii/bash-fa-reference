@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Save multi-line commands as a single history entry where possible."
+  ],
+  "examples": [],
+  "id": "shopt.cmdhist",
+  "kind": "shopt",
+  "language": "en",
+  "name": "cmdhist",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Save multi-line commands as a single history entry where possible.",
+  "synopsis": "shopt -s cmdhist | shopt -u cmdhist",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

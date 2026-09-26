@@ -1,19 +1,19 @@
 # نصب Bashref
 
-Bashref 2.0.0 یک ابزار خط فرمان آفلاین برای مرجع دوزبانه Bash است.
+Bashref 2.1.0 یک ابزار خط فرمان آفلاین برای مرجع دوزبانه Bash است.
 
 ## روش پیشنهادی نصب
 
 wheel رسمی را مستقیماً از GitHub Release نصب کنید:
 
 ```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
 یا با pip:
 
 ```bash
-python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
 برای source checkoutشده:

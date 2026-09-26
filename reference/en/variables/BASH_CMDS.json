@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Associative array exposing Bash's command hash table."
+  ],
+  "examples": [],
+  "id": "variable.BASH_CMDS",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_CMDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Associative array exposing Bash's command hash table.",
+  "synopsis": "$BASH_CMDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

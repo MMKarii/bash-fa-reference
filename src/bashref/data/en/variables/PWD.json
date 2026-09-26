@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Current working directory as maintained by the shell."
+  ],
+  "examples": [],
+  "id": "variable.PWD",
+  "kind": "variable",
+  "language": "en",
+  "name": "PWD",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Current working directory as maintained by the shell.",
+  "synopsis": "$PWD",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "مسیر commandها را هنگام lookup در hash table نگه می‌دارد."
+  ],
+  "examples": [],
+  "id": "option.hashall",
+  "kind": "option",
+  "language": "fa",
+  "name": "hashall",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "مسیر commandها را هنگام lookup در hash table نگه می‌دارد.",
+  "synopsis": "set -o hashall | set +o hashall",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

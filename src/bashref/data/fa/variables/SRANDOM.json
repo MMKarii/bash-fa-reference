@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "یک مقدار تصادفی ۳۲ بیتی ارائه می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.SRANDOM",
+  "kind": "variable",
+  "language": "fa",
+  "name": "SRANDOM",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "یک مقدار تصادفی ۳۲ بیتی ارائه می‌کند.",
+  "synopsis": "$SRANDOM",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

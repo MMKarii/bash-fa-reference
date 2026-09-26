@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array مربوط به آرگومان‌های frameهای فعال call stack است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ARGV",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_ARGV",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array مربوط به آرگومان‌های frameهای فعال call stack است.",
+  "synopsis": "$BASH_ARGV",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Process ID of the current Bash process."
+  ],
+  "examples": [],
+  "id": "variable.BASHPID",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASHPID",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Process ID of the current Bash process.",
+  "synopsis": "$BASHPID",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

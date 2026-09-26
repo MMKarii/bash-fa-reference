@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "index آرگومان بعدی که getopts باید پردازش کند."
+  ],
+  "examples": [],
+  "id": "variable.OPTIND",
+  "kind": "variable",
+  "language": "fa",
+  "name": "OPTIND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "index آرگومان بعدی که getopts باید پردازش کند.",
+  "synopsis": "$OPTIND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

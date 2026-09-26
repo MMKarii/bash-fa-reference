@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Pseudo-random integer produced on each expansion."
+  ],
+  "examples": [],
+  "id": "variable.RANDOM",
+  "kind": "variable",
+  "language": "en",
+  "name": "RANDOM",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Pseudo-random integer produced on each expansion.",
+  "synopsis": "$RANDOM",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

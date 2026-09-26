@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "رشته نسخه Bash در حال اجرا است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_VERSION",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_VERSION",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "رشته نسخه Bash در حال اجرا است.",
+  "synopsis": "$BASH_VERSION",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

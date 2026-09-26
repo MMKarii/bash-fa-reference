@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Do not exit a non-interactive shell when exec cannot execute its command."
+  ],
+  "examples": [],
+  "id": "shopt.execfail",
+  "kind": "shopt",
+  "language": "en",
+  "name": "execfail",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Do not exit a non-interactive shell when exec cannot execute its command.",
+  "synopsis": "shopt -s execfail | shopt -u execfail",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

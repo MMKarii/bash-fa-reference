@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Report terminated background jobs immediately."
+  ],
+  "examples": [],
+  "id": "option.notify",
+  "kind": "option",
+  "language": "en",
+  "name": "notify",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Report terminated background jobs immediately.",
+  "synopsis": "set -o notify | set +o notify",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

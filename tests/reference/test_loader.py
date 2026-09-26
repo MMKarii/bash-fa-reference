@@ -84,3 +84,42 @@ def test_list_can_filter_kind():
     ids = [item["id"] for item in result]
     assert "builtin.printf" in ids
     assert ids == sorted(ids)
+
+
+def test_same_name_across_kinds_is_allowed_but_bare_lookup_is_not(tmp_path: Path):
+    builtin_en = record("en", "history")
+    builtin_fa = record("fa", "history")
+    option_en = {
+        **record("en", "history"),
+        "id": "option.history",
+        "kind": "option",
+    }
+    option_fa = {
+        **record("fa", "history"),
+        "id": "option.history",
+        "kind": "option",
+    }
+
+    def write_kind_record(item: dict) -> None:
+        folder = "builtins" if item["kind"] == "builtin" else "options"
+        path = tmp_path / item["language"] / folder / "history.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(item), encoding="utf-8")
+
+    for item in (builtin_en, builtin_fa, option_en, option_fa):
+        write_kind_record(item)
+
+    manifest = {
+        "format_version": 1,
+        "product_version": "2.1.0",
+        "languages": ["en", "fa"],
+        "record_count": 2,
+        "records": ["builtin.history", "option.history"],
+    }
+    (tmp_path / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+
+    store = ReferenceStore.load(tmp_path)
+    assert store.get("builtin.history", "en")["kind"] == "builtin"
+    assert store.get("option.history", "en")["kind"] == "option"
+    with pytest.raises(EntryNotFoundError):
+        store.get("history", "en")

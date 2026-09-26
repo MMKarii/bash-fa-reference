@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "هنگام خروج login shell تعاملی به jobها SIGHUP می‌فرستد."
+  ],
+  "examples": [],
+  "id": "shopt.huponexit",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "huponexit",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "هنگام خروج login shell تعاملی به jobها SIGHUP می‌فرستد.",
+  "synopsis": "shopt -s huponexit | shopt -u huponexit",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

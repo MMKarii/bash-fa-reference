@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "به cd اجازه می‌دهد آرگومان غیر-directory را نام متغیری حاوی مسیر در نظر بگیرد."
+  ],
+  "examples": [],
+  "id": "shopt.cdable_vars",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "cdable_vars",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "به cd اجازه می‌دهد آرگومان غیر-directory را نام متغیری حاوی مسیر در نظر بگیرد.",
+  "synopsis": "shopt -s cdable_vars | shopt -u cdable_vars",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

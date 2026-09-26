@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "یک shell function تعریف می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.function",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "function",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "یک shell function تعریف می‌کند.",
+  "synopsis": "name () compound-command [ redirections ]",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

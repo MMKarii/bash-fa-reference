@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array containing the most recent [[ string =~ regex ]] match and capture groups."
+  ],
+  "examples": [],
+  "id": "variable.BASH_REMATCH",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_REMATCH",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array containing the most recent [[ string =~ regex ]] match and capture groups.",
+  "synopsis": "$BASH_REMATCH",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

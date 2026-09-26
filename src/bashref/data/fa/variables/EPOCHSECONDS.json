@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "زمان فعلی Unix epoch را برحسب ثانیه ارائه می‌کند."
+  ],
+  "examples": [],
+  "id": "variable.EPOCHSECONDS",
+  "kind": "variable",
+  "language": "fa",
+  "name": "EPOCHSECONDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "زمان فعلی Unix epoch را برحسب ثانیه ارائه می‌کند.",
+  "synopsis": "$EPOCHSECONDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

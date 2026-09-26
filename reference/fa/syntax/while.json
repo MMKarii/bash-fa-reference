@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "تا زمانی که test موفق باشد commandها را تکرار می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.while",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "while",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "تا زمانی که test موفق باشد commandها را تکرار می‌کند.",
+  "synopsis": "while test-commands; do consequent-commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

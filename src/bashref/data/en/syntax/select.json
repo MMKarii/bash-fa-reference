@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Present an interactive numbered menu and assign the selected word."
+  ],
+  "examples": [],
+  "id": "syntax.select",
+  "kind": "syntax",
+  "language": "en",
+  "name": "select",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Present an interactive numbered menu and assign the selected word.",
+  "synopsis": "select name [in words ...]; do commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

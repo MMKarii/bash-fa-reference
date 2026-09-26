@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "رفتار debugging پیشرفته برای functionها، trapها و متغیرهای call stack را فعال می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.extdebug",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "extdebug",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "رفتار debugging پیشرفته برای functionها، trapها و متغیرهای call stack را فعال می‌کند.",
+  "synopsis": "shopt -s extdebug | shopt -u extdebug",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

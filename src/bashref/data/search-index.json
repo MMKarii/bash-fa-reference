@@ -976,6 +976,39 @@
       },
       {
         "aliases": [],
+        "description": "Automatically mark modified or created variables for export.",
+        "id": "option.allexport",
+        "name": "allexport",
+        "summary": "Automatically mark modified or created variables for export.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable brace expansion such as {a,b} and {1..5}.",
+        "id": "option.braceexpand",
+        "name": "braceexpand",
+        "summary": "Enable brace expansion such as {a,b} and {1..5}.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Use Emacs-style Readline command-line editing.",
+        "id": "option.emacs",
+        "name": "emacs",
+        "summary": "Use Emacs-style Readline command-line editing.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "errexit requests shell exit after certain unhandled command failures; exceptions are context-sensitive.",
         "id": "option.errexit",
         "name": "errexit",
@@ -983,6 +1016,149 @@
         "tags": [
           "option",
           "errexit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make ERR traps inherited by shell functions, command substitutions, and subshells.",
+        "id": "option.errtrace",
+        "name": "errtrace",
+        "summary": "Make ERR traps inherited by shell functions, command substitutions, and subshells.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make DEBUG and RETURN traps inherited by functions and command substitutions.",
+        "id": "option.functrace",
+        "name": "functrace",
+        "summary": "Make DEBUG and RETURN traps inherited by functions and command substitutions.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Remember command locations as commands are looked up.",
+        "id": "option.hashall",
+        "name": "hashall",
+        "summary": "Remember command locations as commands are looked up.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable history expansion using the history expansion character.",
+        "id": "option.histexpand",
+        "name": "histexpand",
+        "summary": "Enable history expansion using the history expansion character.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable command history.",
+        "id": "option.history",
+        "name": "history",
+        "summary": "Enable command history.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Prevent an interactive shell from exiting on a single EOF.",
+        "id": "option.ignoreeof",
+        "name": "ignoreeof",
+        "summary": "Prevent an interactive shell from exiting on a single EOF.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Allow # to introduce comments in interactive shells.",
+        "id": "option.interactive-comments",
+        "name": "interactive-comments",
+        "summary": "Allow # to introduce comments in interactive shells.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Place assignment arguments anywhere in a command into the command environment.",
+        "id": "option.keyword",
+        "name": "keyword",
+        "summary": "Place assignment arguments anywhere in a command into the command environment.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable job control.",
+        "id": "option.monitor",
+        "name": "monitor",
+        "summary": "Enable job control.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Prevent > redirection from overwriting existing regular files by default.",
+        "id": "option.noclobber",
+        "name": "noclobber",
+        "summary": "Prevent > redirection from overwriting existing regular files by default.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Read commands but do not execute them; primarily useful for syntax checking.",
+        "id": "option.noexec",
+        "name": "noexec",
+        "summary": "Read commands but do not execute them; primarily useful for syntax checking.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Disable pathname expansion (globbing).",
+        "id": "option.noglob",
+        "name": "noglob",
+        "summary": "Disable pathname expansion (globbing).",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Report terminated background jobs immediately.",
+        "id": "option.notify",
+        "name": "notify",
+        "summary": "Report terminated background jobs immediately.",
+        "tags": [
+          "option",
+          "set"
         ]
       },
       {
@@ -998,6 +1174,28 @@
       },
       {
         "aliases": [],
+        "description": "Exit after reading and executing one command.",
+        "id": "option.onecmd",
+        "name": "onecmd",
+        "summary": "Exit after reading and executing one command.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Use physical directory paths instead of following logical symlink paths for cd/pwd behavior.",
+        "id": "option.physical",
+        "name": "physical",
+        "summary": "Use physical directory paths instead of following logical symlink paths for cd/pwd behavior.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "pipefail makes pipeline status reflect the rightmost failing command instead of only the last command.",
         "id": "option.pipefail",
         "name": "pipefail",
@@ -1005,6 +1203,50 @@
         "tags": [
           "option",
           "pipefail"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Change Bash behavior to more closely match the POSIX shell standard.",
+        "id": "option.posix",
+        "name": "posix",
+        "summary": "Change Bash behavior to more closely match the POSIX shell standard.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable privileged mode, affecting startup files, environment functions, and effective IDs.",
+        "id": "option.privileged",
+        "name": "privileged",
+        "summary": "Enable privileged mode, affecting startup files, environment functions, and effective IDs.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Print shell input lines as they are read.",
+        "id": "option.verbose",
+        "name": "verbose",
+        "summary": "Print shell input lines as they are read.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Use vi-style Readline command-line editing.",
+        "id": "option.vi",
+        "name": "vi",
+        "summary": "Use vi-style Readline command-line editing.",
+        "tags": [
+          "option",
+          "set"
         ]
       },
       {
@@ -1020,6 +1262,237 @@
       },
       {
         "aliases": [],
+        "description": "Suppress repeated evaluation of array subscripts in selected contexts.",
+        "id": "shopt.array_expand_once",
+        "name": "array_expand_once",
+        "summary": "Suppress repeated evaluation of array subscripts in selected contexts.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Deprecated synonym for array_expand_once.",
+        "id": "shopt.assoc_expand_once",
+        "name": "assoc_expand_once",
+        "summary": "Deprecated synonym for array_expand_once.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Treat a directory name entered as a command as an implicit cd in interactive shells.",
+        "id": "shopt.autocd",
+        "name": "autocd",
+        "summary": "Treat a directory name entered as a command as an implicit cd in interactive shells.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Store full pathnames in BASH_SOURCE entries.",
+        "id": "shopt.bash_source_fullpath",
+        "name": "bash_source_fullpath",
+        "summary": "Store full pathnames in BASH_SOURCE entries.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Let cd interpret a non-directory argument as a variable containing a directory path.",
+        "id": "shopt.cdable_vars",
+        "name": "cdable_vars",
+        "summary": "Let cd interpret a non-directory argument as a variable containing a directory path.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Correct minor spelling errors in directory names used by cd.",
+        "id": "shopt.cdspell",
+        "name": "cdspell",
+        "summary": "Correct minor spelling errors in directory names used by cd.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Verify hashed command paths still exist before executing them.",
+        "id": "shopt.checkhash",
+        "name": "checkhash",
+        "summary": "Verify hashed command paths still exist before executing them.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Check and report running or stopped jobs before an interactive shell exits.",
+        "id": "shopt.checkjobs",
+        "name": "checkjobs",
+        "summary": "Check and report running or stopped jobs before an interactive shell exits.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Update LINES and COLUMNS when terminal size changes.",
+        "id": "shopt.checkwinsize",
+        "name": "checkwinsize",
+        "summary": "Update LINES and COLUMNS when terminal size changes.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Save multi-line commands as a single history entry where possible.",
+        "id": "shopt.cmdhist",
+        "name": "cmdhist",
+        "summary": "Save multi-line commands as a single history entry where possible.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Expand directory names during completion and replace typed text with the expanded path.",
+        "id": "shopt.direxpand",
+        "name": "direxpand",
+        "summary": "Expand directory names during completion and replace typed text with the expanded path.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Attempt spelling correction on directory names during completion.",
+        "id": "shopt.dirspell",
+        "name": "dirspell",
+        "summary": "Attempt spelling correction on directory names during completion.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Include filenames beginning with . in pathname expansion results.",
+        "id": "shopt.dotglob",
+        "name": "dotglob",
+        "summary": "Include filenames beginning with . in pathname expansion results.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Do not exit a non-interactive shell when exec cannot execute its command.",
+        "id": "shopt.execfail",
+        "name": "execfail",
+        "summary": "Do not exit a non-interactive shell when exec cannot execute its command.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Expand aliases in non-interactive shells as well as interactive shells.",
+        "id": "shopt.expand_aliases",
+        "name": "expand_aliases",
+        "summary": "Expand aliases in non-interactive shells as well as interactive shells.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable extended debugging behavior for functions, traps, and call-stack variables.",
+        "id": "shopt.extdebug",
+        "name": "extdebug",
+        "summary": "Enable extended debugging behavior for functions, traps, and call-stack variables.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable extended pattern-matching operators such as ?(), *(), +(), @(), and !().",
+        "id": "shopt.extglob",
+        "name": "extglob",
+        "summary": "Enable extended pattern-matching operators such as ?(), *(), +(), @(), and !().",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make unmatched pathname-expansion patterns produce an expansion error.",
+        "id": "shopt.failglob",
+        "name": "failglob",
+        "summary": "Make unmatched pathname-expansion patterns produce an expansion error.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make FIGNORE suffixes suppress completion matches even when they are the only matches.",
+        "id": "shopt.force_fignore",
+        "name": "force_fignore",
+        "summary": "Make FIGNORE suffixes suppress completion matches even when they are the only matches.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Use ASCII ordering for bracket ranges in pathname matching.",
+        "id": "shopt.globasciiranges",
+        "name": "globasciiranges",
+        "summary": "Use ASCII ordering for bracket ranges in pathname matching.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Prevent pathname expansion from matching . and ...",
+        "id": "shopt.globskipdots",
+        "name": "globskipdots",
+        "summary": "Prevent pathname expansion from matching . and ...",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "globstar makes ** in pathname expansion match recursively through directory levels.",
         "id": "shopt.globstar",
         "name": "globstar",
@@ -1027,6 +1500,193 @@
         "tags": [
           "shopt",
           "globstar"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Format shell error messages in GNU-style filename:line form where applicable.",
+        "id": "shopt.gnu_errfmt",
+        "name": "gnu_errfmt",
+        "summary": "Format shell error messages in GNU-style filename:line form where applicable.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Append history to the history file instead of overwriting it on shell exit.",
+        "id": "shopt.histappend",
+        "name": "histappend",
+        "summary": "Append history to the history file instead of overwriting it on shell exit.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Allow a failed history expansion to be re-edited.",
+        "id": "shopt.histreedit",
+        "name": "histreedit",
+        "summary": "Allow a failed history expansion to be re-edited.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Load history-expanded text into the editing buffer instead of executing it immediately.",
+        "id": "shopt.histverify",
+        "name": "histverify",
+        "summary": "Load history-expanded text into the editing buffer instead of executing it immediately.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Attempt hostname completion where appropriate.",
+        "id": "shopt.hostcomplete",
+        "name": "hostcomplete",
+        "summary": "Attempt hostname completion where appropriate.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Send SIGHUP to jobs when an interactive login shell exits.",
+        "id": "shopt.huponexit",
+        "name": "huponexit",
+        "summary": "Send SIGHUP to jobs when an interactive login shell exits.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make command substitutions inherit the errexit option.",
+        "id": "shopt.inherit_errexit",
+        "name": "inherit_errexit",
+        "summary": "Make command substitutions inherit the errexit option.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Allow # comments in interactive shells.",
+        "id": "shopt.interactive_comments",
+        "name": "interactive_comments",
+        "summary": "Allow # comments in interactive shells.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Allow the last pipeline command to run in the current shell when job control is inactive.",
+        "id": "shopt.lastpipe",
+        "name": "lastpipe",
+        "summary": "Allow the last pipeline command to run in the current shell when job control is inactive.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Preserve embedded newlines in multi-line history entries.",
+        "id": "shopt.lithist",
+        "name": "lithist",
+        "summary": "Preserve embedded newlines in multi-line history entries.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Let local variables inherit value and attributes from an outer variable of the same name.",
+        "id": "shopt.localvar_inherit",
+        "name": "localvar_inherit",
+        "summary": "Let local variables inherit value and attributes from an outer variable of the same name.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Preserve local-variable scope information after unset until the function returns.",
+        "id": "shopt.localvar_unset",
+        "name": "localvar_unset",
+        "summary": "Preserve local-variable scope information after unset until the function returns.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Warn when a monitored mail file has been accessed since the last check.",
+        "id": "shopt.mailwarn",
+        "name": "mailwarn",
+        "summary": "Warn when a monitored mail file has been accessed since the last check.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Do not search PATH when completing an empty command line.",
+        "id": "shopt.no_empty_cmd_completion",
+        "name": "no_empty_cmd_completion",
+        "summary": "Do not search PATH when completing an empty command line.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Match filenames case-insensitively during pathname expansion.",
+        "id": "shopt.nocaseglob",
+        "name": "nocaseglob",
+        "summary": "Match filenames case-insensitively during pathname expansion.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make pattern matching in case and [[ ]] ignore letter case.",
+        "id": "shopt.nocasematch",
+        "name": "nocasematch",
+        "summary": "Make pattern matching in case and [[ ]] ignore letter case.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Do not re-expand translated $\"...\" strings.",
+        "id": "shopt.noexpand_translation",
+        "name": "noexpand_translation",
+        "summary": "Do not re-expand translated $\"...\" strings.",
+        "tags": [
+          "shopt",
+          "option"
         ]
       },
       {
@@ -1042,6 +1702,182 @@
       },
       {
         "aliases": [],
+        "description": "Treat unquoted & in parameter-substitution replacement text as the matched portion.",
+        "id": "shopt.patsub_replacement",
+        "name": "patsub_replacement",
+        "summary": "Treat unquoted & in parameter-substitution replacement text as the matched portion.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Enable programmable completion.",
+        "id": "shopt.progcomp",
+        "name": "progcomp",
+        "summary": "Enable programmable completion.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Try alias expansion when programmable completion cannot find a completion specification.",
+        "id": "shopt.progcomp_alias",
+        "name": "progcomp_alias",
+        "summary": "Try alias expansion when programmable completion cannot find a completion specification.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Perform shell expansions on prompt strings.",
+        "id": "shopt.promptvars",
+        "name": "promptvars",
+        "summary": "Perform shell expansions on prompt strings.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Report whether the shell is running in restricted mode.",
+        "id": "shopt.restricted_shell",
+        "name": "restricted_shell",
+        "summary": "Report whether the shell is running in restricted mode.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make shift report an error when the count exceeds positional parameters.",
+        "id": "shopt.shift_verbose",
+        "name": "shift_verbose",
+        "summary": "Make shift report an error when the count exceeds positional parameters.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Use PATH to find files for source and . when needed.",
+        "id": "shopt.sourcepath",
+        "name": "sourcepath",
+        "summary": "Use PATH to find files for source and . when needed.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Automatically close file descriptors allocated with {varname} redirections.",
+        "id": "shopt.varredir_close",
+        "name": "varredir_close",
+        "summary": "Automatically close file descriptors allocated with {varname} redirections.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Make echo interpret backslash escapes by default for XPG-style behavior.",
+        "id": "shopt.xpg_echo",
+        "name": "xpg_echo",
+        "summary": "Make echo interpret backslash escapes by default for XPG-style behavior.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Evaluate an arithmetic expression as a shell command.",
+        "id": "syntax.arithmetic-command",
+        "name": "arithmetic-command",
+        "summary": "Evaluate an arithmetic expression as a shell command.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Select a command list by matching a word against shell patterns.",
+        "id": "syntax.case",
+        "name": "case",
+        "summary": "Select a command list by matching a word against shell patterns.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Evaluate Bash conditional expressions without ordinary word splitting.",
+        "id": "syntax.conditional-command",
+        "name": "conditional-command",
+        "summary": "Evaluate Bash conditional expressions without ordinary word splitting.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Iterate over words and assign each value to a variable.",
+        "id": "syntax.for",
+        "name": "for",
+        "summary": "Iterate over words and assign each value to a variable.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Define a shell function.",
+        "id": "syntax.function",
+        "name": "function",
+        "summary": "Define a shell function.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Execute a command list in the current shell environment.",
+        "id": "syntax.group-command",
+        "name": "group-command",
+        "summary": "Execute a command list in the current shell environment.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Conditionally execute command lists based on exit status.",
+        "id": "syntax.if",
+        "name": "if",
+        "summary": "Conditionally execute command lists based on exit status.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "Quoting controls which characters and expansions retain literal meaning.",
         "id": "syntax.quoting",
         "name": "quoting",
@@ -1049,6 +1885,193 @@
         "tags": [
           "syntax",
           "quoting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Present an interactive numbered menu and assign the selected word.",
+        "id": "syntax.select",
+        "name": "select",
+        "summary": "Present an interactive numbered menu and assign the selected word.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Execute a command list in a subshell environment.",
+        "id": "syntax.subshell",
+        "name": "subshell",
+        "summary": "Execute a command list in a subshell environment.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Repeat commands until a test command list succeeds.",
+        "id": "syntax.until",
+        "name": "until",
+        "summary": "Repeat commands until a test command list succeeds.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Repeat commands while a test command list succeeds.",
+        "id": "syntax.while",
+        "name": "while",
+        "summary": "Repeat commands while a test command list succeeds.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pathname used to invoke the current Bash executable.",
+        "id": "variable.BASH",
+        "name": "BASH",
+        "summary": "Pathname used to invoke the current Bash executable.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Readonly colon-separated list of enabled shopt options.",
+        "id": "variable.BASHOPTS",
+        "name": "BASHOPTS",
+        "summary": "Readonly colon-separated list of enabled shopt options.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Process ID of the current Bash process.",
+        "id": "variable.BASHPID",
+        "name": "BASHPID",
+        "summary": "Process ID of the current Bash process.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Associative array exposing the current alias table.",
+        "id": "variable.BASH_ALIASES",
+        "name": "BASH_ALIASES",
+        "summary": "Associative array exposing the current alias table.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Call-stack array containing argument counts for active frames.",
+        "id": "variable.BASH_ARGC",
+        "name": "BASH_ARGC",
+        "summary": "Call-stack array containing argument counts for active frames.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Call-stack array containing arguments for active frames.",
+        "id": "variable.BASH_ARGV",
+        "name": "BASH_ARGV",
+        "summary": "Call-stack array containing arguments for active frames.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Variable that gets or sets the value Bash exposes as $0.",
+        "id": "variable.BASH_ARGV0",
+        "name": "BASH_ARGV0",
+        "summary": "Variable that gets or sets the value Bash exposes as $0.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Associative array exposing Bash's command hash table.",
+        "id": "variable.BASH_CMDS",
+        "name": "BASH_CMDS",
+        "summary": "Associative array exposing Bash's command hash table.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command currently executing or about to execute.",
+        "id": "variable.BASH_COMMAND",
+        "name": "BASH_COMMAND",
+        "summary": "Command currently executing or about to execute.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Select compatibility behavior for an older Bash language level.",
+        "id": "variable.BASH_COMPAT",
+        "name": "BASH_COMPAT",
+        "summary": "Select compatibility behavior for an older Bash language level.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Startup file used by non-interactive Bash shells when applicable.",
+        "id": "variable.BASH_ENV",
+        "name": "BASH_ENV",
+        "summary": "Startup file used by non-interactive Bash shells when applicable.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array of source line numbers corresponding to call-stack entries.",
+        "id": "variable.BASH_LINENO",
+        "name": "BASH_LINENO",
+        "summary": "Array of source line numbers corresponding to call-stack entries.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array containing the most recent [[ string =~ regex ]] match and capture groups.",
+        "id": "variable.BASH_REMATCH",
+        "name": "BASH_REMATCH",
+        "summary": "Array containing the most recent [[ string =~ regex ]] match and capture groups.",
+        "tags": [
+          "variable",
+          "bash"
         ]
       },
       {
@@ -1064,6 +2087,171 @@
       },
       {
         "aliases": [],
+        "description": "Subshell nesting level for the current execution context.",
+        "id": "variable.BASH_SUBSHELL",
+        "name": "BASH_SUBSHELL",
+        "summary": "Subshell nesting level for the current execution context.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Readonly array describing the running Bash version.",
+        "id": "variable.BASH_VERSINFO",
+        "name": "BASH_VERSINFO",
+        "summary": "Readonly array describing the running Bash version.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Version string for the running Bash instance.",
+        "id": "variable.BASH_VERSION",
+        "name": "BASH_VERSION",
+        "summary": "Version string for the running Bash instance.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array containing the current directory stack.",
+        "id": "variable.DIRSTACK",
+        "name": "DIRSTACK",
+        "summary": "Array containing the current directory stack.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Current Unix epoch time with fractional precision.",
+        "id": "variable.EPOCHREALTIME",
+        "name": "EPOCHREALTIME",
+        "summary": "Current Unix epoch time with fractional precision.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Current Unix epoch time in seconds.",
+        "id": "variable.EPOCHSECONDS",
+        "name": "EPOCHSECONDS",
+        "summary": "Current Unix epoch time in seconds.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array containing function names in the current call stack.",
+        "id": "variable.FUNCNAME",
+        "name": "FUNCNAME",
+        "summary": "Array containing function names in the current call stack.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "History number of the current command.",
+        "id": "variable.HISTCMD",
+        "name": "HISTCMD",
+        "summary": "History number of the current command.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Name of the current host as maintained by Bash.",
+        "id": "variable.HOSTNAME",
+        "name": "HOSTNAME",
+        "summary": "Name of the current host as maintained by Bash.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Current line number within a script or shell function.",
+        "id": "variable.LINENO",
+        "name": "LINENO",
+        "summary": "Current line number within a script or shell function.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "GNU-style canonical platform description.",
+        "id": "variable.MACHTYPE",
+        "name": "MACHTYPE",
+        "summary": "GNU-style canonical platform description.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Previous working directory set by cd.",
+        "id": "variable.OLDPWD",
+        "name": "OLDPWD",
+        "summary": "Previous working directory set by cd.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Argument value for the current option processed by getopts.",
+        "id": "variable.OPTARG",
+        "name": "OPTARG",
+        "summary": "Argument value for the current option processed by getopts.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Index of the next argument to be processed by getopts.",
+        "id": "variable.OPTIND",
+        "name": "OPTIND",
+        "summary": "Index of the next argument to be processed by getopts.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "String describing the operating system Bash was built for.",
+        "id": "variable.OSTYPE",
+        "name": "OSTYPE",
+        "summary": "String describing the operating system Bash was built for.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "PIPESTATUS is an array containing exit statuses from the most recently executed foreground pipeline.",
         "id": "variable.PIPESTATUS",
         "name": "PIPESTATUS",
@@ -1071,6 +2259,105 @@
         "tags": [
           "variable",
           "PIPESTATUS"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Process ID of the shell's parent process.",
+        "id": "variable.PPID",
+        "name": "PPID",
+        "summary": "Process ID of the shell's parent process.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command or array Bash executes before displaying each primary prompt.",
+        "id": "variable.PROMPT_COMMAND",
+        "name": "PROMPT_COMMAND",
+        "summary": "Command or array Bash executes before displaying each primary prompt.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Current working directory as maintained by the shell.",
+        "id": "variable.PWD",
+        "name": "PWD",
+        "summary": "Current working directory as maintained by the shell.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pseudo-random integer produced on each expansion.",
+        "id": "variable.RANDOM",
+        "name": "RANDOM",
+        "summary": "Pseudo-random integer produced on each expansion.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Default destination variable used by read.",
+        "id": "variable.REPLY",
+        "name": "REPLY",
+        "summary": "Default destination variable used by read.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Elapsed seconds since shell start or assignment.",
+        "id": "variable.SECONDS",
+        "name": "SECONDS",
+        "summary": "Elapsed seconds since shell start or assignment.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Readonly colon-separated list of enabled set -o options.",
+        "id": "variable.SHELLOPTS",
+        "name": "SHELLOPTS",
+        "summary": "Readonly colon-separated list of enabled set -o options.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Shell nesting level.",
+        "id": "variable.SHLVL",
+        "name": "SHLVL",
+        "summary": "Shell nesting level.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Random 32-bit value supplied by Bash.",
+        "id": "variable.SRANDOM",
+        "name": "SRANDOM",
+        "summary": "Random 32-bit value supplied by Bash.",
+        "tags": [
+          "variable",
+          "bash"
         ]
       }
     ],
@@ -2049,6 +3336,39 @@
       },
       {
         "aliases": [],
+        "description": "متغیرهای ایجاد یا تغییرکرده را به‌صورت خودکار برای export علامت می‌زند.",
+        "id": "option.allexport",
+        "name": "allexport",
+        "summary": "متغیرهای ایجاد یا تغییرکرده را به‌صورت خودکار برای export علامت می‌زند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Brace expansion مانند {a,b} و {1..5} را فعال می‌کند.",
+        "id": "option.braceexpand",
+        "name": "braceexpand",
+        "summary": "Brace expansion مانند {a,b} و {1..5} را فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ویرایش خط فرمان Readline به سبک Emacs را فعال می‌کند.",
+        "id": "option.emacs",
+        "name": "emacs",
+        "summary": "ویرایش خط فرمان Readline به سبک Emacs را فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "errexit از پوسته می‌خواهد پس از برخی failureهای مدیریت‌نشده خارج شود و استثناهای آن به context وابسته‌اند.",
         "id": "option.errexit",
         "name": "errexit",
@@ -2056,6 +3376,149 @@
         "tags": [
           "option",
           "errexit"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "باعث می‌شود trap مربوط به ERR در functionها، command substitutionها و subshellها به ارث برسد.",
+        "id": "option.errtrace",
+        "name": "errtrace",
+        "summary": "باعث می‌شود trap مربوط به ERR در functionها، command substitutionها و subshellها به ارث برسد.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "باعث می‌شود trapهای DEBUG و RETURN در functionها و command substitutionها به ارث برسند.",
+        "id": "option.functrace",
+        "name": "functrace",
+        "summary": "باعث می‌شود trapهای DEBUG و RETURN در functionها و command substitutionها به ارث برسند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "مسیر commandها را هنگام lookup در hash table نگه می‌دارد.",
+        "id": "option.hashall",
+        "name": "hashall",
+        "summary": "مسیر commandها را هنگام lookup در hash table نگه می‌دارد.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "History expansion را با نویسه مخصوص history فعال می‌کند.",
+        "id": "option.histexpand",
+        "name": "histexpand",
+        "summary": "History expansion را با نویسه مخصوص history فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ثبت و استفاده از command history را فعال می‌کند.",
+        "id": "option.history",
+        "name": "history",
+        "summary": "ثبت و استفاده از command history را فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "از خروج shell تعاملی با یک EOF جلوگیری می‌کند.",
+        "id": "option.ignoreeof",
+        "name": "ignoreeof",
+        "summary": "از خروج shell تعاملی با یک EOF جلوگیری می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اجازه می‌دهد # در shell تعاملی آغازگر comment باشد.",
+        "id": "option.interactive-comments",
+        "name": "interactive-comments",
+        "summary": "اجازه می‌دهد # در shell تعاملی آغازگر comment باشد.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "assignmentهای موجود در آرگومان‌های command را در محیط همان command اعمال می‌کند.",
+        "id": "option.keyword",
+        "name": "keyword",
+        "summary": "assignmentهای موجود در آرگومان‌های command را در محیط همان command اعمال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Job control را فعال می‌کند.",
+        "id": "option.monitor",
+        "name": "monitor",
+        "summary": "Job control را فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "به‌صورت پیش‌فرض از overwrite شدن فایل‌های موجود با redirection نوع > جلوگیری می‌کند.",
+        "id": "option.noclobber",
+        "name": "noclobber",
+        "summary": "به‌صورت پیش‌فرض از overwrite شدن فایل‌های موجود با redirection نوع > جلوگیری می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "commandها را می‌خواند اما اجرا نمی‌کند و برای بررسی syntax مفید است.",
+        "id": "option.noexec",
+        "name": "noexec",
+        "summary": "commandها را می‌خواند اما اجرا نمی‌کند و برای بررسی syntax مفید است.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pathname expansion یا globbing را غیرفعال می‌کند.",
+        "id": "option.noglob",
+        "name": "noglob",
+        "summary": "Pathname expansion یا globbing را غیرفعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پایان jobهای پس‌زمینه را سریع‌تر گزارش می‌کند.",
+        "id": "option.notify",
+        "name": "notify",
+        "summary": "پایان jobهای پس‌زمینه را سریع‌تر گزارش می‌کند.",
+        "tags": [
+          "option",
+          "set"
         ]
       },
       {
@@ -2071,6 +3534,28 @@
       },
       {
         "aliases": [],
+        "description": "پس از خواندن و اجرای یک command خارج می‌شود.",
+        "id": "option.onecmd",
+        "name": "onecmd",
+        "summary": "پس از خواندن و اجرای یک command خارج می‌شود.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "برای رفتار cd/pwd از مسیر فیزیکی به‌جای مسیر منطقی symlinkها استفاده می‌کند.",
+        "id": "option.physical",
+        "name": "physical",
+        "summary": "برای رفتار cd/pwd از مسیر فیزیکی به‌جای مسیر منطقی symlinkها استفاده می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "pipefail باعث می‌شود status pipeline خطای راست‌ترین فرمان ناموفق را منعکس کند، نه فقط فرمان آخر را.",
         "id": "option.pipefail",
         "name": "pipefail",
@@ -2078,6 +3563,50 @@
         "tags": [
           "option",
           "pipefail"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "رفتار Bash را به الزامات POSIX shell نزدیک‌تر می‌کند.",
+        "id": "option.posix",
+        "name": "posix",
+        "summary": "رفتار Bash را به الزامات POSIX shell نزدیک‌تر می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Privileged mode را فعال می‌کند و بر startup fileها، functionهای محیطی و IDهای مؤثر اثر می‌گذارد.",
+        "id": "option.privileged",
+        "name": "privileged",
+        "summary": "Privileged mode را فعال می‌کند و بر startup fileها، functionهای محیطی و IDهای مؤثر اثر می‌گذارد.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "خطوط ورودی shell را هنگام خوانده‌شدن چاپ می‌کند.",
+        "id": "option.verbose",
+        "name": "verbose",
+        "summary": "خطوط ورودی shell را هنگام خوانده‌شدن چاپ می‌کند.",
+        "tags": [
+          "option",
+          "set"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ویرایش خط فرمان Readline به سبک vi را فعال می‌کند.",
+        "id": "option.vi",
+        "name": "vi",
+        "summary": "ویرایش خط فرمان Readline به سبک vi را فعال می‌کند.",
+        "tags": [
+          "option",
+          "set"
         ]
       },
       {
@@ -2093,6 +3622,237 @@
       },
       {
         "aliases": [],
+        "description": "ارزیابی تکراری subscriptهای array را در برخی contextها محدود می‌کند.",
+        "id": "shopt.array_expand_once",
+        "name": "array_expand_once",
+        "summary": "ارزیابی تکراری subscriptهای array را در برخی contextها محدود می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نام قدیمی و deprecated برای array_expand_once است.",
+        "id": "shopt.assoc_expand_once",
+        "name": "assoc_expand_once",
+        "summary": "نام قدیمی و deprecated برای array_expand_once است.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در shell تعاملی نام directory را مثل cd ضمنی در نظر می‌گیرد.",
+        "id": "shopt.autocd",
+        "name": "autocd",
+        "summary": "در shell تعاملی نام directory را مثل cd ضمنی در نظر می‌گیرد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "مسیرهای کامل را در عناصر BASH_SOURCE ذخیره می‌کند.",
+        "id": "shopt.bash_source_fullpath",
+        "name": "bash_source_fullpath",
+        "summary": "مسیرهای کامل را در عناصر BASH_SOURCE ذخیره می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "به cd اجازه می‌دهد آرگومان غیر-directory را نام متغیری حاوی مسیر در نظر بگیرد.",
+        "id": "shopt.cdable_vars",
+        "name": "cdable_vars",
+        "summary": "به cd اجازه می‌دهد آرگومان غیر-directory را نام متغیری حاوی مسیر در نظر بگیرد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "خطاهای کوچک تایپی مسیرهای cd را اصلاح می‌کند.",
+        "id": "shopt.cdspell",
+        "name": "cdspell",
+        "summary": "خطاهای کوچک تایپی مسیرهای cd را اصلاح می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پیش از اجرای commandهای hash‌شده وجود مسیر ذخیره‌شده را بررسی می‌کند.",
+        "id": "shopt.checkhash",
+        "name": "checkhash",
+        "summary": "پیش از اجرای commandهای hash‌شده وجود مسیر ذخیره‌شده را بررسی می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پیش از خروج shell تعاملی jobهای در حال اجرا یا متوقف را بررسی و گزارش می‌کند.",
+        "id": "shopt.checkjobs",
+        "name": "checkjobs",
+        "summary": "پیش از خروج shell تعاملی jobهای در حال اجرا یا متوقف را بررسی و گزارش می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در صورت تغییر اندازه terminal، LINES و COLUMNS را به‌روزرسانی می‌کند.",
+        "id": "shopt.checkwinsize",
+        "name": "checkwinsize",
+        "summary": "در صورت تغییر اندازه terminal، LINES و COLUMNS را به‌روزرسانی می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "commandهای چندخطی را تا حد ممکن به‌صورت یک history entry ذخیره می‌کند.",
+        "id": "shopt.cmdhist",
+        "name": "cmdhist",
+        "summary": "commandهای چندخطی را تا حد ممکن به‌صورت یک history entry ذخیره می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "هنگام completion نام directory را expand کرده و متن را با مسیر expandشده جایگزین می‌کند.",
+        "id": "shopt.direxpand",
+        "name": "direxpand",
+        "summary": "هنگام completion نام directory را expand کرده و متن را با مسیر expandشده جایگزین می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "هنگام completion برای نام directory اصلاح تایپی انجام می‌دهد.",
+        "id": "shopt.dirspell",
+        "name": "dirspell",
+        "summary": "هنگام completion برای نام directory اصلاح تایپی انجام می‌دهد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فایل‌هایی که با . شروع می‌شوند را در نتیجه globbing وارد می‌کند.",
+        "id": "shopt.dotglob",
+        "name": "dotglob",
+        "summary": "فایل‌هایی که با . شروع می‌شوند را در نتیجه globbing وارد می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اگر exec نتواند command را اجرا کند، shell غیرتعاملی فوراً خارج نمی‌شود.",
+        "id": "shopt.execfail",
+        "name": "execfail",
+        "summary": "اگر exec نتواند command را اجرا کند، shell غیرتعاملی فوراً خارج نمی‌شود.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Alias expansion را در shellهای غیرتعاملی نیز فعال می‌کند.",
+        "id": "shopt.expand_aliases",
+        "name": "expand_aliases",
+        "summary": "Alias expansion را در shellهای غیرتعاملی نیز فعال می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "رفتار debugging پیشرفته برای functionها، trapها و متغیرهای call stack را فعال می‌کند.",
+        "id": "shopt.extdebug",
+        "name": "extdebug",
+        "summary": "رفتار debugging پیشرفته برای functionها، trapها و متغیرهای call stack را فعال می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Patternهای توسعه‌یافته مانند ?()، *()، +()، @() و !() را فعال می‌کند.",
+        "id": "shopt.extglob",
+        "name": "extglob",
+        "summary": "Patternهای توسعه‌یافته مانند ?()، *()، +()، @() و !() را فعال می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اگر glob هیچ match نداشته باشد خطای expansion ایجاد می‌کند.",
+        "id": "shopt.failglob",
+        "name": "failglob",
+        "summary": "اگر glob هیچ match نداشته باشد خطای expansion ایجاد می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "باعث می‌شود suffixهای FIGNORE حتی در حالت تنها match بودن نیز در completion حذف شوند.",
+        "id": "shopt.force_fignore",
+        "name": "force_fignore",
+        "summary": "باعث می‌شود suffixهای FIGNORE حتی در حالت تنها match بودن نیز در completion حذف شوند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "برای rangeهای bracket در pathname matching از ترتیب ASCII استفاده می‌کند.",
+        "id": "shopt.globasciiranges",
+        "name": "globasciiranges",
+        "summary": "برای rangeهای bracket در pathname matching از ترتیب ASCII استفاده می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "از match شدن . و .. در pathname expansion جلوگیری می‌کند.",
+        "id": "shopt.globskipdots",
+        "name": "globskipdots",
+        "summary": "از match شدن . و .. در pathname expansion جلوگیری می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "globstar باعث می‌شود ** در pathname expansion به‌صورت recursive در سطح‌های دایرکتوری match شود.",
         "id": "shopt.globstar",
         "name": "globstar",
@@ -2100,6 +3860,193 @@
         "tags": [
           "shopt",
           "globstar"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پیام‌های خطای shell را در قالب GNU مانند file:line قالب‌بندی می‌کند.",
+        "id": "shopt.gnu_errfmt",
+        "name": "gnu_errfmt",
+        "summary": "پیام‌های خطای shell را در قالب GNU مانند file:line قالب‌بندی می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "هنگام خروج shell، history را به فایل اضافه می‌کند و overwrite نمی‌کند.",
+        "id": "shopt.histappend",
+        "name": "histappend",
+        "summary": "هنگام خروج shell، history را به فایل اضافه می‌کند و overwrite نمی‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در صورت شکست history expansion امکان ویرایش مجدد command را می‌دهد.",
+        "id": "shopt.histreedit",
+        "name": "histreedit",
+        "summary": "در صورت شکست history expansion امکان ویرایش مجدد command را می‌دهد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متن history-expanded را ابتدا وارد editing buffer می‌کند و مستقیم اجرا نمی‌کند.",
+        "id": "shopt.histverify",
+        "name": "histverify",
+        "summary": "متن history-expanded را ابتدا وارد editing buffer می‌کند و مستقیم اجرا نمی‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در context مناسب hostname completion انجام می‌دهد.",
+        "id": "shopt.hostcomplete",
+        "name": "hostcomplete",
+        "summary": "در context مناسب hostname completion انجام می‌دهد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "هنگام خروج login shell تعاملی به jobها SIGHUP می‌فرستد.",
+        "id": "shopt.huponexit",
+        "name": "huponexit",
+        "summary": "هنگام خروج login shell تعاملی به jobها SIGHUP می‌فرستد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "باعث می‌شود command substitution گزینه errexit را به ارث ببرد.",
+        "id": "shopt.inherit_errexit",
+        "name": "inherit_errexit",
+        "summary": "باعث می‌شود command substitution گزینه errexit را به ارث ببرد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Commentهای # را در shell تعاملی فعال می‌کند.",
+        "id": "shopt.interactive_comments",
+        "name": "interactive_comments",
+        "summary": "Commentهای # را در shell تعاملی فعال می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "وقتی job control غیرفعال است اجازه می‌دهد آخرین command pipeline در shell جاری اجرا شود.",
+        "id": "shopt.lastpipe",
+        "name": "lastpipe",
+        "summary": "وقتی job control غیرفعال است اجازه می‌دهد آخرین command pipeline در shell جاری اجرا شود.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در history چندخطی newlineهای واقعی را حفظ می‌کند.",
+        "id": "shopt.lithist",
+        "name": "lithist",
+        "summary": "در history چندخطی newlineهای واقعی را حفظ می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیر local مقدار و attributeهای متغیر هم‌نام scope بیرونی را به ارث می‌برد.",
+        "id": "shopt.localvar_inherit",
+        "name": "localvar_inherit",
+        "summary": "متغیر local مقدار و attributeهای متغیر هم‌نام scope بیرونی را به ارث می‌برد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اطلاعات scope متغیر local را پس از unset تا پایان function حفظ می‌کند.",
+        "id": "shopt.localvar_unset",
+        "name": "localvar_unset",
+        "summary": "اطلاعات scope متغیر local را پس از unset تا پایان function حفظ می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اگر فایل mail از زمان آخرین بررسی دسترسی خورده باشد هشدار می‌دهد.",
+        "id": "shopt.mailwarn",
+        "name": "mailwarn",
+        "summary": "اگر فایل mail از زمان آخرین بررسی دسترسی خورده باشد هشدار می‌دهد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در completion خط command خالی، PATH را جست‌وجو نمی‌کند.",
+        "id": "shopt.no_empty_cmd_completion",
+        "name": "no_empty_cmd_completion",
+        "summary": "در completion خط command خالی، PATH را جست‌وجو نمی‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pathname expansion را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.",
+        "id": "shopt.nocaseglob",
+        "name": "nocaseglob",
+        "summary": "Pathname expansion را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Pattern matching در case و [[ ]] را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.",
+        "id": "shopt.nocasematch",
+        "name": "nocasematch",
+        "summary": "Pattern matching در case و [[ ]] را نسبت به بزرگی و کوچکی حروف غیرحساس می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "پس از ترجمه locale، رشته‌های $\"...\" را دوباره expand نمی‌کند.",
+        "id": "shopt.noexpand_translation",
+        "name": "noexpand_translation",
+        "summary": "پس از ترجمه locale، رشته‌های $\"...\" را دوباره expand نمی‌کند.",
+        "tags": [
+          "shopt",
+          "option"
         ]
       },
       {
@@ -2115,6 +4062,182 @@
       },
       {
         "aliases": [],
+        "description": "در replacement مربوط به parameter substitution، & بدون quote را بخش match‌شده می‌داند.",
+        "id": "shopt.patsub_replacement",
+        "name": "patsub_replacement",
+        "summary": "در replacement مربوط به parameter substitution، & بدون quote را بخش match‌شده می‌داند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Programmable completion را فعال می‌کند.",
+        "id": "shopt.progcomp",
+        "name": "progcomp",
+        "summary": "Programmable completion را فعال می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اگر programmable completion spec پیدا نشود alias expansion را امتحان می‌کند.",
+        "id": "shopt.progcomp_alias",
+        "name": "progcomp_alias",
+        "summary": "اگر programmable completion spec پیدا نشود alias expansion را امتحان می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "روی promptها expansionهای shell را انجام می‌دهد.",
+        "id": "shopt.promptvars",
+        "name": "promptvars",
+        "summary": "روی promptها expansionهای shell را انجام می‌دهد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نشان می‌دهد shell در restricted mode اجرا می‌شود.",
+        "id": "shopt.restricted_shell",
+        "name": "restricted_shell",
+        "summary": "نشان می‌دهد shell در restricted mode اجرا می‌شود.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "اگر تعداد shift از positional parameterها بیشتر باشد خطا گزارش می‌کند.",
+        "id": "shopt.shift_verbose",
+        "name": "shift_verbose",
+        "summary": "اگر تعداد shift از positional parameterها بیشتر باشد خطا گزارش می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "برای یافتن فایل source و . در صورت نیاز از PATH استفاده می‌کند.",
+        "id": "shopt.sourcepath",
+        "name": "sourcepath",
+        "summary": "برای یافتن فایل source و . در صورت نیاز از PATH استفاده می‌کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "file descriptorهای ساخته‌شده با redirection نوع {varname} را خودکار می‌بندد.",
+        "id": "shopt.varredir_close",
+        "name": "varredir_close",
+        "summary": "file descriptorهای ساخته‌شده با redirection نوع {varname} را خودکار می‌بندد.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "باعث می‌شود echo به‌صورت پیش‌فرض backslash escapeها را تفسیر کند.",
+        "id": "shopt.xpg_echo",
+        "name": "xpg_echo",
+        "summary": "باعث می‌شود echo به‌صورت پیش‌فرض backslash escapeها را تفسیر کند.",
+        "tags": [
+          "shopt",
+          "option"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک arithmetic expression را به‌عنوان shell command ارزیابی می‌کند.",
+        "id": "syntax.arithmetic-command",
+        "name": "arithmetic-command",
+        "summary": "یک arithmetic expression را به‌عنوان shell command ارزیابی می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "با match کردن word در برابر patternهای shell یک command list را انتخاب می‌کند.",
+        "id": "syntax.case",
+        "name": "case",
+        "summary": "با match کردن word در برابر patternهای shell یک command list را انتخاب می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Conditional expressionهای Bash را بدون word splitting معمول ارزیابی می‌کند.",
+        "id": "syntax.conditional-command",
+        "name": "conditional-command",
+        "summary": "Conditional expressionهای Bash را بدون word splitting معمول ارزیابی می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "روی wordها iteration انجام می‌دهد و هر مقدار را به متغیر می‌دهد.",
+        "id": "syntax.for",
+        "name": "for",
+        "summary": "روی wordها iteration انجام می‌دهد و هر مقدار را به متغیر می‌دهد.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک shell function تعریف می‌کند.",
+        "id": "syntax.function",
+        "name": "function",
+        "summary": "یک shell function تعریف می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک command list را در محیط shell فعلی اجرا می‌کند.",
+        "id": "syntax.group-command",
+        "name": "group-command",
+        "summary": "یک command list را در محیط shell فعلی اجرا می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "بر اساس exit status یک یا چند command list را شرطی اجرا می‌کند.",
+        "id": "syntax.if",
+        "name": "if",
+        "summary": "بر اساس exit status یک یا چند command list را شرطی اجرا می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "Quoting تعیین می‌کند کدام نویسه‌ها و expansionها معنای literal خود را حفظ کنند.",
         "id": "syntax.quoting",
         "name": "quoting",
@@ -2122,6 +4245,193 @@
         "tags": [
           "syntax",
           "quoting"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک منوی شماره‌دار تعاملی نمایش می‌دهد و word انتخاب‌شده را assign می‌کند.",
+        "id": "syntax.select",
+        "name": "select",
+        "summary": "یک منوی شماره‌دار تعاملی نمایش می‌دهد و word انتخاب‌شده را assign می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک command list را در subshell اجرا می‌کند.",
+        "id": "syntax.subshell",
+        "name": "subshell",
+        "summary": "یک command list را در subshell اجرا می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "تا زمانی که test موفق نشده باشد commandها را تکرار می‌کند.",
+        "id": "syntax.until",
+        "name": "until",
+        "summary": "تا زمانی که test موفق نشده باشد commandها را تکرار می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "تا زمانی که test موفق باشد commandها را تکرار می‌کند.",
+        "id": "syntax.while",
+        "name": "while",
+        "summary": "تا زمانی که test موفق باشد commandها را تکرار می‌کند.",
+        "tags": [
+          "syntax",
+          "compound-command"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "مسیر executable فعلی Bash را نشان می‌دهد.",
+        "id": "variable.BASH",
+        "name": "BASH",
+        "summary": "مسیر executable فعلی Bash را نشان می‌دهد.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
+        "id": "variable.BASHOPTS",
+        "name": "BASHOPTS",
+        "summary": "فهرست readonly و جداشده با colon از shopt optionهای فعال است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "PID پردازه فعلی Bash است.",
+        "id": "variable.BASHPID",
+        "name": "BASHPID",
+        "summary": "PID پردازه فعلی Bash است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Associative array مربوط به aliasهای فعلی shell است.",
+        "id": "variable.BASH_ALIASES",
+        "name": "BASH_ALIASES",
+        "summary": "Associative array مربوط به aliasهای فعلی shell است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array call stack شامل تعداد آرگومان frameهای فعال است.",
+        "id": "variable.BASH_ARGC",
+        "name": "BASH_ARGC",
+        "summary": "Array call stack شامل تعداد آرگومان frameهای فعال است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array مربوط به آرگومان‌های frameهای فعال call stack است.",
+        "id": "variable.BASH_ARGV",
+        "name": "BASH_ARGV",
+        "summary": "Array مربوط به آرگومان‌های frameهای فعال call stack است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیری برای خواندن یا تغییر مقداری است که Bash به‌عنوان $0 ارائه می‌کند.",
+        "id": "variable.BASH_ARGV0",
+        "name": "BASH_ARGV0",
+        "summary": "متغیری برای خواندن یا تغییر مقداری است که Bash به‌عنوان $0 ارائه می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Associative array مربوط به command hash table داخلی Bash است.",
+        "id": "variable.BASH_CMDS",
+        "name": "BASH_CMDS",
+        "summary": "Associative array مربوط به command hash table داخلی Bash است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command فعلی یا commandی که در آستانه اجراست را نشان می‌دهد.",
+        "id": "variable.BASH_COMMAND",
+        "name": "BASH_COMMAND",
+        "summary": "Command فعلی یا commandی که در آستانه اجراست را نشان می‌دهد.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "سطح compatibility مربوط به نسخه‌های قدیمی‌تر Bash را انتخاب می‌کند.",
+        "id": "variable.BASH_COMPAT",
+        "name": "BASH_COMPAT",
+        "summary": "سطح compatibility مربوط به نسخه‌های قدیمی‌تر Bash را انتخاب می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "startup file مربوط به Bash غیرتعاملی در شرایط مربوط است.",
+        "id": "variable.BASH_ENV",
+        "name": "BASH_ENV",
+        "summary": "startup file مربوط به Bash غیرتعاملی در شرایط مربوط است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array شماره‌خط‌های source متناظر با call stack است.",
+        "id": "variable.BASH_LINENO",
+        "name": "BASH_LINENO",
+        "summary": "Array شماره‌خط‌های source متناظر با call stack است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نتیجه آخرین regex match و groupهای captureشده را نگه می‌دارد.",
+        "id": "variable.BASH_REMATCH",
+        "name": "BASH_REMATCH",
+        "summary": "نتیجه آخرین regex match و groupهای captureشده را نگه می‌دارد.",
+        "tags": [
+          "variable",
+          "bash"
         ]
       },
       {
@@ -2137,6 +4447,171 @@
       },
       {
         "aliases": [],
+        "description": "سطح nesting مربوط به subshell در context فعلی است.",
+        "id": "variable.BASH_SUBSHELL",
+        "name": "BASH_SUBSHELL",
+        "summary": "سطح nesting مربوط به subshell در context فعلی است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array readonly شامل اجزای نسخه Bash در حال اجرا است.",
+        "id": "variable.BASH_VERSINFO",
+        "name": "BASH_VERSINFO",
+        "summary": "Array readonly شامل اجزای نسخه Bash در حال اجرا است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "رشته نسخه Bash در حال اجرا است.",
+        "id": "variable.BASH_VERSION",
+        "name": "BASH_VERSION",
+        "summary": "رشته نسخه Bash در حال اجرا است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array مربوط به directory stack فعلی است.",
+        "id": "variable.DIRSTACK",
+        "name": "DIRSTACK",
+        "summary": "Array مربوط به directory stack فعلی است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "زمان فعلی Unix epoch را با بخش اعشاری ارائه می‌کند.",
+        "id": "variable.EPOCHREALTIME",
+        "name": "EPOCHREALTIME",
+        "summary": "زمان فعلی Unix epoch را با بخش اعشاری ارائه می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "زمان فعلی Unix epoch را برحسب ثانیه ارائه می‌کند.",
+        "id": "variable.EPOCHSECONDS",
+        "name": "EPOCHSECONDS",
+        "summary": "زمان فعلی Unix epoch را برحسب ثانیه ارائه می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Array نام functionهای call stack فعلی است.",
+        "id": "variable.FUNCNAME",
+        "name": "FUNCNAME",
+        "summary": "Array نام functionهای call stack فعلی است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "شماره history مربوط به command فعلی است.",
+        "id": "variable.HISTCMD",
+        "name": "HISTCMD",
+        "summary": "شماره history مربوط به command فعلی است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "نام host فعلی را نشان می‌دهد.",
+        "id": "variable.HOSTNAME",
+        "name": "HOSTNAME",
+        "summary": "نام host فعلی را نشان می‌دهد.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "شماره خط فعلی در script یا shell function است.",
+        "id": "variable.LINENO",
+        "name": "LINENO",
+        "summary": "شماره خط فعلی در script یا shell function است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "توصیف canonical به سبک GNU از platform است.",
+        "id": "variable.MACHTYPE",
+        "name": "MACHTYPE",
+        "summary": "توصیف canonical به سبک GNU از platform است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "دایرکتوری کاری قبلی که توسط cd تنظیم شده است.",
+        "id": "variable.OLDPWD",
+        "name": "OLDPWD",
+        "summary": "دایرکتوری کاری قبلی که توسط cd تنظیم شده است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "مقدار آرگومان option فعلی که getopts پردازش می‌کند.",
+        "id": "variable.OPTARG",
+        "name": "OPTARG",
+        "summary": "مقدار آرگومان option فعلی که getopts پردازش می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "index آرگومان بعدی که getopts باید پردازش کند.",
+        "id": "variable.OPTIND",
+        "name": "OPTIND",
+        "summary": "index آرگومان بعدی که getopts باید پردازش کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "رشته توصیف سیستم‌عاملی است که Bash برای آن build شده است.",
+        "id": "variable.OSTYPE",
+        "name": "OSTYPE",
+        "summary": "رشته توصیف سیستم‌عاملی است که Bash برای آن build شده است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
         "description": "PIPESTATUS آرایه‌ای از exit statusهای آخرین pipeline foreground اجراشده است.",
         "id": "variable.PIPESTATUS",
         "name": "PIPESTATUS",
@@ -2144,6 +4619,105 @@
         "tags": [
           "variable",
           "PIPESTATUS"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "PID پردازه والد shell است.",
+        "id": "variable.PPID",
+        "name": "PPID",
+        "summary": "PID پردازه والد shell است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "Command یا arrayی است که Bash پیش از نمایش prompt اصلی اجرا می‌کند.",
+        "id": "variable.PROMPT_COMMAND",
+        "name": "PROMPT_COMMAND",
+        "summary": "Command یا arrayی است که Bash پیش از نمایش prompt اصلی اجرا می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "دایرکتوری کاری فعلی shell است.",
+        "id": "variable.PWD",
+        "name": "PWD",
+        "summary": "دایرکتوری کاری فعلی shell است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "در هر expansion یک عدد شبه‌تصادفی تولید می‌کند.",
+        "id": "variable.RANDOM",
+        "name": "RANDOM",
+        "summary": "در هر expansion یک عدد شبه‌تصادفی تولید می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "متغیر مقصد پیش‌فرض read است.",
+        "id": "variable.REPLY",
+        "name": "REPLY",
+        "summary": "متغیر مقصد پیش‌فرض read است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "ثانیه‌های سپری‌شده از شروع shell یا آخرین assignment است.",
+        "id": "variable.SECONDS",
+        "name": "SECONDS",
+        "summary": "ثانیه‌های سپری‌شده از شروع shell یا آخرین assignment است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "فهرست readonly و جداشده با colon از optionهای فعال set -o است.",
+        "id": "variable.SHELLOPTS",
+        "name": "SHELLOPTS",
+        "summary": "فهرست readonly و جداشده با colon از optionهای فعال set -o است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "سطح nesting shell است.",
+        "id": "variable.SHLVL",
+        "name": "SHLVL",
+        "summary": "سطح nesting shell است.",
+        "tags": [
+          "variable",
+          "bash"
+        ]
+      },
+      {
+        "aliases": [],
+        "description": "یک مقدار تصادفی ۳۲ بیتی ارائه می‌کند.",
+        "id": "variable.SRANDOM",
+        "name": "SRANDOM",
+        "summary": "یک مقدار تصادفی ۳۲ بیتی ارائه می‌کند.",
+        "tags": [
+          "variable",
+          "bash"
         ]
       }
     ]

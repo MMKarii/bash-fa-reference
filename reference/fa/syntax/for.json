@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "روی wordها iteration انجام می‌دهد و هر مقدار را به متغیر می‌دهد."
+  ],
+  "examples": [],
+  "id": "syntax.for",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "for",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "روی wordها iteration انجام می‌دهد و هر مقدار را به متغیر می‌دهد.",
+  "synopsis": "for name [ [in [words ...] ] ; ] do commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

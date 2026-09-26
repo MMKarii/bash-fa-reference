@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array containing function names in the current call stack."
+  ],
+  "examples": [],
+  "id": "variable.FUNCNAME",
+  "kind": "variable",
+  "language": "en",
+  "name": "FUNCNAME",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array containing function names in the current call stack.",
+  "synopsis": "$FUNCNAME",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

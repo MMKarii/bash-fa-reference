@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Process ID of the shell's parent process."
+  ],
+  "examples": [],
+  "id": "variable.PPID",
+  "kind": "variable",
+  "language": "en",
+  "name": "PPID",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Process ID of the shell's parent process.",
+  "synopsis": "$PPID",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "commandها را می‌خواند اما اجرا نمی‌کند و برای بررسی syntax مفید است."
+  ],
+  "examples": [],
+  "id": "option.noexec",
+  "kind": "option",
+  "language": "fa",
+  "name": "noexec",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "commandها را می‌خواند اما اجرا نمی‌کند و برای بررسی syntax مفید است.",
+  "synopsis": "set -o noexec | set +o noexec",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

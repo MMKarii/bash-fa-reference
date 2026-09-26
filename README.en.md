@@ -2,10 +2,23 @@
 
 ![Bash Professional Reference](docs/en/assets/brand-banner.webp)
 
-This repository turns the supplied Bash source articles into a maintainable professional reference covering shell fundamentals, filesystem work, pipelines, text processing, scripting, automation, system administration, DevOps, defensive security, debugging, portability, and shell comparison.
+Bashref 2.1.0 is an offline bilingual Bash reference CLI plus a generated Reference Guide and a 14-chapter Professional Guide.
 
-**Start reading:** [docs/en/index.md](docs/en/index.md)
+**Live English documentation:** https://mmkarii.github.io/bash-fa-reference/en/
 
-Repeated placeholder material is excluded. Bash-specific edge cases are cross-checked against the official GNU Bash documentation.
+## Quick start
 
-Documentation license: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+```bash
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
+bashref search quoting
+bashref builtin printf
+bashref option pipefail
+bashref shopt extglob
+bashref variable BASH_VERSION
+bashref stats
+bashref doctor
+```
+
+The structured reference contains 214 paired Persian/English records and works offline after installation. Technical Bash behavior is cross-checked primarily against the GNU Bash Reference Manual.
+
+Documentation license: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Software code is MIT-licensed.

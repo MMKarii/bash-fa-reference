@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "متغیرهای ایجاد یا تغییرکرده را به‌صورت خودکار برای export علامت می‌زند."
+  ],
+  "examples": [],
+  "id": "option.allexport",
+  "kind": "option",
+  "language": "fa",
+  "name": "allexport",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "متغیرهای ایجاد یا تغییرکرده را به‌صورت خودکار برای export علامت می‌زند.",
+  "synopsis": "set -o allexport | set +o allexport",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

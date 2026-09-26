@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "یک منوی شماره‌دار تعاملی نمایش می‌دهد و word انتخاب‌شده را assign می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.select",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "select",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "یک منوی شماره‌دار تعاملی نمایش می‌دهد و word انتخاب‌شده را assign می‌کند.",
+  "synopsis": "select name [in words ...]; do commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

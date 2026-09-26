@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Store full pathnames in BASH_SOURCE entries."
+  ],
+  "examples": [],
+  "id": "shopt.bash_source_fullpath",
+  "kind": "shopt",
+  "language": "en",
+  "name": "bash_source_fullpath",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Store full pathnames in BASH_SOURCE entries.",
+  "synopsis": "shopt -s bash_source_fullpath | shopt -u bash_source_fullpath",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Command فعلی یا commandی که در آستانه اجراست را نشان می‌دهد."
+  ],
+  "examples": [],
+  "id": "variable.BASH_COMMAND",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_COMMAND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Command فعلی یا commandی که در آستانه اجراست را نشان می‌دهد.",
+  "synopsis": "$BASH_COMMAND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

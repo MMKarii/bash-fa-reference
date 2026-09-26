@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Do not search PATH when completing an empty command line."
+  ],
+  "examples": [],
+  "id": "shopt.no_empty_cmd_completion",
+  "kind": "shopt",
+  "language": "en",
+  "name": "no_empty_cmd_completion",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Do not search PATH when completing an empty command line.",
+  "synopsis": "shopt -s no_empty_cmd_completion | shopt -u no_empty_cmd_completion",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

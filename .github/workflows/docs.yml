@@ -45,7 +45,8 @@ jobs:
       - name: Generate validate and test Bashref product
         run: |
           python tools/validate_reference.py
-          python tools/build_reference.py
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
+          python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
           git diff --exit-code -- src/bashref/data
           python tools/build_docs_reference.py
@@ -64,7 +65,8 @@ jobs:
           python -m venv "$SMOKE"
           WHEEL="$(ls dist/bashref-*.whl)"
           "$SMOKE/bin/pip" install --no-deps "$WHEEL"
-          test "$("$SMOKE/bin/bashref" --version)" = "bashref 2.0.0"
+          VERSION="$(python -c 'import bashref; print(bashref.__version__)')"
+          test "$("$SMOKE/bin/bashref" --version)" = "bashref $VERSION"
           "$SMOKE/bin/bashref" --lang en search printf | grep -Fq 'printf'
           "$SMOKE/bin/bashref" --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
 
@@ -110,11 +112,38 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if test -f release/v2.0.0.json; then
-            mkdir -p site/v2.0
-            rm -rf site/v2.0/fa site/v2.0/en
-            cp -a site/fa site/v2.0/fa
-            cp -a site/en site/v2.0/en
+          V2_DIR="$RUNNER_TEMP/bashref-v2.0"
+          git worktree add --detach "$V2_DIR" v2.0.0
+          trap 'git worktree remove --force "$V2_DIR" >/dev/null 2>&1 || true' EXIT
+          (
+            cd "$V2_DIR"
+            python tools/build_docs_reference.py
+            mkdocs build --strict -f mkdocs.fa.yml -d "$GITHUB_WORKSPACE/site/v2.0/fa"
+            mkdocs build --strict -f mkdocs.en.yml -d "$GITHUB_WORKSPACE/site/v2.0/en"
+          )
+
+      - name: Build stable v2.1 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! test -f release/v2.1.0.json; then
+            exit 0
+          fi
+          if git rev-parse --verify --quiet refs/tags/v2.1.0 >/dev/null; then
+            V21_DIR="$RUNNER_TEMP/bashref-v2.1"
+            git worktree add --detach "$V21_DIR" v2.1.0
+            trap 'git worktree remove --force "$V21_DIR" >/dev/null 2>&1 || true' EXIT
+            (
+              cd "$V21_DIR"
+              python tools/build_docs_reference.py
+              mkdocs build --strict -f mkdocs.fa.yml -d "$GITHUB_WORKSPACE/site/v2.1/fa"
+              mkdocs build --strict -f mkdocs.en.yml -d "$GITHUB_WORKSPACE/site/v2.1/en"
+            )
+          else
+            mkdir -p site/v2.1
+            rm -rf site/v2.1/fa site/v2.1/en
+            cp -a site/fa site/v2.1/fa
+            cp -a site/en site/v2.1/en
           fi
 
       - name: Publish social preview
@@ -149,6 +178,10 @@ jobs:
           test -f site/v2.0/en/index.html
           test -f site/v2.0/fa/reference/index.html
           test -f site/v2.0/en/reference/index.html
+          test -f site/v2.1/fa/index.html
+          test -f site/v2.1/en/index.html
+          test -f site/v2.1/fa/reference/index.html
+          test -f site/v2.1/en/reference/index.html
           test -f site/fa/14-debugging-testing-portability/index.html
           test -f site/en/14-debugging-testing-portability/index.html
           test -f site/fa/glossary/index.html
@@ -166,10 +199,12 @@ jobs:
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/' site/en/index.html
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/fa/03-variables-expansion-quoting/' site/fa/03-variables-expansion-quoting/index.html
           grep -Fq 'https://mmkarii.github.io/bash-fa-reference/en/03-variables-expansion-quoting/' site/en/03-variables-expansion-quoting/index.html
-          grep -Fq 'Bashref 2.0.0' site/en/index.html
-          grep -Fq 'Bashref 2.0.0' site/fa/index.html
+          grep -Fq 'Bashref 2.1.0' site/en/index.html
+          grep -Fq 'Bashref 2.1.0' site/fa/index.html
           grep -Fq 'Bashref 2.0.0' site/v2.0/en/index.html
           grep -Fq 'Bashref 2.0.0' site/v2.0/fa/index.html
+          grep -Fq 'Bashref 2.1.0' site/v2.1/en/index.html
+          grep -Fq 'Bashref 2.1.0' site/v2.1/fa/index.html
           grep -Fq 'Bashref' site/index.html
           file site/assets/social-preview-v1.jpg | grep -Eq '1280 ?x ?640'
 

@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Command currently executing or about to execute."
+  ],
+  "examples": [],
+  "id": "variable.BASH_COMMAND",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_COMMAND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Command currently executing or about to execute.",
+  "synopsis": "$BASH_COMMAND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

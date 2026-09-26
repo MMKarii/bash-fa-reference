@@ -14,7 +14,7 @@ _KIND_DIR = {
     "example": "examples",
 }
 _ID_RE = re.compile(r"^([a-z][a-z0-9-]*)\.([A-Za-z0-9][A-Za-z0-9_-]*)$")
-_SUBCOMMANDS = "search show builtin syntax expansion option shopt variable example list lang man docs completion"
+_SUBCOMMANDS = "search show builtin syntax expansion option shopt variable example list lang man docs completion stats doctor"
 
 
 def docs_url(record: dict | None, language: str) -> str:

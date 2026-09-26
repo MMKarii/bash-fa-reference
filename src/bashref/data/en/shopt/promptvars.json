@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Perform shell expansions on prompt strings."
+  ],
+  "examples": [],
+  "id": "shopt.promptvars",
+  "kind": "shopt",
+  "language": "en",
+  "name": "promptvars",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Perform shell expansions on prompt strings.",
+  "synopsis": "shopt -s promptvars | shopt -u promptvars",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "روی promptها expansionهای shell را انجام می‌دهد."
+  ],
+  "examples": [],
+  "id": "shopt.promptvars",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "promptvars",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "روی promptها expansionهای shell را انجام می‌دهد.",
+  "synopsis": "shopt -s promptvars | shopt -u promptvars",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

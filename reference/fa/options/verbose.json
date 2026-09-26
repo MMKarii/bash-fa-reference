@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "خطوط ورودی shell را هنگام خوانده‌شدن چاپ می‌کند."
+  ],
+  "examples": [],
+  "id": "option.verbose",
+  "kind": "option",
+  "language": "fa",
+  "name": "verbose",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "خطوط ورودی shell را هنگام خوانده‌شدن چاپ می‌کند.",
+  "synopsis": "set -o verbose | set +o verbose",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

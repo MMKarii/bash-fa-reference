@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "تا زمانی که test موفق نشده باشد commandها را تکرار می‌کند."
+  ],
+  "examples": [],
+  "id": "syntax.until",
+  "kind": "syntax",
+  "language": "fa",
+  "name": "until",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "تا زمانی که test موفق نشده باشد commandها را تکرار می‌کند.",
+  "synopsis": "until test-commands; do consequent-commands; done",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}

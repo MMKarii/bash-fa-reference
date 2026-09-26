@@ -58,3 +58,33 @@ def test_stale_pages_marker_is_reported():
     release, names = complete_release()
     issues = verify_release(release, checksum_text(names), lambda url: "Bashref 1.0.0")
     assert any("release marker" in issue for issue in issues)
+
+
+def test_v21_release_checks_v21_snapshot_paths():
+    version = "2.1.0"
+    names = [
+        f"bashref-{version}-py3-none-any.whl",
+        f"bashref-{version}.tar.gz",
+        f"bashref_{version}_all.deb",
+        f"bashref-{version}-1.noarch.rpm",
+        f"bashref-{version}-portable.tar.gz",
+        f"bashref-{version}-manpages.tar.gz",
+        f"bashref-{version}-completions.tar.gz",
+        f"bashref-{version}-docs.tar.gz",
+        "bashref.rb",
+        "SHA256SUMS",
+    ]
+    release = {
+        "tag_name": "v2.1.0",
+        "draft": True,
+        "assets": [{"name": name} for name in names],
+    }
+    seen = []
+
+    def fetch(url: str) -> str:
+        seen.append(url)
+        return "<html>Bashref 2.1.0</html>"
+
+    assert verify_release(release, checksum_text(names), fetch) == []
+    assert any("/v2.1/en/" in url for url in seen)
+    assert any("/v2.1/fa/" in url for url in seen)

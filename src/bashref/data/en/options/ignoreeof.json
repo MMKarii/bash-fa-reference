@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Prevent an interactive shell from exiting on a single EOF."
+  ],
+  "examples": [],
+  "id": "option.ignoreeof",
+  "kind": "option",
+  "language": "en",
+  "name": "ignoreeof",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Prevent an interactive shell from exiting on a single EOF.",
+  "synopsis": "set -o ignoreeof | set +o ignoreeof",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

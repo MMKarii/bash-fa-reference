@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Command or array Bash executes before displaying each primary prompt."
+  ],
+  "examples": [],
+  "id": "variable.PROMPT_COMMAND",
+  "kind": "variable",
+  "language": "en",
+  "name": "PROMPT_COMMAND",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Command or array Bash executes before displaying each primary prompt.",
+  "synopsis": "$PROMPT_COMMAND",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

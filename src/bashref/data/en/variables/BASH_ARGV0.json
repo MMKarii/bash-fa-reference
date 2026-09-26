@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Variable that gets or sets the value Bash exposes as $0."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ARGV0",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_ARGV0",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Variable that gets or sets the value Bash exposes as $0.",
+  "synopsis": "$BASH_ARGV0",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

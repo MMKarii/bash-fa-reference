@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Treat a directory name entered as a command as an implicit cd in interactive shells."
+  ],
+  "examples": [],
+  "id": "shopt.autocd",
+  "kind": "shopt",
+  "language": "en",
+  "name": "autocd",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Treat a directory name entered as a command as an implicit cd in interactive shells.",
+  "synopsis": "shopt -s autocd | shopt -u autocd",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

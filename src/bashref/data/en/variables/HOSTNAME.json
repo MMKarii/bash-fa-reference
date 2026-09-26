@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Name of the current host as maintained by Bash."
+  ],
+  "examples": [],
+  "id": "variable.HOSTNAME",
+  "kind": "variable",
+  "language": "en",
+  "name": "HOSTNAME",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Name of the current host as maintained by Bash.",
+  "synopsis": "$HOSTNAME",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

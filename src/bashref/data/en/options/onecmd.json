@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Exit after reading and executing one command."
+  ],
+  "examples": [],
+  "id": "option.onecmd",
+  "kind": "option",
+  "language": "en",
+  "name": "onecmd",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Exit after reading and executing one command.",
+  "synopsis": "set -o onecmd | set +o onecmd",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

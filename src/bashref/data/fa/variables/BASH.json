@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "مسیر executable فعلی Bash را نشان می‌دهد."
+  ],
+  "examples": [],
+  "id": "variable.BASH",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "مسیر executable فعلی Bash را نشان می‌دهد.",
+  "synopsis": "$BASH",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

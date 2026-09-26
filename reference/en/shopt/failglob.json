@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make unmatched pathname-expansion patterns produce an expansion error."
+  ],
+  "examples": [],
+  "id": "shopt.failglob",
+  "kind": "shopt",
+  "language": "en",
+  "name": "failglob",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Make unmatched pathname-expansion patterns produce an expansion error.",
+  "synopsis": "shopt -s failglob | shopt -u failglob",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

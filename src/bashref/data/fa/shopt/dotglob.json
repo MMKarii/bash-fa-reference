@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "فایل‌هایی که با . شروع می‌شوند را در نتیجه globbing وارد می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.dotglob",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "dotglob",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "فایل‌هایی که با . شروع می‌شوند را در نتیجه globbing وارد می‌کند.",
+  "synopsis": "shopt -s dotglob | shopt -u dotglob",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

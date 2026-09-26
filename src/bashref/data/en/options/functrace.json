@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Make DEBUG and RETURN traps inherited by functions and command substitutions."
+  ],
+  "examples": [],
+  "id": "option.functrace",
+  "kind": "option",
+  "language": "en",
+  "name": "functrace",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Make DEBUG and RETURN traps inherited by functions and command substitutions.",
+  "synopsis": "set -o functrace | set +o functrace",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

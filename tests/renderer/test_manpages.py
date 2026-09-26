@@ -33,5 +33,12 @@ def test_persian_text_is_preserved():
 def test_cli_manpage_uses_parseable_th_date():
     from tools.build_manpages import render_cli_manpage
     first = render_cli_manpage().splitlines()[0]
-    assert '"September 25, 2026"' in first
-    assert '"Bashref 2.0.0"' in first
+    assert '"September 26, 2026"' in first
+    assert '"Bashref 2.1.0"' in first
+
+
+def test_cli_manpage_lists_diagnostic_commands():
+    from tools.build_manpages import render_cli_manpage
+    text = render_cli_manpage()
+    assert "stats" in text
+    assert "doctor" in text

@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "وقتی job control غیرفعال است اجازه می‌دهد آخرین command pipeline در shell جاری اجرا شود."
+  ],
+  "examples": [],
+  "id": "shopt.lastpipe",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "lastpipe",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "وقتی job control غیرفعال است اجازه می‌دهد آخرین command pipeline در shell جاری اجرا شود.",
+  "synopsis": "shopt -s lastpipe | shopt -u lastpipe",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

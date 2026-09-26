@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Startup file used by non-interactive Bash shells when applicable."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ENV",
+  "kind": "variable",
+  "language": "en",
+  "name": "BASH_ENV",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Startup file used by non-interactive Bash shells when applicable.",
+  "synopsis": "$BASH_ENV",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

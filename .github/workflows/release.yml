@@ -10,18 +10,19 @@ permissions:
   contents: write
 
 concurrency:
-  group: bashref-v2-release
+  group: bashref-v2.1-release
   cancel-in-progress: false
 
 jobs:
-  publish-v2:
-    name: release / v2.0.0
+  publish-v2-1:
+    name: release / v2.1.0
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      VERSION: "2.0.0"
-      TAG: "v2.0.0"
+      VERSION: "2.1.0"
+      TAG: "v2.1.0"
+      SNAPSHOT: "v2.1"
       BASE_URL: "https://mmkarii.github.io/bash-fa-reference"
     steps:
       - uses: actions/checkout@v7
@@ -38,13 +39,22 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if ! test -f release/v2.0.0.json; then
+          if ! test -f release/v2.1.0.json; then
             echo "publish=no" >> "$GITHUB_OUTPUT"
-            echo "No v2 release marker in this revision."
+            echo "No v2.1 release marker in this revision."
             exit 0
           fi
 
           python tools/release_version.py "$TAG" "$VERSION"
+
+          if gh release view "$TAG" --json isDraft >/tmp/bashref-release-state.json 2>/dev/null; then
+            IS_DRAFT="$(python -c 'import json; print(str(json.load(open("/tmp/bashref-release-state.json"))["isDraft"]).lower())')"
+            if test "$IS_DRAFT" = "false"; then
+              echo "publish=no" >> "$GITHUB_OUTPUT"
+              echo "Release $TAG is already published."
+              exit 0
+            fi
+          fi
 
           RELEASE_REF="$GITHUB_SHA"
           if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
@@ -63,15 +73,6 @@ jobs:
             fi
           fi
 
-          if gh release view "$TAG" --json isDraft >/tmp/bashref-release-state.json 2>/dev/null; then
-            IS_DRAFT="$(python -c 'import json; print(str(json.load(open("/tmp/bashref-release-state.json"))["isDraft"]).lower())')"
-            if test "$IS_DRAFT" = "false"; then
-              echo "publish=no" >> "$GITHUB_OUTPUT"
-              echo "Release $TAG is already published from this revision."
-              exit 0
-            fi
-          fi
-
           echo "publish=yes" >> "$GITHUB_OUTPUT"
           echo "release_ref=$RELEASE_REF" >> "$GITHUB_OUTPUT"
 
@@ -86,7 +87,7 @@ jobs:
         run: |
           set -euo pipefail
           git checkout --detach "$RELEASE_REF"
-          test -f release/v2.0.0.json
+          test -f release/v2.1.0.json
           python tools/release_version.py "$TAG" "$VERSION"
 
       - name: Install build dependencies
@@ -102,7 +103,7 @@ jobs:
         run: |
           set -euo pipefail
           python tools/validate_reference.py
-          python tools/build_reference.py
+          python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
           python tools/build_docs_reference.py
           python tools/build_manpages.py
@@ -191,14 +192,14 @@ jobs:
           gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
           python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json
 
-      - name: Wait for v2 Pages deployment
+      - name: Wait for v2.1 Pages deployment
         if: steps.state.outputs.publish == 'yes'
         shell: bash
         run: |
           set -euo pipefail
           READY=0
           for attempt in $(seq 1 36); do
-            if curl -fsS "$BASE_URL/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/fa/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/v2.0/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/v2.0/fa/" | grep -Fq "Bashref $VERSION"; then
+            if curl -fsS "$BASE_URL/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/fa/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/$SNAPSHOT/en/" | grep -Fq "Bashref $VERSION"               && curl -fsS "$BASE_URL/$SNAPSHOT/fa/" | grep -Fq "Bashref $VERSION"; then
               READY=1
               break
             fi
@@ -223,7 +224,7 @@ jobs:
         if: always() && steps.state.outputs.publish == 'yes'
         uses: actions/upload-artifact@v4
         with:
-          name: bashref-v2-release-evidence
+          name: bashref-v2.1-release-evidence
           path: |
             dist/
             release.json

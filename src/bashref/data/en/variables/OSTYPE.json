@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "String describing the operating system Bash was built for."
+  ],
+  "examples": [],
+  "id": "variable.OSTYPE",
+  "kind": "variable",
+  "language": "en",
+  "name": "OSTYPE",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "String describing the operating system Bash was built for.",
+  "synopsis": "$OSTYPE",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

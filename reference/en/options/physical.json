@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Use physical directory paths instead of following logical symlink paths for cd/pwd behavior."
+  ],
+  "examples": [],
+  "id": "option.physical",
+  "kind": "option",
+  "language": "en",
+  "name": "physical",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Use physical directory paths instead of following logical symlink paths for cd/pwd behavior.",
+  "synopsis": "set -o physical | set +o physical",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

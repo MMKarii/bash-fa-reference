@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Use PATH to find files for source and . when needed."
+  ],
+  "examples": [],
+  "id": "shopt.sourcepath",
+  "kind": "shopt",
+  "language": "en",
+  "name": "sourcepath",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Use PATH to find files for source and . when needed.",
+  "synopsis": "shopt -s sourcepath | shopt -u sourcepath",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

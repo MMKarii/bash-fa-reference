@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Array call stack شامل تعداد آرگومان frameهای فعال است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_ARGC",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_ARGC",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Array call stack شامل تعداد آرگومان frameهای فعال است.",
+  "synopsis": "$BASH_ARGC",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

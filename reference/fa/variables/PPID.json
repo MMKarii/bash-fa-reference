@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "PID پردازه والد shell است."
+  ],
+  "examples": [],
+  "id": "variable.PPID",
+  "kind": "variable",
+  "language": "fa",
+  "name": "PPID",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "PID پردازه والد shell است.",
+  "synopsis": "$PPID",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

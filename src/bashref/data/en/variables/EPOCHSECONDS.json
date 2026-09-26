@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Current Unix epoch time in seconds."
+  ],
+  "examples": [],
+  "id": "variable.EPOCHSECONDS",
+  "kind": "variable",
+  "language": "en",
+  "name": "EPOCHSECONDS",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "Current Unix epoch time in seconds.",
+  "synopsis": "$EPOCHSECONDS",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

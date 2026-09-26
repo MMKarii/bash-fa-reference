@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Pathname expansion یا globbing را غیرفعال می‌کند."
+  ],
+  "examples": [],
+  "id": "option.noglob",
+  "kind": "option",
+  "language": "fa",
+  "name": "noglob",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Pathname expansion یا globbing را غیرفعال می‌کند.",
+  "synopsis": "set -o noglob | set +o noglob",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

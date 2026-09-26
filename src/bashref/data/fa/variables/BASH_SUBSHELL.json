@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "سطح nesting مربوط به subshell در context فعلی است."
+  ],
+  "examples": [],
+  "id": "variable.BASH_SUBSHELL",
+  "kind": "variable",
+  "language": "fa",
+  "name": "BASH_SUBSHELL",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Bash-Variables"
+  ],
+  "summary": "سطح nesting مربوط به subshell در context فعلی است.",
+  "synopsis": "$BASH_SUBSHELL",
+  "tags": [
+    "variable",
+    "bash"
+  ]
+}

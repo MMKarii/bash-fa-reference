@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "اگر تعداد shift از positional parameterها بیشتر باشد خطا گزارش می‌کند."
+  ],
+  "examples": [],
+  "id": "shopt.shift_verbose",
+  "kind": "shopt",
+  "language": "fa",
+  "name": "shift_verbose",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "اگر تعداد shift از positional parameterها بیشتر باشد خطا گزارش می‌کند.",
+  "synopsis": "shopt -s shift_verbose | shopt -u shift_verbose",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

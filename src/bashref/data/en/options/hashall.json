@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Remember command locations as commands are looked up."
+  ],
+  "examples": [],
+  "id": "option.hashall",
+  "kind": "option",
+  "language": "en",
+  "name": "hashall",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Remember command locations as commands are looked up.",
+  "synopsis": "set -o hashall | set +o hashall",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

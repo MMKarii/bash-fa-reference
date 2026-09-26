@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Try alias expansion when programmable completion cannot find a completion specification."
+  ],
+  "examples": [],
+  "id": "shopt.progcomp_alias",
+  "kind": "shopt",
+  "language": "en",
+  "name": "progcomp_alias",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Try alias expansion when programmable completion cannot find a completion specification.",
+  "synopsis": "shopt -s progcomp_alias | shopt -u progcomp_alias",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

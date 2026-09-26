@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Use Emacs-style Readline command-line editing."
+  ],
+  "examples": [],
+  "id": "option.emacs",
+  "kind": "option",
+  "language": "en",
+  "name": "emacs",
+  "related": [
+    "builtin.set"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+  ],
+  "summary": "Use Emacs-style Readline command-line editing.",
+  "synopsis": "set -o emacs | set +o emacs",
+  "tags": [
+    "option",
+    "set"
+  ]
+}

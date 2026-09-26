@@ -1,0 +1,23 @@
+{
+  "aliases": [],
+  "description": [
+    "Warn when a monitored mail file has been accessed since the last check."
+  ],
+  "examples": [],
+  "id": "shopt.mailwarn",
+  "kind": "shopt",
+  "language": "en",
+  "name": "mailwarn",
+  "related": [
+    "builtin.shopt"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin"
+  ],
+  "summary": "Warn when a monitored mail file has been accessed since the last check.",
+  "synopsis": "shopt -s mailwarn | shopt -u mailwarn",
+  "tags": [
+    "shopt",
+    "option"
+  ]
+}

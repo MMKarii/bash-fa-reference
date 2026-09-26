@@ -1,19 +1,19 @@
 # Install Bashref
 
-Bashref 2.0.0 is an offline bilingual Bash reference CLI.
+Bashref 2.1.0 is an offline bilingual Bash reference CLI.
 
 ## Recommended installation
 
 Install the official wheel directly from the GitHub Release:
 
 ```bash
-pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+pipx install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
 Or with pip:
 
 ```bash
-python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.0.0/bashref-2.0.0-py3-none-any.whl
+python -m pip install https://github.com/MMKarii/bash-fa-reference/releases/download/v2.1.0/bashref-2.1.0-py3-none-any.whl
 ```
 
 For a checked-out source tree:

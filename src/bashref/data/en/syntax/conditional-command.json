@@ -1,0 +1,21 @@
+{
+  "aliases": [],
+  "description": [
+    "Evaluate Bash conditional expressions without ordinary word splitting."
+  ],
+  "examples": [],
+  "id": "syntax.conditional-command",
+  "kind": "syntax",
+  "language": "en",
+  "name": "conditional-command",
+  "related": [],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html#Shell-Compound-Commands"
+  ],
+  "summary": "Evaluate Bash conditional expressions without ordinary word splitting.",
+  "synopsis": "[[ expression ]]",
+  "tags": [
+    "syntax",
+    "compound-command"
+  ]
+}
