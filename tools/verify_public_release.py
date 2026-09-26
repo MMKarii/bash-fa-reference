@@ -68,12 +68,14 @@ def verify_release(
             issues.append(f"SHA256SUMS does not list asset: {name}")
 
     marker = f"Bashref {version}"
+    parts = version.split(".")
+    snapshot = f"v{parts[0]}.{parts[1]}"
     endpoints = [
         f"{base_url}/",
         f"{base_url}/en/",
         f"{base_url}/fa/",
-        f"{base_url}/v2.0/en/",
-        f"{base_url}/v2.0/fa/",
+        f"{base_url}/{snapshot}/en/",
+        f"{base_url}/{snapshot}/fa/",
     ]
     for url in endpoints:
         try:
@@ -87,7 +89,7 @@ def verify_release(
 
 
 def _fetch_text(url: str) -> str:
-    request = urllib.request.Request(url, headers={"User-Agent": "bashref-release-verifier/2.0"})
+    request = urllib.request.Request(url, headers={"User-Agent": "bashref-release-verifier/2.1"})
     with urllib.request.urlopen(request, timeout=20) as response:
         return response.read().decode("utf-8", errors="replace")
 

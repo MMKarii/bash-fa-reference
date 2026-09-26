@@ -2,7 +2,7 @@
 
 <img class="hero-banner" src="assets/brand-banner.webp" alt="بنر مرجع حرفه‌ای Bash">
 
-**Bashref 2.0.0** یک CLI آفلاین، Reference Guide ساختاریافته دوزبانه، man pageهای سیستمی، بسته‌های قابل دانلود و Professional Guide چهارده‌فصلی را در یک پروژه یکپارچه می‌کند.
+**Bashref 2.1.0** یک CLI آفلاین، Reference Guide ساختاریافته دوزبانه، man pageهای سیستمی، بسته‌های قابل دانلود و Professional Guide چهارده‌فصلی را در یک پروژه یکپارچه می‌کند.
 
 این پروژه **فرمان‌های روزمره، Pipeline و Redirection، پردازش متن، اسکریپت‌نویسی، خودکارسازی، مدیریت سیستم، DevOps، امنیت دفاعی و Debugging** را پوشش می‌دهد. رفتارهای ویژه Bash با [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html) تطبیق داده می‌شوند.
 
