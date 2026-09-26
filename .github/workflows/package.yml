@@ -27,7 +27,7 @@ jobs:
           python tools/build_completions.py
           python -m pytest tests/packaging -q
           python -m build
-          python tools/verify_python_artifacts.py $VERSION dist/bashref-$VERSION-py3-none-any.whl dist/bashref-$VERSION.tar.gz
+          python tools/verify_python_artifacts.py "$VERSION" dist/bashref-$VERSION-py3-none-any.whl dist/bashref-$VERSION.tar.gz
       - uses: actions/upload-artifact@v4
         with:
           name: bashref-python-artifacts
@@ -49,13 +49,13 @@ jobs:
           python tools/build_completions.py
           python tools/build_manpages.py
           python -m build
-          python tools/build_deb.py dist/bashref-$VERSION-py3-none-any.whl --version $VERSION
-          python tools/build_rpm.py --version $VERSION
-          python tools/build_release_assets.py --version $VERSION
+          python tools/build_deb.py dist/bashref-$VERSION-py3-none-any.whl --version "$VERSION"
+          python tools/build_rpm.py --version "$VERSION"
+          python tools/build_release_assets.py --version "$VERSION"
           python tools/write_checksums.py dist/* --output dist/SHA256SUMS
-          test -s dist/bashref_$VERSION_all.deb
+          test -s dist/bashref_${VERSION}_all.deb
           ls dist/bashref-$VERSION-1*.noarch.rpm
-          sudo dpkg -i dist/bashref_$VERSION_all.deb
+          sudo dpkg -i dist/bashref_${VERSION}_all.deb
           test "$(bashref --version)" = "bashref $VERSION"
           bashref --lang en --format json builtin printf | grep -Fq '"id": "builtin.printf"'
           mkdir -p "$HOME/.config/bashref"
