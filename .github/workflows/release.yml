@@ -189,8 +189,16 @@ jobs:
           else
             gh release create "$TAG" "${ASSETS[@]}"               --draft               --title "Bashref $VERSION"               --notes-file ".github/release-notes/$TAG.md"
           fi
-          gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
-          python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json
+          FOUND=0
+          for attempt in $(seq 1 15); do
+            gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
+            if python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json; then
+              FOUND=1
+              break
+            fi
+            sleep 2
+          done
+          test "$FOUND" = "1"
 
       - name: Wait for v2.1 Pages deployment
         if: steps.state.outputs.publish == 'yes'
@@ -210,8 +218,16 @@ jobs:
       - name: Verify draft release and public documentation
         if: steps.state.outputs.publish == 'yes'
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
-          python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json
+          FOUND=0
+          for attempt in $(seq 1 15); do
+            gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" > "$RUNNER_TEMP/releases.json"
+            if python "$RUNNER_TEMP/select_release.py" "$RUNNER_TEMP/releases.json" "$TAG" release.json; then
+              FOUND=1
+              break
+            fi
+            sleep 2
+          done
+          test "$FOUND" = "1"
           python tools/verify_public_release.py             --release-json release.json             --checksums dist/SHA256SUMS             --base-url "$BASE_URL"
 
       - name: Publish verified release
