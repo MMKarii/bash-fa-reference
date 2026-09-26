@@ -1,7 +1,144 @@
-:root { --md-primary-fg-color: #07130f; --md-accent-fg-color: #00d66b; }
-.md-header, .md-tabs { background: linear-gradient(90deg,#06110d,#0a2018); }
-.md-typeset h1,.md-typeset h2,.md-typeset h3 { font-weight: 800; }
-.md-typeset code { direction:ltr; unicode-bidi:embed; }
-.md-typeset pre code { direction:ltr; text-align:left; }
-[dir="rtl"] .md-typeset table { direction:rtl; }
-.hero-banner { width:100%; border-radius:14px; box-shadow:0 18px 40px rgba(0,0,0,.24); }
+:root {
+  --bashref-navy: #1e3550;
+  --bashref-navy-dark: #102438;
+  --bashref-navy-deep: #0b1825;
+  --bashref-link: #1f5d8e;
+  --bashref-link-hover: #a84822;
+  --bashref-paper: #ffffff;
+  --bashref-sky: #e6eef5;
+  --bashref-soft: #f3f6f8;
+  --bashref-line: #b7c5d1;
+  --bashref-ink: #202830;
+  --bashref-gold: #e7a33c;
+  --md-primary-fg-color: #1e3550;
+  --md-primary-fg-color--light: #315978;
+  --md-primary-fg-color--dark: #102438;
+  --md-accent-fg-color: #1f5d8e;
+}
+
+html, body { background: var(--bashref-sky); }
+body { color: var(--bashref-ink); font-family: Arial, Helvetica, sans-serif; }
+a { color: var(--bashref-link); }
+a:hover { color: var(--bashref-link-hover); }
+
+.bashref-utilitybar {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 .8rem;
+  background: var(--bashref-navy-deep);
+  border-bottom: 1px solid #07111b;
+  color: #c7d3dd;
+  font-size: .68rem;
+}
+.bashref-utilitybar__links, .bashref-utilitybar__lang { display: flex; align-items: center; gap: 1rem; }
+.bashref-utilitybar a { color: #d9e4ec; text-decoration: none; }
+.bashref-utilitybar a:hover { color: #fff; text-decoration: underline; }
+
+.md-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(#2c4f72, #1e3a57);
+  border-bottom: 1px solid #0e2335;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.md-header__inner { min-height: 3.25rem; }
+.md-header__title { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em; }
+.md-header__button.md-logo { border: 2px solid rgba(255,255,255,.75); border-radius: 50%; padding: .3rem; }
+.md-search__form { border: 1px solid #10263a; border-radius: 2px; background: #fff; }
+.md-search__input { color: #1f2933; }
+.md-search__input::placeholder { color: #657481; }
+
+.md-tabs {
+  background: #f7f9fb;
+  color: #173d60;
+  border-bottom: 1px solid #9fb0be;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}
+.md-tabs__link {
+  margin-top: 0;
+  padding: .78rem .9rem;
+  color: #173d60;
+  font-size: .72rem;
+  font-weight: 700;
+  opacity: 1;
+  border-left: 1px solid #d5dee5;
+}
+.md-tabs__item:last-child .md-tabs__link { border-right: 1px solid #d5dee5; }
+.md-tabs__link:hover, .md-tabs__link--active { background: #e6edf3; color: #0f3454; }
+
+.md-main { background: linear-gradient(#dbe7f0 0, #edf3f7 10rem, #edf3f7 100%); }
+.md-main__inner { max-width: 73rem; margin-top: 1.1rem; }
+.md-content {
+  background: var(--bashref-paper);
+  border: 1px solid var(--bashref-line);
+  box-shadow: 0 2px 5px rgba(42,64,82,.12);
+  min-width: 0;
+}
+.md-content__inner { margin: 0; padding: 1.15rem 1.55rem 2rem; }
+.md-sidebar { background: transparent; }
+.md-sidebar__scrollwrap { background: #f4f7f9; border: 1px solid #c5d0d8; }
+.md-nav__title { color: #234b70; font-weight: 700; }
+.md-nav__link { color: #35556e; }
+.md-nav__link:hover, .md-nav__link--active { color: var(--bashref-link-hover); }
+
+.md-typeset { font-size: .78rem; line-height: 1.58; }
+.md-typeset h1 {
+  margin: 0 0 .7rem;
+  color: #1d3852;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.md-typeset h2 {
+  margin-top: 1.65rem;
+  padding-bottom: .28rem;
+  border-bottom: 1px solid #c7d3dc;
+  color: #244b70;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.md-typeset h3 { color: #2a567d; font-size: 1rem; font-weight: 700; }
+.md-typeset a { color: var(--bashref-link); }
+.md-typeset a:hover { color: var(--bashref-link-hover); }
+.md-typeset code { direction: ltr; unicode-bidi: embed; color: #203a4c; background: #edf2f5; border: 1px solid #d5dfe6; border-radius: 2px; box-shadow: none; }
+.md-typeset pre { border: 1px solid #0b1721; border-radius: 2px; box-shadow: none; }
+.md-typeset pre code { direction: ltr; text-align: left; border: 0; background: #101820; color: #dbe5ec; }
+.md-typeset table:not([class]) { border: 1px solid #b9c6d0; border-radius: 0; box-shadow: none; }
+.md-typeset table:not([class]) th { background: #e6edf3; color: #183d5d; }
+.md-typeset table:not([class]) td { border-top: 1px solid #d5dee5; }
+.md-typeset .admonition, .md-typeset details { border-radius: 2px; box-shadow: none; border: 1px solid #b6c5d0; }
+.md-typeset .admonition-title, .md-typeset summary { background: #edf3f7; }
+.hero-banner { width: 100%; max-height: 215px; object-fit: cover; border: 1px solid #9fb1bf; border-radius: 0; box-shadow: none; }
+
+.md-footer { background: var(--bashref-navy-dark); border-top: 4px solid #091a28; }
+.md-footer-meta { background: var(--bashref-navy-deep); }
+.md-footer a { color: #d8e5ee; }
+.md-footer__link { border: 1px solid rgba(255,255,255,.15); border-radius: 2px; }
+
+.md-button {
+  border-radius: 2px !important;
+  border-color: #9d6b18 !important;
+  background: var(--bashref-gold) !important;
+  color: #2f2109 !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.md-button:hover { background: #f0b652 !important; color: #241804 !important; }
+
+@media screen and (max-width: 76.234375em) {
+  .bashref-utilitybar { display: none; }
+  .md-content { border-left: 0; border-right: 0; }
+}
+@media screen and (max-width: 44.984375em) {
+  .md-main__inner { margin-top: .4rem; }
+  .md-content__inner { padding: .9rem .85rem 1.5rem; }
+  .md-typeset h1 { font-size: 1.5rem; }
+}
+
+[dir="rtl"] .md-typeset table { direction: rtl; }
+[dir="rtl"] .md-typeset pre, [dir="rtl"] .md-typeset code { direction: ltr; text-align: left; }
+[dir="rtl"] .bashref-utilitybar__links, [dir="rtl"] .bashref-utilitybar__lang { direction: ltr; }

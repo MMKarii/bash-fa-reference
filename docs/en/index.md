@@ -1,37 +1,44 @@
-# Bash Professional Reference
+# Bashref: Bash from terminal to reference manual
 
-<img class="hero-banner" src="assets/brand-banner.webp" alt="Bash Professional Reference banner">
+**Bashref 2.1.0** is a free, open-source Bash reference project combining an offline CLI, a **214-record bilingual Reference Guide**, system man pages, installable packages, and a fourteen-chapter Professional Guide.
 
-**Bashref 2.1.0** combines an offline CLI, a structured bilingual Reference Guide, system man pages, downloadable packages, and the 14-chapter Professional Guide.
+[Get Bashref 2.1.0](download/index.md){ .md-button }
 
-This project covers **command-line fundamentals, pipelines and redirection, text processing, scripting, automation, system administration, DevOps, defensive security, and debugging**. Bash-specific behavior is cross-checked against the [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html).
+## News
 
-## Use Bashref
+- **Bashref 2.1.0:** the structured Persian/English reference now contains 214 bilingual records, including broader `set -o`, `shopt`, Bash-variable, and compound-command coverage.
+- **Offline diagnostics:** `bashref stats` reports corpus coverage and `bashref doctor` reports the local runtime without network access.
+- **Versioned documentation:** immutable v2.1, v2.0, and v1.0 snapshots remain available.
 
-- **[Reference Guide](reference/):** precise lookup for builtins, syntax, expansions, options, variables, and core concepts.
-- **[Professional Guide](book/):** the 14-chapter learning and operations handbook.
-- **[Installation](install/):** install the CLI from the official release artifacts.
-- **[Download](download/):** wheel, source archive, DEB/RPM, man pages, completions, and checksums.
-- **[Releases](releases/):** release history and version information.
-- **[About](about/):** architecture, scope, and licensing.
+## What Bashref provides
 
-Quick CLI examples:
+- **[Reference Guide](reference/):** precise lookup for builtins, syntax, expansions, shell options, `shopt`, variables, concepts, and examples.
+- **[Professional Guide](book/):** fourteen chapters for learning, automation, SysAdmin, DevOps, security, and debugging.
+- **[Installation](install/):** install the CLI from verified release artifacts.
+- **[Download](download/):** wheel, source archive, DEB/RPM, portable archive, man pages, completions, Homebrew formula, and checksums.
+- **[Releases](releases/):** release history and stable documentation snapshots.
+- **[About](about/):** architecture, scope, licensing, and project boundaries.
+
+## Quick start
 
 ```bash
-bashref --version
 bashref search quoting
 bashref builtin printf
-bashref --format json option pipefail
+bashref option pipefail
+bashref shopt extglob
+bashref variable BASH_VERSION
+bashref doctor
 ```
 
-## Start here
+## Bashref is...
 
-- New to Bash: [Learning Path](learning-path.md) and chapters 1–4
-- Scripting: chapters 7–8
-- SysAdmin/DevOps: chapters 10–12
-- Security and quality: chapters 8, 13, and 14
-- Fast lookup: [Cheat Sheet](cheatsheet.md)
-- Terminology: [Glossary](glossary.md)
+- **Comprehensive:** 214 paired English/Persian records plus the long-form Professional Guide.
+- **Offline:** core reference lookup, search, diagnostics, JSON output, and completions need no network connection.
+- **Portable:** Python wheel, source distribution, Debian/RPM packages, portable archive, man pages, and shell completions.
+- **Well documented:** Reference Guide, Professional Guide, install documentation, contributor documentation, and system man pages.
+- **Verifiable:** protected CI, release checksums, deterministic generated outputs, and immutable stable documentation snapshots.
+
+Bash-specific behavior is cross-checked primarily against the [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html).
 
 !!! warning "Run commands deliberately"
-    Test file deletion, permission/ownership changes, service operations, and system-level automation in a controlled environment before production use.
+    Test deletion, permission/ownership changes, service operations, and system-level automation in a controlled environment before production use.

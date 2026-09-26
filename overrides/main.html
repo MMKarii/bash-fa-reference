@@ -23,3 +23,20 @@
   <meta name="twitter:description" content="{{ page_description | e }}">
   <meta name="twitter:image" content="{{ config.extra.social_image_url }}">
 {% endblock %}
+
+{% block header %}
+  <div class="bashref-utilitybar">
+    <div class="bashref-utilitybar__links">
+      <a href="{{ config.extra.site_root }}/">Bashref</a>
+      <a href="https://github.com/MMKarii/bash-fa-reference">GitHub</a>
+      <a href="https://github.com/MMKarii/bash-fa-reference/releases">Releases</a>
+      <a href="https://www.gnu.org/software/bash/manual/bash.html">GNU Bash</a>
+      <a href="https://github.com/koalaman/shellcheck">ShellCheck</a>
+    </div>
+    <div class="bashref-utilitybar__lang">
+      <a href="{{ config.extra.site_root }}/en/" lang="en">English</a>
+      <a href="{{ config.extra.site_root }}/fa/" lang="fa">فارسی</a>
+    </div>
+  </div>
+  {{ super() }}
+{% endblock %}
