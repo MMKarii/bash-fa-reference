@@ -12,6 +12,27 @@ license = "MIT"
 license-files = ["LICENSE", "LICENSES/MIT.txt", "LICENSES/CC-BY-4.0.txt"]
 authors = [{ name = "MMKarii" }]
 dependencies = []
+keywords = ["bash", "shell", "reference", "cli", "persian", "farsi", "documentation"]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Documentation",
+  "Topic :: System :: Shells",
+]
+
+[project.urls]
+Homepage = "https://mmkarii.github.io/bash-fa-reference/"
+Documentation = "https://mmkarii.github.io/bash-fa-reference/en/"
+Repository = "https://github.com/MMKarii/bash-fa-reference"
+Issues = "https://github.com/MMKarii/bash-fa-reference/issues"
+Changelog = "https://github.com/MMKarii/bash-fa-reference/blob/main/CHANGELOG.md"
 
 [project.scripts]
 bashref = "bashref.cli:main"

@@ -103,7 +103,7 @@ jobs:
         run: |
           set -euo pipefail
           python tools/validate_reference.py
-          python tools/build_reference.py
+          python tools/build_reference.py --version "$VERSION"
           python tools/build_search_index.py
           python tools/build_docs_reference.py
           python tools/build_manpages.py

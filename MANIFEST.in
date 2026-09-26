@@ -6,3 +6,7 @@ recursive-include packaging *
 include README.md
 include README.fa.md
 include CHANGELOG.md
+include INSTALL.md
+include HACKING.md
+include AUTHORS.md
+include NEWS.md
